@@ -1,65 +1,96 @@
-import Image from "next/image";
+import HeroSection from "@/components/home/HeroSection";
+import ImageReel from "@/components/effects/ImageReel";
+import ServicesSection from "@/components/home/ServicesSection";
+import AboutSection from "@/components/home/AboutSection";
+import GallerySection from "@/components/home/GallerySection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ContactSection from "@/components/home/ContactSection";
 
 export default function Home() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://rudrakshbaglamukhi.com/#person",
+        "name": "Acharya Pt. Rudraksh Rajpurohit",
+        "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
+        "jobTitle": "Vedic Priest & Tantra Sadhak",
+        "description": "Highly revered Vedic Priest & Tantra Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
+        "image": "https://rudrakshbaglamukhi.com/real-gallery-1.jpg",
+        "url": "https://rudrakshbaglamukhi.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nalkheda",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "465441",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://facebook.com/rudrakshbaglamukhi",
+          "https://instagram.com/rudrakshbaglamukhi"
+        ]
+      },
+      {
+        "@type": "PlaceOfWorship",
+        "@id": "https://rudrakshbaglamukhi.com/#temple",
+        "name": "Siddh Peeth Maa Baglamukhi Temple Dham",
+        "description": "The sacred, historical, and highly potent Siddh Peeth of Goddess Maa Baglamukhi situated on the banks of Lakhunder River in Nalkheda, Agar Malwa, Madhya Pradesh.",
+        "url": "https://rudrakshbaglamukhi.com",
+        "telephone": "+91 79095 97033",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Near Maa Baglamukhi Mandir",
+          "addressLocality": "Nalkheda",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "465441",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.9576,
+          "longitude": 76.2415
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "05:00",
+          "closes": "23:00"
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* Schema.org Structured Data for Rich Snippet SEO indexing */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <HeroSection />
+      {/* ─── Seamless Infinite Image Reel ─── */}
+      <div className="bg-sacred-white border-b border-gray-100/60 pb-8">
+        <ImageReel />
+      </div>
+      <div className="sacred-divider" />
+      <ServicesSection />
+      <div className="sacred-divider" />
+      <AboutSection />
+      <div className="sacred-divider" />
+      <GallerySection />
+      <div className="sacred-divider" />
+      <TestimonialsSection />
+      <div className="sacred-divider" />
+      <ContactSection />
+    </>
   );
 }

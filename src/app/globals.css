@@ -1,26 +1,365 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   MODERN LUXURY DESIGN SYSTEM — Maa Baglamukhi Temple
+   Premium Minimalist Palette (Apple/Stripe/Rolex inspired)
+   ============================================================ */
+
+@theme {
+  /* Override default Tailwind colors to globally transform components into premium light ivory & elegant orange/saffron */
+  --color-white: #ffffff; /* Crisp white for premium card elements */
+  --color-gray-50: #fafaf9; /* Elegant soft ivory-grey background */
+  --color-gray-100: #fbf2e6; /* Elegant soft champagne orange border */
+  --color-gray-200: #f6dfc4; /* Medium warm peach-orange border */
+  --color-gray-300: #ffb87a;
+  --color-gray-400: #ffa152;
+  --color-gray-500: #f97316; /* Core vibrant saffron orange text */
+  --color-gray-600: #ea580c; /* Rich core orange highlights */
+  --color-gray-700: #c2410c; /* Deep royal crimson orange */
+  --color-gray-800: #332f27; /* Rich charcoal stone for highly readable body copy */
+  --color-gray-900: #12100e; /* Deep royal charcoal heading color */
+
+  /* Saffron action states mapped to elegant warm saffron orange */
+  --color-saffron: #f97316;
+  --color-saffron-light: #fff7ed;
+  --color-saffron-dark: #c2410c;
+  
+  /* Core Luxury Orange values (named gold for maximum backward compatibility with existing styles) */
+  --color-gold: #f97316;
+  --color-gold-light: #ffedd5;
+  --color-gold-bright: #ff9100;
+  --color-gold-dim: #c2410c;
+  
+  /* Light luxury background mappings */
+  --color-cosmic-black: #fafaf9;
+  --color-cosmic-dark: #fafaf9;
+  --color-cosmic-gray: #f97316;
+  --color-sacred-cream: #fffaf5; /* Soft warm cream tone */
+  --color-sacred-white: #fafaf9; /* Premium alabaster/ivory page background */
+  --color-marble-light: #fafaf9;
+  --color-charcoal: #332f27; /* Warm black body text for strong readability */
+
+  /* Typography: Re-introduce high-end classic luxury serif font pairing */
+  --font-cinzel: var(--font-cinzel), serif;
+  --font-cormorant: var(--font-cormorant), serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-devanagari: var(--font-outfit), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #1e1b18;
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Headings: Cinzel bold luxury serif font for outstanding contrast and grandeur */
+h1, h2, h3, h4, h5, h6, .font-cinzel {
+  font-family: var(--font-cinzel), serif;
+  font-weight: 800; /* Extra bold */
+  color: #12100e;
+  letter-spacing: -0.01em;
+}
+
+/* Paragraphs: highly readable and high-contrast styling */
+p {
+  font-family: var(--font-outfit), sans-serif;
+  color: #2c2a29; /* Dark high-contrast charcoal */
+}
+
+/* Custom Scrollbar - Gold */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sacred-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dim);
+}
+
+/* ============================================================
+   BACKGROUND PATTERNS (Glowing Luxury Gold Grid)
+   ============================================================ */
+
+.sacred-pattern {
+  background-image: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.mandala-bg {
+  background: none;
+}
+
+/* ============================================================
+   GOLD RADIANT GLOWS
+   ============================================================ */
+
+.divine-glow {
+  box-shadow: 0 20px 40px rgba(197, 160, 89, 0.06);
+}
+
+.divine-glow-text {
+  text-shadow: 0 0 8px rgba(197, 160, 89, 0.25);
+}
+
+/* ============================================================
+   GLASSMORPHISM (Frosted Light Gold Glass)
+   ============================================================ */
+
+.glass-dark, .glass-gold, .glass-sacred {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  box-shadow: 0 10px 35px rgba(197, 160, 89, 0.06);
+}
+
+/* ============================================================
+   PREMIUM GOLD BUTTONS
+   ============================================================ */
+
+.btn-sacred {
+  position: relative;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 9999px; /* Pill shape */
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(249, 115, 22, 0.5);
+  text-shadow: none;
+}
+
+.btn-sacred:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #12100e, #f97316);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.25);
+  color: #ffffff;
+}
+
+.btn-sacred-outline {
+  position: relative;
+  background: transparent;
+  color: var(--color-gold-dim);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sacred-outline:hover {
+  background: rgba(197, 160, 89, 0.05);
+  border-color: var(--color-gold-dim);
+  color: var(--color-gold-dim);
+}
+
+/* ============================================================
+   SACRED CARD STYLES (Clean SaaS Cards)
+   ============================================================ */
+
+.sacred-card {
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.12);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(197, 160, 89, 0.04);
+}
+
+.sacred-card:hover {
+  border-color: rgba(197, 160, 89, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(197, 160, 89, 0.12);
+}
+
+/* ============================================================
+   SECTION DIVIDERS (Golden Lines)
+   ============================================================ */
+
+.sacred-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.25), transparent);
+}
+
+.sacred-divider-ornate {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.3), transparent);
+}
+
+.sacred-divider-ornate::after {
+  content: '';
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.15); }
+  50% { box-shadow: 0 0 0 12px rgba(197, 160, 89, 0); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float 8s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* ============================================================
+   GRADIENT TEXT
+   ============================================================ */
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #ea580c, #f97316, #c2410c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-saffron {
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.container-sacred {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ============================================================
+   SWIPER CUSTOM PAGINATION (Saffron Sensation)
+   ============================================================ */
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #f97316;
+  opacity: 0.35;
+  border-radius: 9999px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+  width: 24px;
+  background: #f97316;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+}
+
+/* Equalizer waves for Spiritual Music Player */
+@keyframes soundWave {
+  0% {
+    height: 4px;
+  }
+  100% {
+    height: 16px;
+  }
+}
+
+/* Hero floating particles animation (moved from inline style jsx) */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-80vh) scale(0.8) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Slow spin for decorative dashed ring */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+/* ============================================================
+   RESPONSIVE UTILITIES
+   ============================================================ */
+
+/* Smooth page transitions */
+main {
+  animation: fadeInPage 0.4s ease-out;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile touch optimizations */
+@media (max-width: 768px) {
+  .container-sacred {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding: 48px 0;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
