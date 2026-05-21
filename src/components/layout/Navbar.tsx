@@ -125,6 +125,7 @@ export default function Navbar() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
+                  suppressHydrationWarning={true}
                   className={`relative px-4 py-2 text-sm transition-all duration-300 rounded-full font-bold cursor-pointer ${
                     isActive(link.href)
                       ? "text-white bg-gold shadow-sm"
@@ -143,6 +144,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <motion.button
                 onClick={toggleLang}
+                suppressHydrationWarning={true}
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-gold/10 text-gold hover:bg-gold hover:text-white transition-all font-bold text-sm border border-gold/15 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -152,6 +154,7 @@ export default function Navbar() {
               </motion.button>
               <motion.button
                 onClick={() => handleNavClick("/book")}
+                suppressHydrationWarning={true}
                 className="btn-sacred text-xs px-6 py-2.5 shadow-sm rounded-full cursor-pointer font-bold uppercase tracking-wider"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -164,6 +167,7 @@ export default function Navbar() {
             <div className="flex lg:hidden items-center gap-3">
               <motion.button
                 onClick={toggleLang}
+                suppressHydrationWarning={true}
                 className="w-8 h-8 flex items-center justify-center rounded-full bg-gold/10 text-gold border border-gold/15 font-bold text-xs"
                 whileTap={{ scale: 0.9 }}
               >
@@ -172,6 +176,7 @@ export default function Navbar() {
               <motion.button
                 className="text-gray-900 p-2"
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
+                suppressHydrationWarning={true}
                 whileTap={{ scale: 0.9 }}
                 aria-label="Toggle menu"
               >
@@ -221,6 +226,7 @@ export default function Navbar() {
                       <motion.button
                         key={link.href}
                         onClick={() => handleNavClick(link.href)}
+                        suppressHydrationWarning={true}
                         className={`text-left px-4 py-3 rounded-xl text-base transition-all duration-300 font-bold cursor-pointer ${
                           isActive(link.href)
                             ? "text-gold bg-gold/5"
@@ -240,6 +246,7 @@ export default function Navbar() {
                   {/* Book CTA */}
                   <motion.button
                     onClick={() => handleNavClick("/book")}
+                    suppressHydrationWarning={true}
                     className="btn-sacred w-full text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs shadow-md"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

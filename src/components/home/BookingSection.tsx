@@ -94,6 +94,7 @@ export default function BookingSection() {
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
+                    suppressHydrationWarning={true}
                     className={inputClass}
                   >
                     <option value="">{lang === 'en' ? 'General Inquiry' : 'सामान्य पूछताछ'}</option>
@@ -106,25 +107,25 @@ export default function BookingSection() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="text-xs text-gold font-bold mb-3 block uppercase tracking-wider">{lang === 'en' ? 'Full Name' : 'पूरा नाम'}</label>
-                    <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className={inputClass} required placeholder="Your Name" />
+                    <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} suppressHydrationWarning={true} className={inputClass} required placeholder="Your Name" />
                   </div>
                   <div>
                     <label className="text-xs text-gold font-bold mb-3 block uppercase tracking-wider">{lang === 'en' ? 'Phone / WhatsApp' : 'फ़ोन / व्हाट्सएप'}</label>
-                    <input type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className={inputClass} required placeholder="+91 XXXXX XXXXX" />
+                    <input type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} suppressHydrationWarning={true} className={inputClass} required placeholder="+91 XXXXX XXXXX" />
                   </div>
                 </div>
 
                 <div>
                   <label className="text-xs text-gold font-bold mb-3 block uppercase tracking-wider">{lang === 'en' ? 'Your Message or Question' : 'आपका संदेश या प्रश्न'}</label>
-                  <textarea rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} className={`${inputClass} resize-none`} required placeholder={lang === 'en' ? 'Describe your problem or ask for puja status...' : 'अपनी समस्या बताएं या पूजा की स्थिति पूछें...'} />
+                  <textarea rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} suppressHydrationWarning={true} className={`${inputClass} resize-none`} required placeholder={lang === 'en' ? 'Describe your problem or ask for puja status...' : 'अपनी समस्या बताएं या पूजा की स्थिति पूछें...'} />
                 </div>
 
                 <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
-                  <button type="submit" className="flex-1 btn-sacred shadow-md flex items-center justify-center gap-2 py-4">
+                  <button type="submit" suppressHydrationWarning={true} className="flex-1 btn-sacred shadow-md flex items-center justify-center gap-2 py-4">
                     <FaEnvelope className="w-4 h-4" />
                     {submitted ? (lang === 'en' ? 'Inquiry Sent' : 'पूछताछ भेजी गई') : (lang === 'en' ? 'Send Message' : 'संदेश भेजें')}
                   </button>
-                  <button type="button" onClick={handleWhatsApp} className="flex-1 bg-[#25D366] text-white hover:bg-[#1EBE5D] font-bold uppercase tracking-wider text-xs rounded-xl shadow-md flex items-center justify-center gap-2 py-4 transition-all hover:-translate-y-1">
+                  <button type="button" onClick={handleWhatsApp} suppressHydrationWarning={true} className="flex-1 bg-[#25D366] text-white hover:bg-[#1EBE5D] font-bold uppercase tracking-wider text-xs rounded-xl shadow-md flex items-center justify-center gap-2 py-4 transition-all hover:-translate-y-1">
                     <FaWhatsapp className="w-5 h-5" />
                     {lang === 'en' ? 'WhatsApp Direct' : 'व्हाट्सएप डायरेक्ट'}
                   </button>

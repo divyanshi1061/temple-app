@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface Particle {
@@ -15,17 +15,23 @@ interface Particle {
 }
 
 export default function ParticleField({ count = 25 }: { count?: number }) {
-  const [particles] = useState<Particle[]>(() => Array.from({ length: count }, (_, i) => ({
-    id: i,
-    width: Math.random() * 3 + 1,
-    height: Math.random() * 3 + 1,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    bg: `rgba(212, 160, 23, ${(Math.random() * 0.4 + 0.1).toFixed(2)})`,
-    duration: Math.random() * 8 + 5,
-    delay: Math.random() * 5,
-    yOffset: -(Math.random() * 200 + 100),
-  })));
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        width: Math.random() * 3 + 1,
+        height: Math.random() * 3 + 1,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        bg: `rgba(212, 160, 23, ${(Math.random() * 0.4 + 0.1).toFixed(2)})`,
+        duration: Math.random() * 8 + 5,
+        delay: Math.random() * 5,
+        yOffset: -(Math.random() * 200 + 100),
+      }))
+    );
+  }, [count]);
 
   if (particles.length === 0) return null;
 

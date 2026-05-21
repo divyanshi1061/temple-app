@@ -135,12 +135,14 @@ export default function ContactSection() {
                     <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Full Name' : 'पूरा नाम'}</label>
                     <input type="text" placeholder={lang === 'en' ? "Enter name" : "नाम दर्ज करें"}
                       value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      suppressHydrationWarning={true}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                   <div>
                     <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Phone Number' : 'फ़ोन नंबर'}</label>
                     <input type="tel" placeholder="+91 XXXXX XXXXX"
                       value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      suppressHydrationWarning={true}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                 </div>
@@ -150,11 +152,13 @@ export default function ContactSection() {
                     <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Email Address' : 'ईमेल पता'}</label>
                     <input type="email" placeholder="your@email.com"
                       value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      suppressHydrationWarning={true}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                   <div>
                     <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Service Interest' : 'सेवा रुचि'}</label>
                     <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}
+                      suppressHydrationWarning={true}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs">
                       <option value="">{lang === 'en' ? 'Select service' : 'सेवा चुनें'}</option>
                       <option value="havan">{lang === 'en' ? 'Baglamukhi Havan' : 'बगलामुखी हवन'}</option>
@@ -169,10 +173,12 @@ export default function ContactSection() {
                   <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Message' : 'संदेश'}</label>
                   <textarea rows={3} placeholder={lang === 'en' ? 'Your message...' : 'आपका संदेश...'}
                     value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    suppressHydrationWarning={true}
                     className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none resize-none transition-all font-semibold text-xs h-24" />
                 </div>
                 
                 <motion.button type="submit" 
+                  suppressHydrationWarning={true}
                   className="btn-sacred w-full text-center py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all mt-2"
                   whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                   {submitted 

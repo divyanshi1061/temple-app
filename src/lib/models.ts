@@ -1,11 +1,6 @@
 import mongoose from 'mongoose';
 
-const AdminUserSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  role: { type: String, default: 'admin' },
-}, { timestamps: true });
+
 
 const ServiceSchema = new mongoose.Schema({
   titleEn: { type: String, required: true },
@@ -78,7 +73,7 @@ const TestimonialSchema = new mongoose.Schema({
   rating: { type: Number, default: 5 },
 }, { timestamps: true });
 
-export const AdminUser = mongoose.models.AdminUser || mongoose.model('AdminUser', AdminUserSchema);
+
 export const Service = mongoose.models.Service || mongoose.model('Service', ServiceSchema);
 export const About = mongoose.models.About || mongoose.model('About', AboutSchema);
 export const GalleryImage = mongoose.models.GalleryImage || mongoose.model('GalleryImage', GalleryImageSchema);

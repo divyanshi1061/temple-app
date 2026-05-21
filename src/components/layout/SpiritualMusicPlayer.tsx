@@ -71,6 +71,7 @@ export default function SpiritualMusicPlayer() {
         onClick={togglePlay}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.92 }}
+        suppressHydrationWarning={true}
         className={`relative w-14 h-14 rounded-full flex items-center justify-center shadow-xl border cursor-pointer overflow-hidden transition-all duration-300 ${
           isPlaying
             ? "bg-gradient-to-br from-gold to-orange-500 text-white border-transparent shadow-[0_0_20px_rgba(249,115,22,0.4)]"

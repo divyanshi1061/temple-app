@@ -149,6 +149,7 @@ export default function GallerySection() {
         <div className="flex flex-wrap justify-center gap-3 mb-16">
           {CATEGORIES.map((cat) => (
             <motion.button key={cat.id} onClick={() => setActiveCategory(cat.id)}
+              suppressHydrationWarning={true}
               className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === cat.id
                   ? "bg-gold text-white border border-gold shadow-lg"

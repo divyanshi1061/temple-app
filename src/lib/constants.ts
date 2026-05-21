@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
   },
   phone: "+91 79095 97033",
   whatsapp: "+917909597033",
-  email: "acharya@rudrakshbaglamukhi.com",
+  email: "mabaglamukhi66@gmail.com",
   address: {
     en: "Nalkheda, District Agar Malwa, Madhya Pradesh 465441 (Near Maa Baglamukhi Mandir)",
     hi: "नलखेड़ा, जिला आगर मालवा, मध्य प्रदेश 465441 (माँ बगलामुखी मंदिर के समीप)"
@@ -81,6 +81,27 @@ export const SERVICES = [
     popular: true,
   },
   {
+    id: "baglamukhi-mukhi-havan",
+    title: { en: "Maa Baglamukhi Mukhi Havan", hi: "माँ बगलामुखी मुखी हवन" },
+    description: {
+      en: "Special Baglamukhi mukhi havan performed for focused protection, victory, and removal of stubborn obstacles.",
+      hi: "विशेष बगलामुखी मुखी हवन, जो केंद्रित सुरक्षा, विजय और अड़ियल बाधाओं के निवारण के लिए किया जाता है।"
+    },
+    longDescription: {
+      en: "Maa Baglamukhi Mukhi Havan is a dedicated fire ritual used when a devotee needs sharp protection, strong stambhan, and immediate relief from hostile energy. It is performed with precise samagri, mantra chanting, and Vedic discipline to strengthen divine support and bring clarity, courage, and victory.",
+      hi: "माँ बगलामुखी मुखी हवन एक समर्पित अग्नि अनुष्ठान है, जिसका उपयोग तब किया जाता है जब भक्त को तीव्र सुरक्षा, प्रबल स्तंभन और शत्रु-ऊर्जा से तत्काल राहत की आवश्यकता हो। इसे विशिष्ट सामग्री, मंत्र-जाप और वैदिक अनुशासन के साथ किया जाता है ताकि दिव्य संरक्षण, स्पष्टता, साहस और विजय प्राप्त हो सके।"
+    },
+    benefits: {
+      en: ["Focused divine protection", "Support in difficult situations", "Obstacle removal and victory"],
+      hi: ["केंद्रित दिव्य सुरक्षा", "कठिन परिस्थितियों में सहारा", "बाधा निवारण और विजय"]
+    },
+    duration: { en: "1 Day", hi: "1 दिन" },
+    icon: "BMH",
+    image: "/new-havan-5.jpg",
+    category: "havan",
+    popular: true,
+  },
+  {
     id: "lal-mirchi-havan",
     title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" },
     description: {
@@ -99,6 +120,27 @@ export const SERVICES = [
     icon: "LM",
     image: "/havan-upload-3.jpg",
     category: "havan",
+    popular: true,
+  },
+  {
+    id: "baglamukhi-anushthan",
+    title: { en: "Maa Baglamukhi Anusthan", hi: "माँ बगलामुखी अनुष्ठान" },
+    description: {
+      en: "Powerful Vedic and Tantric ritual of Maa Baglamukhi for victory, obstacle removal, and divine blessings.",
+      hi: "विजय, बाधा निवारण और दिव्य आशीर्वाद के लिए माँ बगलामुखी का शक्तिशाली वैदिक और तांत्रिक अनुष्ठान।"
+    },
+    longDescription: {
+      en: "Maa Baglamukhi Anusthan is a sacred and highly powerful ritual performed to invoke the eighth Mahavidya, Goddess Baglamukhi. It is specifically designed to eliminate all blockages in career, life, or business, resolve deep conflicts, and bestow strong divine protection against negative energies and opponents. Conducted with exact Vedic protocols and offerings.",
+      hi: "माँ बगलामुखी अनुष्ठान आठवीं महाविद्या, देवी बगलामुखी का आह्वान करने के लिए किया जाने वाला एक पवित्र और अत्यधिक शक्तिशाली अनुष्ठान है। यह विशेष रूप से करियर, जीवन या व्यवसाय में सभी बाधाओं को दूर करने, गहरे संघर्षों को हल करने और नकारात्मक ऊर्जाओं और विरोधियों के खिलाफ मजबूत दिव्य सुरक्षा प्रदान करने के लिए डिज़ाइन किया गया है।"
+    },
+    benefits: {
+      en: ["Victory over obstacles and challenges", "Destruction of negative influences", "Divine protection and mental peace", "Success in important endeavors"],
+      hi: ["बाधाओं और चुनौतियों पर विजय", "नकारात्मक प्रभावों का विनाश", "दिव्य सुरक्षा और मानसिक शांति", "महत्वपूर्ण प्रयासों में सफलता"]
+    },
+    duration: { en: "3-5 Days", hi: "3-5 दिन" },
+    icon: "BA",
+    image: "/new-havan-4.png",
+    category: "anusthan",
     popular: true,
   },
   {
@@ -303,23 +345,63 @@ export const SERVICES = [
     category: "paramarsh",
   },
   {
-    id: "vashikaran-akarshan",
-    title: { en: "Vashikaran & Akarshan", hi: "वशीकरण एवं आकर्षण" },
+    id: "vashikaran",
+    title: { en: "Vashikaran Anusthan", hi: "वशीकरण अनुष्ठान" },
     description: {
-      en: "Tantric practices to attract positive relationships and influence people favorably.",
-      hi: "सकारात्मक संबंधों को आकर्षित करने और लोगों को अनुकूल रूप से प्रभावित करने के लिए तांत्रिक अभ्यास।"
+      en: "Ethical Tantric ritual to positively influence someone's mind and resolve estrangement in relationships.",
+      hi: "किसी के मन को सकारात्मक रूप से प्रभावित करने और रिश्तों में मनमुटाव दूर करने के लिए नैतिक तांत्रिक अनुष्ठान।"
     },
     longDescription: {
-      en: "Pure and ethical Vashikaran (influence) and Akarshan (attraction) sadhanas are performed to resolve estranged relationships, bring back harmony in married life, or gain favor in professional circles. These rituals are performed strictly for positive and non-harmful intents.",
-      hi: "शुद्ध और नैतिक वशीकरण और आकर्षण साधनाएं अलग हो गए रिश्तों को सुलझाने, विवाहित जीवन में सद्भाव वापस लाने, या पेशेवर हलकों में पक्ष हासिल करने के लिए की जाती हैं। ये अनुष्ठान कड़ाई से सकारात्मक और गैर-हानिकारक इरादों के लिए किए जाते हैं।"
+      en: "Vashikaran is an ancient Vedic science used to attract and influence a desired person's thoughts and emotions positively. When performed ethically, it resolves severe relationship conflicts, brings back lost love, and restores harmony between couples or family members. Acharya Pt. Rudraksh Rajpurohit performs this ritual using pure and positive mantras only.",
+      hi: "वशीकरण एक प्राचीन वैदिक विज्ञान है जिसका उपयोग किसी वांछित व्यक्ति के विचारों और भावनाओं को सकारात्मक रूप से आकर्षित और प्रभावित करने के लिए किया जाता है। जब इसे नैतिक रूप से किया जाता है, तो यह गंभीर संबंध संघर्षों को हल करता है, खोया हुआ प्यार वापस लाता है और जोड़ों या परिवार के सदस्यों के बीच सद्भाव बहाल करता है।"
     },
     benefits: {
-      en: ["Resolving relationship disputes", "Increasing personal charisma", "Attracting favorable circumstances"],
-      hi: ["रिश्ते के विवादों को सुलझाना", "व्यक्तिगत करिश्मा बढ़ाना", "अनुकूल परिस्थितियों को आकर्षित करना"]
+      en: ["Resolve relationship disputes", "Reunite with estranged partner", "Ethical and positive influence", "Restoration of love and understanding"],
+      hi: ["रिश्ते के विवादों का समाधान", "अलग हुए साथी के साथ पुनर्मिलन", "नैतिक और सकारात्मक प्रभाव", "प्रेम और आपसी समझ की बहाली"]
     },
-    duration: { en: "Custom", hi: "कस्टम" },
-    icon: "VA",
+    duration: { en: "3-5 Days", hi: "3-5 दिन" },
+    icon: "VK",
     image: "/vashikaran-akarshan.png",
+    category: "anusthan",
+  },
+  {
+    id: "akarshan",
+    title: { en: "Akarshan Anusthan", hi: "आकर्षण अनुष्ठान" },
+    description: {
+      en: "Sacred ritual to enhance personal magnetism, attraction, and command respect in social and professional circles.",
+      hi: "व्यक्तिगत आकर्षण, चुंबकीय व्यक्तित्व बढ़ाने और सामाजिक व व्यावसायिक हलकों में सम्मान पाने के लिए पवित्र अनुष्ठान।"
+    },
+    longDescription: {
+      en: "Akarshan Anusthan is focused on enhancing the devotee's personal charisma, self-confidence, and aura. It helps in gaining favor from superiors, resolving communication gaps, and attracting favorable circumstances. The positive energies of this ritual help make one's presence impactful and respected everywhere.",
+      hi: "आकर्षण अनुष्ठान भक्त के व्यक्तिगत आकर्षण, आत्मविश्वास और आभा को बढ़ाने पर केंद्रित है। यह वरिष्ठों से अनुकूलता प्राप्त करने, संचार अंतराल को हल करने और अनुकूल परिस्थितियों को आकर्षित करने में मदद करता है।"
+    },
+    benefits: {
+      en: ["Enhanced personal magnetism and charisma", "Improved social and professional relationships", "Overcoming shyness and self-doubt", "Attracting positive opportunities"],
+      hi: ["बढ़ा हुआ व्यक्तिगत आकर्षण और करिश्मा", "बेहतर सामाजिक और व्यावसायिक संबंध", "संकोच और आत्म-संदेह पर विजय", "सकारात्मक अवसरों को आकर्षित करना"]
+    },
+    duration: { en: "3 Days", hi: "3 दिन" },
+    icon: "AK",
+    image: "/vashikaran-akarshan.png",
+    category: "anusthan",
+  },
+  {
+    id: "vashikaran-moh-ucchatan",
+    title: { en: "Vashikaran Moh Ucchatan", hi: "वशीकरण मोह उच्चाटन" },
+    description: {
+      en: "Comprehensive ritual to manage relations, clear toxic attachments, and resolve severe disputes.",
+      hi: "संबंधों को प्रबंधित करने, जहरीले जुड़ाव को दूर करने और गंभीर विवादों को सुलझाने के लिए व्यापक अनुष्ठान।"
+    },
+    longDescription: {
+      en: "This powerful combined ritual brings together the forces of Vashikaran (ethical attraction/influence), Moh (affection management), and Ucchatan (detachment/separation from negative influences). It is specifically executed to free a family member from bad company or addiction, resolve critical marital discords, and eliminate toxic emotional dependencies.",
+      hi: "यह शक्तिशाली संयुक्त अनुष्ठान वशीकरण (नैतिक आकर्षण/प्रभाव), मोह (स्नेह प्रबंधन), और उच्चाटन (नकारात्मक प्रभावों से अलगाव/दूरी) की शक्तियों को एक साथ लाता है। यह विशेष रूप से किसी पारिवारिक सदस्य को बुरी संगति या व्यसन से मुक्त करने, गंभीर वैवाहिक कलह को सुलझाने के लिए किया जाता है।"
+    },
+    benefits: {
+      en: ["Freedom from toxic bonds and bad company", "Curing harmful addictions", "Resolving intense marital or familial discords", "Restoring emotional stability and control"],
+      hi: ["जहरीले रिश्तों और बुरी संगति से मुक्ति", "हानिकारक व्यसनों का निवारण", "तीव्र वैवाहिक या पारिवारिक कलह का समाधान", "भावनात्मक स्थिरता और नियंत्रण की बहाली"]
+    },
+    duration: { en: "5-7 Days", hi: "5-7 दिन" },
+    icon: "VMU",
+    image: "/moh-ucchatan.png",
     category: "anusthan",
   },
   {
