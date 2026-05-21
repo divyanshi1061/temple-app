@@ -40,12 +40,13 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-sacred-white pt-24"
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-white pt-24"
       style={{
         backgroundImage: "url('/hero-spiritual-bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundColor: 'white',
       }}
     >
       <style dangerouslySetInnerHTML={{ __html: `

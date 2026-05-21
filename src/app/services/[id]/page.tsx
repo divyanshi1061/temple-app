@@ -105,7 +105,16 @@ export default function ServiceDetailPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       {/* Premium Split Hero without big image */}
-      <section className="relative pt-32 pb-16 bg-white border-b border-gray-100 sacred-pattern overflow-hidden">
+      <section
+        className="relative pt-32 pb-16 bg-white border-b border-gray-100 sacred-pattern overflow-hidden"
+        style={{
+          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#fff',
+        }}
+      >
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/5 rounded-bl-[100%] blur-[80px] pointer-events-none" />
         
         <div className="container-sacred relative z-10 flex flex-col lg:flex-row items-center gap-12">

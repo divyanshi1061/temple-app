@@ -9,7 +9,6 @@ const REEL_IMAGES = [
   { src: "/real-havan-kund.jpg", alt: "Sacred Havan Kund" },
   { src: "/real-puja-plate.jpg", alt: "Divine Puja Plate" },
   { src: "/mata-temple-exterior.jpg", alt: "Maa Baglamukhi Temple Exterior" },
-  { src: "/temple-sunset.png", alt: "Nalkheda Dham Sunset" },
   { src: "/havan-upload-1.jpg", alt: "Sacred Havan Fire" },
   { src: "/havan-upload-2.jpg", alt: "Maa Baglamukhi Havan Ritual" },
   { src: "/havan-upload-3.jpg", alt: "Lal Mirchi Havan" },

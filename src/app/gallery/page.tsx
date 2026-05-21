@@ -109,12 +109,12 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-5",
-    url: "/temple-sunset.png",
+    url: "/new-havan-3.jpg",
     aspect: "aspect-[4/3]",
-    titleEn: "Divine Temple Sunset",
-    titleHi: "मंदिर का सूर्यास्त",
-    descEn: "A serene look at the temple silhouette painted against the orange sunset sky.",
-    descHi: "नारंगी सूर्यास्त के आकाश के सामने मंदिर की शांत रूपरेखा।"
+    titleEn: "Devotees Gathering",
+    titleHi: "भक्तों का जमघट",
+    descEn: "Devotees joining hands in prayer during a powerful community havan.",
+    descHi: "एक शक्तिशाली सामूहिक हवन के दौरान प्रार्थना में हाथ जोड़ते भक्तगण।"
   }
 ];
 
@@ -225,7 +225,16 @@ export default function GalleryPage() {
   }, [selectedPhoto]);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-gray-900 font-outfit select-none pb-0 pt-28">
+    <div
+      className="min-h-screen bg-white text-gray-900 font-outfit select-none pb-0 pt-28"
+      style={{
+        backgroundImage: "url('/hero-spiritual-bg.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'white',
+      }}
+    >
 
       {/* 2. Editorial Header Section */}
       <section className="max-w-4xl mx-auto text-center pt-16 pb-12 px-6">
@@ -380,20 +389,6 @@ export default function GalleryPage() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* 4. Bottom Full-Width Atmospheric Banner */}
-      <section className="relative w-full h-[40vh] overflow-hidden bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 flex items-center justify-center border-t border-stone-850">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.08)_0%,transparent_70%)]" />
-        
-        <div className="relative z-10 text-center text-white px-6">
-          <span className="text-[10px] tracking-[0.3em] uppercase text-orange-400 font-bold block mb-4">
-            {lang === "en" ? "Maa Baglamukhi Siddh Peeth" : "मां बगलामुखी सिद्ध पीठ"}
-          </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-cormorant italic font-light tracking-wide text-white leading-tight">
-            {lang === "en" ? "Feel the Sacred Presence" : "दिव्य ऊर्जा की अनुभूति"}
-          </h2>
         </div>
       </section>
 

@@ -42,7 +42,16 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-sacred-white pt-28 pb-20">
       {/* Premium Hero Header */}
-      <section className="relative overflow-hidden pb-20 pt-10">
+      <section
+        className="relative overflow-hidden pb-20 pt-10"
+        style={{
+          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#fff',
+        }}
+      >
         <div className="absolute inset-0 bg-sacred-pattern opacity-50" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
         

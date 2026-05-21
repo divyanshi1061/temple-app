@@ -36,7 +36,16 @@ export default function AboutPage() {
     <main className="min-h-screen bg-sacred-white pb-20 overflow-hidden font-sans">
       
       {/* ─── A. Cinematic Light Hero Banner ─── */}
-      <section className="relative bg-[#fdfbf7] text-gray-900 pt-36 pb-24 md:py-40 overflow-hidden sacred-pattern border-b border-gray-100">
+      <section
+        className="relative text-gray-900 pt-36 pb-24 md:py-40 overflow-hidden sacred-pattern border-b border-gray-100"
+        style={{
+          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#fdfbf7',
+        }}
+      >
         {/* Floating gold particles */}
         <ParticleField count={25} />
         

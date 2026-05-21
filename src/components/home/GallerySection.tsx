@@ -94,7 +94,18 @@ export default function GallerySection() {
   }, [selectedPhoto]);
 
   return (
-    <section id="gallery" className="relative section-padding overflow-hidden bg-white border-t border-gray-100 sacred-pattern">
+    <section
+      id="gallery"
+      className="relative section-padding overflow-hidden bg-white border-t border-gray-100 sacred-pattern"
+      style={{
+        backgroundImage: "url('/hero-spiritual-bg.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'white',
+        backgroundBlendMode: 'overlay',
+      }}
+    >
       <div className="container-sacred relative z-10">
         
         {/* Gallery Header */}
