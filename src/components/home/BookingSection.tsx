@@ -20,8 +20,20 @@ export default function BookingSection() {
 
   const handleInquiry = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate successful form submission immediately
+    if (!formData.phone.trim()) {
+      alert(lang === 'en' ? 'Please enter a phone number to receive the SMS.' : 'कृपया एसएमएस प्राप्त करने के लिए एक फोन नंबर दर्ज करें।');
+      return;
+    }
+
+    const serviceName = selectedService ? SERVICES.find(s => s.id === selectedService)?.title.en : "Puja/Havan";
+    const messageText = `Jai Maa Baglamukhi! Acharya Ji, I want to inquire about ${serviceName}. \nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const bodyDelimiter = isIOS ? '&' : '?';
+    const cleanPhone = formData.phone.trim().replace(/\s+/g, '');
+    const smsUrl = `sms:${cleanPhone}${bodyDelimiter}body=${encodeURIComponent(messageText)}`;
+
     setSubmitted(true);
+    window.location.href = smsUrl;
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: "", phone: "", message: "" });
@@ -103,7 +115,7 @@ export default function BookingSection() {
                 <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
                   <button type="submit" suppressHydrationWarning={true} className="flex-1 btn-sacred shadow-md flex items-center justify-center gap-2 py-4">
                     <FaEnvelope className="w-4 h-4" />
-                    {submitted ? (lang === 'en' ? 'Inquiry Sent' : 'पूछताछ भेजी गई') : (lang === 'en' ? 'Send Message' : 'संदेश भेजें')}
+                    {submitted ? (lang === 'en' ? 'SMS Opened' : 'एसएमएस खुला है') : (lang === 'en' ? 'Send SMS' : 'एसएमएस भेजें')}
                   </button>
                   <button type="button" onClick={handleWhatsApp} suppressHydrationWarning={true} className="flex-1 bg-[#25D366] text-white hover:bg-[#1EBE5D] font-bold uppercase tracking-wider text-xs rounded-xl shadow-md flex items-center justify-center gap-2 py-4 transition-all hover:-translate-y-1">
                     <FaWhatsapp className="w-5 h-5" />

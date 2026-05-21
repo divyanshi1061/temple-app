@@ -20,25 +20,25 @@ export default function Footer() {
   const { lang } = useLanguage();
 
   return (
-    <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-16 pb-8 sacred-pattern">
+    <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-6 pb-3 sacred-pattern">
       {/* Decorative background light gradient */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/3 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[180px] bg-gold/3 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="container-sacred relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-left mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left mb-6">
           
           {/* Column 1: Divine Identity */}
           <motion.div 
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3">
-              <Logo size={48} />
+              <Logo size={40} />
               <div>
-                <h3 className="text-lg font-extrabold text-gray-900 tracking-tight font-cinzel leading-tight">
+                <h3 className="text-base font-extrabold text-gray-900 tracking-tight font-cinzel leading-tight">
                   {SITE_CONFIG.name[lang]}
                 </h3>
                 <span className="text-[9px] tracking-[0.2em] text-gold font-bold uppercase block mt-1">
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation Links */}
           <motion.div 
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* Column 4: Mandir Contact & Location */}
           <motion.div 
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -146,22 +146,22 @@ export default function Footer() {
         </div>
 
         {/* Separator line */}
-        <div className="h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent my-10" />
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent my-4" />
 
         {/* Bottom copyright and slow-moving mantra */}
-        <div className="flex flex-col items-center gap-4 text-center">
+        <div className="flex flex-col items-center gap-2 text-center">
           
-          <p className="text-[10px] text-gray-400 font-bold tracking-wider">
+          <p className="text-[9px] text-gray-400 font-bold tracking-wider">
             © {currentYear} {SITE_CONFIG.name.en}. {lang === 'en' ? 'All rights reserved.' : 'सर्वाधिकार सुरक्षित।'}
           </p>
         </div>
       </div>
 
       {/* Spacer to prevent fixed marquee from overlapping the bottom of the footer scroll */}
-      <div className="w-full h-11 mt-8" />
+      <div className="w-full h-5 mt-5" />
 
       {/* Seamless Moving Marquee Ticker - Sticky at the absolute bottom of the viewport */}
-      <div className="fixed bottom-0 left-0 right-0 z-[100] w-full bg-white/80 backdrop-blur-md bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 border-t border-gold/20 py-2.5 overflow-hidden select-none shadow-md">
+      <div className="fixed bottom-0 left-0 right-0 z-[100] w-full bg-white/80 backdrop-blur-md bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 border-t border-gold/20 py-1.5 overflow-hidden select-none shadow-md">
         <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs font-bold text-gray-700 tracking-wider">
           {Array(2).fill(null).map((_, idx) => (
             <span key={idx} className="flex items-center gap-8 pr-8">
@@ -171,9 +171,9 @@ export default function Footer() {
               <span className="text-gold/60">ॐ</span>
               <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-gold transition-colors">{SITE_CONFIG.email}</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @rudrakshbaglamukhi</a>
+              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @maabaglamukhidarshan</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: @rudrakshbaglamukhi</a>
+              <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: Maa Baglamukhi Darshan</a>
               <span className="text-gold/60">ॐ</span>
               <span className="text-gold font-extrabold uppercase">
                 {lang === 'en' 

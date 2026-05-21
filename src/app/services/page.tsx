@@ -40,15 +40,13 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-sacred-white pt-28 pb-20">
+    <main className="min-h-screen bg-sacred-white pb-20">
       {/* Premium Hero Header */}
       <section
-        className="relative overflow-hidden pb-20 pt-10"
+        className="relative overflow-hidden pb-28 pt-36 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/hero-spiritual-bg.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          minHeight: '520px',
           backgroundColor: '#fff',
         }}
       >
@@ -74,7 +72,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="container-sacred">
+      <section className="container-sacred mt-20 lg:mt-24">
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="w-16 h-16 border-4 border-gold border-t-transparent rounded-full animate-spin"></div>

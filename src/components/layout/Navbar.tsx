@@ -88,7 +88,7 @@ export default function Navbar() {
         animate={isVisible ? "visible" : "hidden"}
         initial="visible"
       >
-        <div className={`mx-auto max-w-6xl transition-all duration-500 rounded-[1.85rem] border ${
+        <div className={`mx-auto max-w-7xl transition-all duration-500 rounded-[1.85rem] border ${
           isScrolled 
             ? "bg-gradient-to-r from-white/95 via-amber-50/90 to-white/95 backdrop-blur-lg shadow-xl shadow-gold/5 border-gold/30" 
             : "bg-gradient-to-r from-white/80 via-amber-50/60 to-white/80 backdrop-blur-md shadow-sm border-white/60"

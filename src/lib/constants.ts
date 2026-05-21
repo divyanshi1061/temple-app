@@ -24,8 +24,8 @@ export const SITE_CONFIG = {
   },
   mapUrl: "https://maps.google.com/?q=Nalkheda+Baglamukhi+Temple",
   socials: {
-    facebook: "https://www.facebook.com/share/1KvBmX2bme/?mibextid=wwXIfr",
-    instagram: "https://www.instagram.com/maa.baglamukhidarshan?igsh=MXh3ZzkzMTd4cmZibg%3D%3D&utm_source=qr",
+    facebook: "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/?mibextid=wwXIfr&rdid=Jgsjq9UYv0FIJt4Z&share_url=https%3A%2F%2Fwww.facebook.com",
+    instagram: "https://www.instagram.com/maabaglamukhidarshan",
     youtube: "https://youtube.com/@maabaglamukhidarshan-d2e?si=OC9ZiN1R5Tb59OBl",
   }
 };
