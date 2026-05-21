@@ -106,8 +106,8 @@ export default function HeroSection() {
               {/* Main Photo Cutout Frame */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden border-8 border-white bg-white shadow-2xl scale-95 flex items-center justify-center">
                 <img
-                  src="/new-havan-5.jpg"
-                  alt="Havan ritual in the temple"
+                  src="/acharya-new.jpg"
+                  alt="New acharya portrait"
                   className="w-full h-full object-cover object-center scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/mata-baglamukhi.jpg';

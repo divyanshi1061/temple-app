@@ -171,9 +171,9 @@ export default function Footer() {
               <span className="text-gold/60">ॐ</span>
               <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-gold transition-colors">{SITE_CONFIG.email}</a>
               <span className="text-gold/60">ॐ</span>
-              <a href="https://instagram.com/rudrakshbaglamukhi" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @rudrakshbaglamukhi</a>
+              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @rudrakshbaglamukhi</a>
               <span className="text-gold/60">ॐ</span>
-              <a href="https://facebook.com/rudrakshbaglamukhi" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: @rudrakshbaglamukhi</a>
+              <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: @rudrakshbaglamukhi</a>
               <span className="text-gold/60">ॐ</span>
               <span className="text-gold font-extrabold uppercase">
                 {lang === 'en' 
