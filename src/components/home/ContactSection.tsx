@@ -13,10 +13,34 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate successful form submission immediately
+    
+    // Format service label based on selection and language
+    const serviceLabel = form.service 
+      ? (form.service === "havan" ? (lang === "en" ? "Baglamukhi Havan" : "बगलामुखी हवन")
+         : form.service === "jaap" ? (lang === "en" ? "Anusthan & Jaap" : "अनुष्ठान एवं जाप")
+         : form.service === "puja" ? (lang === "en" ? "Puja Services" : "पूजा सेवाएं")
+         : (lang === "en" ? "Other" : "अन्य"))
+      : (lang === "en" ? "General" : "सामान्य");
+
+    // Format the inquiry message
+    const messageText = lang === "en"
+      ? `Jai Maa Baglamukhi! Acharya Ji, I have an inquiry:\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nService: ${serviceLabel}\nMessage: ${form.message}`
+      : `जय माँ बगलामुखी! आचार्य जी, मेरे पास एक पूछताछ है:\nनाम: ${form.name}\nफ़ोन: ${form.phone}\nईमेल: ${form.email}\nसेवा: ${serviceLabel}\nसंदेश: ${form.message}`;
+
+    // Detect user OS for SMS format compatibility
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const bodyDelimiter = isIOS ? '&' : '?';
+    const cleanPhone = SITE_CONFIG.phone.replace(/\s+/g, '');
+    const smsUrl = `sms:${cleanPhone}${bodyDelimiter}body=${encodeURIComponent(messageText)}`;
+
+    // Set submit state and trigger redirect to SMS app
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    window.location.href = smsUrl;
+    
+    setTimeout(() => {
+      setSubmitted(false);
+      setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    }, 3000);
   };
 
   const contactInfo = [
@@ -172,7 +196,7 @@ export default function ContactSection() {
                   className="btn-sacred w-full text-center py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all mt-2"
                   whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                   {submitted 
-                    ? (lang === 'en' ? "Inquiry Sent" : "पूछताछ भेजी गई") 
+                    ? (lang === 'en' ? "Opening SMS App..." : "एसएमएस ऐप खुल रहा है...") 
                     : (lang === 'en' ? "Send Inquiry" : "पूछताछ भेजें")}
                 </motion.button>
               </form>

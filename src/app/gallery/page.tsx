@@ -74,15 +74,6 @@ const COLUMN_1_PHOTOS: PhotoItem[] = [
 
 const COLUMN_2_PHOTOS: PhotoItem[] = [
   {
-    id: "col2-new-1",
-    url: "/baglamukhi-anusthan-new.jpg",
-    aspect: "aspect-[4/3]",
-    titleEn: "Maa Baglamukhi Anusthan",
-    titleHi: "माँ बगलामुखी अनुष्ठान",
-    descEn: "Sacred fire offerings and prayers conducted during the divine Maa Baglamukhi Anusthan.",
-    descHi: "दिव्य माँ बगलामुखी अनुष्ठान के दौरान संपन्न पवित्र अग्नि आहुति और प्रार्थनाएं।"
-  },
-  {
     id: "col2-1",
     url: "/new-havan-1.jpg",
     aspect: "aspect-[3/4]",
@@ -128,15 +119,6 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
 ];
 
 const COLUMN_3_PHOTOS: PhotoItem[] = [
-  {
-    id: "col3-new-1",
-    url: "/gallery-new-3.jpg",
-    aspect: "aspect-[16/9]",
-    titleEn: "Sacred Yajna Ceremony",
-    titleHi: "यज्ञ एवं अनुष्ठान",
-    descEn: "Vedic Yajna and Havans guided by Acharya Pt. Rudraksh Rajpurohit at Nalkheda Dham.",
-    descHi: "नलखेड़ा धाम में आचार्य पं. रुद्राक्ष राजपुरोहित के मार्गदर्शन में संपन्न वैदिक यज्ञ और हवन।"
-  },
   {
     id: "col3-1",
     url: "/real-havan-kund.jpg",
@@ -247,22 +229,13 @@ export default function GalleryPage() {
 
       {/* 2. Editorial Header Section */}
       <section className="max-w-4xl mx-auto text-center pt-16 pb-12 px-6">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-cormorant font-normal italic tracking-wider text-gray-900 mb-6">
-          {lang === "en" ? "Portraits of Devotion" : "दिव्य दर्शन की झाँकियाँ"}
+        <span className="text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm inline-block mb-4">
+          {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
+        </span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl mt-4 font-bold tracking-tight text-gray-900 font-cinzel">
+          {lang === 'en' ? 'Gallery' : 'गैलरी'}
         </h1>
-        
-        <p className="max-w-2xl mx-auto text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-8">
-          {lang === "en"
-            ? "I capture the divine essence of Vedic rituals, havans, and the sacred energy of Maa Baglamukhi temple. Each frame is a portal to the ancient, spiritual, and timeless traditions of Nalkheda Dham."
-            : "मैं वैदिक अनुष्ठानों, हवनों और माँ बगलामुखी मंदिर की दिव्य ऊर्जा को कलात्मक दृष्टिकोण से कैमरे में उतारता हूँ। प्रत्येक चित्र सिद्ध पीठ नलखेड़ा धाम की प्राचीन और शाश्वत आध्यात्मिक विरासत की एक खिड़की है।"}
-        </p>
-
-        <button
-          onClick={() => router.push("/book")}
-          className="inline-block text-[10px] md:text-xs tracking-[0.25em] uppercase font-bold text-gray-900 border-b border-gray-900 pb-1.5 hover:text-orange-600 hover:border-orange-600 transition-all duration-300"
-        >
-          {lang === "en" ? "Let's Consult Pt. Rudraksh" : "आचार्य जी से परामर्श लें"}
-        </button>
+        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
       </section>
 
       {/* 3. Visual Masonry Grid (4 Columns) */}
@@ -474,7 +447,7 @@ export default function GalleryPage() {
                 <h3 className="text-2xl md:text-3xl font-cormorant font-normal italic tracking-wide text-gray-900 mb-4">
                   {lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6">
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify sm:text-left">
                   {lang === "en" ? selectedPhoto.descEn : selectedPhoto.descHi}
                 </p>
 

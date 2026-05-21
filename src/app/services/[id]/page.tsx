@@ -93,12 +93,12 @@ export default function ServiceDetailPage() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Jai Maa Baglamukhi! Acharya Ji, I am interested in knowing more about ${service.titleEn} and would like to check its status or book.`
+    `Jai Maa Baglamukhi! Acharya Ji, I am interested in booking or knowing more about ${service.titleEn}.`
   );
   const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${whatsappMessage}`;
 
   return (
-    <main className="min-h-screen bg-sacred-white pb-20">
+    <main className="min-h-screen bg-sacred-white pb-32 lg:pb-20">
       {/* Schema.org Structured Data for dynamic service indexing */}
       <script
         type="application/ld+json"
@@ -204,8 +204,8 @@ export default function ServiceDetailPage() {
                   <FaInfoCircle className="text-gold w-5 h-5 flex-shrink-0 mt-0.5" />
                   <p>
                     {lang === 'en' 
-                      ? 'To know more about this ritual or check your puja status, please send us a direct inquiry.' 
-                      : 'इस अनुष्ठान के बारे में अधिक जानने या अपनी पूजा की स्थिति जांचने के लिए, कृपया हमें सीधा संदेश भेजें।'}
+                      ? 'To know more about this ritual or to book a consultation, please send us a direct inquiry.' 
+                      : 'इस अनुष्ठान के बारे में अधिक जानने या परामर्श बुक करने के लिए, कृपया हमें सीधा संदेश भेजें।'}
                   </p>
                 </div>
 
@@ -221,10 +221,10 @@ export default function ServiceDetailPage() {
                   </a>
 
                   <Link
-                    href="/#contact"
-                    className="w-full py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:bg-gray-900 hover:text-white uppercase tracking-wider"
+                    href={`/book?service=${service._id}`}
+                    className="w-full py-4 bg-gold hover:bg-gold/90 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 uppercase tracking-wider text-center"
                   >
-                    {lang === 'en' ? 'Check Status / Book' : 'स्थिति जांचें / बुक करें'}
+                    {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
                   </Link>
                 </div>
 
@@ -233,6 +233,25 @@ export default function ServiceDetailPage() {
           </motion.div>
         </div>
       </section>
+      {/* Sticky Bottom Bar on Mobile */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-3 flex gap-3 shadow-lg shadow-gold/5">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-3.5 bg-[#25D366] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition-all uppercase tracking-wider hover:bg-[#1EBE5D]"
+        >
+          <FaWhatsapp className="w-4 h-4" />
+          {lang === 'en' ? 'WhatsApp' : 'व्हाट्सएप'}
+        </a>
+
+        <Link
+          href={`/book?service=${service._id}`}
+          className="flex-1 py-3.5 bg-gold text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition-all uppercase tracking-wider text-center hover:bg-gold/90"
+        >
+          {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
+        </Link>
+      </div>
     </main>
   );
 }

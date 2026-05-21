@@ -1,195 +1,153 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { fadeInUp } from "@/animations/variants";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { IoCloseOutline } from "react-icons/io5";
 
-type GalleryItem = {
-  _id: string;
-  title: string;
+type PhotoItem = {
+  id: string;
   url: string;
-  category: string;
+  aspect: string;
+  titleEn: string;
+  titleHi: string;
+  descEn: string;
+  descHi: string;
 };
 
-const DEFAULT_GALLERY = [
-  { _id: "1", title: "", category: "gallery", url: "acharya-new.jpg" },
-  { _id: "3", title: "", category: "gallery", url: "gallery-1.png" },
-  { _id: "4", title: "", category: "gallery", url: "gallery-2.png" },
-  { _id: "5", title: "", category: "gallery", url: "gallery-3.png" },
-  { _id: "6", title: "", category: "gallery", url: "gallery-4.png" },
-  { _id: "7", title: "", category: "gallery", url: "gallery-5.png" },
-  { _id: "8", title: "", category: "gallery", url: "havan-upload-1.jpg" },
-  { _id: "9", title: "", category: "gallery", url: "havan-upload-2.jpg" },
-  { _id: "10", title: "", category: "gallery", url: "havan-upload-3.jpg" },
-  { _id: "12", title: "", category: "gallery", url: "lakshmi-prapti.png" },
-  { _id: "13", title: "", category: "gallery", url: "mata-baglamukhi.jpg" },
-  { _id: "14", title: "", category: "gallery", url: "mata-idol-1.jpg" },
-  { _id: "15", title: "", category: "gallery", url: "mata-idol-2.jpg" },
-  { _id: "16", title: "", category: "gallery", url: "mata-temple-exterior.jpg" },
-  { _id: "17", title: "", category: "gallery", url: "moh-ucchatan.png" },
-  { _id: "18", title: "", category: "gallery", url: "nav-graha-shanti.png" },
-  { _id: "19", title: "", category: "gallery", url: "new-havan-1.jpg" },
-  { _id: "20", title: "", category: "gallery", url: "new-havan-2.jpg" },
-  { _id: "21", title: "", category: "gallery", url: "new-havan-3.jpg" },
-  { _id: "22", title: "", category: "gallery", url: "new-havan-4.png" },
-  { _id: "23", title: "", category: "gallery", url: "new-havan-5.jpg" },
-  { _id: "24", title: "", category: "gallery", url: "new-upload-10.jpg" },
-  { _id: "25", title: "", category: "gallery", url: "new-upload-6.jpg" },
-  { _id: "26", title: "", category: "gallery", url: "new-upload-7.jpg" },
-  { _id: "27", title: "", category: "gallery", url: "new-upload-8.jpg" },
-  { _id: "28", title: "", category: "gallery", url: "new-upload-9.jpg" },
-  { _id: "29", title: "", category: "gallery", url: "nyayalay-vijay.png" },
-  { _id: "30", title: "", category: "gallery", url: "pitra-kaal-sarp.png" },
-  { _id: "31", title: "", category: "gallery", url: "real-gallery-1.jpg" },
-  { _id: "32", title: "", category: "gallery", url: "real-gallery-2.jpg" },
-  { _id: "34", title: "", category: "gallery", url: "real-gallery-4.jpg" },
-  { _id: "35", title: "", category: "gallery", url: "real-gallery-5.jpg" },
-  { _id: "36", title: "", category: "gallery", url: "real-havan-kund.jpg" },
-  { _id: "37", title: "", category: "gallery", url: "real-puja-plate.jpg" },
-  { _id: "38", title: "", category: "gallery", url: "santan-prapti.png" },
-  { _id: "39", title: "", category: "gallery", url: "temple-bhog-area.jpg" },
-  { _id: "40", title: "", category: "gallery", url: "temple-devotees-1.jpg" },
-  { _id: "41", title: "", category: "gallery", url: "temple-dome-night.jpg" },
-  { _id: "42", title: "", category: "gallery", url: "temple-entrance-1.jpg" },
-  { _id: "43", title: "", category: "gallery", url: "temple-inside-1.jpg" },
-  { _id: "44", title: "", category: "gallery", url: "temple-lion-gate.jpg" },
-  { _id: "45", title: "", category: "gallery", url: "temple-night-1.jpg" },
-  { _id: "46", title: "", category: "gallery", url: "temple-night-2.jpg" },
-  { _id: "47", title: "", category: "gallery", url: "temple-side-1.jpg" },
-  { _id: "48", title: "", category: "gallery", url: "temple-sunset.png" },
-  { _id: "49", title: "", category: "gallery", url: "temple-tower.jpg" },
-  { _id: "50", title: "", category: "gallery", url: "vashikaran-akarshan.png" },
-  { _id: "51", title: "", category: "gallery", url: "vastu-shastra.png" },
-  { _id: "52", title: "", category: "gallery", url: "vyapar-vraddhi.png" },
-  { _id: "53", title: "", category: "gallery", url: "vyavahik-badha.png" },
-  { _id: "54", title: "", category: "gallery", url: "temple-entrance-1.jpg" },
-  { _id: "55", title: "", category: "gallery", url: "temple-devotees-1.jpg" },
-  { _id: "56", title: "", category: "gallery", url: "temple-inside-1.jpg" },
-  { _id: "57", title: "", category: "gallery", url: "temple-side-1.jpg" },
-  { _id: "58", title: "", category: "gallery", url: "temple-night-1.jpg" },
-  { _id: "59", title: "", category: "gallery", url: "temple-night-2.jpg" },
-  { _id: "60", title: "", category: "gallery", url: "temple-dome-night.jpg" },
-  { _id: "61", title: "", category: "gallery", url: "temple-tower.jpg" },
-  { _id: "62", title: "", category: "gallery", url: "temple-lion-gate.jpg" },
-  { _id: "63", title: "", category: "gallery", url: "temple-bhog-area.jpg" },
-  { _id: "64", title: "", category: "gallery", url: "temple-sunset.png" },
-  { _id: "65", title: "", category: "gallery", url: "new-havan-1.jpg" },
-  { _id: "66", title: "", category: "gallery", url: "new-havan-2.jpg" },
-  { _id: "67", title: "", category: "gallery", url: "new-havan-3.jpg" },
-  { _id: "68", title: "", category: "gallery", url: "new-havan-4.png" },
-  { _id: "69", title: "", category: "gallery", url: "new-havan-5.jpg" },
-  { _id: "70", title: "", category: "gallery", url: "new-upload-6.jpg" },
-  { _id: "71", title: "", category: "gallery", url: "new-upload-7.jpg" },
-  { _id: "72", title: "", category: "gallery", url: "new-upload-8.jpg" },
-  { _id: "73", title: "", category: "gallery", url: "new-upload-9.jpg" },
-  { _id: "74", title: "", category: "gallery", url: "new-upload-10.jpg" },
-  { _id: "75", title: "Maha Mrityunjay Anusthan", category: "gallery", url: "mrityunjay-new.jpg" },
-  { _id: "76", title: "Maa Baglamukhi Anusthan", category: "gallery", url: "baglamukhi-anusthan-new.jpg" },
-  { _id: "77", title: "Sacred Yajna Ceremony", category: "gallery", url: "gallery-new-3.jpg" }
-];
-
-const CATEGORIES = [
-  { id: "all", label: { en: "All", hi: "सभी" } },
-  { id: "temple", label: { en: "Temple", hi: "मंदिर" } },
-  { id: "ceremony", label: { en: "Ceremony", hi: "समारोह" } }
+// Curated list of high-quality showcase images matching the gallery page
+const SHOWCASE_PHOTOS: PhotoItem[] = [
+  {
+    id: "home-g-1",
+    url: "/mrityunjay-new.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maha Mrityunjay Anusthan",
+    titleHi: "महामृत्युंजय अनुष्ठान",
+    descEn: "Pt. Rudraksh Rajpurohit conducting the sacred Maha Mrityunjay Anusthan for health, healing, and longevity.",
+    descHi: "स्वास्थ्य, आरोग्य और दीर्घायु के लिए पं. रुद्राक्ष राजपुरोहित द्वारा पवित्र महामृत्युंजय अनुष्ठान का संपादन।"
+  },
+  {
+    id: "home-g-2",
+    url: "/acharya-new.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Acharya Pt. Rudraksh Rajpurohit",
+    titleHi: "आचार्य पं. रुद्राक्ष राजपुरोहित",
+    descEn: "Pt. Rudraksh Rajpurohit in deep meditation and divine guidance at Nalkheda Dham.",
+    descHi: "नलखेड़ा धाम में गहरे ध्यान और दिव्य मार्गदर्शन में पं. रुद्राक्ष राजपुरोहित।"
+  },
+  {
+    id: "home-g-3",
+    url: "/mata-idol-1.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa Baglamukhi Sanctum",
+    titleHi: "माँ बगलामुखी गर्भगृह",
+    descEn: "The divine golden idol of Maa Baglamukhi Devi at Nalkheda Dham Temple.",
+    descHi: "नलखेड़ा धाम मंदिर में माँ बगलामुखी देवी की दिव्य स्वर्ण प्रतिमा।"
+  },
+  {
+    id: "home-g-4",
+    url: "/new-havan-1.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Siddh Peeth Puja",
+    titleHi: "सिद्ध पीठ पूजा",
+    descEn: "Intricate arrangements during a special puja ritual at the temple.",
+    descHi: "मंदिर में एक विशेष पूजा अनुष्ठान के दौरान जटिल व्यवस्था।"
+  },
+  {
+    id: "home-g-5",
+    url: "/real-havan-kund.jpg",
+    aspect: "aspect-[4/3]",
+    titleEn: "Agni Dev - Havan Fire",
+    titleHi: "अग्नि देव - हवन कुंड",
+    descEn: "The sacred fire consuming offerings in the central Havan Kund.",
+    descHi: "मुख्य हवन कुंड में आहुति ग्रहण करती पवित्र अग्नि।"
+  },
+  {
+    id: "home-g-6",
+    url: "/temple-entrance-1.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Temple Entrance Gates",
+    titleHi: "मंदिर प्रवेश द्वार",
+    descEn: "The decorative and grand entrance welcoming devotees into the temple.",
+    descHi: "भक्तों का मंदिर में स्वागत करता हुआ भव्य और कलात्मक प्रवेश द्वार।"
+  }
 ];
 
 export default function GallerySection() {
   const { lang } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [images, setImages] = useState<GalleryItem[]>(DEFAULT_GALLERY);
+  const router = useRouter();
+  const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
 
-  const filtered = activeCategory === "all" 
-    ? images 
-    : images.filter(g => g.category.toLowerCase() === activeCategory.toLowerCase());
-
-  const displayImages = [...filtered].reverse().slice(0, 6);
+  // Custom scroll lock for lightbox
+  useEffect(() => {
+    if (selectedPhoto) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedPhoto]);
 
   return (
     <section id="gallery" className="relative section-padding overflow-hidden bg-white border-t border-gray-100 sacred-pattern">
       <div className="container-sacred relative z-10">
-        <motion.div className="text-center mb-20" variants={fadeInUp} initial="hidden"
-          whileInView="visible" viewport={{ once: true, margin: "-100px" }}>
+        
+        {/* Gallery Header */}
+        <motion.div 
+          className="text-center mb-20" 
+          variants={fadeInUp} 
+          initial="hidden"
+          whileInView="visible" 
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <span className="text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm">
             {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900 font-cinzel">
             {lang === 'en' ? 'Gallery' : 'गैलरी'}
           </h2>
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {CATEGORIES.map((cat) => (
-            <motion.button key={cat.id} onClick={() => setActiveCategory(cat.id)}
-              suppressHydrationWarning={true}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-                activeCategory === cat.id
-                  ? "bg-gold text-white border border-gold shadow-lg"
-                  : "bg-white border border-gray-100 text-gold hover:text-gold-dim hover:border-gold/35"
-              }`}
-              whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              {cat.label[lang]}
-            </motion.button>
+        {/* Clean, Staggered Grid Layout (Staggered aspect ratios, grayscale hover, borderless) */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 max-w-5xl mx-auto">
+          {SHOWCASE_PHOTOS.map((item) => (
+            <motion.div
+              key={item.id}
+              onClick={() => setSelectedPhoto(item)}
+              className="break-inside-avoid mb-6 group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300 rounded-lg"
+              whileHover={{ scale: 0.995 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className={`relative w-full ${item.aspect} overflow-hidden`}>
+                <img
+                  src={item.url}
+                  alt={lang === "en" ? item.titleEn : item.titleHi}
+                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
+              </div>
+            </motion.div>
           ))}
         </div>
 
-          <div className="columns-1 sm:columns-2 md:columns-3 gap-6 max-w-5xl mx-auto">
-            <AnimatePresence mode="popLayout">
-              {displayImages.map((item, idx) => {
-                const titleText = item.title;
-                const imageSrc = item.url.startsWith('http') ? item.url : `/${item.url}`;
-                
-                // Genuine Pinterest Staggered heights
-                let aspectClass = "aspect-[4/3]";
-                if (idx % 3 === 0) aspectClass = "aspect-[3/4]";
-                else if (idx % 3 === 1) aspectClass = "aspect-square";
-                else if (idx % 3 === 2) aspectClass = "aspect-[4/5]";
-
-                return (
-                  <motion.div key={item._id} layout
-                    initial={{ opacity: 0, scale: 0.97 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.97 }}
-                    transition={{ duration: 0.3 }}
-                    className="break-inside-avoid mb-6 group relative bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl border border-gray-100 transition-shadow duration-300 flex flex-col">
-
-                    {/* Image Container with Staggered Aspect Height */}
-                    <div className={`relative ${aspectClass} w-full overflow-hidden bg-gray-100`}>
-                      <Image
-                        src={imageSrc}
-                        alt={`${titleText} - Sacred Maa Baglamukhi Temple Havan Puja Ceremony by Pt. Rudraksh Rajpurohit`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                        style={{ objectFit: "cover" }}
-                        className="transition-transform duration-500 ease-out group-hover:scale-105"
-                      />
-                      {/* Ambient overlay */}
-                      <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300" />
-                    </div>
-
-                    {/* Simple, Highly Visible, and Readable Text Below Image */}
-                    <div className="p-5 bg-white flex-1 border-t border-gray-50">
-                      <p className="text-[10px] text-gold font-bold uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                        {item.category === 'ceremony' ? (lang === 'en' ? 'Sacred Ceremony' : 'पवित्र समारोह') : (lang === 'en' ? 'Temple' : 'मंदिर')}
-                      </p>
-                      <h4 className="text-gray-900 text-base md:text-lg font-bold tracking-tight font-cinzel leading-snug group-hover:text-gold transition-colors duration-300">
-                        {titleText}
-                      </h4>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
-
         {/* View Full Gallery Link */}
-        <motion.div className="mt-16 flex justify-center" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <Link href="/gallery" className="group flex items-center gap-2 px-8 py-4 bg-white border border-gray-200 text-gray-900 font-bold rounded-full shadow-sm hover:shadow-md hover:border-gold hover:text-gold transition-all duration-300">
+        <motion.div 
+          className="mt-16 flex justify-center" 
+          variants={fadeInUp} 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+        >
+          <Link 
+            href="/gallery" 
+            className="group flex items-center gap-2 px-8 py-4 bg-white border border-gray-200 text-gray-900 font-bold rounded-full shadow-sm hover:shadow-md hover:border-gold hover:text-gold transition-all duration-300"
+          >
             {lang === 'en' ? 'Explore Full Gallery' : 'पूरी गैलरी देखें'}
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -197,6 +155,78 @@ export default function GallerySection() {
           </Link>
         </motion.div>
       </div>
+
+      {/* Lightbox Modal (Matching Gallery Page) */}
+      <AnimatePresence>
+        {selectedPhoto && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedPhoto(null)}
+            className="fixed inset-0 bg-[#FAF8F5]/98 z-[200] flex flex-col justify-between p-6 md:p-12 cursor-zoom-out"
+          >
+            {/* Close Button */}
+            <div className="w-full flex justify-end">
+              <button
+                onClick={() => setSelectedPhoto(null)}
+                className="text-gray-500 hover:text-gray-900 p-2 transition-colors cursor-pointer"
+                aria-label="Close lightbox"
+              >
+                <IoCloseOutline size={28} />
+              </button>
+            </div>
+
+            {/* Main Content Area */}
+            <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto w-full">
+              {/* Image */}
+              <motion.div 
+                className="max-h-[55vh] md:max-h-[70vh] max-w-full md:max-w-[50%] overflow-hidden shadow-2xl bg-gray-50"
+                initial={{ y: 15, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 15, opacity: 0 }}
+                transition={{ delay: 0.1, duration: 0.4 }}
+              >
+                <img
+                  src={selectedPhoto.url}
+                  alt={lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
+                  className="w-full h-full object-contain"
+                />
+              </motion.div>
+
+              {/* Text Description */}
+              <motion.div 
+                className="max-w-md text-left md:pt-0"
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 10, opacity: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                onClick={(e) => e.stopPropagation()} // Prevent closing when text is clicked
+              >
+                <h3 className="text-2xl md:text-3xl font-cormorant font-normal italic tracking-wide text-gray-900 mb-4">
+                  {lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
+                </h3>
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify sm:text-left">
+                  {lang === "en" ? selectedPhoto.descEn : selectedPhoto.descHi}
+                </p>
+
+                <button
+                  onClick={() => {
+                    setSelectedPhoto(null);
+                    router.push("/book");
+                  }}
+                  className="text-[10px] tracking-[0.25em] uppercase font-bold text-gray-900 border-b border-gray-900 pb-1 hover:text-orange-600 hover:border-orange-600 transition-colors"
+                >
+                  {lang === "en" ? "Consult About This Ritual" : "इस अनुष्ठान के बारे में परामर्श लें"}
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Bottom spacer to align center */}
+            <div className="hidden md:block h-8" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -55,8 +55,8 @@ export default function Footer() {
 
             <div className="flex gap-2.5 mt-2">
               {[
-                { icon: FaFacebookF, href: "#", name: "Facebook" },
-                { icon: FaInstagram, href: "#", name: "Instagram" },
+                { icon: FaFacebookF, href: SITE_CONFIG.socials.facebook, name: "Facebook" },
+                { icon: FaInstagram, href: SITE_CONFIG.socials.instagram, name: "Instagram" },
                 { icon: FaYoutube, href: "#", name: "YouTube" },
               ].map((social, i) => (
                 <motion.a
@@ -154,6 +154,32 @@ export default function Footer() {
           <p className="text-[10px] text-gray-400 font-bold tracking-wider">
             © {currentYear} {SITE_CONFIG.name.en}. {lang === 'en' ? 'All rights reserved.' : 'सर्वाधिकार सुरक्षित।'}
           </p>
+        </div>
+      </div>
+
+      {/* Seamless Moving Marquee Ticker */}
+      <div className="w-full bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 border-t border-gold/20 py-3.5 overflow-hidden mt-8 select-none">
+        <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs font-bold text-gray-700 tracking-wider">
+          {Array(2).fill(null).map((_, idx) => (
+            <span key={idx} className="flex items-center gap-8 pr-8">
+              <span>{lang === 'en' ? 'Acharya Pt. Rudraksh Rajpurohit' : 'आचार्य पं. रुद्राक्ष राजपुरोहित'}</span>
+              <span className="text-gold/60">ॐ</span>
+              <a href={`tel:${SITE_CONFIG.phone}`} className="hover:text-gold transition-colors">{SITE_CONFIG.phone}</a>
+              <span className="text-gold/60">ॐ</span>
+              <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-gold transition-colors">{SITE_CONFIG.email}</a>
+              <span className="text-gold/60">ॐ</span>
+              <a href="https://instagram.com/rudrakshbaglamukhi" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @rudrakshbaglamukhi</a>
+              <span className="text-gold/60">ॐ</span>
+              <a href="https://facebook.com/rudrakshbaglamukhi" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: @rudrakshbaglamukhi</a>
+              <span className="text-gold/60">ॐ</span>
+              <span className="text-gold font-extrabold uppercase">
+                {lang === 'en' 
+                  ? '✦ Contact us for authentic Vedic Pujas, Maa Baglamukhi Havans, and Kundali analysis at Siddh Peeth Nalkheda Dham ✦' 
+                  : '✦ सिद्ध पीठ नलखेड़ा धाम में प्रामाणिक वैदिक पूजा, माँ बगलामुखी हवन और कुंडली विश्लेषण के लिए आज ही संपर्क करें! ✦'}
+              </span>
+              <span className="text-gold/60">ॐ</span>
+            </span>
+          ))}
         </div>
       </div>
     </footer>

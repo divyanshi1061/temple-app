@@ -50,12 +50,12 @@ export default function BookingSection() {
             {lang === 'en' ? 'Direct Consultation' : 'सीधा परामर्श'}
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900 font-cinzel">
-            {lang === 'en' ? 'Inquire & Check Status' : 'पूछताछ करें और स्थिति जांचें'}
+            {lang === 'en' ? 'Consultation & Inquiry' : 'परामर्श और पूछताछ'}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto font-medium text-lg leading-relaxed">
             {lang === 'en'
-              ? 'Send a direct inquiry to Acharya Pt. Rudraksh Rajpurohit regarding your anusthan, or check the status of an ongoing puja.'
-              : 'अपने अनुष्ठान के संबंध में आचार्य पं. रुद्राक्ष राजपुरोहित को सीधी पूछताछ भेजें, या चल रही पूजा की स्थिति की जांच करें।'}
+              ? 'Send a direct inquiry to Acharya Pt. Rudraksh Rajpurohit regarding your anusthan and sacred rituals.'
+              : 'अपने अनुष्ठान और पवित्र अनुष्ठानों के संबंध में आचार्य पं. रुद्राक्ष राजपुरोहित को सीधी पूछताछ भेजें।'}
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function BookingSection() {
 
                 <div>
                   <label className="text-xs text-gold font-bold mb-3 block uppercase tracking-wider">{lang === 'en' ? 'Your Message or Question' : 'आपका संदेश या प्रश्न'}</label>
-                  <textarea rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} suppressHydrationWarning={true} className={`${inputClass} resize-none`} required placeholder={lang === 'en' ? 'Describe your problem or ask for puja status...' : 'अपनी समस्या बताएं या पूजा की स्थिति पूछें...'} />
+                  <textarea rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} suppressHydrationWarning={true} className={`${inputClass} resize-none`} required placeholder={lang === 'en' ? 'Describe your problem or ask your question...' : 'अपनी समस्या बताएं या अपना प्रश्न पूछें...'} />
                 </div>
 
                 <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
@@ -122,7 +122,7 @@ export default function BookingSection() {
                 {[
                   { en: "Direct guidance from Acharya Ji based on your astrological chart.", hi: "आपकी ज्योतिषीय कुंडली के आधार पर आचार्य जी से सीधा मार्गदर्शन।" },
                   { en: "Understand which specific anusthan is right for your problems.", hi: "समझें कि आपकी समस्याओं के लिए कौन सा विशिष्ट अनुष्ठान सही है।" },
-                  { en: "Track the daily status of your ongoing 36-lakh or sawa-lakh jaap.", hi: "अपने चल रहे 36-लाख या सवा-लाख जाप की दैनिक स्थिति को ट्रैक करें।" },
+                  { en: "Get regular updates on your scheduled or ongoing 36-lakh or sawa-lakh jaap.", hi: "अपने निर्धारित या चल रहे 36-लाख या सवा-लाख जाप के बारे में नियमित जानकारी प्राप्त करें।" },
                   { en: "100% confidential and secure consultation.", hi: "100% गोपनीय और सुरक्षित परामर्श।" }
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-3">
