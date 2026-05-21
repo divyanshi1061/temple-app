@@ -83,7 +83,7 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 pt-5 px-4 sm:px-6 lg:px-8`}
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 pt-3 px-4 sm:px-5 lg:px-6`}
         variants={navbarVariants}
         animate={isVisible ? "visible" : "hidden"}
         initial="visible"
@@ -94,7 +94,7 @@ export default function Navbar() {
             : "bg-gradient-to-r from-white/80 via-amber-50/60 to-white/80 backdrop-blur-md shadow-sm border-white/60"
         }`}>
           <nav className={`flex items-center justify-between transition-all duration-500 ${
-            isScrolled ? "h-16 px-6 lg:px-8" : "h-20 px-8 lg:px-10"
+            isScrolled ? "h-14 px-5 lg:px-6" : "h-16 px-6 lg:px-8"
           }`}>
             {/* Logo */}
             <motion.a
@@ -107,7 +107,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Logo size={isScrolled ? 42 : 46} alt={`${SITE_CONFIG.name[lang]} logo`} className="transition-all duration-500" />
+              <Logo size={isScrolled ? 40 : 44} alt={`${SITE_CONFIG.name[lang]} logo`} className="transition-all duration-500" />
               <div className="hidden sm:block">
                 <h1 className="text-sm sm:text-base tracking-tight text-gray-900 leading-none font-bold font-cinzel">
                   {SITE_CONFIG.name[lang]}

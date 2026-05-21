@@ -195,6 +195,15 @@ const COLUMN_4_PHOTOS: PhotoItem[] = [
     descHi: "शाम की महा-आरती की प्रतीक्षा में एक साथ बैठे श्रद्धालु।"
   },
   {
+    id: "col4-4",
+    url: "/new-havan-4.png",
+    aspect: "aspect-[4/3]",
+    titleEn: "Maa Baglamukhi Darshan",
+    titleHi: "माँ बगलामुखी दर्शन",
+    descEn: "A special puja moment captured during the Maa Baglamukhi darshan ceremony.",
+    descHi: "माँ बगलामुखी दर्शन समारोह के दौरान लिया गया विशेष पूजा क्षण।"
+  },
+  {
     id: "col4-5",
     url: "/temple-night-2.jpg",
     aspect: "aspect-square",
