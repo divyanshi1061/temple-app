@@ -57,7 +57,7 @@ export default function Footer() {
               {[
                 { icon: FaFacebookF, href: SITE_CONFIG.socials.facebook, name: "Facebook" },
                 { icon: FaInstagram, href: SITE_CONFIG.socials.instagram, name: "Instagram" },
-                { icon: FaYoutube, href: "#", name: "YouTube" },
+                { icon: FaYoutube, href: SITE_CONFIG.socials.youtube, name: "YouTube" },
               ].map((social, i) => (
                 <motion.a
                   key={i}
