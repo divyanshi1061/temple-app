@@ -65,7 +65,7 @@ export default function SpiritualMusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-6 left-4 md:left-6 z-50 flex items-center gap-3 select-none">
+    <div className="fixed bottom-16 left-4 md:left-6 z-50 flex items-center gap-3 select-none">
       {/* Music Toggle Button */}
       <motion.button
         onClick={togglePlay}

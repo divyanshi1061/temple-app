@@ -1,91 +1,89 @@
 // ============================================================
 // FRAMER MOTION ANIMATION VARIANTS
-// Sacred, cinematic, divine motion design
+// Sacred, clean, responsive motion design (optimized for speed & realism)
 // ============================================================
 
 import { Variants } from "framer-motion";
 
-// Page transitions
+// Page transitions (subtle fade without page shifts)
 export const pageTransition: Variants = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0.95 },
   animate: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.25, ease: "easeOut" },
   },
   exit: {
-    opacity: 0,
-    y: -20,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+    opacity: 0.95,
+    transition: { duration: 0.2, ease: "easeIn" },
   },
 };
 
-// Fade in from bottom
+// Fade in from bottom (reduced offset and duration)
 export const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 15 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       delay,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut",
     },
   }),
 };
 
 // Fade in from left
 export const fadeInLeft: Variants = {
-  hidden: { opacity: 0, x: -60 },
+  hidden: { opacity: 0, x: -15 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       delay,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut",
     },
   }),
 };
 
 // Fade in from right
 export const fadeInRight: Variants = {
-  hidden: { opacity: 0, x: 60 },
+  hidden: { opacity: 0, x: 15 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       delay,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut",
     },
   }),
 };
 
 // Scale up reveal
 export const scaleUp: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.96 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.7,
+      duration: 0.35,
       delay,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut",
     },
   }),
 };
 
 // Blur to visible
 export const blurReveal: Variants = {
-  hidden: { opacity: 0, filter: "blur(20px)" },
+  hidden: { opacity: 0, filter: "blur(4px)" },
   visible: (delay: number = 0) => ({
     opacity: 1,
     filter: "blur(0px)",
     transition: {
-      duration: 1,
+      duration: 0.4,
       delay,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut",
     },
   }),
 };
@@ -96,49 +94,49 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
     },
   },
 };
 
 // Stagger item
 export const staggerItem: Variants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 8 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
 };
 
-// Card hover
+// Card hover (subtler lift)
 export const cardHover = {
   rest: {
     scale: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.25, ease: "easeOut" },
   },
   hover: {
-    scale: 1.03,
-    y: -8,
-    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
+    scale: 1.01,
+    y: -3,
+    transition: { duration: 0.25, ease: "easeOut" },
   },
 };
 
 // Glowing button
 export const glowPulse = {
   initial: {
-    boxShadow: "0 0 20px rgba(212, 160, 23, 0.3)",
+    boxShadow: "0 0 10px rgba(249, 115, 22, 0.15)",
   },
   animate: {
     boxShadow: [
-      "0 0 20px rgba(212, 160, 23, 0.3)",
-      "0 0 40px rgba(212, 160, 23, 0.5), 0 0 60px rgba(255, 107, 0, 0.2)",
-      "0 0 20px rgba(212, 160, 23, 0.3)",
+      "0 0 10px rgba(249, 115, 22, 0.15)",
+      "0 0 20px rgba(249, 115, 22, 0.25)",
+      "0 0 10px rgba(249, 115, 22, 0.15)",
     ],
     transition: {
       duration: 3,
@@ -148,11 +146,11 @@ export const glowPulse = {
   },
 };
 
-// Floating animation
+// Floating animation (toned down)
 export const floating = {
   initial: { y: 0 },
   animate: {
-    y: [-10, 10, -10],
+    y: [-3, 3, -3],
     transition: {
       duration: 6,
       repeat: Infinity,
@@ -166,7 +164,7 @@ export const mandalaRotate = {
   animate: {
     rotate: 360,
     transition: {
-      duration: 60,
+      duration: 80,
       repeat: Infinity,
       ease: "linear",
     },
@@ -179,20 +177,20 @@ export const textRevealContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.04,
-      delayChildren: 0.3,
+      staggerChildren: 0.02,
+      delayChildren: 0.15,
     },
   },
 };
 
 export const textRevealChar: Variants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 15 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
 };
@@ -201,7 +199,7 @@ export const textRevealChar: Variants = {
 export const parallaxSlow = {
   initial: { y: 0 },
   animate: (scrollY: number) => ({
-    y: scrollY * 0.3,
+    y: scrollY * 0.15,
     transition: { type: "tween", ease: "linear" },
   }),
 };
@@ -210,16 +208,16 @@ export const parallaxSlow = {
 export const divineEntrance: Variants = {
   hidden: {
     opacity: 0,
-    scale: 0.5,
-    filter: "blur(30px)",
+    scale: 0.96,
+    filter: "blur(4px)",
   },
   visible: {
     opacity: 1,
     scale: 1,
     filter: "blur(0px)",
     transition: {
-      duration: 1.2,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.5,
+      ease: "easeOut",
     },
   },
 };
@@ -231,16 +229,16 @@ export const slideInFromLeft: Variants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
   exit: {
     x: "-100%",
     opacity: 0,
     transition: {
-      duration: 0.4,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.25,
+      ease: "easeIn",
     },
   },
 };
@@ -251,16 +249,16 @@ export const navbarVariants: Variants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.3,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.2,
+      ease: "easeOut",
     },
   },
   hidden: {
     y: -100,
     opacity: 0,
     transition: {
-      duration: 0.3,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.2,
+      ease: "easeIn",
     },
   },
 };
@@ -270,35 +268,36 @@ export const modalOverlay: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.3 },
+    transition: { duration: 0.2 },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2 },
+    transition: { duration: 0.15 },
   },
 };
 
 export const modalContent: Variants = {
   hidden: {
     opacity: 0,
-    scale: 0.9,
-    y: 20,
+    scale: 0.96,
+    y: 10,
   },
   visible: {
     opacity: 1,
     scale: 1,
     y: 0,
     transition: {
-      duration: 0.4,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.25,
+      ease: "easeOut",
     },
   },
   exit: {
     opacity: 0,
-    scale: 0.9,
-    y: 20,
+    scale: 0.96,
+    y: 10,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
+      ease: "easeIn",
     },
   },
 };
@@ -309,16 +308,16 @@ export const accordionContent: Variants = {
     height: 0,
     opacity: 0,
     transition: {
-      height: { duration: 0.3 },
-      opacity: { duration: 0.2 },
+      height: { duration: 0.2 },
+      opacity: { duration: 0.15 },
     },
   },
   visible: {
     height: "auto",
     opacity: 1,
     transition: {
-      height: { duration: 0.4 },
-      opacity: { duration: 0.3, delay: 0.1 },
+      height: { duration: 0.25 },
+      opacity: { duration: 0.2, delay: 0.05 },
     },
   },
 };

@@ -234,7 +234,7 @@ export default function ServiceDetailPage() {
         </div>
       </section>
       {/* Sticky Bottom Bar on Mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-3 flex gap-3 shadow-lg shadow-gold/5">
+      <div className="lg:hidden fixed bottom-[37px] left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-3 flex gap-3 shadow-lg shadow-gold/5">
         <a
           href={whatsappUrl}
           target="_blank"

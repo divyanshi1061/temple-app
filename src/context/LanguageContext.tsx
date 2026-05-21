@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { motion } from 'framer-motion';
 
 type Language = 'en' | 'hi';
 
@@ -14,37 +13,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Language>('en');
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const toggleLang = () => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setLang(prev => (prev === 'en' ? 'hi' : 'en'));
-      setIsTransitioning(false);
-    }, 200);
+    setLang(prev => (prev === 'en' ? 'hi' : 'en'));
   };
 
   const handleSetLang = (newLang: Language) => {
     if (newLang === lang) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setLang(newLang);
-      setIsTransitioning(false);
-    }, 200);
+    setLang(newLang);
   };
 
   return (
     <LanguageContext.Provider value={{ lang, toggleLang, setLang: handleSetLang }}>
-      <motion.div
-        animate={{ 
-          opacity: isTransitioning ? 0.4 : 1,
-          filter: isTransitioning ? 'blur(4px)' : 'blur(0px)'
-        }}
-        transition={{ duration: 0.2 }}
-        className="min-h-screen"
-      >
+      <div className="min-h-screen">
         {children}
-      </motion.div>
+      </div>
     </LanguageContext.Provider>
   );
 }

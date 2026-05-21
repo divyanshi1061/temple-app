@@ -9,7 +9,7 @@ export default function FloatingContact() {
   )}`;
 
   return (
-    <div className="sticky bottom-6 ml-auto mr-4 md:mr-6 z-50 flex flex-col items-center gap-3 w-fit float-right">
+    <div className="fixed bottom-28 md:bottom-16 right-4 md:right-6 z-[80] flex flex-col items-center gap-3 w-fit">
       <a
         href={whatsappUrl}
         target="_blank"

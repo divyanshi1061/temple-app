@@ -157,8 +157,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Seamless Moving Marquee Ticker */}
-      <div className="w-full bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 border-t border-gold/20 py-3.5 overflow-hidden mt-8 select-none">
+      {/* Spacer to prevent fixed marquee from overlapping the bottom of the footer scroll */}
+      <div className="w-full h-11 mt-8" />
+
+      {/* Seamless Moving Marquee Ticker - Sticky at the absolute bottom of the viewport */}
+      <div className="fixed bottom-0 left-0 right-0 z-[100] w-full bg-white/80 backdrop-blur-md bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 border-t border-gold/20 py-2.5 overflow-hidden select-none shadow-md">
         <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs font-bold text-gray-700 tracking-wider">
           {Array(2).fill(null).map((_, idx) => (
             <span key={idx} className="flex items-center gap-8 pr-8">
