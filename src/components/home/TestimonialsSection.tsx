@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/animations/variants";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
@@ -56,33 +56,7 @@ const DEFAULT_TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   const { lang } = useLanguage();
-  const [testimonials, setTestimonials] = useState<TestimonialItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const res = await fetch("/api/admin/testimonials");
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.length > 0) {
-            setTestimonials(data);
-          } else {
-            setTestimonials(DEFAULT_TESTIMONIALS);
-          }
-        } else {
-          setTestimonials(DEFAULT_TESTIMONIALS);
-        }
-      } catch (error) {
-        console.error("Failed to fetch testimonials", error);
-        setTestimonials(DEFAULT_TESTIMONIALS);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTestimonials();
-  }, []);
+  const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
 
   return (
     <section id="testimonials" className="relative py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50 border-t border-gray-100 sacred-pattern">
@@ -112,9 +86,6 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Slider */}
-        {loading ? (
-          <div className="text-center py-10 text-gray-500 font-semibold">Loading devotee miracles...</div>
-        ) : (
           <motion.div 
             className="w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -194,7 +165,6 @@ export default function TestimonialsSection() {
             {/* Custom pagination layout */}
             <div className="swiper-custom-pagination flex justify-center gap-2 mt-8 z-20 relative" />
           </motion.div>
-        )}
       </div>
     </section>
   );

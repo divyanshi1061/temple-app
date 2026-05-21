@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel, Cormorant_Garamond, Outfit } from "next/font/google";
+import { Inter, Cinzel, Cormorant_Garamond, Outfit, Playball } from "next/font/google";
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -31,6 +31,13 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
+const playball = Playball({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-playball",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Pandit Maa Baglamukhi | Maa Baglamukhi Dham, Nalkheda",
   description:
@@ -54,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${outfit.variable} ${cinzel.variable} ${cormorant.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} ${cinzel.variable} ${cormorant.variable} ${playball.variable} antialiased`}
       >
         <LanguageProvider>
           <ClientLayoutWrapper>

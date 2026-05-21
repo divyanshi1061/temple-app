@@ -12,13 +12,6 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const { lang } = useLanguage();
   
-  const [headerData, setHeaderData] = useState({
-    headingEn: SITE_CONFIG.name.en,
-    headingHi: SITE_CONFIG.name.hi,
-    subheadingEn: SITE_CONFIG.tagline.en,
-    subheadingHi: SITE_CONFIG.tagline.hi
-  });
-
   const [particles, setParticles] = useState<Array<{
     id: number;
     width: string;
@@ -41,28 +34,6 @@ export default function HeroSection() {
         delay: `${Math.random() * 8}s`,
       }))
     );
-  }, []);
-
-  useEffect(() => {
-    const fetchHeader = async () => {
-      try {
-        const res = await fetch('/api/admin/header');
-        const contentType = res.headers.get('content-type') || '';
-
-        if (!res.ok || !contentType.includes('application/json')) {
-          return;
-        }
-
-        const data = await res.json();
-        if (data && data.headingEn) {
-          setHeaderData(data);
-        }
-      } catch (err) {
-        console.error("Failed to fetch header data", err);
-      }
-    };
-
-    fetchHeader();
   }, []);
 
   return (
@@ -155,10 +126,10 @@ export default function HeroSection() {
             {/* Main Headline & Subheading */}
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
-                {lang === 'hi' ? headerData.headingHi : headerData.headingEn}
+                {lang === 'hi' ? SITE_CONFIG.name.hi : SITE_CONFIG.name.en}
               </h1>
               <h2 className="text-base sm:text-lg md:text-xl text-gold font-bold tracking-wider uppercase font-cinzel">
-                {lang === 'hi' ? headerData.subheadingHi : headerData.subheadingEn}
+                {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
               </h2>
             </div>
 

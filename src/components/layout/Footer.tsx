@@ -20,7 +20,7 @@ export default function Footer() {
   const { lang } = useLanguage();
 
   return (
-    <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-20 pb-12 sacred-pattern">
+    <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-16 pb-8 sacred-pattern">
       {/* Decorative background light gradient */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/3 rounded-full blur-[120px] pointer-events-none" />
 

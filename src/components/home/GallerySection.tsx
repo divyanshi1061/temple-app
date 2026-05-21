@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { fadeInUp } from "@/animations/variants";
@@ -99,32 +99,7 @@ const CATEGORIES = [
 export default function GallerySection() {
   const { lang } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("all");
-  const [images, setImages] = useState<GalleryItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const res = await fetch("/api/admin/gallery");
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.length > 0) {
-            setImages(data);
-          } else {
-            setImages(DEFAULT_GALLERY);
-          }
-        } else {
-          setImages(DEFAULT_GALLERY);
-        }
-      } catch (error) {
-        console.error("Failed to fetch gallery images", error);
-        setImages(DEFAULT_GALLERY);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchImages();
-  }, []);
+  const [images, setImages] = useState<GalleryItem[]>(DEFAULT_GALLERY);
 
   const filtered = activeCategory === "all" 
     ? images 
@@ -161,9 +136,6 @@ export default function GallerySection() {
           ))}
         </div>
 
-        {loading ? (
-          <div className="text-center text-gray-500 py-10">Loading sacred gallery...</div>
-        ) : (
           <div className="columns-1 sm:columns-2 md:columns-3 gap-6 max-w-5xl mx-auto">
             <AnimatePresence mode="popLayout">
               {displayImages.map((item, idx) => {
@@ -213,7 +185,6 @@ export default function GallerySection() {
               })}
             </AnimatePresence>
           </div>
-        )}
 
         {/* View Full Gallery Link */}
         <motion.div className="mt-16 flex justify-center" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>

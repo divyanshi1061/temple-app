@@ -18,7 +18,6 @@ export default function FloatingContact() {
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp size={28} />
-        <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-ping opacity-30" />
       </a>
 
       <a

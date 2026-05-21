@@ -11,22 +11,12 @@ export default function ContactSection() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const res = await fetch("/api/admin/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
-      });
-      if (res.ok) {
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 3000);
-        setForm({ name: "", phone: "", email: "", service: "", message: "" });
-      }
-    } catch (error) {
-      console.error("Failed to submit inquiry", error);
-    }
+    // Simulate successful form submission immediately
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+    setForm({ name: "", phone: "", email: "", service: "", message: "" });
   };
 
   const contactInfo = [

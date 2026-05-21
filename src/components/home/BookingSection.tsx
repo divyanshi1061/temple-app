@@ -18,34 +18,14 @@ export default function BookingSection() {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInquiry = async (e: React.FormEvent) => {
+  const handleInquiry = (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const serviceName = selectedService ? SERVICES.find(s => s.id === selectedService)?.title.en : "General Inquiry";
-      const payload = {
-        name: formData.name,
-        phone: formData.phone,
-        email: "Not provided", // Booking section doesn't have email field currently
-        service: serviceName,
-        message: formData.message
-      };
-
-      const res = await fetch("/api/admin/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      
-      if (res.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({ name: "", phone: "", message: "" });
-        }, 3000);
-      }
-    } catch (error) {
-      console.error("Failed to submit inquiry", error);
-    }
+    // Simulate successful form submission immediately
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: "", phone: "", message: "" });
+    }, 3000);
   };
 
   const handleWhatsApp = () => {

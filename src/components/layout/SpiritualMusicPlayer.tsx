@@ -79,11 +79,6 @@ export default function SpiritualMusicPlayer() {
         }`}
         title={lang === "en" ? "Toggle Sacred Music" : "संगीत चालू/बंद करें"}
       >
-        {/* Pulsing Ring overlay */}
-        {isPlaying && (
-          <span className="absolute inset-0 rounded-full border border-orange-400 opacity-60 animate-ping pointer-events-none" />
-        )}
-
         {/* Rotating Sacred Chakra SVG background */}
         <motion.div
           animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
@@ -106,18 +101,9 @@ export default function SpiritualMusicPlayer() {
           </svg>
         </motion.div>
 
-        {/* Equalizer Wave / Static Note */}
+        {/* Static Note */}
         <div className="relative flex items-center justify-center gap-[3px] z-10">
-          {isPlaying ? (
-            <div className="flex items-end gap-[3px] h-4">
-              <span className="w-[3px] bg-white rounded-full animate-[soundWave_1s_infinite_alternate]" style={{ animationDelay: "0.1s" }} />
-              <span className="w-[3px] bg-white rounded-full animate-[soundWave_1.2s_infinite_alternate]" style={{ animationDelay: "0.3s" }} />
-              <span className="w-[3px] bg-white rounded-full animate-[soundWave_0.8s_infinite_alternate]" style={{ animationDelay: "0.5s" }} />
-              <span className="w-[3px] bg-white rounded-full animate-[soundWave_1.1s_infinite_alternate]" style={{ animationDelay: "0.2s" }} />
-            </div>
-          ) : (
-            <FaMusic className="w-5 h-5" />
-          )}
+          <FaMusic className="w-5 h-5" />
         </div>
       </motion.button>
 

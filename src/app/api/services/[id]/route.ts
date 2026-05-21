@@ -1,26 +1,26 @@
 import { NextResponse } from 'next/server';
-import connectToDatabase from '@/lib/db';
-import { Service } from '@/lib/models';
 import { SERVICES } from '@/lib/constants';
 
 export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    await connectToDatabase();
     const resolvedParams = await params;
-    const service = await Service.findById(resolvedParams.id);
-    if (!service) {
+    const s = SERVICES.find(item => item.id === resolvedParams.id);
+    if (!s) {
         return NextResponse.json({ error: 'Service not found' }, { status: 404 });
     }
     
-    const sObj = service.toObject();
-    if (!sObj.image) {
-      const constantService = SERVICES.find(cs => cs.title.en === sObj.titleEn || cs.title.hi === sObj.titleHi);
-      if (constantService && constantService.image) {
-        sObj.image = constantService.image;
-      } else {
-        sObj.image = '/new-havan-1.jpg'; // General fallback
-      }
-    }
+    const sObj = {
+      _id: s.id,
+      titleEn: s.title.en,
+      titleHi: s.title.hi,
+      descriptionEn: s.description.en,
+      descriptionHi: s.description.hi,
+      longDescriptionEn: s.longDescription?.en || "",
+      longDescriptionHi: s.longDescription?.hi || "",
+      category: s.category || "puja",
+      image: s.image || "/new-havan-1.jpg",
+      popular: s.popular || false,
+    };
 
     return NextResponse.json(sObj);
   } catch (error) {
