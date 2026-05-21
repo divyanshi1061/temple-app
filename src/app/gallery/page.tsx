@@ -44,15 +44,6 @@ const COLUMN_1_PHOTOS: PhotoItem[] = [
     descHi: "नलखेड़ा धाम में गहरे ध्यान और दिव्य मार्गदर्शन में पं. रुद्राक्ष राजपुरोहित।"
   },
   {
-    id: "col1-2",
-    url: "/mata-idol-1.jpg",
-    aspect: "aspect-[3/4]",
-    titleEn: "Maa Baglamukhi Sanctum",
-    titleHi: "माँ बगलामुखी गर्भगृह",
-    descEn: "The divine golden idol of Maa Baglamukhi Devi at Nalkheda Dham Temple.",
-    descHi: "नलखेड़ा धाम मंदिर में माँ बगलामुखी देवी की दिव्य स्वर्ण प्रतिमा।"
-  },
-  {
     id: "col1-3",
     url: "/havan-upload-1.jpg",
     aspect: "aspect-[3/4]",
@@ -70,6 +61,16 @@ const COLUMN_1_PHOTOS: PhotoItem[] = [
     descEn: "The magnificent night view of the illuminated Maa Baglamukhi temple.",
     descHi: "रोशनी से जगमगाते माँ बगलामुखी मंदिर का भव्य रात्रिकालीन दृश्य।"
   }
+  ,
+  {
+    id: "col1-5",
+    url: "/real-gallery-5.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa Baglamukhi Shringar",
+    titleHi: "माँ बगलामुखी श्रृंगार",
+    descEn: "A ceremonial portrait from the gallery collection.",
+    descHi: "गैलरी संग्रह से एक सांस्कृतिक पूजापूर्ण चित्रण।"
+  }
 ];
 
 const COLUMN_2_PHOTOS: PhotoItem[] = [
@@ -81,6 +82,15 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     titleHi: "सिद्ध पीठ पूजा",
     descEn: "Intricate arrangements during a special puja ritual at the temple.",
     descHi: "मंदिर में एक विशेष पूजा अनुष्ठान के दौरान जटिल व्यवस्था।"
+  },
+  {
+    id: "col2-2",
+    url: "/new-havan-2.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Havan Ritual 2",
+    titleHi: "हवन अनुष्ठान 2",
+    descEn: "A second sacred Havan ritual captured during the devotions at Nalkheda Dham.",
+    descHi: "नलखेड़ा धाम में समर्पण के दौरान एक दूसरा पवित्र हवन अनुष्ठान।"
   },
   {
     id: "col2-3",
@@ -106,15 +116,52 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     titleHi: "भक्तों का जमघट",
     descEn: "Devotees joining hands in prayer during a powerful community havan.",
     descHi: "एक शक्तिशाली सामूहिक हवन के दौरान प्रार्थना में हाथ जोड़ते भक्तगण।"
-  },
+  }
+  ,
   {
     id: "col2-5",
-    url: "/new-havan-3.jpg",
-    aspect: "aspect-[4/3]",
-    titleEn: "Devotees Gathering",
-    titleHi: "भक्तों का जमघट",
-    descEn: "Devotees joining hands in prayer during a powerful community havan.",
-    descHi: "एक शक्तिशाली सामूहिक हवन के दौरान प्रार्थना में हाथ जोड़ते भक्तगण।"
+    url: "/new-upload-10.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Community Ritual",
+    titleHi: "सामुदायिक अनुष्ठान",
+    descEn: "Captured moments from recent temple activities.",
+    descHi: "हालिया मंदिर गतिविधियों से लिए गए दृश्य।"
+  },
+  {
+    id: "col2-6",
+    url: "/new-upload-9.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Temple Offering",
+    titleHi: "मंदिर अर्पण",
+    descEn: "Offerings prepared for the evening puja.",
+    descHi: "शाम की पूजा के लिए तैयार किए गए अर्पण।"
+  },
+  {
+    id: "col2-7",
+    url: "/new-upload-8.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Puja Preparation",
+    titleHi: "पूजा तैयारी",
+    descEn: "Preparations and arrangements behind the ritual.",
+    descHi: "अनुष्ठान के पीछे की तैयारी और व्यवस्थाएं।"
+  },
+  {
+    id: "col2-8",
+    url: "/new-upload-7.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Altar Details",
+    titleHi: "वेदिका विवरण",
+    descEn: "Close-up details from the temple altar.",
+    descHi: "मंदिर वेदी के क्लोज़-अप विवरण।"
+  },
+  {
+    id: "col2-9",
+    url: "/IMG_5116.JPG.jpeg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Devotional Moment",
+    titleHi: "भक्ति क्षण",
+    descEn: "A candid devotional photograph.",
+    descHi: "एक सहज भक्ति पूर्ण फ़ोटो।"
   }
 ];
 
@@ -139,12 +186,12 @@ const COLUMN_3_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-3",
-    url: "/mata-idol-2.jpg",
-    aspect: "aspect-square",
-    titleEn: "Sacred Shrine Deity",
-    titleHi: "पवित्र गर्भगृह विग्रह",
-    descEn: "A detailed view of the deity decorated with sacred yellow garments and flowers.",
-    descHi: "पीले वस्त्रों और फूलों से सुसज्जित देवी माँ का विस्तृत दर्शन।"
+    url: "/mata-baglamukhi.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa Baglamukhi Idol",
+    titleHi: "माँ बगलामुखी प्रतिमा",
+    descEn: "The divine idol of Maa Baglamukhi decorated for the temple ceremony.",
+    descHi: "मंदिर समारोह के लिए सजाई गई माँ बगलामुखी की दिव्य मूर्ति।"
   },
   {
     id: "col3-4",
@@ -163,6 +210,25 @@ const COLUMN_3_PHOTOS: PhotoItem[] = [
     titleHi: "वैदिक पूजा थाली",
     descEn: "A close-up of the ceremonial plate arranged with kumkum, flowers, and lamps.",
     descHi: "कुमकुम, फूलों और दीयों से सजी हुई अनुष्ठान की थाली।"
+  }
+  ,
+  {
+    id: "col3-6",
+    url: "/IMG_5112.JPG.jpeg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Temple Devotee",
+    titleHi: "मंदिर श्रद्धालु",
+    descEn: "Portrait from the temple gathering.",
+    descHi: "मंदिर के समागम से लिया गया चित्र।"
+  },
+  {
+    id: "col3-7",
+    url: "/mata.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa Image",
+    titleHi: "माँ का चित्र",
+    descEn: "A revered portrait used in ceremonial rites.",
+    descHi: "अनुष्ठानों में उपयोग किया जाने वाला पूजनीय चित्र।"
   }
 ];
 
@@ -195,16 +261,25 @@ const COLUMN_4_PHOTOS: PhotoItem[] = [
     descHi: "शाम की महा-आरती की प्रतीक्षा में एक साथ बैठे श्रद्धालु।"
   },
   {
-    id: "col4-4",
-    url: "/new-havan-4.png",
-    aspect: "aspect-[4/3]",
-    titleEn: "Maa Baglamukhi Darshan",
-    titleHi: "माँ बगलामुखी दर्शन",
-    descEn: "A special puja moment captured during the Maa Baglamukhi darshan ceremony.",
-    descHi: "माँ बगलामुखी दर्शन समारोह के दौरान लिया गया विशेष पूजा क्षण।"
+    id: "col4-6",
+    url: "/temple-lion-gate.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Temple Lion Gate",
+    titleHi: "मंदिर सिंह द्वार",
+    descEn: "The ornate lion gate at the temple entrance symbolizing strength and protection.",
+    descHi: "शक्ति और सुरक्षा का प्रतीक मंदिर के प्रवेश द्वार का शानदार सिंह द्वार।"
   },
   {
-    id: "col4-5",
+    id: "col4-7",
+    url: "/temple-dome-night.jpg",
+    aspect: "aspect-[4/3]",
+    titleEn: "Temple Dome Night",
+    titleHi: "मंदिर गुंबद रात में",
+    descEn: "The illuminated dome captured against the night sky.",
+    descHi: "रात्रि आकाश के खिलाफ रोशन गुंबद का दृश्य।"
+  },
+  {
+    id: "col4-8",
     url: "/temple-night-2.jpg",
     aspect: "aspect-square",
     titleEn: "Gilded Temple architecture",

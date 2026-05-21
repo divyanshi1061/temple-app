@@ -40,12 +40,12 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-3",
-    url: "/mata-idol-1.jpg",
+    url: "/new-havan-2.jpg",
     aspect: "aspect-[3/4]",
-    titleEn: "Maa Baglamukhi Sanctum",
-    titleHi: "माँ बगलामुखी गर्भगृह",
-    descEn: "The divine golden idol of Maa Baglamukhi Devi at Nalkheda Dham Temple.",
-    descHi: "नलखेड़ा धाम मंदिर में माँ बगलामुखी देवी की दिव्य स्वर्ण प्रतिमा।"
+    titleEn: "Havan Ritual 2",
+    titleHi: "हवन अनुष्ठान 2",
+    descEn: "A second sacred Havan ritual captured during the devotions at Nalkheda Dham.",
+    descHi: "नलखेड़ा धाम में समर्पण के दौरान एक दूसरा पवित्र हवन अनुष्ठान।"
   },
   {
     id: "home-g-4",
@@ -73,6 +73,25 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
     titleHi: "मंदिर प्रवेश द्वार",
     descEn: "The decorative and grand entrance welcoming devotees into the temple.",
     descHi: "भक्तों का मंदिर में स्वागत करता हुआ भव्य और कलात्मक प्रवेश द्वार।"
+  }
+  ,
+  {
+    id: "home-g-7",
+    url: "/mata-baglamukhi.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa Baglamukhi",
+    titleHi: "माँ बगलामुखी",
+    descEn: "Revered portrait of Maa Baglamukhi from the temple gallery.",
+    descHi: "मंदिर गैलरी से माँ बगलामुखी का पूजनीय चित्र।"
+  },
+  {
+    id: "home-g-8",
+    url: "/mata.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maa (Devotional)",
+    titleHi: "माँ (भक्ति)",
+    descEn: "A devotional image used during special ceremonies.",
+    descHi: "विशेष अनुष्ठानों के दौरान उपयोग किया जाने वाला भक्ति चित्र।"
   }
 ];
 
@@ -125,23 +144,22 @@ export default function GallerySection() {
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
         </motion.div>
 
-        {/* Clean, Staggered Grid Layout (Staggered aspect ratios, grayscale hover, borderless) */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 max-w-5xl mx-auto">
-          {SHOWCASE_PHOTOS.map((item) => (
+        {/* Uniform 6-image gallery grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {SHOWCASE_PHOTOS.slice(0, 6).map((item) => (
             <motion.div
               key={item.id}
               onClick={() => setSelectedPhoto(item)}
-              className="break-inside-avoid mb-6 group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300 rounded-lg"
+              className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300 rounded-3xl"
               whileHover={{ scale: 0.995 }}
               transition={{ duration: 0.4 }}
             >
-              <div className={`relative w-full ${item.aspect} overflow-hidden`}>
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
                 <img
                   src={item.url}
                   alt={lang === "en" ? item.titleEn : item.titleHi}
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
               </div>
             </motion.div>
           ))}
