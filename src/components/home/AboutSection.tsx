@@ -47,7 +47,7 @@ export default function AboutSection() {
                 alt="Acharya Pt. Rudraksh Rajpurohit" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/acharya-rudraksh.jpg';
+                  (e.target as HTMLImageElement).src = '/acharya-new.jpg';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -60,7 +60,7 @@ export default function AboutSection() {
                   src="/acharya-new.jpg" 
                   alt="Acharya" 
                   className="w-full h-full object-cover" 
-                  onError={(e) => { (e.target as HTMLImageElement).src = '/acharya-rudraksh.jpg'; }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/acharya-new.jpg'; }}
                 />
               </div>
               <div className="w-[1px] h-7 bg-gray-200" />

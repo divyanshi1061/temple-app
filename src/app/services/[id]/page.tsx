@@ -89,7 +89,7 @@ export default function ServiceDetailPage() {
     "areaServed": "Worldwide",
     "serviceType": "Vedic Puja & Tantra Havan",
     "category": service.category || "Religious Service",
-    "image": service.image ? (service.image.startsWith('http') ? service.image : `https://rudrakshbaglamukhi.com/${service.image}`) : undefined
+    "image": service.image ? (service.image.startsWith('http') ? service.image : `https://rudrakshbaglamukhi.com${service.image.startsWith('/') ? '' : '/'}${service.image}`) : undefined
   };
 
   const whatsappMessage = encodeURIComponent(
@@ -137,7 +137,7 @@ export default function ServiceDetailPage() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                 <img 
-                  src={service.image.startsWith('http') ? service.image : '/' + service.image} 
+                  src={service.image.startsWith('http') ? service.image : (service.image.startsWith('/') ? service.image : '/' + service.image)} 
                   alt={`${title} Puja Havan Ceremony performed by Vedic Priest Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Maa Baglamukhi Dham, Nalkheda`}
                   className="w-full h-full object-cover"
                 />

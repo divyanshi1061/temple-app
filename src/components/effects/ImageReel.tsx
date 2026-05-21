@@ -13,7 +13,7 @@ const REEL_IMAGES = [
   { src: "/havan-upload-1.jpg", alt: "Sacred Havan Fire" },
   { src: "/havan-upload-2.jpg", alt: "Maa Baglamukhi Havan Ritual" },
   { src: "/havan-upload-3.jpg", alt: "Lal Mirchi Havan" },
-  { src: "/havan-upload-4.jpg", alt: "Tantric Havan Puja" },
+  { src: "/shatru-stambhan.png", alt: "Tantric Havan Puja" },
   { src: "/gallery-1.png", alt: "Maa Baglamukhi Shringar" },
   { src: "/gallery-4.png", alt: "Mata Rani Bhog" },
   { src: "/gallery-5.png", alt: "Purnahuti Ceremony" },
@@ -89,12 +89,7 @@ export default function ImageReel() {
                 className="transition-transform duration-700 group-hover:scale-105"
               />
 
-              {/* Text label on Hover */}
-              <div className="absolute bottom-4 left-5 right-5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-white text-xs font-bold uppercase tracking-wider font-cinzel">
-                  {img.alt}
-                </p>
-              </div>
+
             </div>
           ))}
         </div>

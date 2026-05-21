@@ -16,7 +16,6 @@ type GalleryItem = {
 
 const DEFAULT_GALLERY = [
   { _id: "1", title: "", category: "gallery", url: "acharya-new.jpg" },
-  { _id: "2", title: "", category: "gallery", url: "acharya-rudraksh.jpg" },
   { _id: "3", title: "", category: "gallery", url: "gallery-1.png" },
   { _id: "4", title: "", category: "gallery", url: "gallery-2.png" },
   { _id: "5", title: "", category: "gallery", url: "gallery-3.png" },
@@ -25,7 +24,6 @@ const DEFAULT_GALLERY = [
   { _id: "8", title: "", category: "gallery", url: "havan-upload-1.jpg" },
   { _id: "9", title: "", category: "gallery", url: "havan-upload-2.jpg" },
   { _id: "10", title: "", category: "gallery", url: "havan-upload-3.jpg" },
-  { _id: "11", title: "", category: "gallery", url: "havan-upload-4.jpg" },
   { _id: "12", title: "", category: "gallery", url: "lakshmi-prapti.png" },
   { _id: "13", title: "", category: "gallery", url: "mata-baglamukhi.jpg" },
   { _id: "14", title: "", category: "gallery", url: "mata-idol-1.jpg" },
@@ -47,7 +45,6 @@ const DEFAULT_GALLERY = [
   { _id: "30", title: "", category: "gallery", url: "pitra-kaal-sarp.png" },
   { _id: "31", title: "", category: "gallery", url: "real-gallery-1.jpg" },
   { _id: "32", title: "", category: "gallery", url: "real-gallery-2.jpg" },
-  { _id: "33", title: "", category: "gallery", url: "real-gallery-3.jpg" },
   { _id: "34", title: "", category: "gallery", url: "real-gallery-4.jpg" },
   { _id: "35", title: "", category: "gallery", url: "real-gallery-5.jpg" },
   { _id: "36", title: "", category: "gallery", url: "real-havan-kund.jpg" },
@@ -88,7 +85,11 @@ const DEFAULT_GALLERY = [
   { _id: "71", title: "", category: "gallery", url: "new-upload-7.jpg" },
   { _id: "72", title: "", category: "gallery", url: "new-upload-8.jpg" },
   { _id: "73", title: "", category: "gallery", url: "new-upload-9.jpg" },
-  { _id: "74", title: "", category: "gallery", url: "new-upload-10.jpg" }];
+  { _id: "74", title: "", category: "gallery", url: "new-upload-10.jpg" },
+  { _id: "75", title: "Maha Mrityunjay Anusthan", category: "gallery", url: "mrityunjay-new.jpg" },
+  { _id: "76", title: "Maa Baglamukhi Anusthan", category: "gallery", url: "baglamukhi-anusthan-new.jpg" },
+  { _id: "77", title: "Sacred Yajna Ceremony", category: "gallery", url: "gallery-new-3.jpg" }
+];
 
 const CATEGORIES = [
   { id: "all", label: { en: "All", hi: "सभी" } },

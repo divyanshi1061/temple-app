@@ -81,27 +81,6 @@ export const SERVICES = [
     popular: true,
   },
   {
-    id: "baglamukhi-mukhi-havan",
-    title: { en: "Maa Baglamukhi Mukhi Havan", hi: "माँ बगलामुखी मुखी हवन" },
-    description: {
-      en: "Special Baglamukhi mukhi havan performed for focused protection, victory, and removal of stubborn obstacles.",
-      hi: "विशेष बगलामुखी मुखी हवन, जो केंद्रित सुरक्षा, विजय और अड़ियल बाधाओं के निवारण के लिए किया जाता है।"
-    },
-    longDescription: {
-      en: "Maa Baglamukhi Mukhi Havan is a dedicated fire ritual used when a devotee needs sharp protection, strong stambhan, and immediate relief from hostile energy. It is performed with precise samagri, mantra chanting, and Vedic discipline to strengthen divine support and bring clarity, courage, and victory.",
-      hi: "माँ बगलामुखी मुखी हवन एक समर्पित अग्नि अनुष्ठान है, जिसका उपयोग तब किया जाता है जब भक्त को तीव्र सुरक्षा, प्रबल स्तंभन और शत्रु-ऊर्जा से तत्काल राहत की आवश्यकता हो। इसे विशिष्ट सामग्री, मंत्र-जाप और वैदिक अनुशासन के साथ किया जाता है ताकि दिव्य संरक्षण, स्पष्टता, साहस और विजय प्राप्त हो सके।"
-    },
-    benefits: {
-      en: ["Focused divine protection", "Support in difficult situations", "Obstacle removal and victory"],
-      hi: ["केंद्रित दिव्य सुरक्षा", "कठिन परिस्थितियों में सहारा", "बाधा निवारण और विजय"]
-    },
-    duration: { en: "1 Day", hi: "1 दिन" },
-    icon: "BMH",
-    image: "/new-havan-5.jpg",
-    category: "havan",
-    popular: true,
-  },
-  {
     id: "lal-mirchi-havan",
     title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" },
     description: {
@@ -139,7 +118,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "BA",
-    image: "/new-havan-4.png",
+    image: "/baglamukhi-anusthan-main.png",
     category: "anusthan",
     popular: true,
   },
@@ -185,23 +164,43 @@ export const SERVICES = [
     category: "puja",
   },
   {
-    id: "pitra-dosh-kaal-sarp",
-    title: { en: "Pitra Dosh & Kaal Sarp Dosh Nivaran", hi: "पितृ दोष और काल सर्प दोष निवारण" },
+    id: "pitra-dosh-nivaran",
+    title: { en: "Pitra Dosh Nivaran", hi: "पितृ दोष निवारण" },
     description: {
-      en: "Specialized pujas to remove ancestral curses (Pitra Dosh) and astrological serpent alignments (Kaal Sarp).",
-      hi: "पैतृक श्राप (पितृ दोष) और ज्योतिषीय सर्प संरेखण (काल सर्प दोष) को दूर करने के लिए विशेष पूजा।"
+      en: "Specialized Vedic puja to resolve ancestral obstacles, curses and restore family peace.",
+      hi: "पैतृक बाधाओं, दोषों को दूर करने और परिवार में सुख-शांति बहाल करने के लिए विशेष वैदिक पूजा।"
     },
     longDescription: {
-      en: "Pitra Dosh arises from displeased ancestors, causing unexplainable hurdles, financial ruin, and lack of progeny. Kaal Sarp Dosh occurs when all planets align between Rahu and Ketu, causing extreme struggles. Acharya Pt. Rudraksh Rajpurohit performs potent Vedic remedies like Narayan Bali and specialized Havans to permanently eradicate these severe doshas.",
-      hi: "पितृ दोष अप्रसन्न पूर्वजों के कारण उत्पन्न होता है, जिससे अस्पष्ट बाधाएं, वित्तीय बर्बादी और संतान की कमी होती है। काल सर्प दोष तब होता है जब सभी ग्रह राहु और केतु के बीच संरेखित होते हैं, जिससे अत्यधिक संघर्ष होता है। आचार्य पं. रुद्राक्ष राजपुरोहित इन गंभीर दोषों को स्थायी रूप से समाप्त करने के लिए नारायण बली और विशेष हवन जैसे शक्तिशाली वैदिक उपाय करते हैं।"
+      en: "Pitra Dosh arises from displeased ancestral spirits or unfulfilled ancestral karmas, causing unexplainable hurdles, continuous failures, financial distress, and progeny-related obstacles. Acharya Pt. Rudraksh Rajpurohit performs detailed ancestral pacification rituals and Narayan Bali Pujas at Nalkheda Peeth to permanently liberate the family from these blockages.",
+      hi: "पितृ दोष पूर्वजों की अप्रसन्नता या अतृप्ति के कारण उत्पन्न होता है, जिससे जीवन में अकारण बाधाएं, निरंतर विफलताएं, आर्थिक तंगी और संतान सुख में रुकावट आती है। आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा पीठ पर नारायण बलि और पितृ शांति अनुष्ठान कर परिवार को इन दोषों से मुक्ति दिलाते हैं।"
     },
     benefits: {
-      en: ["Removal of ancestral blockages", "Relief from continuous life struggles", "Restoration of family prosperity"],
-      hi: ["पैतृक बाधाओं का निवारण", "निरंतर जीवन संघर्षों से राहत", "पारिवारिक समृद्धि की बहाली"]
+      en: ["Eradication of ancestral obstacles", "Restoration of family harmony and peace", "Blessings of ancestors for growth and progeny"],
+      hi: ["पैतृक बाधाओं और दोषों का पूर्ण निवारण", "पारिवारिक सुख, शांति और समृद्धि की बहाली", "वंश वृद्धि और उन्नति के लिए पितरों का आशीर्वाद"]
     },
     duration: { en: "2 Days", hi: "2 दिन" },
-    icon: "PK",
+    icon: "PD",
     image: "/pitra-kaal-sarp.png",
+    category: "puja",
+  },
+  {
+    id: "kaal-sarp-dosh-nivaran",
+    title: { en: "Kaal Sarp Dosh Nivaran", hi: "काल सर्प दोष निवारण" },
+    description: {
+      en: "Astrological serpent alignment remedies to resolve severe struggles, sudden setbacks, and delay in growth.",
+      hi: "अत्यधिक संघर्षों, अचानक आने वाली बाधाओं और प्रगति में देरी को दूर करने के लिए विशेष काल सर्प योग निवारण पूजा।"
+    },
+    longDescription: {
+      en: "Kaal Sarp Dosh occurs when all seven primary planets are hemmed between Rahu and Ketu in the birth chart. This causes extreme struggles, health issues, professional instability, and constant mental agony. A specialized Vedic Puja and Havan at the banks of the Lakhundar River in Nalkheda are conducted to pacify the serpent deities and neutralize Rahu-Ketu influences.",
+      hi: "कुंडली में जब सभी सातों मुख्य ग्रह राहु और केतु के मध्य आ जाते हैं, तब काल सर्प दोष का निर्माण होता है। यह जीवन में अत्यधिक संघर्ष, स्वास्थ्य समस्याएं, करियर में अस्थिरता और मानसिक तनाव पैदा करता है। नलखेड़ा में लखूंदर नदी के तट पर विशेष पूजा और हवन के माध्यम से नाग देवताओं को शांत कर राहु-केतु के कुप्रभावों को दूर किया जाता है।"
+    },
+    benefits: {
+      en: ["Relief from sudden setbacks and professional delays", "Improved mental stability and clarity", "Removal of fear of failures and chronic struggles"],
+      hi: ["करियर में अचानक आने वाले उतार-चढ़ाव से राहत", "मानसिक स्थिरता, सुख और स्पष्टता की प्राप्ति", "अकारण भय और निरंतर संघर्षों का अंत"]
+    },
+    duration: { en: "1-2 Days", hi: "1-2 दिन" },
+    icon: "KS",
+    image: "/kaal-sarp-puja.png",
     category: "puja",
   },
   {
@@ -225,23 +224,43 @@ export const SERVICES = [
     category: "anusthan",
   },
   {
-    id: "shatru-vinash",
-    title: { en: "Shatru Stambhan, Vinash & Rog Nash", hi: "शत्रु स्तंभन, विनाश और रोग नाश" },
+    id: "shatru-stambhan",
+    title: { en: "Shatru Stambhan", hi: "शत्रु स्तंभन" },
     description: {
-      en: "Tantric rituals to paralyze enemy actions, destroy hostility, and eradicate persistent diseases.",
-      hi: "शत्रु के कार्यों को पंगु बनाने, शत्रुता को नष्ट करने और लगातार बीमारियों को मिटाने के लिए तांत्रिक अनुष्ठान।"
+      en: "Tantric rituals to paralyze enemy actions and freeze their hostile plots or speech.",
+      hi: "शत्रु के हानिकारक कार्यों को पंगु बनाने और उनकी शत्रुतापूर्ण योजनाओं व वाणी का स्तंभन करने के लिए तांत्रिक अनुष्ठान।"
     },
     longDescription: {
-      en: "When faced with ruthless enemies or incurable ailments, this fierce invocation of Maa Baglamukhi is performed. It aims at 'Stambhan'—freezing the opponent's speech and thoughts, rendering them powerless, while simultaneously eliminating severe diseases (Rog Nash) that plague the devotee.",
-      hi: "जब क्रूर दुश्मनों या लाइलाज बीमारियों का सामना करना पड़ता है, तो माँ बगलामुखी का यह उग्र आह्वान किया जाता है। इसका उद्देश्य 'स्तंभन' है-प्रतिद्वंद्वी के भाषण और विचारों को स्थिर करना, उन्हें शक्तिहीन बनाना, जबकि एक ही समय में भक्त को परेशान करने वाली गंभीर बीमारियों (रोग नाश) को खत्म करना।"
+      en: "This intense invocation of Maa Baglamukhi is performed to freeze the actions, thoughts, and speech of hostile opponents. It renders adversaries powerless, offering complete protection and peace of mind to the devotee in legal, personal, or professional conflicts.",
+      hi: "माँ बगलामुखी का यह तीव्र अनुष्ठान शत्रुओं के कार्यों, विचारों और वाणी को स्थिर (स्तंभित) करने के लिए किया जाता है। यह विरोधियों को निष्प्रभावी कर साधक को कानूनी, व्यक्तिगत या व्यावसायिक विवादों में पूर्ण सुरक्षा प्रदान करता है।"
     },
     benefits: {
-      en: ["Total neutralization of enemies", "Relief from chronic or strange ailments", "Peace of mind and security"],
-      hi: ["शत्रुओं का पूर्ण बेअसर होना", "पुरानी या अजीब बीमारियों से राहत", "मन की शांति और सुरक्षा"]
+      en: ["Paralysis and freezing of enemy plots", "Absolute victory in conflicts", "Impenetrable shield of protection"],
+      hi: ["शत्रु की साजिशों का स्तंभन", "विवादों और मुकदमों में पूर्ण विजय", "सुरक्षा का अभेद्य कवच"]
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "SV",
-    image: "/havan-upload-4.jpg",
+    image: "/shatru-stambhan.png",
+    category: "anusthan",
+  },
+  {
+    id: "rog-nash",
+    title: { en: "Rog Nash Anusthan", hi: "रोग नाश अनुष्ठान" },
+    description: {
+      en: "Divine Tantric invocation of Maa Baglamukhi to eradicate chronic diseases and restore physical wellness.",
+      hi: "पुरानी व गंभीर बीमारियों को नष्ट करने और शारीरिक स्वास्थ्य की पुनः प्राप्ति के लिए माँ बगलामुखी का दिव्य अनुष्ठान।"
+    },
+    longDescription: {
+      en: "When medical treatments fall short or when plagued by persistent physical or mental ailments, the Rog Nash Anusthan invokes the healing and protective energies of Goddess Baglamukhi. Special herb offerings and Vedic chanting are conducted to eliminate toxins, disease-causing doshas, and restore complete health.",
+      hi: "जब चिकित्सीय उपचारों से पर्याप्त लाभ न मिल रहा हो या लगातार शारीरिक और मानसिक कष्ट परेशान कर रहे हों, तब माँ बगलामुखी के रोग नाश अनुष्ठान द्वारा स्वास्थ्य प्रदाता ऊर्जाओं का आह्वान किया जाता है। विशेष औषधियों की आहुति और मंत्र जाप के द्वारा रोगों और शारीरिक दोषों का निवारण किया जाता है।"
+    },
+    benefits: {
+      en: ["Eradication of chronic and persistent diseases", "Restoration of health and physical strength", "Mental peace and elimination of health anxiety"],
+      hi: ["पुरानी और लाइलाज बीमारियों का अंत", "उत्तम स्वास्थ्य और शारीरिक बल की प्राप्ति", "मानसिक शांति और स्वास्थ्य संबंधी चिंताओं से मुक्ति"]
+    },
+    duration: { en: "3-5 Days", hi: "3-5 दिन" },
+    icon: "RN",
+    image: "/rog-nash.png",
     category: "anusthan",
   },
   {
@@ -381,27 +400,7 @@ export const SERVICES = [
     },
     duration: { en: "3 Days", hi: "3 दिन" },
     icon: "AK",
-    image: "/vashikaran-akarshan.png",
-    category: "anusthan",
-  },
-  {
-    id: "vashikaran-moh-ucchatan",
-    title: { en: "Vashikaran Moh Ucchatan", hi: "वशीकरण मोह उच्चाटन" },
-    description: {
-      en: "Comprehensive ritual to manage relations, clear toxic attachments, and resolve severe disputes.",
-      hi: "संबंधों को प्रबंधित करने, जहरीले जुड़ाव को दूर करने और गंभीर विवादों को सुलझाने के लिए व्यापक अनुष्ठान।"
-    },
-    longDescription: {
-      en: "This powerful combined ritual brings together the forces of Vashikaran (ethical attraction/influence), Moh (affection management), and Ucchatan (detachment/separation from negative influences). It is specifically executed to free a family member from bad company or addiction, resolve critical marital discords, and eliminate toxic emotional dependencies.",
-      hi: "यह शक्तिशाली संयुक्त अनुष्ठान वशीकरण (नैतिक आकर्षण/प्रभाव), मोह (स्नेह प्रबंधन), और उच्चाटन (नकारात्मक प्रभावों से अलगाव/दूरी) की शक्तियों को एक साथ लाता है। यह विशेष रूप से किसी पारिवारिक सदस्य को बुरी संगति या व्यसन से मुक्त करने, गंभीर वैवाहिक कलह को सुलझाने के लिए किया जाता है।"
-    },
-    benefits: {
-      en: ["Freedom from toxic bonds and bad company", "Curing harmful addictions", "Resolving intense marital or familial discords", "Restoring emotional stability and control"],
-      hi: ["जहरीले रिश्तों और बुरी संगति से मुक्ति", "हानिकारक व्यसनों का निवारण", "तीव्र वैवाहिक या पारिवारिक कलह का समाधान", "भावनात्मक स्थिरता और नियंत्रण की बहाली"]
-    },
-    duration: { en: "5-7 Days", hi: "5-7 दिन" },
-    icon: "VMU",
-    image: "/moh-ucchatan.png",
+    image: "/akarshan-anusthan.png",
     category: "anusthan",
   },
   {

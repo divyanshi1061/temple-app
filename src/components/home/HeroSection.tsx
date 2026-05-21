@@ -55,6 +55,15 @@ export default function HeroSection() {
         }
       `}} />
 
+      {/* Spiritual Background Image Watermark */}
+      <motion.div className="absolute inset-0 z-0 pointer-events-none opacity-[0.12]" style={{ y }}>
+        <img
+          src="/hero-spiritual-bg.png"
+          alt="Sacred Spiritual Background"
+          className="w-full h-full object-cover object-center"
+        />
+      </motion.div>
+
       {/* Soft blurred background orbs */}
       <motion.div className="absolute inset-0 z-0 pointer-events-none" style={{ y }}>
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[100px] opacity-70 mix-blend-multiply" />

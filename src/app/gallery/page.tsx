@@ -26,6 +26,15 @@ type PhotoItem = {
 // Configured image data matching the reference image's grid layout structure
 const COLUMN_1_PHOTOS: PhotoItem[] = [
   {
+    id: "col1-new-1",
+    url: "/mrityunjay-new.jpg",
+    aspect: "aspect-[3/4]",
+    titleEn: "Maha Mrityunjay Anusthan",
+    titleHi: "महामृत्युंजय अनुष्ठान",
+    descEn: "Pt. Rudraksh Rajpurohit conducting the sacred Maha Mrityunjay Anusthan for health, healing, and longevity.",
+    descHi: "स्वास्थ्य, आरोग्य और दीर्घायु के लिए पं. रुद्राक्ष राजपुरोहित द्वारा पवित्र महामृत्युंजय अनुष्ठान का संपादन।"
+  },
+  {
     id: "col1-1",
     url: "/acharya-new.jpg",
     aspect: "aspect-[3/4]",
@@ -65,6 +74,15 @@ const COLUMN_1_PHOTOS: PhotoItem[] = [
 
 const COLUMN_2_PHOTOS: PhotoItem[] = [
   {
+    id: "col2-new-1",
+    url: "/baglamukhi-anusthan-new.jpg",
+    aspect: "aspect-[4/3]",
+    titleEn: "Maa Baglamukhi Anusthan",
+    titleHi: "माँ बगलामुखी अनुष्ठान",
+    descEn: "Sacred fire offerings and prayers conducted during the divine Maa Baglamukhi Anusthan.",
+    descHi: "दिव्य माँ बगलामुखी अनुष्ठान के दौरान संपन्न पवित्र अग्नि आहुति और प्रार्थनाएं।"
+  },
+  {
     id: "col2-1",
     url: "/new-havan-1.jpg",
     aspect: "aspect-[3/4]",
@@ -72,15 +90,6 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     titleHi: "सिद्ध पीठ पूजा",
     descEn: "Intricate arrangements during a special puja ritual at the temple.",
     descHi: "मंदिर में एक विशेष पूजा अनुष्ठान के दौरान जटिल व्यवस्था।"
-  },
-  {
-    id: "col2-2",
-    url: "/acharya-rudraksh.jpg",
-    aspect: "aspect-[3/4]",
-    titleEn: "Acharya Conducting Anusthan",
-    titleHi: "अनुष्ठान करते आचार्य जी",
-    descEn: "Vedic rites being guided by Acharya Pt. Rudraksh Rajpurohit.",
-    descHi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा निर्देशित वैदिक अनुष्ठान।"
   },
   {
     id: "col2-3",
@@ -119,6 +128,15 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
 ];
 
 const COLUMN_3_PHOTOS: PhotoItem[] = [
+  {
+    id: "col3-new-1",
+    url: "/gallery-new-3.jpg",
+    aspect: "aspect-[16/9]",
+    titleEn: "Sacred Yajna Ceremony",
+    titleHi: "यज्ञ एवं अनुष्ठान",
+    descEn: "Vedic Yajna and Havans guided by Acharya Pt. Rudraksh Rajpurohit at Nalkheda Dham.",
+    descHi: "नलखेड़ा धाम में आचार्य पं. रुद्राक्ष राजपुरोहित के मार्गदर्शन में संपन्न वैदिक यज्ञ और हवन।"
+  },
   {
     id: "col3-1",
     url: "/real-havan-kund.jpg",
@@ -193,15 +211,6 @@ const COLUMN_4_PHOTOS: PhotoItem[] = [
     titleHi: "साधकों का समागम",
     descEn: "Devotees sitting together waiting for the evening maha-aarti.",
     descHi: "शाम की महा-आरती की प्रतीक्षा में एक साथ बैठे श्रद्धालु।"
-  },
-  {
-    id: "col4-4",
-    url: "/havan-upload-4.jpg",
-    aspect: "aspect-[3/4]",
-    titleEn: "Sacred Flames of Yajna",
-    titleHi: "यज्ञ की पावन लपटें",
-    descEn: "The high-rising flames of the Baglamukhi havan invoking divine grace.",
-    descHi: "ईश्वरीय कृपा का आह्वान करती बगलामुखी हवन की ऊंची उठती लपटें।"
   },
   {
     id: "col4-5",
@@ -402,17 +411,8 @@ export default function GalleryPage() {
       </section>
 
       {/* 4. Bottom Full-Width Atmospheric Banner */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-black flex items-center justify-center">
-        <motion.img
-          src="/new-havan-4.png"
-          alt="Divine Fire Ritual at Nalkheda"
-          className="absolute inset-0 w-full h-full object-cover opacity-60 scale-105"
-          initial={{ y: 20 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          viewport={{ once: true }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-black/30" />
+      <section className="relative w-full h-[40vh] overflow-hidden bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 flex items-center justify-center border-t border-stone-850">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.08)_0%,transparent_70%)]" />
         
         <div className="relative z-10 text-center text-white px-6">
           <span className="text-[10px] tracking-[0.3em] uppercase text-orange-400 font-bold block mb-4">
