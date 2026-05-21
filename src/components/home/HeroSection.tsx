@@ -37,7 +37,17 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" ref={ref} className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-sacred-white pt-24">
+    <section
+      id="home"
+      ref={ref}
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-sacred-white pt-24"
+      style={{
+        backgroundImage: "url('/hero-spiritual-bg.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes spin-slow {
           0% { transform: rotate(0deg); }
@@ -106,8 +116,8 @@ export default function HeroSection() {
               {/* Main Photo Cutout Frame */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden border-8 border-white bg-white shadow-2xl scale-95 flex items-center justify-center">
                 <img
-                  src="/hero-spiritual-bg.png"
-                  alt="Spiritual hero background"
+                  src="/acharya-new.jpg"
+                  alt="New acharya portrait"
                   className="w-full h-full object-cover object-center scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/mata-baglamukhi.jpg';
