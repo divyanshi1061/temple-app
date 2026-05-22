@@ -26,7 +26,7 @@ export default function BookingSection() {
     }
 
     const serviceName = selectedService ? SERVICES.find(s => s.id === selectedService)?.title.en : "Puja/Havan";
-    const messageText = `Jai Maa Baglamukhi! Acharya Ji, I want to inquire about ${serviceName}. \nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    const messageText = `Jai Mata Di! Acharya Ji, I want to inquire about ${serviceName}. \nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     const bodyDelimiter = isIOS ? '&' : '?';
     const cleanPhone = formData.phone.trim().replace(/\s+/g, '');
@@ -43,7 +43,7 @@ export default function BookingSection() {
   const handleWhatsApp = () => {
     const serviceName = selectedService ? SERVICES.find(s => s.id === selectedService)?.title.en : "Puja/Havan";
     const text = encodeURIComponent(
-      `Jai Maa Baglamukhi! Acharya Ji, I want to inquire about ${serviceName}. \nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
+      `Jai Mata Di! Acharya Ji, I want to inquire about ${serviceName}. \nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
     );
     window.open(`https://wa.me/${SITE_CONFIG.whatsapp}?text=${text}`, "_blank");
   };

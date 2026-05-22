@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/animations/variants";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
@@ -57,6 +57,27 @@ const DEFAULT_TESTIMONIALS = [
 export default function TestimonialsSection() {
   const { lang } = useLanguage();
   const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
+
+  useEffect(() => {
+    const loadReviews = () => {
+      const saved = localStorage.getItem("user_reviews");
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setTestimonials([...DEFAULT_TESTIMONIALS, ...parsed]);
+          }
+        } catch (e) {
+          console.error("Failed to parse reviews", e);
+        }
+      }
+    };
+
+    loadReviews();
+
+    window.addEventListener("reviewsUpdated", loadReviews);
+    return () => window.removeEventListener("reviewsUpdated", loadReviews);
+  }, []);
 
   return (
     <section id="testimonials" className="relative py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50 border-t border-gray-100 sacred-pattern">

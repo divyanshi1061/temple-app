@@ -321,7 +321,7 @@ export const SERVICES = [
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "KM",
-    image: "/image.png",
+    image: "/karya-mukti.png",
     category: "puja",
   },
   {

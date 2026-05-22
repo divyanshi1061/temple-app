@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
+import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -159,7 +160,7 @@ export default function HeroSection() {
             </p>
 
             {/* Solid Clean Action CTA Button */}
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <button 
                 onClick={() => {
                   const target = document.getElementById("services");
@@ -170,6 +171,33 @@ export default function HeroSection() {
               >
                 {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
               </button>
+
+              {/* Review Us Button - Mobile Only */}
+              <button
+                onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
+                suppressHydrationWarning={true}
+                className="lg:hidden text-[11px] px-8 py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
+              >
+                {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
+              </button>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="flex items-center gap-5 pt-6 pb-16 lg:pb-0">
+              <span className="text-xs font-bold text-gray-600 uppercase tracking-widest">
+                {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
+              </span>
+              <div className="flex items-center gap-3">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-transparent hover:border-gray-200 bg-white/50 backdrop-blur-sm">
+                  <FaFacebook size={20} />
+                </a>
+                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-transparent hover:border-gray-200 bg-white/50 backdrop-blur-sm">
+                  <FaYoutube size={20} />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-transparent hover:border-gray-200 bg-white/50 backdrop-blur-sm">
+                  <FaInstagram size={20} />
+                </a>
+              </div>
             </div>
 
           </div>

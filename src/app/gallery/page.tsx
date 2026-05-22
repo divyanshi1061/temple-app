@@ -308,53 +308,190 @@ export default function GalleryPage() {
     };
   }, [selectedPhoto]);
 
+  const renderPhotoCard = (item: PhotoItem) => (
+    <motion.div
+      key={item.id}
+      onClick={() => setSelectedPhoto(item)}
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+      }}
+      className="group relative overflow-hidden rounded-2xl bg-gray-900 cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-gold/20 transition-all duration-500"
+    >
+      <div className={`relative w-full ${item.aspect} overflow-hidden`}>
+        <img
+          src={item.url}
+          alt={lang === "en" ? item.titleEn : item.titleHi}
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 className="text-white font-cinzel font-bold text-lg md:text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            {lang === "en" ? item.titleEn : item.titleHi}
+          </h3>
+          <p className="text-white/80 text-xs mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 line-clamp-2">
+            {lang === "en" ? item.descEn : item.descHi}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+
   return (
     <div
-      className="min-h-screen bg-white text-gray-900 font-outfit select-none pb-0 pt-28"
+      className="min-h-screen bg-white text-gray-900 font-outfit select-none pb-0 pt-28 relative"
       style={{
         backgroundImage: "url('/hero-spiritual-bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: 'white',
+        backgroundAttachment: 'fixed'
       }}
     >
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px] pointer-events-none z-0" />
 
       {/* 2. Editorial Header Section */}
-      <section className="max-w-4xl mx-auto text-center pt-16 pb-12 px-6">
-        <span className="text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm inline-block mb-4">
-          {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
-        </span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl mt-4 font-bold tracking-tight text-gray-900 font-cinzel">
-          {lang === 'en' ? 'Gallery' : 'गैलरी'}
-        </h1>
-        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
+      <section className="relative max-w-4xl mx-auto text-center pt-16 md:pt-24 pb-16 px-6 z-10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/15 rounded-full blur-[100px] pointer-events-none" />
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <span className="text-gold text-xs tracking-[0.3em] uppercase font-bold bg-white/60 px-6 py-2.5 rounded-full border border-gold/20 backdrop-blur-md inline-block mb-6 shadow-sm">
+            {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
+          </span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 font-cinzel drop-shadow-sm">
+            {lang === 'en' ? 'Divine Gallery' : 'दिव्य गैलरी'}
+          </h1>
+          <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-8 opacity-70" />
+        </motion.div>
       </section>
 
+      {/* 4. Video Gallery Section — Maa Baglamukhi Darshan Channel */}
+      <motion.section 
+        className="px-6 md:px-12 max-w-[1440px] mx-auto pb-20 relative z-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 font-cinzel inline-block relative">
+            {lang === 'en' ? 'Temple Videos' : 'मंदिर वीडियो'}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold rounded-full" />
+          </h2>
+          <p className="mt-6 text-gray-600 text-sm md:text-base max-w-xl mx-auto">
+            {lang === 'en' 
+              ? 'Watch sacred rituals, havan ceremonies, and divine darshan from our official YouTube channel — Maa Baglamukhi Darshan' 
+              : 'हमारे आधिकारिक यूट्यूब चैनल — माँ बगलामुखी दर्शन से पवित्र अनुष्ठान, हवन समारोह और दिव्य दर्शन देखें'}
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Video 1 — Havan Booking / Maa Baglamukhi Havan Benefits */}
+          <motion.div 
+            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20"
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="aspect-video relative">
+              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full z-0"
+                src="https://www.youtube.com/embed/C9iVhfuGFow" 
+                title={lang === 'en' ? 'Maa Baglamukhi Havan Benefits' : 'माँ बगलामुखी हवन के लाभ'}
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen>
+              </iframe>
+            </div>
+            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
+              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
+                {lang === 'en' ? '🔥 Maa Baglamukhi Havan Benefits' : '🔥 माँ बगलामुखी हवन के लाभ'}
+              </h3>
+              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
+            </div>
+          </motion.div>
+
+          {/* Video 2 — Baglamukhi Darshan Shorts */}
+          <motion.div 
+            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20"
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="aspect-video relative">
+              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full z-0"
+                src="https://www.youtube.com/embed/B8eT6o8a1oU" 
+                title={lang === 'en' ? 'Maa Baglamukhi Divine Darshan' : 'माँ बगलामुखी दिव्य दर्शन'}
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen>
+              </iframe>
+            </div>
+            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
+              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
+                {lang === 'en' ? '🙏 Maa Baglamukhi Divine Darshan' : '🙏 माँ बगलामुखी दिव्य दर्शन'}
+              </h3>
+              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
+            </div>
+          </motion.div>
+
+          {/* Video 3 — Channel Latest Videos Embed */}
+          <motion.div 
+            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20 md:col-span-2 lg:col-span-1"
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="aspect-video relative">
+              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full z-0"
+                src="https://www.youtube.com/embed?listType=user_uploads&list=UCw1djYbf_qoTFF2LpV1CoTQ" 
+                title={lang === 'en' ? 'Latest Videos from Channel' : 'चैनल से नवीनतम वीडियो'}
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen>
+              </iframe>
+            </div>
+            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
+              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
+                {lang === 'en' ? '📺 Latest from Our Channel' : '📺 हमारे चैनल से नवीनतम'}
+              </h3>
+              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Visit Channel Button */}
+        <div className="text-center mt-10">
+          <a 
+            href="https://youtube.com/@maabaglamukhidarshan-d2e?si=OC9ZiN1R5Tb59OBl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-semibold text-sm tracking-wide shadow-lg hover:shadow-red-500/30 hover:scale-105 transition-all duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            {lang === 'en' ? 'Visit Our YouTube Channel' : 'हमारा YouTube चैनल देखें'}
+          </a>
+        </div>
+      </motion.section>
+
       {/* 3. Visual Masonry Grid (4 Columns) */}
-      <section className="px-6 md:px-12 max-w-[1440px] mx-auto pb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+      <section className="px-6 md:px-12 max-w-[1440px] mx-auto pb-24 relative z-10">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+          }}
+        >
           {/* Column 1 */}
           <div className="flex flex-col gap-6">
-            {COLUMN_1_PHOTOS.map((item) => (
-              <motion.div
-                key={item.id}
-                onClick={() => setSelectedPhoto(item)}
-                className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300"
-                whileHover={{ scale: 0.995 }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <img
-                    src={item.url}
-                    alt={lang === "en" ? item.titleEn : item.titleHi}
-                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                </div>
-              </motion.div>
-            ))}
+            {COLUMN_1_PHOTOS.map((item) => renderPhotoCard(item))}
           </div>
 
           {/* Column 2 */}
@@ -363,117 +500,29 @@ export default function GalleryPage() {
               if (item.isDouble) {
                 return (
                   <div key={item.id} className="grid grid-cols-2 gap-3 w-full">
-                    <motion.div
-                      onClick={() => setSelectedPhoto({
-                        ...item,
-                        url: item.urlA || "",
-                        titleEn: item.titleEnA || "",
-                        titleHi: item.titleHiA || ""
-                      })}
-                      className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow"
-                      whileHover={{ scale: 0.99 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="relative aspect-[3/4] w-full overflow-hidden">
-                        <img
-                          src={item.urlA}
-                          alt={lang === "en" ? item.titleEnA : item.titleHiA}
-                          className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                      </div>
-                    </motion.div>
-                    
-                    <motion.div
-                      onClick={() => setSelectedPhoto({
-                        ...item,
-                        url: item.urlB || "",
-                        titleEn: item.titleEnB || "",
-                        titleHi: item.titleHiB || ""
-                      })}
-                      className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow"
-                      whileHover={{ scale: 0.99 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="relative aspect-[3/4] w-full overflow-hidden">
-                        <img
-                          src={item.urlB}
-                          alt={lang === "en" ? item.titleEnB : item.titleHiB}
-                          className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                      </div>
-                    </motion.div>
+                    {renderPhotoCard({
+                      ...item, id: `${item.id}-A`, url: item.urlA || "", titleEn: item.titleEnA || "", titleHi: item.titleHiA || "", aspect: "aspect-[3/4]"
+                    })}
+                    {renderPhotoCard({
+                      ...item, id: `${item.id}-B`, url: item.urlB || "", titleEn: item.titleEnB || "", titleHi: item.titleHiB || "", aspect: "aspect-[3/4]"
+                    })}
                   </div>
                 );
               }
-
-              return (
-                <motion.div
-                  key={item.id}
-                  onClick={() => setSelectedPhoto(item)}
-                  className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300"
-                  whileHover={{ scale: 0.995 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                    <img
-                      src={item.url}
-                      alt={lang === "en" ? item.titleEn : item.titleHi}
-                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                  </div>
-                </motion.div>
-              );
+              return renderPhotoCard(item);
             })}
           </div>
 
           {/* Column 3 */}
           <div className="flex flex-col gap-6">
-            {COLUMN_3_PHOTOS.map((item) => (
-              <motion.div
-                key={item.id}
-                onClick={() => setSelectedPhoto(item)}
-                className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300"
-                whileHover={{ scale: 0.995 }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <img
-                    src={item.url}
-                    alt={lang === "en" ? item.titleEn : item.titleHi}
-                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                </div>
-              </motion.div>
-            ))}
+            {COLUMN_3_PHOTOS.map((item) => renderPhotoCard(item))}
           </div>
 
           {/* Column 4 */}
           <div className="flex flex-col gap-6">
-            {COLUMN_4_PHOTOS.map((item) => (
-              <motion.div
-                key={item.id}
-                onClick={() => setSelectedPhoto(item)}
-                className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300"
-                whileHover={{ scale: 0.995 }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <img
-                    src={item.url}
-                    alt={lang === "en" ? item.titleEn : item.titleHi}
-                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
-                </div>
-              </motion.div>
-            ))}
+            {COLUMN_4_PHOTOS.map((item) => renderPhotoCard(item))}
           </div>
-
-        </div>
+        </motion.div>
       </section>
 
       {/* 5. Minimalist Lightbox Modal */}

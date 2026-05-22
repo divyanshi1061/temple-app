@@ -8,6 +8,8 @@ import { navbarVariants, slideInFromLeft } from "@/animations/variants";
 import { useLanguage } from "@/context/LanguageContext";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "@/components/layout/Logo";
+import ReviewModal from "@/components/ReviewModal";
+import { FaStar } from "react-icons/fa";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +17,7 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   
   const { lang, toggleLang } = useLanguage();
   const router = useRouter();
@@ -31,6 +34,13 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  // Global Review Modal Listener
+  useEffect(() => {
+    const handleOpenReview = () => setIsReviewModalOpen(true);
+    window.addEventListener("open-review-modal", handleOpenReview);
+    return () => window.removeEventListener("open-review-modal", handleOpenReview);
+  }, []);
 
   // Track active section
   useEffect(() => {
@@ -145,6 +155,15 @@ export default function Navbar() {
             {/* Actions: Language Toggle & Book CTA */}
             <div className="hidden lg:flex items-center gap-3">
               <motion.button
+                onClick={() => setIsReviewModalOpen(true)}
+                suppressHydrationWarning={true}
+                className="text-[11px] font-bold text-gray-600 hover:text-gold transition-colors uppercase tracking-wider border-b border-transparent hover:border-gold pb-0.5 mx-2"
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
+              </motion.button>
+              <motion.button
                 onClick={toggleLang}
                 suppressHydrationWarning={true}
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-gold/10 text-gold hover:bg-gold hover:text-white transition-all font-bold text-sm border border-gold/15 cursor-pointer"
@@ -194,48 +213,45 @@ export default function Navbar() {
         {isMobileOpen && (
           <>
             <motion.div
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[98] lg:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsMobileOpen(false)}
-            />
-            <motion.div
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-[99] lg:hidden bg-white border-l border-gray-150 shadow-2xl"
-              variants={slideInFromLeft}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              className="fixed inset-0 z-[98] lg:hidden bg-sacred-white"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="flex flex-col h-full p-6 pt-24 justify-between">
-                <div>
-                  {/* Logo in mobile */}
-                  <div className="mb-6 pb-4 border-b border-gray-100 flex items-center gap-3">
-                    <Logo size={42} alt={`${SITE_CONFIG.name[lang]} logo`} />
+              {/* Decorative background */}
+              <div className="absolute inset-0 bg-sacred-pattern opacity-50 pointer-events-none" />
+              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gold/10 rounded-full blur-[80px] pointer-events-none" />
+
+              <div className="relative z-10 flex flex-col h-full p-6 pt-24 pb-12 overflow-y-auto">
+                <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8">
+                  {/* Logo */}
+                  <div className="mb-2 flex flex-col items-center gap-3">
+                    <Logo size={56} alt={`${SITE_CONFIG.name[lang]} logo`} />
                     <div>
-                      <h2 className="text-sm text-gray-900 font-bold tracking-tight font-cinzel leading-none">
+                      <h2 className="text-xl text-gray-900 font-bold tracking-tight font-cinzel leading-none">
                         {SITE_CONFIG.name[lang]}
                       </h2>
-                      <span className="text-[8px] text-gold font-bold tracking-widest mt-1 uppercase block">
+                      <span className="text-[10px] text-gold font-bold tracking-widest mt-2 uppercase block">
                         {lang === 'en' ? 'Nalkheda Dham' : 'नलखेड़ा धाम'}
                       </span>
                     </div>
                   </div>
 
                   {/* Nav Links */}
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-2 w-full max-w-[250px]">
                     {NAV_LINKS.map((link, i) => (
                       <motion.button
                         key={link.href}
                         onClick={() => handleNavClick(link.href)}
                         suppressHydrationWarning={true}
-                        className={`text-left px-4 py-3 rounded-xl text-base transition-all duration-300 font-bold cursor-pointer ${
+                        className={`text-center py-4 text-base transition-all duration-300 font-bold tracking-wider border-b border-gray-100 uppercase ${
                           isActive(link.href)
-                            ? "text-gold bg-gold/5"
-                            : "text-gray-600 hover:text-gold hover:bg-gold/5"
+                            ? "text-gold"
+                            : "text-gray-600 hover:text-gold"
                         }`}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 + i * 0.05 }}
                       >
                         {link.label[lang]}
@@ -244,24 +260,33 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div>
-                  {/* Book CTA */}
-                  <motion.button
-                    onClick={() => handleNavClick("/book")}
-                    suppressHydrationWarning={true}
-                    className="btn-sacred w-full text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs shadow-md"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
-                  </motion.button>
+                <div className="w-full max-w-[250px] mx-auto mt-8">
+                  {/* Actions */}
+                  <div className="flex flex-col gap-4">
+                    <motion.button
+                      onClick={() => handleNavClick("/book")}
+                      suppressHydrationWarning={true}
+                      className="btn-sacred w-full text-center py-4 rounded-full font-bold uppercase tracking-wider text-sm shadow-md"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
+                    </motion.button>
 
-                  {/* Contact info */}
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-center">
-                    <p className="text-xs text-gray-500 font-bold tracking-wide">
-                      {SITE_CONFIG.phone}
-                    </p>
+                    <motion.button
+                      onClick={() => {
+                        setIsMobileOpen(false);
+                        setIsReviewModalOpen(true);
+                      }}
+                      suppressHydrationWarning={true}
+                      className="text-xs font-bold text-gray-500 hover:text-gold transition-colors uppercase tracking-wider underline-offset-4 hover:underline text-center py-2"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                    >
+                      {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
+                    </motion.button>
                   </div>
                 </div>
               </div>
@@ -269,6 +294,8 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
+
+      <ReviewModal isOpen={isReviewModalOpen} onClose={() => setIsReviewModalOpen(false)} />
     </>
   );
 }
