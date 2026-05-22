@@ -19,6 +19,8 @@ export default function ContactSection() {
       ? (form.service === "havan" ? (lang === "en" ? "Baglamukhi Havan" : "बगलामुखी हवन")
          : form.service === "jaap" ? (lang === "en" ? "Anusthan & Jaap" : "अनुष्ठान एवं जाप")
          : form.service === "puja" ? (lang === "en" ? "Puja Services" : "पूजा सेवाएं")
+         : form.service === "rin-mukti" ? (lang === "en" ? "Rin Mukti (Debt Relief)" : "ऋण मुक्ति (कर्ज से राहत)")
+         : form.service === "karya-mukti" ? (lang === "en" ? "Karya Mukti / Kasht Mukti" : "कार्य मुक्ति / कष्ट मुक्ति")
          : (lang === "en" ? "Other" : "अन्य"))
       : (lang === "en" ? "General" : "सामान्य");
 
@@ -177,6 +179,8 @@ export default function ContactSection() {
                       <option value="">{lang === 'en' ? 'Select service' : 'सेवा चुनें'}</option>
                       <option value="havan">{lang === 'en' ? 'Baglamukhi Havan' : 'बगलामुखी हवन'}</option>
                       <option value="jaap">{lang === 'en' ? 'Anusthan & Jaap' : 'अनुष्ठान एवं जाप'}</option>
+                      <option value="rin-mukti">{lang === 'en' ? 'Rin Mukti (Debt Relief)' : 'ऋण मुक्ति (कर्ज से राहत)'}</option>
+                      <option value="karya-mukti">{lang === 'en' ? 'Karya Mukti / Kasht Mukti' : 'कार्य मुक्ति / कष्ट मुक्ति'}</option>
                       <option value="puja">{lang === 'en' ? 'Puja Services' : 'पूजा सेवाएं'}</option>
                       <option value="other">{lang === 'en' ? 'Other' : 'अन्य'}</option>
                     </select>

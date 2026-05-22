@@ -175,6 +175,8 @@ export default function Footer() {
               <span className="text-gold/60">ॐ</span>
               <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: Maa Baglamukhi Darshan</a>
               <span className="text-gold/60">ॐ</span>
+              <a href={SITE_CONFIG.socials.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">YouTube: Maa Baglamukhi Darshan</a>
+              <span className="text-gold/60">ॐ</span>
               <span className="text-gold font-extrabold uppercase">
                 {lang === 'en' 
                   ? '✦ Contact us for authentic Vedic Pujas, Maa Baglamukhi Havans, and Kundali analysis at Siddh Peeth Nalkheda Dham ✦' 

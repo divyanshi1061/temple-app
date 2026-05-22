@@ -12,8 +12,8 @@ export const SITE_CONFIG = {
     hi: "दिव्य सुरक्षा एवं सिद्ध वैदिक पूजा"
   },
   description: {
-    en: "Authentic Maa Baglamukhi Havan, Tantra Anusthan, and Vedic Pujas performed by Acharya Pt. Rudraksh Rajpurohit at the sacred Siddh Peeth of Nalkheda Dham.",
-    hi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा नलखेड़ा धाम के पवित्र सिद्ध पीठ में आयोजित प्रामाणिक माँ बगलामुखी हवन, तंत्र अनुष्ठान और वैदिक पूजा।"
+    en: "Authentic Maa Baglamukhi Havan and Vedic Pujas performed by Acharya Pt. Rudraksh Rajpurohit at the sacred Siddh Peeth of Nalkheda Dham.",
+    hi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा नलखेड़ा धाम के पवित्र सिद्ध पीठ में आयोजित प्रामाणिक माँ बगलामुखी हवन और वैदिक पूजा।"
   },
   phone: "+91 79095 97033",
   whatsapp: "+917909597033",
@@ -165,46 +165,6 @@ export const SERVICES = [
     category: "puja",
   },
   {
-    id: "pitra-dosh-nivaran",
-    title: { en: "Pitra Dosh Nivaran", hi: "पितृ दोष निवारण" },
-    description: {
-      en: "Specialized Vedic puja to resolve ancestral obstacles, curses and restore family peace.",
-      hi: "पैतृक बाधाओं, दोषों को दूर करने और परिवार में सुख-शांति बहाल करने के लिए विशेष वैदिक पूजा।"
-    },
-    longDescription: {
-      en: "Pitra Dosh arises from displeased ancestral spirits or unfulfilled ancestral karmas, causing unexplainable hurdles, continuous failures, financial distress, and progeny-related obstacles. Acharya Pt. Rudraksh Rajpurohit performs detailed ancestral pacification rituals and Narayan Bali Pujas at Nalkheda Peeth to permanently liberate the family from these blockages.",
-      hi: "पितृ दोष पूर्वजों की अप्रसन्नता या अतृप्ति के कारण उत्पन्न होता है, जिससे जीवन में अकारण बाधाएं, निरंतर विफलताएं, आर्थिक तंगी और संतान सुख में रुकावट आती है। आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा पीठ पर नारायण बलि और पितृ शांति अनुष्ठान कर परिवार को इन दोषों से मुक्ति दिलाते हैं।"
-    },
-    benefits: {
-      en: ["Eradication of ancestral obstacles", "Restoration of family harmony and peace", "Blessings of ancestors for growth and progeny"],
-      hi: ["पैतृक बाधाओं और दोषों का पूर्ण निवारण", "पारिवारिक सुख, शांति और समृद्धि की बहाली", "वंश वृद्धि और उन्नति के लिए पितरों का आशीर्वाद"]
-    },
-    duration: { en: "2 Days", hi: "2 दिन" },
-    icon: "PD",
-    image: "/pitra-kaal-sarp.png",
-    category: "puja",
-  },
-  {
-    id: "kaal-sarp-dosh-nivaran",
-    title: { en: "Kaal Sarp Dosh Nivaran", hi: "काल सर्प दोष निवारण" },
-    description: {
-      en: "Astrological serpent alignment remedies to resolve severe struggles, sudden setbacks, and delay in growth.",
-      hi: "अत्यधिक संघर्षों, अचानक आने वाली बाधाओं और प्रगति में देरी को दूर करने के लिए विशेष काल सर्प योग निवारण पूजा।"
-    },
-    longDescription: {
-      en: "Kaal Sarp Dosh occurs when all seven primary planets are hemmed between Rahu and Ketu in the birth chart. This causes extreme struggles, health issues, professional instability, and constant mental agony. A specialized Vedic Puja and Havan at the banks of the Lakhundar River in Nalkheda are conducted to pacify the serpent deities and neutralize Rahu-Ketu influences.",
-      hi: "कुंडली में जब सभी सातों मुख्य ग्रह राहु और केतु के मध्य आ जाते हैं, तब काल सर्प दोष का निर्माण होता है। यह जीवन में अत्यधिक संघर्ष, स्वास्थ्य समस्याएं, करियर में अस्थिरता और मानसिक तनाव पैदा करता है। नलखेड़ा में लखूंदर नदी के तट पर विशेष पूजा और हवन के माध्यम से नाग देवताओं को शांत कर राहु-केतु के कुप्रभावों को दूर किया जाता है।"
-    },
-    benefits: {
-      en: ["Relief from sudden setbacks and professional delays", "Improved mental stability and clarity", "Removal of fear of failures and chronic struggles"],
-      hi: ["करियर में अचानक आने वाले उतार-चढ़ाव से राहत", "मानसिक स्थिरता, सुख और स्पष्टता की प्राप्ति", "अकारण भय और निरंतर संघर्षों का अंत"]
-    },
-    duration: { en: "1-2 Days", hi: "1-2 दिन" },
-    icon: "KS",
-    image: "/kaal-sarp-puja.png",
-    category: "puja",
-  },
-  {
     id: "maha-mrityunjay",
     title: { en: "Maha Mrityunjay Anusthan", hi: "महामृत्युंजय अनुष्ठान" },
     description: {
@@ -323,6 +283,46 @@ export const SERVICES = [
     icon: "VV",
     image: "/vyapar-vraddhi.png",
     category: "anusthan",
+  },
+  {
+    id: "rin-mukti",
+    title: { en: "Rin Mukti (Debt Relief)", hi: "ऋण मुक्ति (कर्ज से राहत)" },
+    description: {
+      en: "Special puja, jaap, and havan dedicated to relieve debt burdens and restore financial freedom.",
+      hi: "ऋण मुक्ति (कर्ज से राहत) के लिए विशेष पूजा, जप और हवन।"
+    },
+    longDescription: {
+      en: "This sacred ritual is performed to remove heavy debt burdens, financial stress, and blocked cash flow. Through focused puja, mantra jaap, and havan, Acharya Ji invokes Maa Baglamukhi's grace to free devotees from chronic borrowing and monetary anxiety.",
+      hi: "यह पवित्र अनुष्ठान भारी कर्ज, वित्तीय तनाव और अवरुद्ध नकदी प्रवाह को दूर करने के लिए किया जाता है। विशेष पूजा, मंत्र जाप और हवन के माध्यम से आचार्य जी माँ बगलामुखी की कृपा को बुलाते हैं ताकि भक्तों को दीर्घकालिक उधारी और मौद्रिक चिंता से मुक्ति मिल सके।"
+    },
+    benefits: {
+      en: ["Relief from outstanding debts", "Clearing financial blockages", "Restored money flow and peace"],
+      hi: ["बकाया ऋण से मुक्ति", "वित्तीय अवरोधों का निवारण", "धन के प्रवाह और मन की शांति की बहाली"]
+    },
+    duration: { en: "1-3 Days", hi: "1-3 दिन" },
+    icon: "RM",
+    image: "/pitra-kaal-sarp.png",
+    category: "puja",
+  },
+  {
+    id: "karya-mukti",
+    title: { en: "Karya Mukti / Kasht Mukti", hi: "कार्य मुक्ति / कष्ट मुक्ति" },
+    description: {
+      en: "Special puja, jaap, and havan to remove obstacles and hardship in work, career, and daily life.",
+      hi: "कार्य मुक्ति / कष्ट मुक्ति के लिए विशेष पूजा, जप और हवन।"
+    },
+    longDescription: {
+      en: "This powerful ritual dissolves karmic obstacles that create struggles, delays, and hardship in your professional and personal life. Specific puja, mantra chanting, and havan bring relief from blocked paths, stress, and continuous difficulties, restoring momentum and success.",
+      hi: "यह शक्तिशाली अनुष्ठान उन कर्मिक बाधाओं को दूर करता है जो आपके पेशेवर और व्यक्तिगत जीवन में संघर्ष, देरी और कष्ट पैदा करती हैं। विशिष्ट पूजा, मंत्र जाप और हवन अवरुद्ध मार्गों, तनाव और निरंतर कठिनाइयों से मुक्ति दिलाते हैं और गति तथा सफलता को बहाल करते हैं।"
+    },
+    benefits: {
+      en: ["Removal of career and work obstacles", "Ease from ongoing struggles", "Renewed momentum and progress"],
+      hi: ["कार्य और रोजगार में बाधाओं का निवारण", "चल रहे संघर्षों से राहत", "नई गति और प्रगति की बहाली"]
+    },
+    duration: { en: "1-3 Days", hi: "1-3 दिन" },
+    icon: "KM",
+    image: "/image.png",
+    category: "puja",
   },
   {
     id: "lakshmi-prapti",

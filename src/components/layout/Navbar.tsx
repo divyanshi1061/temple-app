@@ -80,12 +80,14 @@ export default function Navbar() {
     return false;
   };
 
+  const shouldShowNavbar = !isMobileOpen && isVisible;
+
   return (
     <>
       <motion.header
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 pt-3 px-4 sm:px-5 lg:px-6`}
         variants={navbarVariants}
-        animate={isVisible ? "visible" : "hidden"}
+        animate={shouldShowNavbar ? "visible" : "hidden"}
         initial="visible"
       >
         <div className={`mx-auto max-w-7xl transition-all duration-500 rounded-[1.85rem] border ${

@@ -115,7 +115,7 @@ export default function HeroSection() {
               <div className="absolute inset-8 rounded-full border border-gold/10 scale-95 animate-spin-slow-reverse pointer-events-none" />
               
               {/* Main Photo Cutout Frame */}
-              <div className="absolute inset-0 rounded-3xl overflow-hidden border-8 border-white bg-white shadow-2xl scale-95 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full overflow-hidden border-8 border-white bg-white shadow-2xl scale-95 flex items-center justify-center">
                 <img
                   src="/acharya-new.jpg"
                   alt="New acharya portrait"

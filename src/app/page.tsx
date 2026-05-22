@@ -15,8 +15,8 @@ export default function Home() {
         "@id": "https://rudrakshbaglamukhi.com/#person",
         "name": "Acharya Pt. Rudraksh Rajpurohit",
         "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
-        "jobTitle": "Vedic Priest & Tantra Sadhak",
-        "description": "Highly revered Vedic Priest & Tantra Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
+        "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
+        "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
         "image": "https://rudrakshbaglamukhi.com/real-gallery-1.jpg",
         "url": "https://rudrakshbaglamukhi.com",
         "address": {

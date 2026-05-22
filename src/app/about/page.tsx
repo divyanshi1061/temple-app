@@ -21,8 +21,8 @@ export default function AboutPage() {
     : "आचार्य पं. रुद्राक्ष राजपुरोहित";
 
   const panditDesc = lang === "en"
-    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Tantra Sadhak at Nalkheda Dham Siddh Peeth. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide. Born into a lineage of spiritual practitioners, he has spent his life mastering the intricacies of Vedic scriptures, Yajna (fire rituals), and Tantric protections."
-    : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और तंत्र साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं। आध्यात्मिक साधकों के एक प्रतिष्ठित वंश में जन्मे, उन्होंने वैदिक शास्त्रों, यज्ञ और तांत्रिक रक्षा प्रणालियों में महारत हासिल करने में अपना जीवन समर्पित किया है।";
+    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Nalkheda Dham Siddh Peeth. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide. Born into a lineage of spiritual practitioners, he has spent his life mastering the intricacies of Vedic scriptures, Yajna (fire rituals), and Tantric protections."
+    : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और बगलामुखी साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं। आध्यात्मिक साधकों के एक प्रतिष्ठित वंश में जन्मे, उन्होंने वैदिक शास्त्रों, यज्ञ और तांत्रिक रक्षा प्रणालियों में महारत हासिल करने में अपना जीवन समर्पित किया है।";
 
   const mataHistory = lang === "en"
     ? "The magnificent temple of Goddess Maa Baglamukhi is located in Nalkheda, Agar Malwa district, approximately 100 kilometers from Ujjain. Situated on the banks of the Lakhundar River, this temple is highly significant from both religious and tantric perspectives. The idol of Maa Baglamukhi installed here dates back to the Pandava era, as mentioned in the Kalika Purana. Among the idols in the temple, Maa Baglamukhi sits in the center, flanked by Maa Lakshmi on the right and Maa Saraswati on the left in the form of 'Pindis'. During the Dwapara Yuga, while the Pandavas were in exile, Lord Krishna advised them to worship Maa Baglamukhi to ensure victory. Among the Ten Mahavidyas, Maa Baglamukhi is the eighth. Her worship and rituals are highly effective and precise. The temple is more than 500 years old, serving as a primary Siddh Peeth in India. Sacred trees like Bel, Champa, White Aak, Amla, Neem, and Peepal stand together here. The Lakhundar River flows perennially behind the temple, enhancing its natural beauty. Many saints' tombs lie on the riverbanks, indicating a historic presence of ascetics. The surrounding cremation grounds (Muktidham) in all four directions further establish Nalkheda Dham as a powerful center for Tantra and Sadhana."
@@ -282,7 +282,7 @@ export default function AboutPage() {
                     {lang === "en" ? "Acharya Pt. Rudraksh Rajpurohit" : "आचार्य पं. रुद्राक्ष राजपुरोहित"}
                   </h4>
                   <span className="text-[10px] text-gold uppercase font-bold tracking-widest">
-                    {lang === "en" ? "Chief Priest & Tantra Sadhak" : "मुख्य पुरोहित एवं तंत्र साधक"}
+                    {lang === "en" ? "Priest & Bagalmukhi Sadhak" : "पुरोहित एवं बगलामुखी साधक"}
                   </span>
                 </div>
               </motion.div>

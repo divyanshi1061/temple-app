@@ -14,8 +14,8 @@ export default function AboutSection() {
     : "आचार्य पं. रुद्राक्ष राजपुरोहित";
     
   const desc = lang === 'en'
-    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Tantra Sadhak at Nalkheda Dham Siddh Peeth. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
-    : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और तंत्र साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं।";
+    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Nalkheda Dham Siddh Peeth. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
+    : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और बगलामुखी साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं।";
 
   const mission = lang === 'en'
     ? "The magnificent temple of Goddess Maa Baglamukhi is located in Nalkheda, Agar Malwa district, approximately 100 kilometers from Ujjain. Situated on the banks of the Lakhundar River, this temple is highly significant from both religious and tantric perspectives. The idol of Maa Baglamukhi installed here dates back to the Pandava era, as mentioned in the Kalika Purana. Among the idols in the temple, Maa Baglamukhi sits in the center, flanked by Maa Lakshmi on the right and Maa Saraswati on the left in the form of 'Pindis'. During the Dwapara Yuga, while the Pandavas were in exile, Lord Krishna advised them to worship Maa Baglamukhi to ensure victory. Among the Ten Mahavidyas, Maa Baglamukhi is the eighth. Her worship and rituals are highly effective and precise. The temple is more than 500 years old, serving as a primary Siddh Peeth in India. Sacred trees like Bel, Champa, White Aak, Amla, Neem, and Peepal stand together here. The Lakhundar River (anciently named Lakshmana) flows perennially behind the temple, enhancing its natural beauty. Many saints' tombs lie on the riverbanks, indicating a historic presence of ascetics. The surrounding cremation grounds (Muktidham) in all four directions further establish Nalkheda Dham as a powerful center for Tantra and Sadhana."
@@ -69,7 +69,7 @@ export default function AboutSection() {
                   {lang === 'en' ? 'Revered' : 'प्रतिष्ठित'}
                 </p>
                 <p className="text-gray-500 font-semibold uppercase tracking-wider text-[9px]">
-                  {lang === 'en' ? 'Vedic Sadhak' : 'वैदिक साधक'}
+                  {lang === 'en' ? 'Bagalamukhi Sadhak' : 'वैदिक साधक'}
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function AboutSection() {
               {[
                 { title: { en: "Authentic Rituals", hi: "प्रामाणिक अनुष्ठान" }, desc: { en: "100% adherence to pure Vedic scriptures.", hi: "शुद्ध वैदिक शास्त्रों का 100% पालन।" } },
                 { title: { en: "Global Reach", hi: "वैश्विक पहुंच" }, desc: { en: "Online sankalp for remote devotees.", hi: "दूरस्थ भक्तों के लिए ऑनलाइन संकल्प।" } },
-                { title: { en: "Tantric Mastery", hi: "तांत्रिक महारत" }, desc: { en: "Specialist in resolving court & enemy cases.", hi: "अदालत और शत्रु मामलों को सुलझाने में विशेषज्ञ।" } },
+                { title: { en: "Online Havan & Anusthan", hi: "ऑनलाइन हवन व अनुष्ठान" }, desc: { en: "Live online havan and anusthan bookings for devotees worldwide.", hi: "विश्वभर के भक्तों के लिए लाइव ऑनलाइन हवन और अनुष्ठान बुकिंग।" } },
                 { title: { en: "Secure Booking", hi: "सुरक्षित बुकिंग" }, desc: { en: "Transparent and trusted process.", hi: "पारदर्शी और विश्वसनीय प्रक्रिया।" } },
               ].map((val, i) => (
                 <div key={i} className="flex gap-2.5">
