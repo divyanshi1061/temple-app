@@ -49,7 +49,7 @@ export default function ContactSection() {
     { icon: FaPhone, label: { en: "Phone", hi: "फ़ोन" }, value: SITE_CONFIG.phone, href: `tel:${SITE_CONFIG.phone}` },
     { icon: FaWhatsapp, label: { en: "WhatsApp", hi: "व्हाट्सएप" }, value: { en: "Chat with us", hi: "हमसे चैट करें" }, href: `https://wa.me/${SITE_CONFIG.whatsapp}` },
     { icon: FaEnvelope, label: { en: "Email", hi: "ईमेल" }, value: SITE_CONFIG.email, href: `mailto:${SITE_CONFIG.email}` },
-    { icon: FaMapMarkerAlt, label: { en: "Address", hi: "पता" }, value: { en: "Nalkheda, MP 465441", hi: "नलखेड़ा, मध्य प्रदेश 465441" }, href: SITE_CONFIG.mapUrl },
+    { icon: FaMapMarkerAlt, label: { en: "Address", hi: "पता" }, value: { en: "Nalkheda, MP 465445", hi: "नलखेड़ा, मध्य प्रदेश 465445" }, href: SITE_CONFIG.mapUrl },
   ];
 
   const travelInfo = [

@@ -19,8 +19,8 @@ export const SITE_CONFIG = {
   whatsapp: "+917909597033",
   email: "mabaglamukhi66@gmail.com",
   address: {
-    en: "Nalkheda, District Agar Malwa, Madhya Pradesh 465441 (Near Maa Baglamukhi Mandir)",
-    hi: "नलखेड़ा, जिला आगर मालवा, मध्य प्रदेश 465441 (माँ बगलामुखी मंदिर के समीप)"
+    en: "Nalkheda, District Agar Malwa, Madhya Pradesh 465445 (Near Maa Baglamukhi Mandir)",
+    hi: "नलखेड़ा, जिला आगर मालवा, मध्य प्रदेश 465445 (माँ बगलामुखी मंदिर के समीप)"
   },
   mapUrl: "https://maps.google.com/?q=Nalkheda+Baglamukhi+Temple",
   socials: {

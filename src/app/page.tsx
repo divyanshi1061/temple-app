@@ -23,7 +23,7 @@ export default function Home() {
           "@type": "PostalAddress",
           "addressLocality": "Nalkheda",
           "addressRegion": "Madhya Pradesh",
-          "postalCode": "465441",
+          "postalCode": "465445",
           "addressCountry": "IN"
         },
         "sameAs": [
@@ -43,7 +43,7 @@ export default function Home() {
           "streetAddress": "Near Maa Baglamukhi Mandir",
           "addressLocality": "Nalkheda",
           "addressRegion": "Madhya Pradesh",
-          "postalCode": "465441",
+          "postalCode": "465445",
           "addressCountry": "IN"
         },
         "geo": {
