@@ -137,7 +137,7 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Right Column: Contact Form */}
-          <motion.div variants={fadeInRight} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div variants={fadeInRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:mt-12 xl:mt-14">
             <div className="bg-white rounded-3xl p-4 md:p-8 border border-gray-100 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full blur-2xl pointer-events-none" />
               

@@ -109,7 +109,7 @@ export default function HeroSection() {
           
           {/* LEFT COLUMN: Premium Sacred Visuals (Image) */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-6">
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+            <div className="relative w-80 h-80 sm:w-[28rem] sm:h-[28rem]">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
@@ -222,7 +222,7 @@ export default function HeroSection() {
 
           {/* 4. Image Below Details */}
           <div className="flex justify-center items-center relative py-2">
-            <div className="relative w-44 h-44 sm:w-56 sm:h-56">
+            <div className="relative w-48 h-48 sm:w-60 sm:h-60">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
