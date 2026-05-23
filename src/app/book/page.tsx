@@ -3,8 +3,11 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Book Puja | Acharya Pt. Rudraksh Sharma",
-  description: "Book sacred Maa Baglamukhi Pujas, Havan, and Anusthan performed online or offline at Siddh Peeth Nalkheda Dham.",
+  title: "Book Online Puja & Havan | Acharya Pt. Rudraksh Rajpurohit",
+  description: "Book authentic Maa Baglamukhi Pujas, intense Havans, and sacred Vedic Anusthans at Siddh Peeth Nalkheda Dham, guided by Acharya Pt. Rudraksh Rajpurohit.",
+  alternates: {
+    canonical: "/book",
+  },
 };
 
 export default function BookPage() {

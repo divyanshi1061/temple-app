@@ -39,17 +39,53 @@ const playball = Playball({
 });
 
 export const metadata: Metadata = {
-  title: "Pandit Maa Baglamukhi | Maa Baglamukhi Dham, Nalkheda",
+  metadataBase: new URL('https://rudrakshbaglamukhi.com'),
+  title: {
+    default: "Pandit Maa Baglamukhi | Acharya Pt. Rudraksh Rajpurohit | Nalkheda Dham",
+    template: "%s | Pandit Maa Baglamukhi"
+  },
   description:
-    "Divine Protection & Sacred Vedic Pujas by Acharya Pt. Rudraksh Rajpurohit at the sacred Nalkheda Dham.",
-  keywords:
-    "Pandit Maa Baglamukhi, Acharya Pt. Rudraksh Rajpurohit, Rudraksh Rajpurohit, Nalkheda Dham Priest, Maa Baglamukhi Havan, Online Puja Booking, Vedic Pandit Nalkheda, Tantra Sadhana",
+    "Authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans performed by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult for legal victory, business growth, and protection.",
+  keywords: [
+    "Pandit Maa Baglamukhi", 
+    "Acharya Pt. Rudraksh Rajpurohit", 
+    "Rudraksh Rajpurohit", 
+    "Maa Baglamukhi Dham Nalkheda", 
+    "Nalkheda temple pujari", 
+    "Maa Baglamukhi Havan online booking", 
+    "best pandit for baglamukhi havan in nalkheda", 
+    "Maa Baglamukhi 36 Lakh Jaap", 
+    "Sawa Lakh Jaap", 
+    "Nyayalay Vijay Puja", 
+    "Vastu Shastra Paramarsh", 
+    "Vedic Pandit Nalkheda", 
+    "Tantra Sadhana"
+  ].join(", "),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: "Pandit Maa Baglamukhi | Maa Baglamukhi Dham, Nalkheda",
+    title: "Pandit Maa Baglamukhi | Acharya Pt. Rudraksh Rajpurohit | Nalkheda Dham",
     description:
-      "Vedic Priest Pt. Rudraksh Rajpurohit guides devotees in powerful Baglamukhi Havans, Anusthans, and Vedic Pujas at Nalkheda Dham.",
+      "Authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans performed by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham.",
+    url: "https://rudrakshbaglamukhi.com",
+    siteName: "Pandit Maa Baglamukhi",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Pandit Maa Baglamukhi Logo",
+      }
+    ],
     type: "website",
     locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pandit Maa Baglamukhi | Acharya Pt. Rudraksh Rajpurohit | Nalkheda Dham",
+    description: "Authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans performed by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham.",
+    images: ["/logo.png"],
   },
   icons: {
     icon: "/logo.png",
