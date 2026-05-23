@@ -78,7 +78,7 @@ export default function Home() {
       />
       <HeroSection />
       {/* ─── Seamless Infinite Image Reel ─── */}
-      <div className="relative bg-sacred-white border-b border-gray-100/60 pb-4 overflow-hidden">
+      <div className="relative bg-sacred-white pb-4 overflow-hidden">
         {/* Spiritual background image at back of reel */}
         <div 
           className="absolute inset-0 z-0 pointer-events-none opacity-20"
@@ -95,15 +95,10 @@ export default function Home() {
           <ImageReel />
         </div>
       </div>
-      <div className="sacred-divider" />
       <ServicesSection />
-      <div className="sacred-divider" />
       <AboutSection />
-      <div className="sacred-divider" />
       <GallerySection />
-      <div className="sacred-divider" />
       <TestimonialsSection />
-      <div className="sacred-divider" />
       <ContactSection />
     </>
   );
