@@ -103,10 +103,11 @@ export default function HeroSection() {
 
       {/* Main Grid Content (Split 50/50) */}
       <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
-        {/* Asymmetric 2-Column Split: Image on Left (5 cols), Text/Actions on Right (7 cols) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+        
+        {/* Desktop Layout (lg and above) */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           
-          {/* LEFT COLUMN: Premium Sacred Visuals */}
+          {/* LEFT COLUMN: Premium Sacred Visuals (Image) */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-6">
             <div className="relative w-72 h-72 sm:w-96 sm:h-96">
               
@@ -127,8 +128,6 @@ export default function HeroSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
-
-
 
             </div>
           </div>
@@ -171,15 +170,6 @@ export default function HeroSection() {
               >
                 {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
               </button>
-
-              {/* Review Us Button - Mobile Only */}
-              <button
-                onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
-                suppressHydrationWarning={true}
-                className="lg:hidden text-[11px] px-8 py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
-              >
-                {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
-              </button>
             </div>
 
             {/* Social Media Links */}
@@ -203,8 +193,102 @@ export default function HeroSection() {
           </div>
 
         </div>
-      </motion.div>
 
+        {/* Mobile Layout (below lg breakpoint) */}
+        <div className="flex lg:hidden flex-col items-center w-full text-center space-y-5">
+          
+          {/* 1. Shloka Banner */}
+          <div className="px-3.5 py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
+            <p className="text-[9px] sm:text-[10px] text-gold-dim tracking-[0.1em] font-bold font-cinzel leading-none">
+              {MANTRAS[0]}
+            </p>
+          </div>
+
+          {/* 2. Headline & Subheading */}
+          <div className="space-y-1">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] uppercase">
+              {lang === 'hi' ? SITE_CONFIG.name.hi : SITE_CONFIG.name.en}
+            </h1>
+            <h2 className="text-xs sm:text-sm text-gold font-bold tracking-wider uppercase font-cinzel">
+              {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
+            </h2>
+          </div>
+
+          {/* 3. Description */}
+          <p className="text-xs sm:text-sm text-gray-600 max-w-md leading-relaxed font-semibold px-2 text-justify sm:text-center">
+            {SITE_CONFIG.description[lang]}
+          </p>
+
+          {/* 4. Image Below Details */}
+          <div className="flex justify-center items-center relative py-2">
+            <div className="relative w-44 h-44 sm:w-56 sm:h-56">
+              
+              {/* Circular Background Decor */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
+              <div className="absolute inset-2 rounded-full border border-dashed border-gold/20 scale-100 animate-spin-slow pointer-events-none" />
+              <div className="absolute inset-4 rounded-full border border-gold/10 scale-95 animate-spin-slow-reverse pointer-events-none" />
+              
+              {/* Main Photo Cutout Frame */}
+              <div className="absolute inset-0 rounded-full overflow-hidden border-6 border-white bg-white shadow-xl scale-95 flex items-center justify-center">
+                <img
+                  src="/acharya-new.jpg"
+                  alt="New acharya portrait"
+                  className="w-full h-full object-cover object-center scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/mata-baglamukhi.jpg';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              </div>
+
+            </div>
+          </div>
+
+          {/* 5. Action Buttons Under Image */}
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+            <button 
+              onClick={() => {
+                const target = document.getElementById("services");
+                if (target) target.scrollIntoView({ behavior: "smooth" });
+              }}
+              suppressHydrationWarning={true}
+              className="btn-sacred text-xs px-8 py-3 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all"
+            >
+              {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
+            </button>
+
+            {/* Review Us Button */}
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
+              suppressHydrationWarning={true}
+              className="text-xs px-8 py-3 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
+            >
+              {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
+            </button>
+          </div>
+
+          {/* 6. Follow Us Social Links Under Buttons */}
+          <div className="flex flex-col items-center gap-2 pt-3">
+            <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+              {lang === 'en' ? 'Follow Us' : 'हमें फॉलो करें'}
+            </span>
+            <div className="flex items-center gap-3.5">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 bg-white">
+                <FaFacebook size={16} />
+              </a>
+              <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 bg-white">
+                <FaYoutube size={16} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 bg-white">
+                <FaInstagram size={16} />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </motion.div>
     </section>
   );
 }

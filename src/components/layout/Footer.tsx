@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[180px] bg-gold/3 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="container-sacred relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 text-left mb-4 md:mb-6">
           
           {/* Column 1: Divine Identity */}
           <motion.div 
@@ -53,7 +53,7 @@ export default function Footer() {
                 : 'पवित्र सिद्ध पीठ नलखेड़ा धाम में प्रामाणिक वैदिक अनुष्ठान, माँ बगलामुखी हवन और श्रद्धापूर्ण मार्गदर्शन के लिए समर्पित।'}
             </p>
 
-            <div className="flex gap-2.5 mt-2">
+            <div className="flex gap-2 mt-2">
               {[
                 { icon: FaFacebookF, href: SITE_CONFIG.socials.facebook, name: "Facebook" },
                 { icon: FaInstagram, href: SITE_CONFIG.socials.instagram, name: "Instagram" },
@@ -63,11 +63,11 @@ export default function Footer() {
                   key={i}
                   href={social.href}
                   aria-label={social.name}
-                  className="w-9 h-9 rounded-full bg-gold/5 border border-gold/15 flex items-center justify-center text-gold hover:text-white hover:border-gold hover:bg-gold shadow-sm transition-all duration-300"
+                  className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gold/5 border border-gold/15 flex items-center justify-center text-gold hover:text-white hover:border-gold hover:bg-gold shadow-sm transition-all duration-300"
                   whileHover={{ scale: 1.08, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <social.icon size={13} />
+                  <social.icon size={12} className="md:w-3.5 md:h-3.5" />
                 </motion.a>
               ))}
             </div>
@@ -81,10 +81,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-3">
+            <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
               {lang === 'en' ? 'Quick Navigation' : 'त्वरित नेविगेशन'}
             </h4>
-            <ul className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs font-bold text-gray-600">
+            <ul className="grid grid-cols-2 gap-y-2 md:gap-y-3 gap-x-4 text-xs font-bold text-gray-600">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   {link.href.startsWith("/") ? (
@@ -113,18 +113,18 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-3">
+            <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
               {lang === 'en' ? 'Contact Mandir' : 'मंदिर संपर्क'}
             </h4>
-            <div className="flex flex-col gap-3.5 text-xs font-bold text-gray-600">
+            <div className="flex flex-col gap-2 md:gap-3.5 text-xs font-bold text-gray-600">
               <a href={`tel:${SITE_CONFIG.phone}`} className="flex items-center gap-3 hover:text-gold transition-colors">
-                <div className="w-8 h-8 rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaPhoneAlt size={12} />
                 </div>
                 <span>{SITE_CONFIG.phone}</span>
               </a>
               <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-center gap-3 hover:text-gold transition-colors">
-                <div className="w-8 h-8 rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaEnvelope size={12} />
                 </div>
                 <span className="break-all">{SITE_CONFIG.email}</span>
@@ -135,7 +135,7 @@ export default function Footer() {
                 rel="noopener noreferrer" 
                 className="flex items-start gap-3 hover:text-gold transition-colors"
               >
-                <div className="w-8 h-8 rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0 mt-0.5">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0 mt-0.5">
                   <FaMapMarkerAlt size={12} />
                 </div>
                 <span className="leading-relaxed">{SITE_CONFIG.address[lang]}</span>
@@ -151,7 +151,7 @@ export default function Footer() {
         {/* Bottom copyright and slow-moving mantra */}
         <div className="flex flex-col items-center gap-2 text-center">
           
-          <p className="text-[9px] text-gray-400 font-bold tracking-wider">
+          <p className="text-[8px] md:text-[9px] text-gray-400 font-bold tracking-wider">
             © {currentYear} {SITE_CONFIG.name.en}. {lang === 'en' ? 'All rights reserved.' : 'सर्वाधिकार सुरक्षित।'}
           </p>
         </div>

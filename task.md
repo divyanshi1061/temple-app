@@ -16,3 +16,7 @@
   - `[x]` Make titles and descriptions visible directly below each image
 - `[x]` Verify new layout using browser subagent
 - `[x]` Update walkthrough artifact
+- `[x]` Reduce Image Reel card dimensions and container padding to make it smaller
+- `[x]` Add spiritual watermark and gold/amber gradient backgrounds to the Image Reel wrapper
+- `[x]` Add spiritual watermark, ambient glow orbs, and relative text overlays to the Gallery page
+

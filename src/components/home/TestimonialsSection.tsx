@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/animations/variants";
-import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -80,112 +80,93 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section id="testimonials" className="relative py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50 border-t border-gray-100 sacred-pattern">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
-
+    <section id="testimonials" className="relative py-8 overflow-hidden bg-white border-t border-gray-100 sacred-pattern">
       <div className="container-sacred relative z-10">
         
-        {/* Dynamic Header Block */}
+        {/* Simplified Header Block */}
         <motion.div 
-          className="text-center mb-16 max-w-3xl mx-auto"
+          className="text-center mb-10 max-w-3xl mx-auto"
           variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
         >
-          <span className="inline-flex items-center gap-2 text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm mb-6">
-            <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+          <span className="inline-flex items-center text-gold text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20 backdrop-blur-sm mb-3">
             {lang === 'en' ? 'Devotee Experiences' : 'भक्तों के अनुभव'}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-3">
             {lang === 'en' ? 'Miracles of Devotion' : 'भक्ति के चमत्कार'}
           </h2>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
+          <p className="text-gray-600 text-xs md:text-sm leading-relaxed font-outfit max-w-2xl mx-auto">
             {lang === 'en' 
-              ? 'Read the powerful stories of devotees whose lives were transformed by Maa Baglamukhi\'s divine grace through Acharya Ji\'s guidance.'
-              : 'उन भक्तों की शक्तिशाली कहानियाँ पढ़ें जिनका जीवन आचार्य जी के मार्गदर्शन में माँ बगलामुखी की दिव्य कृपा से बदल गया।'}
+              ? 'Read the stories of devotees whose lives were blessed by Maa Baglamukhi\'s divine grace through Acharya Ji\'s guidance.'
+              : 'उन भक्तों की कहानियाँ पढ़ें जिनका जीवन आचार्य जी के मार्गदर्शन में माँ बगलामुखी की दिव्य कृपा से धन्य हुआ।'}
           </p>
-          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6" />
         </motion.div>
 
-        {/* Slider */}
-          <motion.div 
-            className="w-full"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+        {/* Faster Slider */}
+        <motion.div 
+          className="w-full"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1}
+            loop={testimonials.length > 1}
+            speed={400}
+            autoplay={{ delay: 1800, disableOnInteraction: false }}
+            pagination={{ clickable: true, el: ".swiper-custom-pagination" }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 1.5 },
+              1024: { slidesPerView: 2 },
+              1280: { slidesPerView: 3 }
+            }}
+            modules={[Autoplay, Pagination]}
+            className="w-full py-2"
           >
-            <Swiper
-              spaceBetween={24}
-              slidesPerView={1}
-              loop={testimonials.length > 1}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              pagination={{ clickable: true, el: ".swiper-custom-pagination" }}
-              breakpoints={{
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 1.5 },
-                1024: { slidesPerView: 2 },
-                1280: { slidesPerView: 3 }
-              }}
-              modules={[Autoplay, Pagination]}
-              className="w-full py-6"
-            >
-              {testimonials.map((t) => {
-                const name = lang === 'en' ? t.nameEn : t.nameHi;
-                const text = lang === 'en' ? t.textEn : t.textHi;
-                const location = lang === 'en' ? t.locationEn : t.locationHi;
+            {testimonials.map((t) => {
+              const name = lang === 'en' ? t.nameEn : t.nameHi;
+              const text = lang === 'en' ? t.textEn : t.textHi;
+              const location = lang === 'en' ? t.locationEn : t.locationHi;
 
-                return (
-                  <SwiperSlide key={t._id} className="h-auto">
-                    <div className="w-full bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-100 hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/5 transition-all duration-500 relative overflow-hidden flex flex-col justify-between h-full min-h-[360px] md:min-h-[380px] shadow-sm select-none">
-                      
-                      {/* Decorative Elements */}
-                      <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-gold/10 to-transparent rounded-full blur-2xl pointer-events-none" />
-                      <FaQuoteLeft className="absolute top-8 right-8 text-7xl text-gray-50/70 pointer-events-none transform rotate-12" />
-                      
-                      {/* Service tag pill */}
-                      <div className="relative z-10 mb-5 flex">
-                        <span className="text-[9px] md:text-[10px] text-gold font-bold bg-gold/5 border border-gold/15 px-3 py-1 rounded-full uppercase tracking-wider">
-                          {lang === 'en' ? 'Puja Experience' : 'पूजा अनुभव'}
+              return (
+                <SwiperSlide key={t._id} className="h-auto">
+                  <div className="w-full bg-white rounded-2xl p-4 border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all duration-300 relative flex flex-col justify-start h-full shadow-sm select-none">
+                    
+                    {/* Header Info: Name, Location, Rating */}
+                    <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-3 flex-shrink-0 z-10 relative">
+                      <div className="flex flex-col">
+                        <span className="font-outfit font-bold text-xs text-gray-900 tracking-wider uppercase">
+                          {name}
+                        </span>
+                        <span className="text-[10px] text-gray-500 font-outfit font-normal">
+                          {location}
                         </span>
                       </div>
-
-                      {/* Quote Content */}
-                      <div className="relative z-10 flex-grow">
-                        <p className="text-base md:text-lg text-gray-800 leading-relaxed font-semibold italic">
-                          &ldquo;{text}&rdquo;
-                        </p>
+                      <div className="flex gap-0.5 flex-shrink-0">
+                        {Array.from({ length: t.rating }, (_, index) => (
+                          <FaStar key={index} className="text-gold text-[9px]" />
+                        ))}
                       </div>
-                      
-                      {/* Author Profile */}
-                      <div className="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100 relative z-10 flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center border border-gold/30 flex-shrink-0 shadow-inner ring-4 ring-gold/5">
-                          <span className="text-lg font-bold text-gold font-cinzel">
-                            {name.charAt(0)}
-                          </span>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="text-gray-900 font-bold text-sm md:text-base tracking-tight truncate">{name}</h4>
-                          <div className="flex flex-wrap items-center gap-2 mt-1">
-                            <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider truncate">{location}</span>
-                            <div className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
-                            <div className="flex gap-0.5 flex-shrink-0">
-                              {Array.from({ length: t.rating }, (_, index) => (
-                                <FaStar key={index} className="text-gold text-[9px]" />
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-            
-            {/* Custom pagination layout */}
-            <div className="swiper-custom-pagination flex justify-center gap-2 mt-8 z-20 relative" />
-          </motion.div>
+
+                    {/* Testimonial Quote */}
+                    <div className="relative z-10 flex-grow">
+                      <p className="text-xs text-gray-600 leading-relaxed font-outfit text-justify font-normal">
+                        &ldquo;{text}&rdquo;
+                      </p>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          
+          {/* Custom pagination layout */}
+          <div className="swiper-custom-pagination flex justify-center gap-2 mt-4 z-20 relative" />
+        </motion.div>
       </div>
     </section>
   );

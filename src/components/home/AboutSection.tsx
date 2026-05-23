@@ -26,7 +26,7 @@ export default function AboutSection() {
     : "मां बगलामुखी माता का भव्य मंदिर आगर-मालवा जिले के नलखेड़ा में लखुंदर नदी के तट पर स्थित है। यह मंदिर धार्मिक और तांत्रिक दोनों ही तरह की साधनाओं के लिए महत्वपूर्ण है। यहां किया जाने वाला बगलामुखी हवन (अग्नि अनुष्ठान) दुनिया भर में प्रसिद्ध है। भारत और अन्य देशों से लोग दर्शन (पूजा), हवन और पूजा (प्रार्थना) के लिए आते हैं। यहां भक्तों की मनोकामनाएं पूरी होती हैं।";
 
   return (
-    <section id="about" className="relative py-16 lg:py-24 overflow-hidden bg-white">
+    <section id="about" className="relative py-10 md:py-16 lg:py-24 overflow-hidden bg-white">
       {/* Background */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-sacred-pattern opacity-30 pointer-events-none" />
       <div className="absolute -left-64 top-1/4 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
@@ -34,14 +34,14 @@ export default function AboutSection() {
       <div className="container-sacred relative z-10 px-4 sm:px-6 lg:px-8">
         
         {/* ═══════ Part 1: About Acharya Ji ═══════ */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16 lg:mb-20">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center mb-10 lg:mb-20">
           
           {/* Left: Acharya Image */}
           <motion.div 
             className="relative"
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-md mx-auto border-2 border-gray-100 bg-gray-100">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-xs md:max-w-md mx-auto border-2 border-gray-100 bg-gray-100">
               <img 
                 src="/acharya-new.jpg" 
                 alt="Acharya Pt. Rudraksh Rajpurohit" 
@@ -54,8 +54,8 @@ export default function AboutSection() {
             </div>
 
             {/* Badge */}
-            <div className="absolute -bottom-5 left-4 sm:left-8 z-20 bg-white p-3.5 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-gold/30 bg-gray-100">
+            <div className="absolute -bottom-4 left-3 sm:left-8 z-20 bg-white p-2.5 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 flex items-center gap-2 sm:gap-3">
+              <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-gold/30 bg-gray-100">
                 <img 
                   src="/acharya-new.jpg" 
                   alt="Acharya" 
@@ -65,10 +65,10 @@ export default function AboutSection() {
               </div>
               <div className="w-[1px] h-7 bg-gray-200" />
               <div>
-                <p className="text-gray-900 font-bold text-xs leading-tight font-cinzel">
+                <p className="text-gray-900 font-bold text-[10px] sm:text-xs leading-tight font-cinzel">
                   {lang === 'en' ? 'Revered' : 'प्रतिष्ठित'}
                 </p>
-                <p className="text-gray-500 font-semibold uppercase tracking-wider text-[9px]">
+                <p className="text-gray-500 font-semibold uppercase tracking-wider text-[8px] sm:text-[9px]">
                   {lang === 'en' ? 'Bagalamukhi Sadhak' : 'वैदिक साधक'}
                 </p>
               </div>
@@ -79,18 +79,18 @@ export default function AboutSection() {
           <motion.div 
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           >
-            <span className="text-gold text-xs tracking-[0.25em] uppercase font-bold mb-3 block">
+            <span className="text-gold text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold mb-2 block">
               {lang === 'en' ? 'About Acharya Ji' : 'आचार्य जी के बारे में'}
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-4">
               {title}
             </h2>
-            <p className="text-gray-600 text-sm lg:text-base leading-relaxed font-medium mb-6">
+            <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed font-medium mb-4 md:mb-6">
               {desc}
             </p>
 
-            {/* Core Values Grid — removed "payment gateway" from Secure Booking */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+            {/* Core Values Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 md:mb-6">
               {[
                 { title: { en: "Authentic Rituals", hi: "प्रामाणिक अनुष्ठान" }, desc: { en: "100% adherence to pure Vedic scriptures.", hi: "शुद्ध वैदिक शास्त्रों का 100% पालन।" } },
                 { title: { en: "Global Reach", hi: "वैश्विक पहुंच" }, desc: { en: "Online sankalp for remote devotees.", hi: "दूरस्थ भक्तों के लिए ऑनलाइन संकल्प।" } },
@@ -102,14 +102,14 @@ export default function AboutSection() {
                     <FaCheckCircle className="text-gold text-base" />
                   </div>
                   <div>
-                    <h4 className="text-gray-900 font-bold text-sm mb-0.5">{val.title[lang]}</h4>
-                    <p className="text-gray-500 text-xs font-medium leading-relaxed">{val.desc[lang]}</p>
+                    <h4 className="text-gray-900 font-bold text-xs sm:text-sm mb-0.5">{val.title[lang]}</h4>
+                    <p className="text-gray-500 text-[11px] sm:text-xs font-medium leading-relaxed">{val.desc[lang]}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <a href="#services" className="inline-block px-6 py-3 bg-gray-900 hover:bg-gold text-white font-bold rounded-full transition-colors duration-300 shadow-lg text-sm">
+            <a href="#services" className="inline-block px-5 py-2.5 bg-gray-900 hover:bg-gold text-white font-bold rounded-full transition-colors duration-300 shadow-lg text-xs sm:text-sm">
               {lang === 'en' ? 'Discover Services' : 'सेवाएं खोजें'}
             </a>
           </motion.div>
@@ -117,13 +117,13 @@ export default function AboutSection() {
 
         {/* ═══════ Part 2: About Mata Mandir — Compact Preview ═══════ */}
         <motion.div 
-          className="bg-gray-50 rounded-2xl p-5 sm:p-8 border border-gray-100 shadow-sm relative overflow-hidden"
+          className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
         >
-          <div className="grid md:grid-cols-12 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
             {/* Left: Image Thumbnail (Single Large Image) */}
-            <div className="md:col-span-5 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white p-2">
-              <div className="rounded-2xl overflow-hidden bg-gray-100 relative aspect-[4/3] w-full">
+            <div className="md:col-span-5 rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white p-1.5 md:p-2">
+              <div className="rounded-xl md:rounded-2xl overflow-hidden bg-gray-100 relative aspect-[4/3] w-full">
                 <Image
                   src="/mata-baglamukhi.jpg"
                   alt="Maa Baglamukhi - Sacred Darshan"
@@ -137,20 +137,20 @@ export default function AboutSection() {
 
             {/* Right: Brief Text + CTA */}
             <div className="md:col-span-7 flex flex-col items-start pl-0 md:pl-4">
-              <span className="text-gold text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-3 py-1.5 rounded-full border border-gold/20 mb-4">
+              <span className="text-gold text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-3 py-1.5 rounded-full border border-gold/20 mb-3 md:mb-4">
                 {lang === 'en' ? 'Siddh Peeth Nalkheda Dham' : 'सिद्ध पीठ नलखेड़ा धाम'}
               </span>
-              <h3 className="text-xl md:text-2xl font-bold font-cinzel text-gray-900 mb-3">
+              <h3 className="text-lg md:text-2xl font-bold font-cinzel text-gray-900 mb-2 md:mb-3">
                 {lang === 'en' ? 'Maa Baglamukhi Temple' : 'माँ बगलामुखी मंदिर'}
               </h3>
-              <p className="text-gray-600 leading-relaxed font-medium text-sm mb-5 line-clamp-3">
+              <p className="text-gray-600 leading-relaxed font-medium text-xs sm:text-sm mb-4 md:mb-5 line-clamp-4">
                 {lang === 'en'
                   ? 'The magnificent temple of Goddess Maa Baglamukhi is located in Nalkheda, approximately 100 km from Ujjain. Situated on the banks of the Lakhundar River, this temple is highly significant from both religious and tantric perspectives. The idol dates back to the Pandava era.'
                   : 'उज्जैन से लगभग 100 किलोमीटर दूरी पर नलखेड़ा में माँ बगलामुखी का भव्य मंदिर स्थित है। लखुन्दर नदी के तट पर स्थित यह मंदिर धार्मिक एवं तांत्रिक दृष्टि से अत्यंत महत्वपूर्ण है। यहाँ स्थापित मूर्ति पाण्डव कालीन है।'}
               </p>
               <a
                 href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gold text-white font-bold rounded-full transition-colors duration-300 shadow-lg text-sm group"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 hover:bg-gold text-white font-bold rounded-full transition-colors duration-300 shadow-lg text-xs sm:text-sm group"
               >
                 {lang === 'en' ? 'Read Full History' : 'पूरा इतिहास पढ़ें'}
                 <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -163,3 +163,4 @@ export default function AboutSection() {
     </section>
   );
 }
+

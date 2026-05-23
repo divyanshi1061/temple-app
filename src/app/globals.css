@@ -74,9 +74,10 @@ h1, h2, h3, h4, h5, h6, .font-cinzel {
 }
 
 /* Paragraphs: highly readable and high-contrast styling */
-p {
+p, li {
   font-family: var(--font-outfit), sans-serif;
   color: #2c2a29; /* Dark high-contrast charcoal */
+  text-align: justify;
 }
 
 /* Custom Scrollbar - Gold */
@@ -379,5 +380,37 @@ main {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ============================================================
+   PROGRESSIVE GRADIENT BLUR
+   ============================================================ */
+.progressive-blur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  mask-image: linear-gradient(to top, black 25%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 25%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .flex-ratio-narrow {
+    flex: 1.2 1 0%;
+  }
+  .flex-ratio-medium {
+    flex: 1.5 1 0%;
+  }
+  .flex-ratio-wide {
+    flex: 2 1 0%;
+  }
+}
+
+
 
 

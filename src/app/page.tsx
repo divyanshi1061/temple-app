@@ -78,8 +78,22 @@ export default function Home() {
       />
       <HeroSection />
       {/* ─── Seamless Infinite Image Reel ─── */}
-      <div className="bg-sacred-white border-b border-gray-100/60 pb-8">
-        <ImageReel />
+      <div className="relative bg-sacred-white border-b border-gray-100/60 pb-4 overflow-hidden">
+        {/* Spiritual background image at back of reel */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-20"
+          style={{
+            backgroundImage: "url('/hero-spiritual-bg.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        {/* Soft elegant glowing gradient mask */}
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-orange-500/5 to-amber-500/5 pointer-events-none z-0" />
+        <div className="relative z-10">
+          <ImageReel />
+        </div>
       </div>
       <div className="sacred-divider" />
       <ServicesSection />

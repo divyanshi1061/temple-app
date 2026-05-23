@@ -33,7 +33,7 @@ export default function AboutPage() {
     : "मां बगलामुखी माता का भव्य मंदिर आगर-मालवा जिले के नलखेड़ा में लखुंदर नदी के तट पर स्थित है। यह मंदिर धार्मिक और तांत्रिक दोनों ही तरह की साधनाओं के लिए महत्वपूर्ण है। यहां किया जाने वाला बगलामुखी हवन (अग्नि अनुष्ठान) दुनिया भर में प्रसिद्ध है। भारत और अन्य देशों से लोग दर्शन (पूजा), हवन और पूजा (प्रार्थना) के लिए आते हैं। यहां भक्तों की मनोकामनाएं पूरी होती हैं।";
 
   return (
-    <main className="min-h-screen bg-sacred-white pb-20 overflow-hidden font-sans">
+    <main className="min-h-screen bg-sacred-white pb-20 overflow-hidden font-outfit">
       
       {/* ─── A. Cinematic Light Hero Banner ─── */}
       <section
@@ -447,3 +447,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

@@ -14,35 +14,29 @@ type PhotoItem = {
   titleHi: string;
   descEn: string;
   descHi: string;
-  isDouble?: boolean;
-  urlA?: string;
-  urlB?: string;
-  titleEnA?: string;
-  titleHiA?: string;
-  titleEnB?: string;
-  titleHiB?: string;
 };
 
 // Configured image data matching the reference image's grid layout structure
-const COLUMN_1_PHOTOS: PhotoItem[] = [
+const ALL_PHOTOS: PhotoItem[] = [
   {
-    id: "col1-new-1",
+    id: "mrityunjay-new",
     url: "/mrityunjay-new.jpg",
     aspect: "aspect-[3/4]",
     titleEn: "Maha Mrityunjay Anusthan",
     titleHi: "महामृत्युंजय अनुष्ठान",
-    descEn: "Pt. Rudraksh Rajpurohit conducting the sacred Maha Mrityunjay Anusthan for health, healing, and longevity.",
-    descHi: "स्वास्थ्य, आरोग्य और दीर्घायु के लिए पं. रुद्राक्ष राजपुरोहित द्वारा पवित्र महामृत्युंजय अनुष्ठान का संपादन।"
+    descEn: "Maha Mrityunjay ritual conducted for health, longevity, and spiritual protection.",
+    descHi: "स्वास्थ्य, दीर्घायु और आध्यात्मिक सुरक्षा के लिए आयोजित महामृत्युंजय अनुष्ठान।"
   },
   {
-    id: "col1-1",
+    id: "acharya-new",
     url: "/acharya-new.jpg",
     aspect: "aspect-[3/4]",
     titleEn: "Acharya Pt. Rudraksh Rajpurohit",
     titleHi: "आचार्य पं. रुद्राक्ष राजपुरोहित",
-    descEn: "Pt. Rudraksh Rajpurohit in deep meditation and divine guidance at Nalkheda Dham.",
-    descHi: "नलखेड़ा धाम में गहरे ध्यान और दिव्य मार्गदर्शन में पं. रुद्राक्ष राजपुरोहित।"
+    descEn: "Acharya Pt. Rudraksh Rajpurohit conducting sacred rituals and prayers at the temple.",
+    descHi: "मंदिर में अनुष्ठान और पूजा का संपादन करते आचार्य पं. रुद्राक्ष राजपुरोहित।"
   },
+  // COLUMN 1
   {
     id: "col1-3",
     url: "/havan-upload-1.jpg",
@@ -60,20 +54,10 @@ const COLUMN_1_PHOTOS: PhotoItem[] = [
     titleHi: "रात्रि में देदीप्यमान मंदिर",
     descEn: "The magnificent night view of the illuminated Maa Baglamukhi temple.",
     descHi: "रोशनी से जगमगाते माँ बगलामुखी मंदिर का भव्य रात्रिकालीन दृश्य।"
-  }
-  ,
-  {
-    id: "col1-5",
-    url: "/real-gallery-5.jpg",
-    aspect: "aspect-[3/4]",
-    titleEn: "Maa Baglamukhi Shringar",
-    titleHi: "माँ बगलामुखी श्रृंगार",
-    descEn: "A ceremonial portrait from the gallery collection.",
-    descHi: "गैलरी संग्रह से एक सांस्कृतिक पूजापूर्ण चित्रण।"
-  }
-];
+  },
 
-const COLUMN_2_PHOTOS: PhotoItem[] = [
+  
+  // COLUMN 2
   {
     id: "col2-1",
     url: "/new-havan-1.jpg",
@@ -92,22 +76,7 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     descEn: "A second sacred Havan ritual captured during the devotions at Nalkheda Dham.",
     descHi: "नलखेड़ा धाम में समर्पण के दौरान एक दूसरा पवित्र हवन अनुष्ठान।"
   },
-  {
-    id: "col2-3",
-    url: "/real-gallery-1.jpg",
-    aspect: "aspect-video",
-    isDouble: true,
-    urlA: "/real-gallery-1.jpg",
-    urlB: "/real-gallery-3.jpg",
-    titleEnA: "Spiritual Devotion",
-    titleHiA: "आध्यात्मिक भक्ति",
-    titleEnB: "Puja Offerings",
-    titleHiB: "पूजा सामग्री",
-    titleEn: "Ritual Assemblages",
-    titleHi: "अनुष्ठान झलकियां",
-    descEn: "Scenes from everyday pujas and offerings at the divine altar.",
-    descHi: "दिव्य वेदी पर प्रतिदिन होने वाली पूजा और चढ़ावे के दृश्य।"
-  },
+
   {
     id: "col2-4",
     url: "/new-havan-3.jpg",
@@ -116,8 +85,7 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     titleHi: "भक्तों का जमघट",
     descEn: "Devotees joining hands in prayer during a powerful community havan.",
     descHi: "एक शक्तिशाली सामूहिक हवन के दौरान प्रार्थना में हाथ जोड़ते भक्तगण।"
-  }
-  ,
+  },
   {
     id: "col2-5",
     url: "/new-upload-10.jpg",
@@ -162,10 +130,9 @@ const COLUMN_2_PHOTOS: PhotoItem[] = [
     titleHi: "भक्ति क्षण",
     descEn: "A candid devotional photograph.",
     descHi: "एक सहज भक्ति पूर्ण फ़ोटो।"
-  }
-];
+  },
 
-const COLUMN_3_PHOTOS: PhotoItem[] = [
+  // COLUMN 3
   {
     id: "col3-1",
     url: "/real-havan-kund.jpg",
@@ -210,8 +177,7 @@ const COLUMN_3_PHOTOS: PhotoItem[] = [
     titleHi: "वैदिक पूजा थाली",
     descEn: "A close-up of the ceremonial plate arranged with kumkum, flowers, and lamps.",
     descHi: "कुमकुम, फूलों और दीयों से सजी हुई अनुष्ठान की थाली।"
-  }
-  ,
+  },
   {
     id: "col3-6",
     url: "/IMG_5112.JPG.jpeg",
@@ -229,10 +195,9 @@ const COLUMN_3_PHOTOS: PhotoItem[] = [
     titleHi: "माँ का चित्र",
     descEn: "A revered portrait used in ceremonial rites.",
     descHi: "अनुष्ठानों में उपयोग किया जाने वाला पूजनीय चित्र।"
-  }
-];
+  },
 
-const COLUMN_4_PHOTOS: PhotoItem[] = [
+  // COLUMN 4
   {
     id: "col4-1",
     url: "/temple-entrance-1.jpg",
@@ -289,8 +254,66 @@ const COLUMN_4_PHOTOS: PhotoItem[] = [
   }
 ];
 
+const YOUTUBE_VIDEOS = [
+  {
+    id: "1IQSzL-D78M",
+    titleEn: "Maa Baglamukhi Maha Havan",
+    titleHi: "माँ बगलामुखी महा हवन"
+  },
+  {
+    id: "6nuT2qMTnK0",
+    titleEn: "Maa Baglamukhi Darshan",
+    titleHi: "माँ बगलामुखी दर्शन"
+  },
+  {
+    id: "61ZxvQ1Ei9M",
+    titleEn: "Maa Baglamukhi Divya Havan",
+    titleHi: "माँ बगलामुखी दिव्य हवन"
+  },
+  {
+    id: "latHG7htf1M",
+    titleEn: "Maa Baglamukhi Shringar",
+    titleHi: "माँ बगलामुखी श्रृंगार"
+  },
+  {
+    id: "8KwG82gkkYA",
+    titleEn: "Maa Baglamukhi Aarti",
+    titleHi: "माँ बगलामुखी आरती"
+  },
+  {
+    id: "C9iVhfuGFow",
+    titleEn: "Maa Baglamukhi Sadhana",
+    titleHi: "माँ बगलामुखी साधना"
+  }
+];
+
+const chunkArray = <T,>(arr: T[], size: number): T[][] => {
+  const chunks: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunks.push(arr.slice(i, i + size));
+  }
+  return chunks;
+};
+
+const getFlexClass = (rowIndex: number, colIndex: number, rowLength: number) => {
+  if (rowLength === 1) return "";
+  if (rowLength === 2) {
+    return colIndex === 0 ? "flex-ratio-narrow" : "flex-ratio-wide";
+  }
+  const isEvenRow = rowIndex % 2 === 0;
+  if (isEvenRow) {
+    if (colIndex === 0) return "flex-ratio-narrow";
+    if (colIndex === 1) return "flex-ratio-wide";
+    return "flex-ratio-medium";
+  } else {
+    if (colIndex === 0) return "flex-ratio-wide";
+    if (colIndex === 1) return "flex-ratio-medium";
+    return "flex-ratio-narrow";
+  }
+};
+
 export default function GalleryPage() {
-  const { lang, toggleLang } = useLanguage();
+  const { lang } = useLanguage();
   const router = useRouter();
   
   // Lightbox Modal state
@@ -308,7 +331,7 @@ export default function GalleryPage() {
     };
   }, [selectedPhoto]);
 
-  const renderPhotoCard = (item: PhotoItem) => (
+  const renderPhotoCard = (item: PhotoItem, flexClass: string) => (
     <motion.div
       key={item.id}
       onClick={() => setSelectedPhoto(item)}
@@ -316,171 +339,144 @@ export default function GalleryPage() {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
       }}
-      className="group relative overflow-hidden rounded-2xl bg-gray-900 cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-gold/20 transition-all duration-500"
+      className={`group relative overflow-hidden rounded-md bg-gray-900 cursor-pointer shadow-md hover:shadow-xl transition-all duration-500 h-[220px] md:h-[320px] w-full ${flexClass}`}
     >
-      <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-        <img
-          src={item.url}
-          alt={lang === "en" ? item.titleEn : item.titleHi}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-          <h3 className="text-white font-cinzel font-bold text-lg md:text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            {lang === "en" ? item.titleEn : item.titleHi}
-          </h3>
-          <p className="text-white/80 text-xs mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 line-clamp-2">
-            {lang === "en" ? item.descEn : item.descHi}
-          </p>
-        </div>
+      <img
+        src={item.url}
+        alt={lang === "en" ? item.titleEn : item.titleHi}
+        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+      {/* Progressive blur overlay */}
+      <div className="progressive-blur" />
+      
+      {/* Text overlay always visible with absolute override styles */}
+      <div className="absolute bottom-4 left-5 right-5 z-10 flex flex-col pointer-events-none">
+        <span 
+          className="text-xs md:text-sm tracking-wide font-normal font-outfit"
+          style={{ color: '#ffffff' }}
+        >
+          {lang === "en" ? item.titleEn : item.titleHi}
+        </span>
       </div>
     </motion.div>
   );
 
+  const photoRows = chunkArray(ALL_PHOTOS, 3);
+
   return (
-    <div
-      className="min-h-screen bg-white text-gray-900 font-outfit select-none pb-0 pt-28 relative"
-      style={{
-        backgroundImage: "url('/hero-spiritual-bg.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: 'white',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px] pointer-events-none z-0" />
+    <div className="min-h-screen bg-[#FAF8F5] text-gray-900 font-outfit select-none pb-24 pt-28 relative overflow-hidden">
+      
+      {/* Subtle spiritual background watermark */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
 
-      {/* 2. Editorial Header Section */}
-      <section className="relative max-w-4xl mx-auto text-center pt-16 md:pt-24 pb-16 px-6 z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/15 rounded-full blur-[100px] pointer-events-none" />
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <span className="text-gold text-xs tracking-[0.3em] uppercase font-bold bg-white/60 px-6 py-2.5 rounded-full border border-gold/20 backdrop-blur-md inline-block mb-6 shadow-sm">
-            {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
-          </span>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 font-cinzel drop-shadow-sm">
-            {lang === 'en' ? 'Divine Gallery' : 'दिव्य गैलरी'}
-          </h1>
-          <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-8 opacity-70" />
-        </motion.div>
-      </section>
+      {/* Soft luxury background orbs */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] opacity-60 pointer-events-none z-0" />
+      <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-amber-200/5 rounded-full blur-[100px] opacity-50 pointer-events-none z-0" />
 
-      {/* 4. Video Gallery Section — Maa Baglamukhi Darshan Channel */}
+      {/* Centered Editorial Brand Header */}
+      <div className="w-full text-center pb-6 border-b border-gray-200/50 max-w-[1440px] mx-auto mt-6 px-6 relative z-10">
+        <h2 className="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-gray-800 font-outfit">
+          {lang === 'en' ? 'PANDIT MAA BAGLAMUKHI' : 'पंडित माँ बगलामुखी'}
+        </h2>
+      </div>
+
+      {/* Videos Section Title */}
+      <div className="px-6 md:px-12 max-w-[1440px] mx-auto pt-12 pb-6 relative z-10">
+        <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
+          <span>—</span>
+          <span>{lang === 'en' ? 'Videos' : 'वीडियो'}</span>
+        </h1>
+        <p className="mt-3 text-gray-600 text-xs md:text-sm font-outfit max-w-2xl tracking-wide leading-relaxed">
+          {lang === 'en' 
+            ? 'Watch recordings of daily prayers, havan ceremonies, and rituals conducted at the temple.' 
+            : 'मंदिर में होने वाली दैनिक आरती, हवन और अनुष्ठान के वीडियो देखें।'
+          }
+        </p>
+      </div>
+
+      {/* Video Gallery Section — Maa Baglamukhi Darshan Channel */}
       <motion.section 
-        className="px-6 md:px-12 max-w-[1440px] mx-auto pb-20 relative z-10"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        className="px-6 md:px-12 max-w-[1440px] mx-auto pb-12 relative z-10"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 font-cinzel inline-block relative">
-            {lang === 'en' ? 'Temple Videos' : 'मंदिर वीडियो'}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold rounded-full" />
-          </h2>
-          <p className="mt-6 text-gray-600 text-sm md:text-base max-w-xl mx-auto">
-            {lang === 'en' 
-              ? 'Watch sacred rituals, havan ceremonies, and divine darshan from our official YouTube channel — Maa Baglamukhi Darshan' 
-              : 'हमारे आधिकारिक यूट्यूब चैनल — माँ बगलामुखी दर्शन से पवित्र अनुष्ठान, हवन समारोह और दिव्य दर्शन देखें'}
-          </p>
-        </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Video 1 — Havan Booking / Maa Baglamukhi Havan Benefits */}
-          <motion.div 
-            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20"
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="aspect-video relative">
-              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-              <iframe 
-                className="absolute top-0 left-0 w-full h-full z-0"
-                src="https://www.youtube.com/embed/C9iVhfuGFow" 
-                title={lang === 'en' ? 'Maa Baglamukhi Havan Benefits' : 'माँ बगलामुखी हवन के लाभ'}
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen>
-              </iframe>
-            </div>
-            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
-              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
-                {lang === 'en' ? '🔥 Maa Baglamukhi Havan Benefits' : '🔥 माँ बगलामुखी हवन के लाभ'}
-              </h3>
-              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
-            </div>
-          </motion.div>
-
-          {/* Video 2 — Baglamukhi Darshan Shorts */}
-          <motion.div 
-            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20"
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="aspect-video relative">
-              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-              <iframe 
-                className="absolute top-0 left-0 w-full h-full z-0"
-                src="https://www.youtube.com/embed/B8eT6o8a1oU" 
-                title={lang === 'en' ? 'Maa Baglamukhi Divine Darshan' : 'माँ बगलामुखी दिव्य दर्शन'}
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen>
-              </iframe>
-            </div>
-            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
-              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
-                {lang === 'en' ? '🙏 Maa Baglamukhi Divine Darshan' : '🙏 माँ बगलामुखी दिव्य दर्शन'}
-              </h3>
-              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
-            </div>
-          </motion.div>
-
-          {/* Video 3 — Channel Latest Videos Embed */}
-          <motion.div 
-            className="relative rounded-2xl overflow-hidden shadow-xl bg-gray-900 group border border-gold/20 md:col-span-2 lg:col-span-1"
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="aspect-video relative">
-              <div className="absolute inset-0 bg-gold/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-              <iframe 
-                className="absolute top-0 left-0 w-full h-full z-0"
-                src="https://www.youtube.com/embed?listType=user_uploads&list=UCw1djYbf_qoTFF2LpV1CoTQ" 
-                title={lang === 'en' ? 'Latest Videos from Channel' : 'चैनल से नवीनतम वीडियो'}
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen>
-              </iframe>
-            </div>
-            <div className="p-4 bg-gradient-to-b from-gray-900 to-gray-950">
-              <h3 className="text-white font-cinzel font-semibold text-sm md:text-base truncate">
-                {lang === 'en' ? '📺 Latest from Our Channel' : '📺 हमारे चैनल से नवीनतम'}
-              </h3>
-              <p className="text-white/60 text-xs mt-1">Maa Baglamukhi Darshan</p>
-            </div>
-          </motion.div>
+          {YOUTUBE_VIDEOS.map((vid) => (
+            <motion.div 
+              key={vid.id}
+              className="relative rounded-lg overflow-hidden shadow-md bg-white group border border-gray-200/50"
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="aspect-video relative">
+                <iframe 
+                  className="absolute top-0 left-0 w-full h-full z-0"
+                  src={`https://www.youtube.com/embed/${vid.id}`} 
+                  title={lang === 'en' ? vid.titleEn : vid.titleHi}
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen>
+                </iframe>
+              </div>
+              <div className="p-4 bg-white border-t border-gray-100">
+                <div 
+                  className="font-outfit text-xs md:text-sm font-semibold tracking-wide truncate"
+                  style={{ color: '#12100e' }}
+                >
+                  {lang === 'en' ? vid.titleEn : vid.titleHi}
+                </div>
+                <p className="text-gray-500 text-[10px] mt-1 font-outfit uppercase tracking-wider">
+                  Maa Baglamukhi Darshan
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Visit Channel Button */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-6">
           <a 
             href="https://youtube.com/@maabaglamukhidarshan-d2e?si=OC9ZiN1R5Tb59OBl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-semibold text-sm tracking-wide shadow-lg hover:shadow-red-500/30 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-semibold text-xs tracking-wide shadow-lg hover:shadow-red-500/20 hover:scale-105 transition-all duration-300"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
             </svg>
-            {lang === 'en' ? 'Visit Our YouTube Channel' : 'हमारा YouTube चैनल देखें'}
+            <span style={{ color: '#ffffff' }}>
+              {lang === 'en' ? 'Visit Our YouTube Channel' : 'हमारा YouTube चैनल देखें'}
+            </span>
           </a>
         </div>
       </motion.section>
 
-      {/* 3. Visual Masonry Grid (4 Columns) */}
+      {/* Gallery Section Title */}
+      <div className="px-6 md:px-12 max-w-[1440px] mx-auto pt-12 pb-6 relative z-10">
+        <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
+          <span>—</span>
+          <span>{lang === 'en' ? 'Gallery' : 'गैलरी'}</span>
+        </h1>
+        <p className="mt-3 text-gray-600 text-xs md:text-sm font-outfit max-w-2xl tracking-wide leading-relaxed">
+          {lang === 'en' 
+            ? 'Photographs capturing the shringar, daily darshan, and sacred details from Nalkheda Dham.' 
+            : 'नलखेड़ा धाम से श्रृंगार, दैनिक दर्शन और पवित्र विवरणों को दर्शाती तस्वीरें।'}
+        </p>
+      </div>
+
+      {/* Visual Alternating Flex Grid of Photos */}
       <section className="px-6 md:px-12 max-w-[1440px] mx-auto pb-24 relative z-10">
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="flex flex-col gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -489,39 +485,39 @@ export default function GalleryPage() {
             visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
           }}
         >
-          {/* Column 1 */}
-          <div className="flex flex-col gap-6">
-            {COLUMN_1_PHOTOS.map((item) => renderPhotoCard(item))}
-          </div>
+          {photoRows.map((row, rowIndex) => (
+            <div key={rowIndex} className="flex flex-col md:flex-row gap-6 w-full">
+              {row.map((item, colIndex) => {
+                const flexClass = getFlexClass(rowIndex, colIndex, row.length);
+                return renderPhotoCard(item, flexClass);
+              })}
+            </div>
+          ))}
 
-          {/* Column 2 */}
-          <div className="flex flex-col gap-6">
-            {COLUMN_2_PHOTOS.map((item) => {
-              if (item.isDouble) {
-                return (
-                  <div key={item.id} className="grid grid-cols-2 gap-3 w-full">
-                    {renderPhotoCard({
-                      ...item, id: `${item.id}-A`, url: item.urlA || "", titleEn: item.titleEnA || "", titleHi: item.titleHiA || "", aspect: "aspect-[3/4]"
-                    })}
-                    {renderPhotoCard({
-                      ...item, id: `${item.id}-B`, url: item.urlB || "", titleEn: item.titleEnB || "", titleHi: item.titleHiB || "", aspect: "aspect-[3/4]"
-                    })}
-                  </div>
-                );
-              }
-              return renderPhotoCard(item);
+          {/* Full-width banner at the end, fully visible */}
+          <motion.div
+            onClick={() => setSelectedPhoto({
+              id: "banner-new",
+              url: "/banner-new.jpg",
+              aspect: "aspect-[16/10]",
+              titleEn: "Divine Puja and Havan Banner",
+              titleHi: "दिव्य पूजा एवं हवन बैनर",
+              descEn: "Authentic Maa Baglamukhi Havan and Vedic Puja services guided by Acharya Pt. Rudraksh Rajpurohit.",
+              descHi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा निर्देशित प्रामाणिक माँ बगलामुखी हवन और वैदिक पूजा सेवाएँ।"
             })}
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex flex-col gap-6">
-            {COLUMN_3_PHOTOS.map((item) => renderPhotoCard(item))}
-          </div>
-
-          {/* Column 4 */}
-          <div className="flex flex-col gap-6">
-            {COLUMN_4_PHOTOS.map((item) => renderPhotoCard(item))}
-          </div>
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
+            className="group relative overflow-hidden rounded-md bg-white cursor-pointer shadow-md hover:shadow-xl transition-all duration-500 w-full max-w-4xl mx-auto border border-gray-200/50"
+            style={{ aspectRatio: '1000/620' }}
+          >
+            <img
+              src="/banner-new.jpg"
+              alt="Maa Baglamukhi Divine Banner"
+              className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+            />
+          </motion.div>
         </motion.div>
       </section>
 
@@ -572,10 +568,10 @@ export default function GalleryPage() {
                 transition={{ delay: 0.2, duration: 0.4 }}
                 onClick={(e) => e.stopPropagation()} // Prevent closing when text is clicked
               >
-                <h3 className="text-2xl md:text-3xl font-cormorant font-normal italic tracking-wide text-gray-900 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold font-cinzel tracking-tight text-gray-900 mb-4">
                   {lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify sm:text-left">
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify">
                   {lang === "en" ? selectedPhoto.descEn : selectedPhoto.descHi}
                 </p>
 

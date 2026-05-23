@@ -115,7 +115,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="relative section-padding overflow-hidden bg-white border-t border-gray-100 sacred-pattern"
+      className="relative py-10 md:py-20 overflow-hidden bg-white border-t border-gray-100 sacred-pattern"
       style={{
         backgroundImage: "url('/hero-spiritual-bg.png')",
         backgroundSize: 'cover',
@@ -129,23 +129,23 @@ export default function GallerySection() {
         
         {/* Gallery Header */}
         <motion.div 
-          className="text-center mb-20" 
+          className="text-center mb-6 md:mb-10 max-w-3xl mx-auto" 
           variants={fadeInUp} 
           initial="hidden"
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }}
         >
-          <span className="text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm">
+          <span className="inline-flex items-center text-gold text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20 backdrop-blur-sm mb-3">
             {lang === 'en' ? 'Sacred Moments' : 'पवित्र पल'}
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900 font-cinzel">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-3">
             {lang === 'en' ? 'Gallery' : 'गैलरी'}
           </h2>
-          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2" />
         </motion.div>
 
         {/* Uniform 6-image gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
           {SHOWCASE_PHOTOS.slice(0, 6).map((item) => (
             <motion.div
               key={item.id}
@@ -167,7 +167,7 @@ export default function GallerySection() {
 
         {/* View Full Gallery Link */}
         <motion.div 
-          className="mt-16 flex justify-center" 
+          className="mt-8 md:mt-16 flex justify-center" 
           variants={fadeInUp} 
           initial="hidden" 
           whileInView="visible" 
@@ -232,10 +232,10 @@ export default function GallerySection() {
                 transition={{ delay: 0.2, duration: 0.4 }}
                 onClick={(e) => e.stopPropagation()} // Prevent closing when text is clicked
               >
-                <h3 className="text-2xl md:text-3xl font-cormorant font-normal italic tracking-wide text-gray-900 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold font-cinzel tracking-tight text-gray-900 mb-4">
                   {lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify sm:text-left">
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-light tracking-wide mb-6 text-justify">
                   {lang === "en" ? selectedPhoto.descEn : selectedPhoto.descHi}
                 </p>
 

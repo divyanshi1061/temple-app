@@ -41,7 +41,7 @@ export default function ImageReel() {
   const doubledImages = [...REEL_IMAGES, ...REEL_IMAGES];
 
   return (
-    <div className="w-full overflow-hidden py-12 relative z-20 select-none">
+    <div className="w-full overflow-hidden py-4 md:py-8 relative z-20 select-none">
       {/* Scoped CSS marquee styling */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes marquee {
@@ -68,11 +68,11 @@ export default function ImageReel() {
 
       {/* Main Reels Slider */}
       <div className="mask-fade-edges w-full overflow-hidden flex">
-        <div className="animate-marquee-loop gap-6 flex">
+        <div className="animate-marquee-loop gap-2.5 md:gap-4 flex">
           {doubledImages.map((img, index) => (
             <div
               key={`${img.src}-${index}`}
-              className="relative w-64 h-44 md:w-80 md:h-52 rounded-[1.75rem] overflow-hidden border border-gold/15 bg-white shadow-md hover:shadow-2xl hover:border-gold/50 hover:scale-[1.03] transition-all duration-500 cursor-pointer group shrink-0"
+              className="relative w-28 h-20 sm:w-40 sm:h-28 md:w-52 md:h-36 rounded-lg md:rounded-[1rem] overflow-hidden border border-gold/15 bg-white shadow-sm hover:shadow-lg hover:border-gold/45 hover:scale-[1.02] transition-all duration-500 cursor-pointer group shrink-0"
             >
               {/* Gold outer overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent z-10 transition-opacity duration-300 group-hover:from-black/60" />
@@ -81,11 +81,10 @@ export default function ImageReel() {
                 src={img.src}
                 alt={img.alt}
                 fill
-                sizes="(max-width: 768px) 256px, 320px"
+                sizes="(max-width: 768px) 112px, 208px"
                 style={{ objectFit: "cover" }}
                 className="transition-transform duration-700 group-hover:scale-105"
               />
-
 
             </div>
           ))}

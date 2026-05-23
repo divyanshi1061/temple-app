@@ -71,23 +71,23 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="relative py-16 md:py-20 overflow-hidden bg-gray-50 border-t border-gray-100 sacred-pattern">
+    <section id="contact" className="relative py-10 md:py-20 overflow-hidden bg-gray-50 border-t border-gray-100 sacred-pattern">
       {/* Aura background blur */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-gold/3 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container-sacred relative z-10">
-        <motion.div className="text-center mb-12" variants={fadeInUp} initial="hidden"
+        <motion.div className="text-center mb-10 max-w-3xl mx-auto" variants={fadeInUp} initial="hidden"
           whileInView="visible" viewport={{ once: true, margin: "-100px" }}>
-          <span className="text-gold text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-1.5 rounded-full border border-gold/20 backdrop-blur-sm">
+          <span className="inline-flex items-center text-gold text-[10px] tracking-[0.2em] uppercase font-bold bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20 backdrop-blur-sm mb-3">
             {lang === 'en' ? 'Get In Touch' : 'संपर्क करें'}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4 mb-3 font-bold tracking-tight text-gray-900 font-cinzel">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 font-cinzel leading-tight mb-3">
             {lang === 'en' ? 'Contact Acharya Ji' : 'आचार्य जी से संपर्क करें'}
           </h2>
           <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 max-w-5xl mx-auto items-start">
           
           {/* Left Column: Contact & Travel Info */}
           <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-12">
@@ -100,10 +100,10 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {contactInfo.map((info, i) => (
                   <motion.a key={i} href={info.href} target={info.label.en === "Address" ? "_blank" : undefined}
-                    className="flex items-center gap-4 p-4 bg-white border border-gray-100 hover:border-gold/35 rounded-2xl transition-all group shadow-sm"
+                    className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-white border border-gray-100 hover:border-gold/35 rounded-2xl transition-all group shadow-sm"
                     whileHover={{ y: -2 }}>
-                    <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white group-hover:border-gold transition-all shadow-sm flex-shrink-0">
-                      <info.icon size={15} />
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white group-hover:border-gold transition-all shadow-sm flex-shrink-0">
+                      <info.icon size={13} />
                     </div>
                     <div className="min-w-0">
                       <p className="text-[9px] text-gold/60 uppercase tracking-wider font-bold mb-0.5">{info.label[lang]}</p>
@@ -121,13 +121,13 @@ export default function ContactSection() {
               </h3>
               <div className="space-y-4">
                 {travelInfo.map((travel, i) => (
-                  <div key={i} className="flex gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                  <div key={i} className="flex gap-3 md:gap-4 p-3.5 md:p-5 bg-white border border-gray-100 rounded-2xl shadow-sm">
                     <div className="mt-1 flex-shrink-0">
-                      <travel.icon className="text-gold text-xl" />
+                      <travel.icon className="text-gold text-base md:text-xl" />
                     </div>
                     <div>
-                      <h4 className="text-gray-900 font-bold text-sm uppercase tracking-wider mb-1">{travel.label[lang]}</h4>
-                      <p className="text-gray-600 text-sm font-medium">{travel.desc[lang]}</p>
+                      <h4 className="text-gray-900 font-bold text-xs md:text-sm uppercase tracking-wider mb-1">{travel.label[lang]}</h4>
+                      <p className="text-gray-600 text-xs md:text-sm font-medium">{travel.desc[lang]}</p>
                     </div>
                   </div>
                 ))}
@@ -138,44 +138,44 @@ export default function ContactSection() {
 
           {/* Right Column: Contact Form */}
           <motion.div variants={fadeInRight} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <div className="bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-xl relative overflow-hidden">
+            <div className="bg-white rounded-3xl p-4 md:p-8 border border-gray-100 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full blur-2xl pointer-events-none" />
               
               <h3 className="text-xl text-gray-900 mb-6 font-bold tracking-tight font-cinzel">
                 {lang === 'en' ? 'Send an Inquiry' : 'पूछताछ भेजें'}
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   <div>
-                    <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Full Name' : 'पूरा नाम'}</label>
+                    <label className="text-[9px] sm:text-[10px] text-gold font-bold mb-1 block">{lang === 'en' ? 'Full Name' : 'पूरा नाम'}</label>
                     <input type="text" placeholder={lang === 'en' ? "Enter name" : "नाम दर्ज करें"}
                       value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
                       suppressHydrationWarning={true}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3.5 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                   <div>
-                    <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Phone Number' : 'फ़ोन नंबर'}</label>
+                    <label className="text-[9px] sm:text-[10px] text-gold font-bold mb-1 block">{lang === 'en' ? 'Phone Number' : 'फ़ोन नंबर'}</label>
                     <input type="tel" placeholder="+91 XXXXX XXXXX"
                       value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       suppressHydrationWarning={true}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3.5 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   <div>
-                    <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Email Address' : 'ईमेल पता'}</label>
+                    <label className="text-[9px] sm:text-[10px] text-gold font-bold mb-1 block">{lang === 'en' ? 'Email Address' : 'ईमेल पता'}</label>
                     <input type="email" placeholder="your@email.com"
                       value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
                       suppressHydrationWarning={true}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3.5 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs" required />
                   </div>
                   <div>
-                    <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Service Interest' : 'सेवा रुचि'}</label>
+                    <label className="text-[9px] sm:text-[10px] text-gold font-bold mb-1 block">{lang === 'en' ? 'Service Interest' : 'सेवा रुचि'}</label>
                     <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}
                       suppressHydrationWarning={true}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs">
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3.5 py-2.5 text-gray-900 focus:border-gold focus:ring-0 focus:outline-none transition-all font-semibold text-xs">
                       <option value="">{lang === 'en' ? 'Select service' : 'सेवा चुनें'}</option>
                       <option value="havan">{lang === 'en' ? 'Baglamukhi Havan' : 'बगलामुखी हवन'}</option>
                       <option value="jaap">{lang === 'en' ? 'Anusthan & Jaap' : 'अनुष्ठान एवं जाप'}</option>
@@ -188,11 +188,11 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="text-[10px] text-gold font-bold mb-1.5 block">{lang === 'en' ? 'Message' : 'संदेश'}</label>
+                  <label className="text-[9px] sm:text-[10px] text-gold font-bold mb-1 block">{lang === 'en' ? 'Message' : 'संदेश'}</label>
                   <textarea rows={3} placeholder={lang === 'en' ? 'Your message...' : 'आपका संदेश...'}
                     value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
                     suppressHydrationWarning={true}
-                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none resize-none transition-all font-semibold text-xs h-24" />
+                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3.5 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-gold focus:ring-0 focus:outline-none resize-none transition-all font-semibold text-xs h-20 md:h-24" />
                 </div>
                 
                 <motion.button type="submit" 
