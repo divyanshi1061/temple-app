@@ -114,10 +114,10 @@ export default function HeroSection() {
           <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
  
             {/* Shloka Banner */}
-            <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5 max-w-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
-              <p className="whitespace-nowrap text-[10px] sm:text-xs text-gold-dim tracking-[0.05em] sm:tracking-[0.1em] font-bold leading-none text-center">
-                {MANTRAS[2]}
+            <div className="transform scale-[0.62] xs:scale-[0.68] sm:scale-[0.8] lg:scale-[0.85] origin-center lg:origin-left px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full border border-gold/20 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5 max-w-[98vw] sm:max-w-none">
+              <span className="w-1 h-1 rounded-full bg-gold animate-pulse flex-shrink-0" />
+              <p className="whitespace-nowrap text-[8.5px] sm:text-[10px] text-gold-dim tracking-[0.01em] sm:tracking-[0.05em] font-semibold leading-none text-center">
+                {MANTRAS[0]}
               </p>
             </div>
  
