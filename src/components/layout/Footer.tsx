@@ -148,10 +148,22 @@ export default function Footer() {
         {/* Separator line */}
         <div className="h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent my-4" />
 
-        {/* Bottom copyright and slow-moving mantra */}
-        <div className="flex flex-col items-center gap-2 text-center">
-          
-          <p className="text-[8px] md:text-[9px] text-gray-400 font-bold tracking-wider">
+        {/* Bottom copyright, policy links and slow-moving mantra */}
+        <div className="flex flex-col items-center gap-3 text-center">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-[10px] md:text-xs font-bold text-gray-500">
+            <Link href="/privacy" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Privacy Policy' : 'गोपनीयता नीति'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/terms" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Terms & Conditions' : 'नियम और शर्तें'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/refund-policy" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Cancellation & Refund' : 'रद्दीकरण और रिफंड'}
+            </Link>
+          </div>
+          <p className="text-[8px] md:text-[9px] text-gray-400 font-bold tracking-wider mt-1">
             © {currentYear} {SITE_CONFIG.name.en}. {lang === 'en' ? 'All rights reserved.' : 'सर्वाधिकार सुरक्षित।'}
           </p>
         </div>

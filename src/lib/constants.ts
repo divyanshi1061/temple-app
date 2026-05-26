@@ -8,8 +8,8 @@ export const SITE_CONFIG = {
     hi: "पंडित मां बगलामुखी"
   },
   tagline: {
-    en: "Divine Protection & Sacred Vedic Pujas",
-    hi: "दिव्य सुरक्षा एवं सिद्ध वैदिक पूजा"
+    en: "Vedic Pujas & Havans at Nalkheda Dham",
+    hi: "सिद्ध वैदिक पूजा एवं हवन - नलखेड़ा धाम"
   },
   description: {
     en: "Authentic Maa Baglamukhi Havan and Vedic Pujas performed by Acharya Pt. Rudraksh Rajpurohit at the sacred Siddh Peeth of Nalkheda Dham.",

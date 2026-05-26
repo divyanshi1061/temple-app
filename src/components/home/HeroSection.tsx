@@ -207,9 +207,9 @@ export default function HeroSection() {
 
           {/* 2. Headline & Subheading */}
           <div className="space-y-1">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] uppercase">
+            <p className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] uppercase block">
               {lang === 'hi' ? SITE_CONFIG.name.hi : SITE_CONFIG.name.en}
-            </h1>
+            </p>
             <h2 className="text-xs sm:text-sm text-gold font-bold tracking-wider uppercase font-cinzel">
               {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
             </h2>

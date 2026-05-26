@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Allow static image imports and optimize images
+  // Enable static site generation (SSG) export
+  output: "export",
+  // Allow static image imports
   images: {
+    // Disable default image optimization as next export is serverless
+    unoptimized: true,
     // Allow images from external sources if needed
     remotePatterns: [
       {
@@ -10,8 +14,6 @@ const nextConfig: NextConfig = {
         hostname: "**",
       },
     ],
-    // Optimize for deployment
-    formats: ["image/avif", "image/webp"],
   },
   // Production optimizations
   poweredByHeader: false,
@@ -20,3 +22,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

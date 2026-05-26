@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem } from "@/animations/variants";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import Image from "next/image";
+import { SERVICES } from "@/lib/constants";
 
 type ServiceItem = {
   _id: string;
@@ -16,27 +16,19 @@ type ServiceItem = {
   image?: string;
 };
 
+const STATIC_SERVICES: ServiceItem[] = SERVICES.map(s => ({
+  _id: s.id,
+  titleEn: s.title.en,
+  titleHi: s.title.hi,
+  descriptionEn: s.description.en,
+  descriptionHi: s.description.hi,
+  category: s.category || "puja",
+  image: s.image || "/new-havan-1.jpg",
+}));
+
 export default function ServicesSection() {
   const { lang } = useLanguage();
-  const [services, setServices] = useState<ServiceItem[]>([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const res = await fetch("/api/services");
-        if (res.ok) {
-          const data = await res.json();
-          setServices(data);
-        }
-      } catch (error) {
-        console.error("Failed to fetch services:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchServices();
-  }, []);
 
   return (
     <section id="services" className="relative py-10 md:py-20 overflow-hidden bg-gray-50 border-t border-gray-100 sacred-pattern">
@@ -58,26 +50,21 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        {loading ? (
-          <div className="flex justify-center items-center py-12">
-            <div className="w-12 h-12 border-4 border-gold border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        ) : (
-          <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
-            variants={staggerContainer} initial="hidden" whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}>
-            {(() => {
-              const homeServiceIds = [
-                "vyavahik-badha",
-                "santan-prapti",
-                "lakshmi-prapti",
-                "baglamukhi-36-sawa-lakh",
-                "nyayalay-vijay",
-                "vastu-shastra"
-              ];
-              const filteredServices = homeServiceIds
-                .map(id => services.find(s => s._id === id))
-                .filter((s): s is ServiceItem => !!s);
+        <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          variants={staggerContainer} initial="hidden" whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}>
+          {(() => {
+            const homeServiceIds = [
+              "vyavahik-badha",
+              "santan-prapti",
+              "lakshmi-prapti",
+              "baglamukhi-36-sawa-lakh",
+              "nyayalay-vijay",
+              "vastu-shastra"
+            ];
+            const filteredServices = homeServiceIds
+              .map(id => STATIC_SERVICES.find(s => s._id === id))
+              .filter((s): s is ServiceItem => !!s);
 
               return filteredServices.map((service) => (
                 <motion.div key={service._id} variants={staggerItem}
@@ -124,7 +111,7 @@ export default function ServicesSection() {
               ));
             })()}
           </motion.div>
-        )}
+
 
         {/* Bottom CTA */}
         <motion.div className="text-center mt-16" variants={fadeInUp} initial="hidden"

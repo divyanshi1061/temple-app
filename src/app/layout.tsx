@@ -41,11 +41,11 @@ const playball = Playball({
 export const metadata: Metadata = {
   metadataBase: new URL('https://rudrakshbaglamukhi.com'),
   title: {
-    default: "Maa Baglamukhi Havan & Puja | Nalkheda Dham | Book Now",
+    default: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
     template: "%s | Maa Baglamukhi Nalkheda Dham"
   },
   description:
-    "Book authentic Maa Baglamukhi Havan, Vedic Puja & Anusthan at Siddh Peeth Nalkheda. Expert guidance by Acharya Pt. Rudraksh for victory & protection. 🙏",
+    "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
   keywords: [
     "Maa Baglamukhi Havan Nalkheda", 
     "Acharya Pt. Rudraksh Rajpurohit", 
@@ -59,15 +59,17 @@ export const metadata: Metadata = {
     "Nyayalay Vijay Puja", 
     "Vastu Shastra Paramarsh", 
     "Vedic Pandit Nalkheda", 
-    "Tantra Sadhana"
+    "Tantra Sadhana",
+    "Maa Baglamukhi Siddh Peeth",
+    "Nalkheda Dham Puja"
   ].join(", "),
   alternates: {
     canonical: "https://rudrakshbaglamukhi.com",
   },
   openGraph: {
-    title: "Maa Baglamukhi Havan & Puja | Nalkheda Dham",
+    title: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
     description:
-      "Book authentic Maa Baglamukhi Havan, Vedic Puja & Anusthan at Siddh Peeth Nalkheda. Expert guidance by Acharya Pt. Rudraksh for victory & protection. 🙏",
+      "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
     url: "https://rudrakshbaglamukhi.com",
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
@@ -83,8 +85,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maa Baglamukhi Havan & Puja | Nalkheda Dham",
-    description: "Book authentic Maa Baglamukhi Havan, Vedic Puja & Anusthan at Siddh Peeth Nalkheda. Expert guidance by Acharya Pt. Rudraksh for victory & protection. 🙏",
+    title: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
+    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
     images: ["/logo.png"],
   },
   icons: {

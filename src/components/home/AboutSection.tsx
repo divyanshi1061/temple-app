@@ -8,22 +8,17 @@ import Image from "next/image";
 export default function AboutSection() {
   const { lang } = useLanguage();
 
-  // Fallbacks
   const title = lang === 'en' 
     ? "Acharya Pt. Rudraksh Rajpurohit" 
     : "आचार्य पं. रुद्राक्ष राजपुरोहित";
     
   const desc = lang === 'en'
-    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Nalkheda Dham Siddh Peeth. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
+    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Siddh Peeth Nalkheda Dham. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
     : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और बगलामुखी साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं।";
 
-  const mission = lang === 'en'
-    ? "The magnificent temple of Goddess Maa Baglamukhi is located in Nalkheda, Agar Malwa district, approximately 100 kilometers from Ujjain. Situated on the banks of the Lakhundar River, this temple is highly significant from both religious and tantric perspectives. The idol of Maa Baglamukhi installed here dates back to the Pandava era, as mentioned in the Kalika Purana. Among the idols in the temple, Maa Baglamukhi sits in the center, flanked by Maa Lakshmi on the right and Maa Saraswati on the left in the form of 'Pindis'. During the Dwapara Yuga, while the Pandavas were in exile, Lord Krishna advised them to worship Maa Baglamukhi to ensure victory. Among the Ten Mahavidyas, Maa Baglamukhi is the eighth. Her worship and rituals are highly effective and precise. The temple is more than 500 years old, serving as a primary Siddh Peeth in India. Sacred trees like Bel, Champa, White Aak, Amla, Neem, and Peepal stand together here. The Lakhundar River (anciently named Lakshmana) flows perennially behind the temple, enhancing its natural beauty. Many saints' tombs lie on the riverbanks, indicating a historic presence of ascetics. The surrounding cremation grounds (Muktidham) in all four directions further establish Nalkheda Dham as a powerful center for Tantra and Sadhana."
-    : "उज्जैन से लगभग 100 किलोमीटर दूरी पर आगर मालवा जिले के नलखेडा में मां बगलामुखी मंदिर स्थित है। यह मंदिर लखुन्दर नदी के तट पर स्थित है। मंदिर धार्मिक एवं तांत्रिक दृष्टि से महत्वपूर्ण है। मंदिर में स्थित मां बगलामुखी की मुर्ति पाण्डव कालीन है। इसका प्रमाण कालिका पुराण में बताया गया है। मंदिर में स्थित मुर्तियों में बीच में मां बगलामुखी , दाए महालक्ष्मी व बाऐं मां सरस्वती पीण्डी के रूप में विराजित है। द्वापर युग में अज्ञातवास के समय पाण्डवों को भगवान श्रीकृष्ण ने बताया था की तुम मां बगलामुखी की साधना करो । दस महाविद्याओं में मां बगलामुखी अष्टम महाविद्या है। मां बगलामुखी की साधना अचुक होती है। यह मंदिर 500 वर्ष से भी अधिक पुराना है। त्रिशक्ति मां का मंदिर भारत वर्ष में प्रधान सिद्ध पीठ नलखेड़ा में स्थित है। बेल पत्र, चंपा, सफेद आंकड़े, आंवले तथा निम्न एवं पीपल के वृक्ष एक साथ स्थित है । मंदिर के पीछे लखुन्दर नदी (पुरातत्व नाम लक्ष्मणा) का पानी वर्ष भर रहता है जो प्राकृतिक सौंदर्य को दर्शाता है। नदी के किनारे कई संतो की समाधियां स्थित है। पुर्व में बड़ी संख्या में संतो के रहने का प्रमाण मिलता है। मंदिर के चारों दिशाओं में पुर्व से श्मशान (मुक्तिधाम) है जो साधना एंव तन्त्र स्थल होने का प्रमाण है।";
-
-  const vision = lang === 'en'
-    ? "The magnificent temple of Goddess Maa Baglamukhi is located on the banks of the Lakhundar River in Nalkheda, Agar Malwa district. This temple holds immense significance for both religious worship and tantric sadhanas. The Baglamukhi Havan (fire ritual) performed here is famous worldwide. Devotees from all over India and abroad visit Nalkheda Dham for sacred darshan, potent havans, and holy prayers, where their innermost wishes are fulfilled."
-    : "मां बगलामुखी माता का भव्य मंदिर आगर-मालवा जिले के नलखेड़ा में लखुंदर नदी के तट पर स्थित है। यह मंदिर धार्मिक और तांत्रिक दोनों ही तरह की साधनाओं के लिए महत्वपूर्ण है। यहां किया जाने वाला बगलामुखी हवन (अग्नि अनुष्ठान) दुनिया भर में प्रसिद्ध है। भारत और अन्य देशों से लोग दर्शन (पूजा), हवन और पूजा (प्रार्थना) के लिए आते हैं। यहां भक्तों की मनोकामनाएं पूरी होती हैं।";
+  const templeSummary = lang === 'en'
+    ? "Experience divine blessings at the ancient Siddh Peeth of Maa Baglamukhi, situated on the banks of the sacred Lakhundar River in Nalkheda Dham. Dating back to the Pandava era, this spiritual powerhouse is world-renowned for its intense Vedic Pujas and specialized Tantra Havans conducted under pure scriptures."
+    : "नलखेड़ा धाम में पवित्र लखुंदर नदी के तट पर स्थित माँ बगलामुखी के प्राचीन सिद्ध पीठ में दिव्य आशीर्वाद का अनुभव करें। पांडव कालीन इतिहास से समृद्ध यह मंदिर अपने तीव्र वैदिक अनुष्ठानों और शास्त्र सम्मत तांत्रिक हवन के लिए विश्व प्रसिद्ध है।";
 
   return (
     <section id="about" className="relative py-10 md:py-16 lg:py-24 overflow-hidden bg-white">
@@ -33,13 +28,16 @@ export default function AboutSection() {
 
       <div className="container-sacred relative z-10 px-4 sm:px-6 lg:px-8">
         
-        {/* ═══════ Part 1: About Acharya Ji ═══════ */}
+        {/* Part 1: About Acharya Ji */}
         <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center mb-10 lg:mb-20">
           
           {/* Left: Acharya Image */}
           <motion.div 
             className="relative"
-            initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: -30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.5 }}
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-xs md:max-w-md mx-auto border-2 border-gray-100 bg-gray-100">
               <img 
@@ -77,7 +75,10 @@ export default function AboutSection() {
 
           {/* Right: About Content */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: 30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.5 }}
           >
             <span className="text-gold text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold mb-2 block">
               {lang === 'en' ? 'About Acharya Ji' : 'आचार्य जी के बारे में'}
@@ -115,10 +116,13 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* ═══════ Part 2: About Mata Mandir — Compact Preview ═══════ */}
+        {/* Part 2: About Mata Mandir — Compact Preview */}
         <motion.div 
           className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm relative overflow-hidden"
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.5 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
             {/* Left: Image Thumbnail (Single Large Image) */}
@@ -126,7 +130,7 @@ export default function AboutSection() {
               <div className="rounded-xl md:rounded-2xl overflow-hidden bg-gray-100 relative aspect-[4/3] w-full">
                 <Image
                   src="/mata-baglamukhi.jpg"
-                  alt="Maa Baglamukhi - Sacred Darshan"
+                  alt="Maa Baglamukhi - Sacred Darshan at Nalkheda Dham"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   style={{ objectFit: "cover" }}
@@ -141,12 +145,10 @@ export default function AboutSection() {
                 {lang === 'en' ? 'Siddh Peeth Nalkheda Dham' : 'सिद्ध पीठ नलखेड़ा धाम'}
               </span>
               <h3 className="text-lg md:text-2xl font-bold font-cinzel text-gray-900 mb-2 md:mb-3">
-                {lang === 'en' ? 'Maa Baglamukhi Temple' : 'माँ बगलामुखी मंदिर'}
+                {lang === 'en' ? 'Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham' : 'सिद्ध पीठ माँ बगलामुखी मंदिर, नलखेड़ा धाम'}
               </h3>
               <p className="text-gray-600 leading-relaxed font-medium text-xs sm:text-sm mb-4 md:mb-5 line-clamp-4">
-                {lang === 'en'
-                  ? 'The magnificent temple of Goddess Maa Baglamukhi is located in Nalkheda, approximately 100 km from Ujjain. Situated on the banks of the Lakhundar River, this temple is highly significant from both religious and tantric perspectives. The idol dates back to the Pandava era.'
-                  : 'उज्जैन से लगभग 100 किलोमीटर दूरी पर नलखेड़ा में माँ बगलामुखी का भव्य मंदिर स्थित है। लखुन्दर नदी के तट पर स्थित यह मंदिर धार्मिक एवं तांत्रिक दृष्टि से अत्यंत महत्वपूर्ण है। यहाँ स्थापित मूर्ति पाण्डव कालीन है।'}
+                {templeSummary}
               </p>
               <a
                 href="/about"
@@ -163,4 +165,3 @@ export default function AboutSection() {
     </section>
   );
 }
-
