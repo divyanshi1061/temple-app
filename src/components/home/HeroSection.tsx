@@ -110,9 +110,84 @@ export default function HeroSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full text-center lg:text-left">
           
-          {/* LEFT COLUMN: Premium Sacred Visuals (Image) - Order second on mobile, column 1-5 on desktop */}
-          <div className="order-2 lg:order-none lg:col-span-5 flex justify-center items-center relative py-2 lg:py-6">
-            <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-[28rem] lg:h-[28rem]">
+          {/* LEFT COLUMN: Divine Text & Actions */}
+          <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
+ 
+            {/* Shloka Banner */}
+            <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5 max-w-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
+              <p className="whitespace-nowrap text-[10px] sm:text-xs text-gold-dim tracking-[0.05em] sm:tracking-[0.1em] font-bold leading-none text-center">
+                {MANTRAS[2]}
+              </p>
+            </div>
+ 
+            {/* Main Headline & Subheading */}
+            <div className="space-y-2 lg:space-y-3">
+              <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] lg:leading-[1.1] uppercase">
+                {lang === 'hi' 
+                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
+                  : "Maa Baglamukhi Havan & Vedic Pujas"
+                }
+              </h1>
+              <h2 className="text-[10px] sm:text-xs lg:text-sm text-gold font-semibold tracking-wider uppercase font-cinzel">
+                {lang === 'hi' 
+                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित • सिद्ध पीठ नलखेड़ा धाम" 
+                  : "by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
+                }
+              </h2>
+            </div>
+ 
+            {/* Description */}
+            <p className="text-[11px] sm:text-xs lg:text-sm text-gray-600 max-w-md lg:max-w-lg leading-relaxed font-medium px-2 lg:px-0 text-center lg:text-left">
+              {SITE_CONFIG.description[lang]}
+            </p>
+ 
+            {/* Solid Clean Action CTA Buttons */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-4 pt-1">
+              <button 
+                onClick={() => {
+                  const target = document.getElementById("services");
+                  if (target) target.scrollIntoView({ behavior: "smooth" });
+                }}
+                suppressHydrationWarning={true}
+                className="btn-sacred text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
+              >
+                {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
+              </button>
+ 
+              {/* Review Us Button */}
+              <button
+                onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
+                suppressHydrationWarning={true}
+                className="text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
+              >
+                {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
+              </button>
+            </div>
+ 
+            {/* Social Media Links */}
+            <div className="flex items-center gap-3 pt-2 lg:pt-3">
+              <span className="text-[10px] lg:text-xs font-bold text-gray-500 lg:text-gray-600 uppercase tracking-widest">
+                {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
+              </span>
+              <div className="flex items-center gap-3">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                  <FaFacebook className="w-4 h-4 lg:w-5 lg:h-5" />
+                </a>
+                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                  <FaYoutube className="w-4 h-4 lg:w-5 lg:h-5" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                  <FaInstagram className="w-4 h-4 lg:w-5 lg:h-5" />
+                </a>
+              </div>
+            </div>
+ 
+          </div>
+ 
+          {/* RIGHT COLUMN: Premium Sacred Visuals (Image) */}
+          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center relative py-2 lg:py-6">
+            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem]">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
@@ -126,7 +201,7 @@ export default function HeroSection() {
                   alt="Acharya Pt. Rudraksh Rajpurohit portrait"
                   fill
                   priority
-                  sizes="(max-width: 640px) 176px, (max-width: 768px) 224px, (max-width: 1024px) 288px, 450px"
+                  sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 450px"
                   style={{ objectFit: "cover", objectPosition: "center" }}
                   className="scale-105"
                 />
@@ -134,84 +209,6 @@ export default function HeroSection() {
               </div>
  
             </div>
-          </div>
- 
-          {/* RIGHT COLUMN: Divine Text & Actions - Order first on mobile, column 6-12 on desktop */}
-          <div className="order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
- 
-            {/* Shloka Banner */}
-            <div className="px-3.5 py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
-              <p className="text-[9px] sm:text-[10px] text-gold-dim tracking-[0.1em] font-bold font-cinzel leading-none">
-                {MANTRAS[0]}
-              </p>
-            </div>
- 
-            {/* Main Headline & Subheading */}
-            <div className="space-y-2">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
-                {lang === 'hi' 
-                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
-                  : "Maa Baglamukhi Havan & Vedic Pujas"
-                }
-                <span className="block text-xs sm:text-sm md:text-base text-gold mt-2 font-semibold normal-case tracking-wider">
-                  {lang === 'hi' 
-                    ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
-                    : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
-                  }
-                </span>
-              </h1>
-              <h2 className="text-[10px] sm:text-xs md:text-sm text-gold font-bold tracking-wider uppercase font-cinzel">
-                {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
-              </h2>
-            </div>
- 
-            {/* Description */}
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-md lg:max-w-xl leading-relaxed font-semibold px-2 lg:px-0 text-center lg:text-left">
-              {SITE_CONFIG.description[lang]}
-            </p>
-
-            {/* Solid Clean Action CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-4 pt-1">
-              <button 
-                onClick={() => {
-                  const target = document.getElementById("services");
-                  if (target) target.scrollIntoView({ behavior: "smooth" });
-                }}
-                suppressHydrationWarning={true}
-                className="btn-sacred text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
-              >
-                {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
-              </button>
-
-              {/* Review Us Button */}
-              <button
-                onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
-                suppressHydrationWarning={true}
-                className="text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
-              >
-                {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
-              </button>
-            </div>
-
-            {/* Social Media Links */}
-            <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-5 pt-3 lg:pt-4">
-              <span className="text-[10px] lg:text-xs font-bold text-gray-500 lg:text-gray-600 uppercase tracking-widest">
-                {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
-              </span>
-              <div className="flex items-center gap-3.5">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
-                  <FaFacebook className="w-4 h-4 lg:w-5 lg:h-5" />
-                </a>
-                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
-                  <FaYoutube className="w-4 h-4 lg:w-5 lg:h-5" />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
-                  <FaInstagram className="w-4 h-4 lg:w-5 lg:h-5" />
-                </a>
-              </div>
-            </div>
-
           </div>
 
         </div>
