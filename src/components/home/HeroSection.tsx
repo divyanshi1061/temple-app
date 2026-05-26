@@ -106,13 +106,13 @@ export default function HeroSection() {
       </div>
 
       {/* Main Grid Content (Split 50/50) */}
-      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
+      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-16 items-center w-full text-center lg:text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full text-center lg:text-left">
           
           {/* LEFT COLUMN: Premium Sacred Visuals (Image) - Order second on mobile, column 1-5 on desktop */}
           <div className="order-2 lg:order-none lg:col-span-5 flex justify-center items-center relative py-2 lg:py-6">
-            <div className="relative w-32 h-32 sm:w-48 sm:h-48 lg:w-[28rem] lg:h-[28rem]">
+            <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-[28rem] lg:h-[28rem]">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
@@ -126,19 +126,19 @@ export default function HeroSection() {
                   alt="Acharya Pt. Rudraksh Rajpurohit portrait"
                   fill
                   priority
-                  sizes="(max-width: 768px) 128px, 192px"
+                  sizes="(max-width: 640px) 176px, (max-width: 768px) 224px, (max-width: 1024px) 288px, 450px"
                   style={{ objectFit: "cover", objectPosition: "center" }}
                   className="scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
-
+ 
             </div>
           </div>
-
+ 
           {/* RIGHT COLUMN: Divine Text & Actions - Order first on mobile, column 6-12 on desktop */}
           <div className="order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
-
+ 
             {/* Shloka Banner */}
             <div className="px-3.5 py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
@@ -146,28 +146,28 @@ export default function HeroSection() {
                 {MANTRAS[0]}
               </p>
             </div>
-
+ 
             {/* Main Headline & Subheading */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
                 {lang === 'hi' 
-                  ? "सिद्ध पीठ नलखेड़ा धाम - माँ बगलामुखी हवन एवं वैदिक पूजा"
+                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
                   : "Maa Baglamukhi Havan & Vedic Pujas"
                 }
-                <span className="block text-xl sm:text-3xl md:text-4xl text-gold mt-1.5 font-semibold normal-case">
+                <span className="block text-xs sm:text-sm md:text-base text-gold mt-2 font-semibold normal-case tracking-wider">
                   {lang === 'hi' 
                     ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
                     : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
                   }
                 </span>
               </h1>
-              <h2 className="text-xs sm:text-sm md:text-base text-gold font-bold tracking-wider uppercase font-cinzel">
+              <h2 className="text-[10px] sm:text-xs md:text-sm text-gold font-bold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
               </h2>
             </div>
-
+ 
             {/* Description */}
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-md lg:max-w-xl leading-relaxed font-semibold px-2 lg:px-0 text-justify sm:text-center lg:text-left">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-md lg:max-w-xl leading-relaxed font-semibold px-2 lg:px-0 text-center lg:text-left">
               {SITE_CONFIG.description[lang]}
             </p>
 
