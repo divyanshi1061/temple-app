@@ -73,9 +73,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-6xl md:text-8xl font-black font-cinzel tracking-tight bg-gradient-to-r from-amber-600 via-gold to-yellow-600 bg-clip-text text-transparent mb-6 uppercase"
+            className="text-3xl sm:text-5xl md:text-7xl font-black font-cinzel tracking-tight bg-gradient-to-r from-amber-600 via-gold to-yellow-600 bg-clip-text text-transparent mb-6 uppercase max-w-4xl leading-tight"
           >
-            {lang === "en" ? "ABOUT US." : "परिचय।"}
+            {lang === "en" ? "About Maa Baglamukhi Dham" : "माँ बगलामुखी धाम - परिचय"}
           </motion.h1>
 
           {/* Sanskrit Sloke banner */}

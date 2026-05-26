@@ -11,17 +11,23 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const service = SERVICES.find(s => s.id === id);
   if (!service) {
     return {
-      title: "Divine Ritual Service",
+      title: "Divine Ritual Service | Maa Baglamukhi Nalkheda Dham",
       description: "Sacred Vedic Yajna and Havan services conducted at Maa Baglamukhi Temple, Nalkheda Dham.",
+      alternates: {
+        canonical: "https://rudrakshbaglamukhi.com/services",
+      }
     };
   }
 
-  const titleText = `${service.title.en} (${service.title.hi})`;
-  const descriptionText = `${service.description.en} This sacred Yajna and Havan is personally conducted by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham.`;
+  const titleText = `${service.title.en} - ${service.title.hi} | Book Havan & Puja`;
+  const shortDesc = service.description.en.length > 105 
+    ? `${service.description.en.substring(0, 105)}...` 
+    : service.description.en;
+  const descriptionText = `Book authentic ${service.title.en} Havan performed by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda. ${shortDesc} 🙏`;
 
   return {
     title: titleText,
-    description: descriptionText,
+    description: descriptionText.substring(0, 155),
     keywords: [
       service.title.en,
       service.title.hi,
@@ -31,8 +37,29 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       "Siddh Peeth Nalkheda Havan"
     ].join(", "),
     alternates: {
-      canonical: `/services/${id}`,
+      canonical: `https://rudrakshbaglamukhi.com/services/${id}`,
     },
+    openGraph: {
+      title: `${service.title.en} | Maa Baglamukhi Nalkheda`,
+      description: descriptionText.substring(0, 155),
+      url: `https://rudrakshbaglamukhi.com/services/${id}`,
+      siteName: "Maa Baglamukhi Nalkheda Dham",
+      images: [
+        {
+          url: service.image || "/logo.png",
+          width: 800,
+          height: 600,
+          alt: `${service.title.en} Puja Ceremony`,
+        }
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title.en} | Maa Baglamukhi Nalkheda`,
+      description: descriptionText.substring(0, 155),
+      images: [service.image || "/logo.png"],
+    }
   };
 }
 

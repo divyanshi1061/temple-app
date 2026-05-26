@@ -17,7 +17,7 @@ export default function Home() {
         "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
         "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
         "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
-        "image": "https://rudrakshbaglamukhi.com/real-gallery-1.jpg",
+        "image": "https://rudrakshbaglamukhi.com/acharya-new.jpg",
         "url": "https://rudrakshbaglamukhi.com",
         "address": {
           "@type": "PostalAddress",
@@ -28,7 +28,8 @@ export default function Home() {
         },
         "sameAs": [
           "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/?mibextid=wwXIfr&rdid=Jgsjq9UYv0FIJt4Z&share_url=https%3A%2F%2Fwww.facebook.com",
-          "https://instagram.com/maabaglamukhidarshan"
+          "https://instagram.com/maabaglamukhidarshan",
+          "https://youtube.com/@maabaglamukhidarshan-d2e"
         ]
       },
       {
@@ -64,6 +65,46 @@ export default function Home() {
           ],
           "opens": "05:00",
           "closes": "23:00"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rudrakshbaglamukhi.com/#website",
+        "url": "https://rudrakshbaglamukhi.com",
+        "name": "Maa Baglamukhi Havan & Puja – Nalkheda Dham",
+        "description": "Book authentic Vedic Pujas and Havans at Siddh Peeth Maa Baglamukhi Dham, Nalkheda",
+        "publisher": { "@id": "https://rudrakshbaglamukhi.com/#person" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rudrakshbaglamukhi.com/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudrakshbaglamukhi.com" },
+          { "@type": "ListItem", "position": 2, "name": "Sacred Services", "item": "https://rudrakshbaglamukhi.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "About Temple", "item": "https://rudrakshbaglamukhi.com/about" },
+          { "@type": "ListItem", "position": 4, "name": "Gallery", "item": "https://rudrakshbaglamukhi.com/gallery" },
+          { "@type": "ListItem", "position": 5, "name": "Book Puja", "item": "https://rudrakshbaglamukhi.com/book" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rudrakshbaglamukhi.com/#services",
+        "serviceType": "Vedic Puja & Havan",
+        "provider": { "@id": "https://rudrakshbaglamukhi.com/#person" },
+        "areaServed": { "@type": "Country", "name": "India" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Sacred Vedic Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maa Baglamukhi 36 Lakh & Sawa Lakh Jaap" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maa Baglamukhi Vishesh Havan" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nyayalay Vijay - Court Case Victory Puja" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shatru Stambhan Anusthan" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vastu Shastra Paramarsh" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nav Graha Shanti Puja" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maha Mrityunjay Anusthan" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Santan Prapti Puja" }}
+          ]
         }
       }
     ]

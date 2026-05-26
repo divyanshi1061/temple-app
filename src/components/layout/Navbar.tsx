@@ -121,9 +121,9 @@ export default function Navbar() {
             >
               <Logo size={isScrolled ? 40 : 44} alt={`${SITE_CONFIG.name[lang]} logo`} className="transition-all duration-500" />
               <div className="hidden sm:block">
-                <h1 className="text-sm sm:text-base tracking-tight text-gray-900 leading-none font-bold font-cinzel">
+                <span className="text-sm sm:text-base tracking-tight text-gray-900 leading-none font-bold font-cinzel block">
                   {SITE_CONFIG.name[lang]}
-                </h1>
+                </span>
                 <span className="text-[9px] text-gold font-bold tracking-widest block mt-1 uppercase">
                   {lang === 'en' ? 'Vedic Acharya' : 'वैदिक आचार्य'}
                 </span>

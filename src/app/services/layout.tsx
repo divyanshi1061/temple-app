@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Vastu Shastra consultation"
   ].join(", "),
   alternates: {
-    canonical: "/services",
+    canonical: "https://rudrakshbaglamukhi.com/services",
   },
 };
 

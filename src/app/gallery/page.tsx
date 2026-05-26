@@ -383,17 +383,17 @@ export default function GalleryPage() {
 
       {/* Centered Editorial Brand Header */}
       <div className="w-full text-center pb-6 border-b border-gray-200/50 max-w-[1440px] mx-auto mt-6 px-6 relative z-10">
-        <h2 className="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-gray-800 font-outfit">
-          {lang === 'en' ? 'PANDIT MAA BAGLAMUKHI' : 'पंडित माँ बगलामुखी'}
-        </h2>
+        <h1 className="text-sm md:text-base font-bold tracking-[0.25em] uppercase text-gray-800 font-outfit">
+          {lang === 'en' ? 'Maa Baglamukhi Temple Gallery & Videos' : 'माँ बगलामुखी मंदिर गैलरी और वीडियो'}
+        </h1>
       </div>
 
       {/* Videos Section Title */}
       <div className="px-6 md:px-12 max-w-[1440px] mx-auto pt-12 pb-6 relative z-10">
-        <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
+        <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
           <span>—</span>
           <span>{lang === 'en' ? 'Videos' : 'वीडियो'}</span>
-        </h1>
+        </h2>
         <p className="mt-3 text-gray-600 text-xs md:text-sm font-outfit max-w-2xl tracking-wide leading-relaxed">
           {lang === 'en' 
             ? 'Watch recordings of daily prayers, havan ceremonies, and rituals conducted at the temple.' 
@@ -462,10 +462,10 @@ export default function GalleryPage() {
 
       {/* Gallery Section Title */}
       <div className="px-6 md:px-12 max-w-[1440px] mx-auto pt-12 pb-6 relative z-10">
-        <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
+        <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-800 uppercase font-outfit flex items-center gap-3">
           <span>—</span>
           <span>{lang === 'en' ? 'Gallery' : 'गैलरी'}</span>
-        </h1>
+        </h2>
         <p className="mt-3 text-gray-600 text-xs md:text-sm font-outfit max-w-2xl tracking-wide leading-relaxed">
           {lang === 'en' 
             ? 'Photographs capturing the shringar, daily darshan, and sacred details from Nalkheda Dham.' 

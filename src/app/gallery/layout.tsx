@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Siddh Peeth Nalkheda media"
   ].join(", "),
   alternates: {
-    canonical: "/gallery",
+    canonical: "https://rudrakshbaglamukhi.com/gallery",
   },
 };
 

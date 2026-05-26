@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Nalkheda temple history"
   ].join(", "),
   alternates: {
-    canonical: "/about",
+    canonical: "https://rudrakshbaglamukhi.com/about",
   },
 };
 

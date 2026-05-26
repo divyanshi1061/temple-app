@@ -61,9 +61,9 @@ export default function BookingSection() {
           <span className="text-gold text-xs tracking-[0.2em] uppercase font-bold bg-gold/10 px-4 py-2 rounded-full border border-gold/20 backdrop-blur-sm">
             {lang === 'en' ? 'Direct Consultation' : 'सीधा परामर्श'}
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900 font-cinzel">
-            {lang === 'en' ? 'Consultation & Inquiry' : 'परामर्श और पूछताछ'}
-          </h2>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mt-6 mb-6 font-bold tracking-tight text-gray-900 font-cinzel">
+            {lang === 'en' ? 'Book Online Puja & Havan' : 'ऑनलाइन पूजा एवं हवन बुकिंग'}
+          </h1>
           <p className="text-gray-600 max-w-2xl mx-auto font-medium text-lg leading-relaxed">
             {lang === 'en'
               ? 'Send a direct inquiry to Acharya Pt. Rudraksh Rajpurohit regarding your anusthan and sacred rituals.'
