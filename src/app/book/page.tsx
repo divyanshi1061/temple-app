@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Book Online Puja & Havan | Acharya Pt. Rudraksh Rajpurohit",
-  description: "Book authentic Maa Baglamukhi Pujas, intense Havans, and sacred Vedic Anusthans at Siddh Peeth Nalkheda Dham, guided by Acharya Pt. Rudraksh Rajpurohit.",
+  title: "Book Online Puja & Havan | Acharya Pt Rudraksh Rajpurohit",
+  description: "Book authentic Maa Baglamukhi Pujas, Havans, and Vedic Anusthans at Siddh Peeth Nalkheda Dham, guided by Acharya Pt Rudraksh Rajpurohit.",
   keywords: [
     "Maa Baglamukhi Havan booking",
     "online puja booking",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Pt Rudraksh Rajpurohit consultation"
   ],
   alternates: {
-    canonical: "https://rudrakshbaglamukhi.com/book",
+    canonical: "https://www.panditmaabaglamukhi.com/book",
   },
 };
 

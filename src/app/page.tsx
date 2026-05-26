@@ -12,13 +12,13 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://rudrakshbaglamukhi.com/#person",
+        "@id": "https://www.panditmaabaglamukhi.com/#person",
         "name": "Acharya Pt. Rudraksh Rajpurohit",
         "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
         "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
         "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
-        "image": "https://rudrakshbaglamukhi.com/acharya-new.jpg",
-        "url": "https://rudrakshbaglamukhi.com",
+        "image": "https://www.panditmaabaglamukhi.com/acharya-new.jpg",
+        "url": "https://www.panditmaabaglamukhi.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Nalkheda",
@@ -34,10 +34,10 @@ export default function Home() {
       },
       {
         "@type": "PlaceOfWorship",
-        "@id": "https://rudrakshbaglamukhi.com/#temple",
+        "@id": "https://www.panditmaabaglamukhi.com/#temple",
         "name": "Siddh Peeth Maa Baglamukhi Temple Dham",
         "description": "The sacred, historical, and highly potent Siddh Peeth of Goddess Maa Baglamukhi situated on the banks of Lakhunder River in Nalkheda, Agar Malwa, Madhya Pradesh.",
-        "url": "https://rudrakshbaglamukhi.com",
+        "url": "https://www.panditmaabaglamukhi.com",
         "telephone": "+91 79095 97033",
         "address": {
           "@type": "PostalAddress",
@@ -69,28 +69,28 @@ export default function Home() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://rudrakshbaglamukhi.com/#website",
-        "url": "https://rudrakshbaglamukhi.com",
+        "@id": "https://www.panditmaabaglamukhi.com/#website",
+        "url": "https://www.panditmaabaglamukhi.com",
         "name": "Maa Baglamukhi Havan & Puja – Nalkheda Dham",
         "description": "Book authentic Vedic Pujas and Havans at Siddh Peeth Maa Baglamukhi Dham, Nalkheda",
-        "publisher": { "@id": "https://rudrakshbaglamukhi.com/#person" }
+        "publisher": { "@id": "https://www.panditmaabaglamukhi.com/#person" }
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://rudrakshbaglamukhi.com/#breadcrumb",
+        "@id": "https://www.panditmaabaglamukhi.com/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudrakshbaglamukhi.com" },
-          { "@type": "ListItem", "position": 2, "name": "Sacred Services", "item": "https://rudrakshbaglamukhi.com/services" },
-          { "@type": "ListItem", "position": 3, "name": "About Temple", "item": "https://rudrakshbaglamukhi.com/about" },
-          { "@type": "ListItem", "position": 4, "name": "Gallery", "item": "https://rudrakshbaglamukhi.com/gallery" },
-          { "@type": "ListItem", "position": 5, "name": "Book Puja", "item": "https://rudrakshbaglamukhi.com/book" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.panditmaabaglamukhi.com" },
+          { "@type": "ListItem", "position": 2, "name": "Sacred Services", "item": "https://www.panditmaabaglamukhi.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "About Temple", "item": "https://www.panditmaabaglamukhi.com/about" },
+          { "@type": "ListItem", "position": 4, "name": "Gallery", "item": "https://www.panditmaabaglamukhi.com/gallery" },
+          { "@type": "ListItem", "position": 5, "name": "Book Puja", "item": "https://www.panditmaabaglamukhi.com/book" }
         ]
       },
       {
         "@type": "Service",
-        "@id": "https://rudrakshbaglamukhi.com/#services",
+        "@id": "https://www.panditmaabaglamukhi.com/#services",
         "serviceType": "Vedic Puja & Havan",
-        "provider": { "@id": "https://rudrakshbaglamukhi.com/#person" },
+        "provider": { "@id": "https://www.panditmaabaglamukhi.com/#person" },
         "areaServed": { "@type": "Country", "name": "India" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",

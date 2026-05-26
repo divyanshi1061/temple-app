@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: "Divine Ritual Service | Maa Baglamukhi Nalkheda Dham",
       description: "Sacred Vedic Yajna and Havan services conducted at Maa Baglamukhi Temple, Nalkheda Dham.",
       alternates: {
-        canonical: "https://rudrakshbaglamukhi.com/services",
+        canonical: "https://www.panditmaabaglamukhi.com/services",
       }
     };
   }
@@ -37,12 +37,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       "Siddh Peeth Nalkheda Havan"
     ].join(", "),
     alternates: {
-      canonical: `https://rudrakshbaglamukhi.com/services/${id}`,
+      canonical: `https://www.panditmaabaglamukhi.com/services/${id}`,
     },
     openGraph: {
       title: `${service.title.en} | Maa Baglamukhi Nalkheda`,
       description: descriptionText.substring(0, 155),
-      url: `https://rudrakshbaglamukhi.com/services/${id}`,
+      url: `https://www.panditmaabaglamukhi.com/services/${id}`,
       siteName: "Maa Baglamukhi Nalkheda Dham",
       images: [
         {

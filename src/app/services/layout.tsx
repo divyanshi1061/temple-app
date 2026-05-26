@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vedic Pujas, Havans & Anusthans Services | Nalkheda",
-  description: "Browse the complete range of sacred Vedic and Tantric services personally conducted by Acharya Pt. Rudraksh Rajpurohit at Maa Baglamukhi Temple, Nalkheda Dham.",
+  title: "Vedic Pujas, Havans & Anusthans by Acharya Pt Rudraksh Rajpurohit",
+  description: "Browse the complete range of sacred Vedic Pujas, Havans, and Anusthans personally conducted by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham.",
   keywords: [
     "Vedic Puja services Nalkheda",
     "Maa Baglamukhi Havan booking",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Vastu Shastra consultation"
   ].join(", "),
   alternates: {
-    canonical: "https://rudrakshbaglamukhi.com/services",
+    canonical: "https://www.panditmaabaglamukhi.com/services",
   },
 };
 

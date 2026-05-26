@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://rudrakshbaglamukhi.com/sitemap.xml',
+    sitemap: 'https://www.panditmaabaglamukhi.com/sitemap.xml',
   };
 }

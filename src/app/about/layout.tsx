@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Acharya Pt. Rudraksh Rajpurohit & Maa Baglamukhi Temple",
-  description: "Learn about the ancient history of Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham and the spiritual lineage of Vedic Priest Acharya Pt. Rudraksh Rajpurohit.",
+  title: "About Acharya Pt Rudraksh Rajpurohit & Siddh Peeth Nalkheda Dham",
+  description: "Learn about the ancient history of Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham and the spiritual lineage of Vedic Priest Acharya Pt Rudraksh Rajpurohit.",
   keywords: [
-    "Acharya Pt. Rudraksh Rajpurohit",
+    "Acharya Pt Rudraksh Rajpurohit",
     "Maa Baglamukhi Temple Nalkheda history",
     "Baglamukhi Sadhak Nalkheda",
     "Vedic Priest Nalkheda Dham",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Nalkheda temple history"
   ].join(", "),
   alternates: {
-    canonical: "https://rudrakshbaglamukhi.com/about",
+    canonical: "https://www.panditmaabaglamukhi.com/about",
   },
 };
 

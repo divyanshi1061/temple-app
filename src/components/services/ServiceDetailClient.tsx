@@ -71,12 +71,12 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
     "provider": {
       "@type": "Person",
       "name": "Acharya Pt. Rudraksh Rajpurohit",
-      "url": "https://rudrakshbaglamukhi.com"
+      "url": "https://www.panditmaabaglamukhi.com"
     },
     "areaServed": "Worldwide",
     "serviceType": "Vedic Puja & Tantra Havan",
     "category": service.category || "Religious Service",
-    "image": service.image ? (service.image.startsWith('http') ? service.image : `https://rudrakshbaglamukhi.com${service.image.startsWith('/') ? '' : '/'}${service.image}`) : undefined
+    "image": service.image ? (service.image.startsWith('http') ? service.image : `https://www.panditmaabaglamukhi.com${service.image.startsWith('/') ? '' : '/'}${service.image}`) : undefined
   };
 
   const whatsappMessage = encodeURIComponent(

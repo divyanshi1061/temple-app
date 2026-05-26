@@ -9,11 +9,11 @@ export default function AboutSection() {
   const { lang } = useLanguage();
 
   const title = lang === 'en' 
-    ? "Acharya Pt. Rudraksh Rajpurohit" 
+    ? "Acharya Pt Rudraksh Rajpurohit" 
     : "आचार्य पं. रुद्राक्ष राजपुरोहित";
     
   const desc = lang === 'en'
-    ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Siddh Peeth Nalkheda Dham. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
+    ? "Acharya Pt Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Siddh Peeth Nalkheda Dham. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
     : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और बगलामुखी साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं।";
 
   const templeSummary = lang === 'en'

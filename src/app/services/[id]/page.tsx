@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `https://rudrakshbaglamukhi.com/services/${resolvedParams.id}`,
+      canonical: `https://www.panditmaabaglamukhi.com/services/${resolvedParams.id}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://rudrakshbaglamukhi.com/services/${resolvedParams.id}`,
+      url: `https://www.panditmaabaglamukhi.com/services/${resolvedParams.id}`,
       type: "website",
     },
   };

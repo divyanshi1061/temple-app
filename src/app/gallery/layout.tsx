@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Maa Baglamukhi Temple Photos & Videos Gallery",
-  description: "Watch recent video recordings of daily prayers, holy Havan ceremonies, and explore photographs of divine shringar from Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham.",
+  title: "Maa Baglamukhi Temple Photos & Videos Gallery | Siddh Peeth Nalkheda Dham",
+  description: "Watch video recordings of daily prayers, Havan ceremonies, and photos from Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham, guided by Acharya Pt Rudraksh Rajpurohit.",
   keywords: [
     "Maa Baglamukhi Nalkheda videos",
     "Baglamukhi temple photo gallery",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Siddh Peeth Nalkheda media"
   ].join(", "),
   alternates: {
-    canonical: "https://rudrakshbaglamukhi.com/gallery",
+    canonical: "https://www.panditmaabaglamukhi.com/gallery",
   },
 };
 

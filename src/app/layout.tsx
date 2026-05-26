@@ -3,6 +3,7 @@ import { Inter, Cinzel, Cormorant_Garamond, Outfit, Playball } from "next/font/g
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { LanguageProvider } from "@/context/LanguageContext";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,16 +40,16 @@ const playball = Playball({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rudrakshbaglamukhi.com'),
+  metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
-    template: "%s | Maa Baglamukhi Nalkheda Dham"
+    default: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
+    template: "%s | Siddh Peeth Maa Baglamukhi Nalkheda Dham"
   },
   description:
-    "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
+    "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
   keywords: [
     "Maa Baglamukhi Havan Nalkheda", 
-    "Acharya Pt. Rudraksh Rajpurohit", 
+    "Acharya Pt Rudraksh Rajpurohit", 
     "Rudraksh Rajpurohit", 
     "Maa Baglamukhi Dham Nalkheda", 
     "Nalkheda temple pujari", 
@@ -64,13 +65,13 @@ export const metadata: Metadata = {
     "Nalkheda Dham Puja"
   ].join(", "),
   alternates: {
-    canonical: "https://rudrakshbaglamukhi.com",
+    canonical: "https://www.panditmaabaglamukhi.com",
   },
   openGraph: {
-    title: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
+    title: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
     description:
-      "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
-    url: "https://rudrakshbaglamukhi.com",
+      "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
+    url: "https://www.panditmaabaglamukhi.com",
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
       {
@@ -85,8 +86,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vedic Maa Baglamukhi Havan & Puja | Acharya Pt. Rudraksh",
-    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Acharya Pt. Rudraksh at Siddh Peeth Nalkheda Dham. Consult for victory & protection. 🙏",
+    title: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
+    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
     images: ["/logo.png"],
   },
   icons: {
@@ -106,6 +107,19 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} ${cinzel.variable} ${cormorant.variable} ${playball.variable} antialiased`}
       >
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-K3Z6K5PBDY'}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-K3Z6K5PBDY'}');
+          `}
+        </Script>
         <LanguageProvider>
           <ClientLayoutWrapper>
             {children}

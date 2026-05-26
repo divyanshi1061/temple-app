@@ -4,7 +4,7 @@ import { SERVICES } from '@/lib/constants';
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://rudrakshbaglamukhi.com';
+  const baseUrl = 'https://www.panditmaabaglamukhi.com';
 
   const staticRoutes = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1.0 },

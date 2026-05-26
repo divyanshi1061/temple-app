@@ -181,7 +181,7 @@ export const SERVICES = [
     },
     duration: { en: "7-11 Days", hi: "7-11 दिन" },
     icon: "MM",
-    image: "/real-gallery-3.jpg",
+    image: "/mrityunjay-new.jpg",
     category: "anusthan",
   },
   {

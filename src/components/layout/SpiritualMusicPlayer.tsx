@@ -11,16 +11,20 @@ export default function SpiritualMusicPlayer() {
   const [showTooltip, setShowTooltip] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    // Initialize audio element with locally hosted ambient flute MP3
-    audioRef.current = new Audio("/ambient-flute.mp3");
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.4; // Gentle ambient volume that does not overpower the text
+  const initAudio = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/ambient-flute.mp3");
+      audioRef.current.loop = true;
+      audioRef.current.volume = 0.4; // Gentle ambient volume that does not overpower the text
+    }
+  };
 
+  useEffect(() => {
     // Session recovery: check if devotee had enabled music previously
     const savedState = localStorage.getItem("spiritual-music-playing");
     if (savedState === "true") {
-      audioRef.current.play()
+      initAudio();
+      audioRef.current?.play()
         .then(() => {
           setIsPlaying(true);
           setShowTooltip(false);
@@ -45,6 +49,7 @@ export default function SpiritualMusicPlayer() {
   }, []);
 
   const togglePlay = () => {
+    initAudio();
     if (!audioRef.current) return;
 
     if (isPlaying) {
