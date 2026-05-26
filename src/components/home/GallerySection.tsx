@@ -147,11 +147,13 @@ export default function GallerySection() {
 
         {/* Uniform 6-image gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {SHOWCASE_PHOTOS.slice(0, 6).map((item) => (
+          {SHOWCASE_PHOTOS.slice(0, 6).map((item, index) => (
             <motion.div
               key={item.id}
               onClick={() => setSelectedPhoto(item)}
-              className="group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300 rounded-3xl"
+              className={`group relative overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300 rounded-3xl ${
+                index >= 4 ? "hidden sm:block" : ""
+              }`}
               whileHover={{ scale: 0.995 }}
               transition={{ duration: 0.4 }}
             >

@@ -151,19 +151,19 @@ export default function HeroSection() {
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
                 {lang === 'hi' 
-                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
+                  ? "सिद्ध पीठ नलखेड़ा धाम - माँ बगलामुखी हवन एवं वैदिक पूजा"
                   : "Maa Baglamukhi Havan & Vedic Pujas"
                 }
+                <span className="block text-xl sm:text-3xl md:text-4xl text-gold mt-1.5 font-semibold normal-case">
+                  {lang === 'hi' 
+                    ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
+                    : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
+                  }
+                </span>
               </h1>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-gold mt-1.5 font-semibold normal-case font-cinzel">
-                {lang === 'hi' 
-                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
-                  : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
-                }
-              </h2>
-              <p className="text-xs sm:text-sm md:text-base text-gold font-bold tracking-wider uppercase font-cinzel text-center lg:text-left">
+              <h2 className="text-xs sm:text-sm md:text-base text-gold font-bold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
-              </p>
+              </h2>
             </div>
 
             {/* Description */}
