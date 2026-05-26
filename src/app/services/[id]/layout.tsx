@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       siteName: "Maa Baglamukhi Nalkheda Dham",
       images: [
         {
-          url: service.image || "/logo.png",
+          url: service.image || "/logo.webp",
           width: 800,
           height: 600,
           alt: `${service.title.en} Puja Ceremony`,
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: "summary_large_image",
       title: `${service.title.en} | Maa Baglamukhi Nalkheda`,
       description: descriptionText.substring(0, 155),
-      images: [service.image || "/logo.png"],
+      images: [service.image || "/logo.webp"],
     }
   };
 }

@@ -23,7 +23,7 @@ const STATIC_SERVICES: ServiceItem[] = SERVICES.map(s => ({
   descriptionEn: s.description.en,
   descriptionHi: s.description.hi,
   category: s.category || "puja",
-  image: s.image || "/new-havan-1.jpg",
+  image: s.image || "/new-havan-1.webp",
 }));
 
 export default function ServicesSection() {

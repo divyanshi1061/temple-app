@@ -20,7 +20,7 @@ type PhotoItem = {
 const ALL_PHOTOS: PhotoItem[] = [
   {
     id: "mrityunjay-new",
-    url: "/mrityunjay-new.jpg",
+    url: "/mrityunjay-new.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maha Mrityunjay Anusthan",
     titleHi: "महामृत्युंजय अनुष्ठान",
@@ -29,7 +29,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "acharya-new",
-    url: "/acharya-new.jpg",
+    url: "/acharya-new.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Acharya Pt. Rudraksh Rajpurohit",
     titleHi: "आचार्य पं. रुद्राक्ष राजपुरोहित",
@@ -39,7 +39,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   // COLUMN 1
   {
     id: "col1-3",
-    url: "/havan-upload-1.jpg",
+    url: "/havan-upload-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Sacred Vedic Havan",
     titleHi: "पवित्र वैदिक हवन",
@@ -48,7 +48,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col1-4",
-    url: "/temple-night-1.jpg",
+    url: "/temple-night-1.webp",
     aspect: "aspect-square",
     titleEn: "Temple Under Night Sky",
     titleHi: "रात्रि में देदीप्यमान मंदिर",
@@ -60,7 +60,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   // COLUMN 2
   {
     id: "col2-1",
-    url: "/new-havan-1.jpg",
+    url: "/new-havan-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Siddh Peeth Puja",
     titleHi: "सिद्ध पीठ पूजा",
@@ -69,7 +69,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-2",
-    url: "/new-havan-2.jpg",
+    url: "/new-havan-2.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Havan Ritual 2",
     titleHi: "हवन अनुष्ठान 2",
@@ -79,7 +79,7 @@ const ALL_PHOTOS: PhotoItem[] = [
 
   {
     id: "col2-4",
-    url: "/new-havan-3.jpg",
+    url: "/new-havan-3.webp",
     aspect: "aspect-[4/3]",
     titleEn: "Devotees Gathering",
     titleHi: "भक्तों का जमघट",
@@ -88,7 +88,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-5",
-    url: "/new-upload-10.jpg",
+    url: "/new-upload-10.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Community Ritual",
     titleHi: "सामुदायिक अनुष्ठान",
@@ -97,7 +97,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-6",
-    url: "/new-upload-9.jpg",
+    url: "/new-upload-9.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Temple Offering",
     titleHi: "मंदिर अर्पण",
@@ -106,7 +106,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-7",
-    url: "/new-upload-8.jpg",
+    url: "/new-upload-8.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Puja Preparation",
     titleHi: "पूजा तैयारी",
@@ -115,7 +115,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-8",
-    url: "/new-upload-7.jpg",
+    url: "/new-upload-7.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Altar Details",
     titleHi: "वेदिका विवरण",
@@ -124,7 +124,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col2-9",
-    url: "/IMG_5116.JPG.jpeg",
+    url: "/IMG_5116.JPG.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Devotional Moment",
     titleHi: "भक्ति क्षण",
@@ -135,7 +135,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   // COLUMN 3
   {
     id: "col3-1",
-    url: "/real-havan-kund.jpg",
+    url: "/real-havan-kund.webp",
     aspect: "aspect-[4/3]",
     titleEn: "Agni Dev - Havan Fire",
     titleHi: "अग्नि देव - हवन कुंड",
@@ -144,7 +144,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-2",
-    url: "/temple-tower.jpg",
+    url: "/temple-tower.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Golden Shikhar Dome",
     titleHi: "स्वर्ण शिखर गुंबद",
@@ -153,7 +153,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-3",
-    url: "/mata-baglamukhi.jpg",
+    url: "/mata-baglamukhi.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maa Baglamukhi Idol",
     titleHi: "माँ बगलामुखी प्रतिमा",
@@ -162,7 +162,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-4",
-    url: "/new-havan-5.jpg",
+    url: "/new-havan-5.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Prasad and Offerings",
     titleHi: "प्रसाद एवं हवन सामग्री",
@@ -171,7 +171,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-5",
-    url: "/real-puja-plate.jpg",
+    url: "/real-puja-plate.webp",
     aspect: "aspect-[16/6]",
     titleEn: "Vedic Puja Plate",
     titleHi: "वैदिक पूजा थाली",
@@ -180,7 +180,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-6",
-    url: "/IMG_5112.JPG.jpeg",
+    url: "/IMG_5112.JPG.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Temple Devotee",
     titleHi: "मंदिर श्रद्धालु",
@@ -189,7 +189,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col3-7",
-    url: "/mata.jpg",
+    url: "/mata.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maa Image",
     titleHi: "माँ का चित्र",
@@ -200,7 +200,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   // COLUMN 4
   {
     id: "col4-1",
-    url: "/temple-entrance-1.jpg",
+    url: "/temple-entrance-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Temple Entrance Gates",
     titleHi: "मंदिर प्रवेश द्वार",
@@ -209,7 +209,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col4-2",
-    url: "/temple-inside-1.jpg",
+    url: "/temple-inside-1.webp",
     aspect: "aspect-[4/3]",
     titleEn: "Sacred Inner Sanctuary",
     titleHi: "पवित्र अंतःस्थल",
@@ -218,7 +218,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col4-3",
-    url: "/temple-devotees-1.jpg",
+    url: "/temple-devotees-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Gathering of Seekers",
     titleHi: "साधकों का समागम",
@@ -227,7 +227,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col4-6",
-    url: "/temple-lion-gate.jpg",
+    url: "/temple-lion-gate.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Temple Lion Gate",
     titleHi: "मंदिर सिंह द्वार",
@@ -236,7 +236,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col4-7",
-    url: "/temple-dome-night.jpg",
+    url: "/temple-dome-night.webp",
     aspect: "aspect-[4/3]",
     titleEn: "Temple Dome Night",
     titleHi: "मंदिर गुंबद रात में",
@@ -245,7 +245,7 @@ const ALL_PHOTOS: PhotoItem[] = [
   },
   {
     id: "col4-8",
-    url: "/temple-night-2.jpg",
+    url: "/temple-night-2.webp",
     aspect: "aspect-square",
     titleEn: "Gilded Temple architecture",
     titleHi: "स्वर्ण मण्डित वास्तुकला",
@@ -318,6 +318,9 @@ export default function GalleryPage() {
   
   // Lightbox Modal state
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
+
+  // Active videos map to lazy-load YouTube iframes
+  const [activeVideos, setActiveVideos] = useState<Record<string, boolean>>({});
   
   // Custom scroll lock for lightbox
   useEffect(() => {
@@ -370,7 +373,7 @@ export default function GalleryPage() {
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-20"
         style={{
-          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundImage: "url('/hero-spiritual-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -417,15 +420,33 @@ export default function GalleryPage() {
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.4 }}
             >
-              <div className="aspect-video relative">
-                <iframe 
-                  className="absolute top-0 left-0 w-full h-full z-0"
-                  src={`https://www.youtube.com/embed/${vid.id}`} 
-                  title={lang === 'en' ? vid.titleEn : vid.titleHi}
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowFullScreen>
-                </iframe>
+              <div className="aspect-video relative bg-black cursor-pointer">
+                {activeVideos[vid.id] ? (
+                  <iframe 
+                    className="absolute top-0 left-0 w-full h-full z-0"
+                    src={`https://www.youtube.com/embed/${vid.id}?autoplay=1`} 
+                    title={lang === 'en' ? vid.titleEn : vid.titleHi}
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen>
+                  </iframe>
+                ) : (
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center z-10"
+                    onClick={() => setActiveVideos(prev => ({ ...prev, [vid.id]: true }))}
+                  >
+                    <img 
+                      src={`https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`} 
+                      alt={lang === 'en' ? vid.titleEn : vid.titleHi}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300"
+                    />
+                    <div className="absolute w-16 h-11 bg-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:bg-red-700 group-hover:scale-105 transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="p-4 bg-white border-t border-gray-100">
                 <div 
@@ -447,7 +468,7 @@ export default function GalleryPage() {
           <a 
             href="https://youtube.com/@maabaglamukhidarshan-d2e?si=OC9ZiN1R5Tb59OBl"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-semibold text-xs tracking-wide shadow-lg hover:shadow-red-500/20 hover:scale-105 transition-all duration-300"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -498,7 +519,7 @@ export default function GalleryPage() {
           <motion.div
             onClick={() => setSelectedPhoto({
               id: "banner-new",
-              url: "/banner-new.jpg",
+              url: "/banner-new.webp",
               aspect: "aspect-[16/10]",
               titleEn: "Divine Puja and Havan Banner",
               titleHi: "दिव्य पूजा एवं हवन बैनर",
@@ -513,7 +534,7 @@ export default function GalleryPage() {
             style={{ aspectRatio: '1000/620' }}
           >
             <img
-              src="/banner-new.jpg"
+              src="/banner-new.webp"
               alt="Maa Baglamukhi Divine Banner"
               className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
             />

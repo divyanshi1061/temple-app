@@ -40,13 +40,12 @@ export default function AboutSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-xs md:max-w-md mx-auto border-2 border-gray-100 bg-gray-100">
-              <img 
-                src="/acharya-new.jpg" 
+              <Image 
+                src="/acharya-new.webp" 
                 alt="Acharya Pt. Rudraksh Rajpurohit" 
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/acharya-new.jpg';
-                }}
+                fill
+                sizes="(max-width: 768px) 280px, 400px"
+                style={{ objectFit: "cover" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             </div>
@@ -54,11 +53,12 @@ export default function AboutSection() {
             {/* Badge */}
             <div className="absolute -bottom-4 left-3 sm:left-8 z-20 bg-white p-2.5 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 flex items-center gap-2 sm:gap-3">
               <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-gold/30 bg-gray-100">
-                <img 
-                  src="/acharya-new.jpg" 
+                <Image 
+                  src="/acharya-new.webp" 
                   alt="Acharya" 
-                  className="w-full h-full object-cover" 
-                  onError={(e) => { (e.target as HTMLImageElement).src = '/acharya-new.jpg'; }}
+                  fill
+                  sizes="(max-width: 640px) 32px, 44px"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="w-[1px] h-7 bg-gray-200" />
@@ -103,7 +103,7 @@ export default function AboutSection() {
                     <FaCheckCircle className="text-gold text-base" />
                   </div>
                   <div>
-                    <h4 className="text-gray-900 font-bold text-xs sm:text-sm mb-0.5">{val.title[lang]}</h4>
+                    <h3 className="text-gray-900 font-bold text-xs sm:text-sm mb-0.5">{val.title[lang]}</h3>
                     <p className="text-gray-500 text-[11px] sm:text-xs font-medium leading-relaxed">{val.desc[lang]}</p>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function AboutSection() {
             <div className="md:col-span-5 rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white p-1.5 md:p-2">
               <div className="rounded-xl md:rounded-2xl overflow-hidden bg-gray-100 relative aspect-[4/3] w-full">
                 <Image
-                  src="/mata-baglamukhi.jpg"
+                  src="/mata-baglamukhi.webp"
                   alt="Maa Baglamukhi - Sacred Darshan at Nalkheda Dham"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"

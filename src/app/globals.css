@@ -65,6 +65,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Eliminate 300ms click/tap delays on mobile viewports */
+button, a, select, input, [role="button"] {
+  touch-action: manipulation;
+}
+
 /* Headings: Cinzel bold luxury serif font for outstanding contrast and grandeur */
 h1, h2, h3, h4, h5, h6, .font-cinzel {
   font-family: var(--font-cinzel), serif;
@@ -78,6 +83,15 @@ p, li {
   font-family: var(--font-outfit), sans-serif;
   color: #2c2a29; /* Dark high-contrast charcoal */
   text-align: justify;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  p, li {
+    font-size: 15px;
+    line-height: 1.55;
+  }
 }
 
 /* Custom Scrollbar - Gold */

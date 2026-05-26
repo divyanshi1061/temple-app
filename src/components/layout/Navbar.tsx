@@ -24,11 +24,27 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
-      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 100);
-      setLastScrollY(currentScrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          
+          setIsScrolled((prevScrolled) => {
+            const nextScrolled = currentScrollY > 50;
+            return prevScrolled === nextScrolled ? prevScrolled : nextScrolled;
+          });
+          
+          setIsVisible((prevVisible) => {
+            const nextVisible = currentScrollY < lastScrollY || currentScrollY < 100;
+            return prevVisible === nextVisible ? prevVisible : nextVisible;
+          });
+          
+          setLastScrollY(currentScrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -189,13 +205,13 @@ export default function Navbar() {
               <motion.button
                 onClick={toggleLang}
                 suppressHydrationWarning={true}
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-gold/10 text-gold border border-gold/15 font-bold text-xs"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-gold/10 text-gold border border-gold/15 font-bold text-sm"
                 whileTap={{ scale: 0.9 }}
               >
                 {lang === 'en' ? 'अ' : 'EN'}
               </motion.button>
               <motion.button
-                className="text-gray-900 p-2"
+                className="text-gray-900 p-3 flex items-center justify-center rounded-full hover:bg-gold/5"
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
                 suppressHydrationWarning={true}
                 whileTap={{ scale: 0.9 }}

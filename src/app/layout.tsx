@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Cinzel, Cormorant_Garamond, Outfit, Playball } from "next/font/google";
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
@@ -39,14 +39,20 @@ const playball = Playball({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
-    template: "%s | Siddh Peeth Maa Baglamukhi Nalkheda Dham"
+    default: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
+    template: "%s | Siddh Peeth Nalkheda"
   },
   description:
-    "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
+    "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
   keywords: [
     "Maa Baglamukhi Havan Nalkheda", 
     "Acharya Pt Rudraksh Rajpurohit", 
@@ -68,14 +74,14 @@ export const metadata: Metadata = {
     canonical: "https://www.panditmaabaglamukhi.com",
   },
   openGraph: {
-    title: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
+    title: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
     description:
-      "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
+      "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
     url: "https://www.panditmaabaglamukhi.com",
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 500,
         height: 500,
         alt: "Pandit Maa Baglamukhi Logo",
@@ -86,14 +92,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maa Baglamukhi Havan & Vedic Pujas | Siddh Peeth Nalkheda Dham | Acharya Pt Rudraksh Rajpurohit",
-    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas, and Anusthans by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Consult Pt Rudraksh Rajpurohit for victory & protection. 🙏",
-    images: ["/logo.png"],
+    title: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
+    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
+    images: ["/logo.webp"],
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
   },
 };
 
@@ -104,15 +110,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://img.youtube.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${inter.variable} ${outfit.variable} ${cinzel.variable} ${cormorant.variable} ${playball.variable} antialiased`}
       >
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-K3Z6K5PBDY'}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

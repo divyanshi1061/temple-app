@@ -73,7 +73,16 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
       "name": "Acharya Pt. Rudraksh Rajpurohit",
       "url": "https://www.panditmaabaglamukhi.com"
     },
-    "areaServed": "Worldwide",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
     "serviceType": "Vedic Puja & Tantra Havan",
     "category": service.category || "Religious Service",
     "image": service.image ? (service.image.startsWith('http') ? service.image : `https://www.panditmaabaglamukhi.com${service.image.startsWith('/') ? '' : '/'}${service.image}`) : undefined
@@ -95,7 +104,7 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
       <section
         className="relative pt-32 pb-16 bg-white border-b border-gray-100 sacred-pattern overflow-hidden"
         style={{
-          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundImage: "url('/hero-spiritual-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -209,7 +218,7 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
                   <a
                     href={whatsappUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="w-full py-4 bg-[#25D366] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-[#25D366]/20 hover:shadow-xl hover:bg-[#1EBE5D] hover:-translate-y-1 uppercase tracking-wider"
                   >
                     <FaWhatsapp className="w-5 h-5" />
@@ -234,7 +243,7 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
         <a
           href={whatsappUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="flex-1 py-3.5 bg-[#25D366] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition-all uppercase tracking-wider hover:bg-[#1EBE5D]"
         >
           <FaWhatsapp className="w-4 h-4" />

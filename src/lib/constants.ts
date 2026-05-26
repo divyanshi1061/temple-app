@@ -56,7 +56,7 @@ export const SERVICES = [
     },
     duration: { en: "Extended Days", hi: "विस्तारित दिन" },
     icon: "B3",
-    image: "/havan-upload-1.jpg",
+    image: "/havan-upload-1.webp",
     category: "anusthan",
     popular: true,
   },
@@ -77,7 +77,7 @@ export const SERVICES = [
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "MV",
-    image: "/havan-upload-2.jpg",
+    image: "/havan-upload-2.webp",
     category: "havan",
     popular: true,
   },
@@ -98,7 +98,7 @@ export const SERVICES = [
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "LM",
-    image: "/havan-upload-3.jpg",
+    image: "/havan-upload-3.webp",
     category: "havan",
     popular: true,
   },
@@ -119,7 +119,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "BA",
-    image: "/baglamukhi-anusthan-main.png",
+    image: "/baglamukhi-anusthan-main.webp",
     category: "anusthan",
     popular: true,
   },
@@ -140,7 +140,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "NV",
-    image: "/nyayalay-vijay.png",
+    image: "/nyayalay-vijay.webp",
     category: "puja",
     popular: true,
   },
@@ -161,7 +161,7 @@ export const SERVICES = [
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "NG",
-    image: "/nav-graha-shanti.png",
+    image: "/nav-graha-shanti.webp",
     category: "puja",
   },
   {
@@ -181,7 +181,7 @@ export const SERVICES = [
     },
     duration: { en: "7-11 Days", hi: "7-11 दिन" },
     icon: "MM",
-    image: "/mrityunjay-new.jpg",
+    image: "/mrityunjay-new.webp",
     category: "anusthan",
   },
   {
@@ -201,7 +201,7 @@ export const SERVICES = [
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "SV",
-    image: "/shatru-stambhan.png",
+    image: "/shatru-stambhan.webp",
     category: "anusthan",
   },
   {
@@ -221,7 +221,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "RN",
-    image: "/rog-nash.png",
+    image: "/rog-nash.webp",
     category: "anusthan",
   },
   {
@@ -241,7 +241,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "SP",
-    image: "/santan-prapti.png",
+    image: "/santan-prapti.webp",
     category: "puja",
   },
   {
@@ -261,7 +261,7 @@ export const SERVICES = [
     },
     duration: { en: "3 Days", hi: "3 दिन" },
     icon: "VB",
-    image: "/vyavahik-badha.png",
+    image: "/vyavahik-badha.webp",
     category: "puja",
   },
   {
@@ -281,7 +281,7 @@ export const SERVICES = [
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "VV",
-    image: "/vyapar-vraddhi.png",
+    image: "/vyapar-vraddhi.webp",
     category: "anusthan",
   },
   {
@@ -301,7 +301,7 @@ export const SERVICES = [
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "RM",
-    image: "/pitra-kaal-sarp.png",
+    image: "/pitra-kaal-sarp.webp",
     category: "puja",
   },
   {
@@ -321,7 +321,7 @@ export const SERVICES = [
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "KM",
-    image: "/karya-mukti.png",
+    image: "/karya-mukti.webp",
     category: "puja",
   },
   {
@@ -341,7 +341,7 @@ export const SERVICES = [
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "LP",
-    image: "/lakshmi-prapti.png",
+    image: "/lakshmi-prapti.webp",
     category: "puja",
   },
   {
@@ -361,7 +361,7 @@ export const SERVICES = [
     },
     duration: { en: "Consultation", hi: "परामर्श" },
     icon: "VS",
-    image: "/vastu-shastra.png",
+    image: "/vastu-shastra.webp",
     category: "paramarsh",
   },
   {
@@ -381,7 +381,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "VK",
-    image: "/vashikaran-akarshan.png",
+    image: "/vashikaran-akarshan.webp",
     category: "anusthan",
   },
   {
@@ -401,7 +401,7 @@ export const SERVICES = [
     },
     duration: { en: "3 Days", hi: "3 दिन" },
     icon: "AK",
-    image: "/akarshan-anusthan.png",
+    image: "/akarshan-anusthan.webp",
     category: "anusthan",
   },
   {
@@ -421,7 +421,7 @@ export const SERVICES = [
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "MU",
-    image: "/moh-ucchatan.png",
+    image: "/moh-ucchatan.webp",
     category: "anusthan",
   }
 ];

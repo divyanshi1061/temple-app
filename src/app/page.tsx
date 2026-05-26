@@ -17,7 +17,7 @@ export default function Home() {
         "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
         "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
         "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
-        "image": "https://www.panditmaabaglamukhi.com/acharya-new.jpg",
+        "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
         "url": "https://www.panditmaabaglamukhi.com",
         "address": {
           "@type": "PostalAddress",
@@ -96,14 +96,118 @@ export default function Home() {
           "@type": "OfferCatalog",
           "name": "Sacred Vedic Services",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maa Baglamukhi 36 Lakh & Sawa Lakh Jaap" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maa Baglamukhi Vishesh Havan" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nyayalay Vijay - Court Case Victory Puja" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shatru Stambhan Anusthan" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vastu Shastra Paramarsh" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nav Graha Shanti Puja" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maha Mrityunjay Anusthan" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Santan Prapti Puja" }}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Maa Baglamukhi 36 Lakh & Sawa Lakh Jaap",
+                  "description": "Extensive chanting of Maa Baglamukhi mantras for protection."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Maa Baglamukhi Vishesh Havan",
+                  "description": "Special fire ritual dedicated to Maa Baglamukhi."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Nyayalay Vijay - Court Case Victory Puja",
+                  "description": "Rituals to gain victory in pending legal cases."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Shatru Stambhan Anusthan",
+                  "description": "Tantric rituals to paralyze enemy actions."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Vastu Shastra Paramarsh",
+                  "description": "Expert Vastu consultation to harmonize energy flows."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Nav Graha Shanti Puja",
+                  "description": "Pacification of all nine planets."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Maha Mrityunjay Anusthan",
+                  "description": "Intense chanting of Maha Mrityunjay mantra."
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Santan Prapti Puja",
+                  "description": "Divine rituals seeking blessings for children."
+                }
+              }
+            }
           ]
         }
       }
@@ -124,7 +228,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 z-0 pointer-events-none opacity-20"
           style={{
-            backgroundImage: "url('/hero-spiritual-bg.png')",
+            backgroundImage: "url('/hero-spiritual-bg.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

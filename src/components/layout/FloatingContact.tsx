@@ -13,7 +13,7 @@ export default function FloatingContact() {
       <a
         href={whatsappUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 hover:scale-110 transition-all duration-200"
         aria-label="Chat on WhatsApp"
       >

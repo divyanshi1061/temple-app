@@ -7,6 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { IoCloseOutline } from "react-icons/io5";
+import Image from "next/image";
 
 type PhotoItem = {
   id: string;
@@ -22,7 +23,7 @@ type PhotoItem = {
 const SHOWCASE_PHOTOS: PhotoItem[] = [
   {
     id: "home-g-1",
-    url: "/mrityunjay-new.jpg",
+    url: "/mrityunjay-new.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maha Mrityunjay Anusthan",
     titleHi: "महामृत्युंजय अनुष्ठान",
@@ -31,7 +32,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-2",
-    url: "/acharya-new.jpg",
+    url: "/acharya-new.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Acharya Pt. Rudraksh Rajpurohit",
     titleHi: "आचार्य पं. रुद्राक्ष राजपुरोहित",
@@ -40,7 +41,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-3",
-    url: "/new-havan-2.jpg",
+    url: "/new-havan-2.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Havan Ritual 2",
     titleHi: "हवन अनुष्ठान 2",
@@ -49,7 +50,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-4",
-    url: "/new-havan-1.jpg",
+    url: "/new-havan-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Siddh Peeth Puja",
     titleHi: "सिद्ध पीठ पूजा",
@@ -58,7 +59,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-5",
-    url: "/real-havan-kund.jpg",
+    url: "/real-havan-kund.webp",
     aspect: "aspect-[4/3]",
     titleEn: "Agni Dev - Havan Fire",
     titleHi: "अग्नि देव - हवन कुंड",
@@ -67,7 +68,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-6",
-    url: "/temple-entrance-1.jpg",
+    url: "/temple-entrance-1.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Temple Entrance Gates",
     titleHi: "मंदिर प्रवेश द्वार",
@@ -77,7 +78,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   ,
   {
     id: "home-g-7",
-    url: "/mata-baglamukhi.jpg",
+    url: "/mata-baglamukhi.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maa Baglamukhi",
     titleHi: "माँ बगलामुखी",
@@ -86,7 +87,7 @@ const SHOWCASE_PHOTOS: PhotoItem[] = [
   },
   {
     id: "home-g-8",
-    url: "/mata.jpg",
+    url: "/mata.webp",
     aspect: "aspect-[3/4]",
     titleEn: "Maa (Devotional)",
     titleHi: "माँ (भक्ति)",
@@ -117,7 +118,7 @@ export default function GallerySection() {
       id="gallery"
       className="relative py-10 md:py-20 overflow-hidden bg-white border-t border-gray-100 sacred-pattern"
       style={{
-        backgroundImage: "url('/hero-spiritual-bg.png')",
+        backgroundImage: "url('/hero-spiritual-bg.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -155,10 +156,13 @@ export default function GallerySection() {
               transition={{ duration: 0.4 }}
             >
               <div className="relative w-full aspect-[4/3] overflow-hidden">
-                <img
+                <Image
                   src={item.url}
                   alt={lang === "en" ? item.titleEn : item.titleHi}
-                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                  className="transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
             </motion.div>
@@ -210,16 +214,18 @@ export default function GallerySection() {
             <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto w-full">
               {/* Image */}
               <motion.div 
-                className="max-h-[55vh] md:max-h-[70vh] max-w-full md:max-w-[50%] overflow-hidden shadow-2xl bg-gray-50"
+                className="max-h-[55vh] md:max-h-[70vh] max-w-full md:max-w-[50%] overflow-hidden shadow-2xl bg-gray-50 relative aspect-[3/4] w-full"
                 initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 15, opacity: 0 }}
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
-                <img
+                <Image
                   src={selectedPhoto.url}
                   alt={lang === "en" ? selectedPhoto.titleEn : selectedPhoto.titleHi}
-                  className="w-full h-full object-contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "contain" }}
                 />
               </motion.div>
 

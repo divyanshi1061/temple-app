@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section
         className="relative text-gray-900 pt-36 pb-24 md:py-40 overflow-hidden sacred-pattern border-b border-gray-100"
         style={{
-          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundImage: "url('/hero-spiritual-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -143,7 +143,7 @@ export default function AboutPage() {
                 {/* Gold Outer-Glow Overlay */}
                 <div className="absolute inset-0 border border-gold/40 rounded-t-[10rem] rounded-b-3xl z-10 pointer-events-none" />
                 <Image
-                  src="/mata-baglamukhi.jpg"
+                  src="/mata-baglamukhi.webp"
                   alt="Maa Baglamukhi Divine Idol"
                   fill
                   priority
@@ -267,11 +267,11 @@ export default function AboutPage() {
                 className="relative max-w-md w-full aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-white group"
               >
                 <img 
-                  src="/acharya-new.jpg" 
+                  src="/acharya-new.webp" 
                   alt="Acharya Pt. Rudraksh Rajpurohit" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/acharya-new.jpg';
+                    (e.target as HTMLImageElement).src = '/acharya-new.webp';
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

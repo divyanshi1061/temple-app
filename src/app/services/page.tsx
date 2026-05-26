@@ -27,7 +27,7 @@ export default function ServicesPage() {
     descriptionEn: s.description.en,
     descriptionHi: s.description.hi,
     category: s.category || "puja",
-    image: s.image || "/new-havan-1.jpg",
+    image: s.image || "/new-havan-1.webp",
   }));
 
   return (
@@ -36,7 +36,7 @@ export default function ServicesPage() {
       <section
         className="relative overflow-hidden pb-28 pt-36 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero-spiritual-bg.png')",
+          backgroundImage: "url('/hero-spiritual-bg.webp')",
           minHeight: '520px',
           backgroundColor: '#fff',
         }}

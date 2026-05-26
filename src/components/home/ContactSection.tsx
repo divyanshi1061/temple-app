@@ -99,7 +99,9 @@ export default function ContactSection() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {contactInfo.map((info, i) => (
-                  <motion.a key={i} href={info.href} target={info.label.en === "Address" ? "_blank" : undefined}
+                  <motion.a key={i} href={info.href} 
+                    target={info.label.en === "Address" || info.label.en === "WhatsApp" ? "_blank" : undefined}
+                    rel={info.label.en === "Address" || info.label.en === "WhatsApp" ? "noopener noreferrer nofollow" : undefined}
                     className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-white border border-gray-100 hover:border-gold/35 rounded-2xl transition-all group shadow-sm"
                     whileHover={{ y: -2 }}>
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white group-hover:border-gold transition-all shadow-sm flex-shrink-0">

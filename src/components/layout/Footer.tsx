@@ -62,6 +62,8 @@ export default function Footer() {
                 <motion.a
                   key={i}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                   aria-label={social.name}
                   className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gold/5 border border-gold/15 flex items-center justify-center text-gold hover:text-white hover:border-gold hover:bg-gold shadow-sm transition-all duration-300"
                   whileHover={{ scale: 1.08, y: -2 }}
@@ -132,7 +134,7 @@ export default function Footer() {
               <a 
                 href={SITE_CONFIG.mapUrl} 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow" 
                 className="flex items-start gap-3 hover:text-gold transition-colors"
               >
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0 mt-0.5">
@@ -183,11 +185,11 @@ export default function Footer() {
               <span className="text-gold/60">ॐ</span>
               <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-gold transition-colors">{SITE_CONFIG.email}</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Instagram: @maabaglamukhidarshan</a>
+              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Instagram: @maabaglamukhidarshan</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Facebook: Maa Baglamukhi Darshan</a>
+              <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Facebook: Maa Baglamukhi Darshan</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">YouTube: Maa Baglamukhi Darshan</a>
+              <a href={SITE_CONFIG.socials.youtube} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">YouTube: Maa Baglamukhi Darshan</a>
               <span className="text-gold/60">ॐ</span>
               <span className="text-gold font-extrabold uppercase">
                 {lang === 'en' 

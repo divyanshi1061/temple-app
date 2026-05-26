@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,9 +42,9 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-white pt-24"
+      className="relative min-h-fit lg:min-h-screen flex flex-col justify-between overflow-hidden bg-white pt-20 lg:pt-24 pb-6 lg:pb-0"
       style={{
-        backgroundImage: "url('/hero-spiritual-bg.png')",
+        backgroundImage: "url('/hero-spiritual-bg.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -69,10 +70,13 @@ export default function HeroSection() {
 
       {/* Spiritual Background Image Watermark */}
       <motion.div className="absolute inset-0 z-0 pointer-events-none opacity-[0.12]" style={{ y }}>
-        <img
-          src="/hero-spiritual-bg.png"
+        <Image
+          src="/hero-spiritual-bg.webp"
           alt="Sacred Spiritual Background"
-          className="w-full h-full object-cover object-center"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </motion.div>
 
@@ -102,13 +106,13 @@ export default function HeroSection() {
       </div>
 
       {/* Main Grid Content (Split 50/50) */}
-      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
+      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full text-center lg:text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-16 items-center w-full text-center lg:text-left">
           
-          {/* LEFT COLUMN: Premium Sacred Visuals (Image) - Order first on mobile, column 1-5 on desktop */}
-          <div className="order-1 lg:order-none lg:col-span-5 flex justify-center items-center relative py-4 lg:py-6">
-            <div className="relative w-48 h-48 sm:w-60 sm:h-60 lg:w-[28rem] lg:h-[28rem]">
+          {/* LEFT COLUMN: Premium Sacred Visuals (Image) - Order second on mobile, column 1-5 on desktop */}
+          <div className="order-2 lg:order-none lg:col-span-5 flex justify-center items-center relative py-2 lg:py-6">
+            <div className="relative w-32 h-32 sm:w-48 sm:h-48 lg:w-[28rem] lg:h-[28rem]">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />
@@ -117,13 +121,14 @@ export default function HeroSection() {
               
               {/* Main Photo Cutout Frame */}
               <div className="absolute inset-0 rounded-full overflow-hidden border-6 lg:border-8 border-white bg-white shadow-xl lg:shadow-2xl scale-95 flex items-center justify-center">
-                <img
-                  src="/acharya-new.jpg"
+                <Image
+                  src="/acharya-new.webp"
                   alt="Acharya Pt. Rudraksh Rajpurohit portrait"
-                  className="w-full h-full object-cover object-center scale-105"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/mata-baglamukhi.jpg';
-                  }}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 128px, 192px"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  className="scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
@@ -131,8 +136,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Divine Text & Actions - Order second on mobile, column 6-12 on desktop */}
-          <div className="order-2 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 lg:space-y-6">
+          {/* RIGHT COLUMN: Divine Text & Actions - Order first on mobile, column 6-12 on desktop */}
+          <div className="order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
 
             {/* Shloka Banner */}
             <div className="px-3.5 py-1.5 rounded-full border border-gold/25 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5">
@@ -146,19 +151,19 @@ export default function HeroSection() {
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.1] uppercase">
                 {lang === 'hi' 
-                  ? "सिद्ध पीठ नलखेड़ा धाम - माँ बगलामुखी हवन एवं वैदिक पूजा"
+                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
                   : "Maa Baglamukhi Havan & Vedic Pujas"
                 }
-                <span className="block text-xl sm:text-3xl md:text-4xl text-gold mt-1.5 font-semibold normal-case">
-                  {lang === 'hi' 
-                    ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
-                    : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
-                  }
-                </span>
               </h1>
-              <h2 className="text-xs sm:text-sm md:text-base text-gold font-bold tracking-wider uppercase font-cinzel">
-                {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-gold mt-1.5 font-semibold normal-case font-cinzel">
+                {lang === 'hi' 
+                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा शास्त्रोक्त अनुष्ठान" 
+                  : "by Acharya Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham"
+                }
               </h2>
+              <p className="text-xs sm:text-sm md:text-base text-gold font-bold tracking-wider uppercase font-cinzel text-center lg:text-left">
+                {lang === 'hi' ? SITE_CONFIG.tagline.hi : SITE_CONFIG.tagline.en}
+              </p>
             </div>
 
             {/* Description */}
@@ -195,13 +200,13 @@ export default function HeroSection() {
                 {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
               </span>
               <div className="flex items-center gap-3.5">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaFacebook className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaYoutube className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaInstagram className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
               </div>
