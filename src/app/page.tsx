@@ -15,7 +15,7 @@ export default function Home() {
         "@type": "Person",
         "@id": "https://www.panditmaabaglamukhi.com/#person",
         "name": "Acharya Pt. Rudraksh Rajpurohit",
-        "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit"],
+        "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit", "Maa Baglamukhi Pandit Nalkheda", "Ma Baglamukhi Pandit Nalkheda"],
         "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
         "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
         "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
@@ -210,6 +210,58 @@ export default function Home() {
               }
             }
           ]
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.panditmaabaglamukhi.com/#localbusiness",
+        "name": "Acharya Pt. Rudraksh Rajpurohit - Best Maa Baglamukhi Pandit Nalkheda",
+        "alternateName": [
+          "Maa Baglamukhi Pandit Nalkheda",
+          "Ma Baglamukhi Pandit Nalkheda",
+          "Baglamukhi Pandit Nalkheda",
+          "Nalkheda Pandit"
+        ],
+        "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
+        "priceRange": "$$",
+        "telephone": "+91 79095 97033",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Near Maa Baglamukhi Mandir",
+          "addressLocality": "Nalkheda",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "465445",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.9576,
+          "longitude": 76.2415
+        },
+        "url": "https://www.panditmaabaglamukhi.com",
+        "sameAs": [
+          "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/?mibextid=wwXIfr&rdid=Jgsjq9UYv0FIJt4Z&share_url=https%3A%2F%2Fwww.facebook.com",
+          "https://instagram.com/maabaglamukhidarshan",
+          "https://youtube.com/@maabaglamukhidarshan-d2e"
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "285"
         }
       }
     ]

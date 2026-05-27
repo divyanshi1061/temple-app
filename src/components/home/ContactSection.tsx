@@ -209,6 +209,23 @@ export default function ContactSection() {
             </div>
           </motion.div>
         </div>
+
+        {/* Google Maps Interactive Iframe for Local SEO */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-12 md:mt-16 w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden border border-gray-200/60 bg-white p-2 shadow-lg"
+        >
+          <iframe 
+            src="https://maps.google.com/maps?q=Maa%20Baglamukhi%20Temple%20Nalkheda&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            className="w-full h-80 md:h-[400px] rounded-[1.85rem] border-0"
+            allowFullScreen
+            loading="lazy"
+            title={lang === "en" ? "Maa Baglamukhi Temple, Nalkheda Location Map" : "माँ बगलामुखी मंदिर, नलखेड़ा स्थान मानचित्र"}
+          />
+        </motion.div>
       </div>
     </section>
   );

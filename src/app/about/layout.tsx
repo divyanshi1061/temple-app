@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   description:
     "Learn about the ancient Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham, its Pandava-era history, the sacred Lakhundar River, and the revered priest Acharya Pt. Rudraksh Rajpurohit.",
   keywords: [
+    "Maa Baglamukhi Pandit Nalkheda",
+    "Ma Baglamukhi Pandit Nalkheda",
     "Pandit Maa Baglamukhi",
     "Bagalamukhi Pandit",
     "Mandir Pujari",

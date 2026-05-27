@@ -69,7 +69,12 @@ export default function Navbar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            const id = entry.target.id;
+            setActiveSection(id);
+            // Clear URL hash when scrolling back to the home/top section
+            if (id === "home" && typeof window !== "undefined" && window.location.hash) {
+              window.history.pushState("", document.title, window.location.pathname + window.location.search);
+            }
           }
         });
       },
@@ -97,12 +102,29 @@ export default function Navbar() {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
+      if (href === "#home") {
+        if (typeof window !== "undefined" && window.location.hash) {
+          window.history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+        setActiveSection("home");
+      }
     }
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMobileOpen(false);
     
+    // Smooth scroll to top and clear hash if clicking Home link on Home page
+    if (href === "/" && pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (typeof window !== "undefined" && window.location.hash) {
+        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+      }
+      setActiveSection("home");
+      return;
+    }
+
     // Check if the link is a hash link for the current page
     if (href.startsWith("#") || (href.startsWith("/#") && pathname === "/")) {
       const hash = href.startsWith("/#") ? href.substring(1) : href;
@@ -110,13 +132,22 @@ export default function Navbar() {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: "smooth" });
+        if (typeof window !== "undefined") {
+          window.history.pushState("", document.title, window.location.pathname + window.location.search + hash);
+        }
       }
     }
   };
 
   const isActive = (href: string) => {
     if (href.startsWith("/")) {
-      if (href === "/") return pathname === "/";
+      if (href === "/") {
+        return pathname === "/" && (activeSection === "home" || activeSection === "");
+      }
+      if (href.includes("#")) {
+        const [path, hash] = href.split("#");
+        return pathname === path && activeSection === hash;
+      }
       return pathname.startsWith(href);
     }
     if (href.startsWith("#")) return pathname === "/" && activeSection === href.replace("#", "");

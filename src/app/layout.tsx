@@ -48,15 +48,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
+    default: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
     template: "%s | Siddh Peeth Nalkheda"
   },
   description:
-    "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
+    "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
   keywords: [
     // Brand & Person keywords
-    "Pandit Maa Baglamukhi", "Pandit Maa Bagalamukhi",
-    "Bagalamukhi Pandit", "Baglamukhi Pandit",
+    "Maa Baglamukhi Pandit Nalkheda", "Maa Bagalamukhi Pandit Nalkheda",
+    "Ma Baglamukhi Pandit Nalkheda", "Ma Bagalamukhi Pandit Nalkheda",
+    "Baglamukhi Pandit Nalkheda", "Nalkheda Baglamukhi Pandit",
+    "Pandit Maa Baglamukhi", "Pandit Maa Bagalamukhi", "Pandit Ma Baglamukhi",
+    "Bagalamukhi Pandit", "Baglamukhi Pandit", "Ma Baglamukhi Pandit",
     "Acharya Pt Rudraksh Rajpurohit", "Rudraksh Rajpurohit",
     "Pt Rudraksh Rajpurohit Nalkheda",
     // Temple & Location keywords
@@ -101,9 +104,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
+    title: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
     description:
-      "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
+      "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
     url: "https://www.panditmaabaglamukhi.com",
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
@@ -119,8 +122,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
-    description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
+    title: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
+    description: "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
     images: ["/og-image.png"],
   },
   icons: {

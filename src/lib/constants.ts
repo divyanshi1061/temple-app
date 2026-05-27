@@ -12,8 +12,8 @@ export const SITE_CONFIG = {
     hi: "सिद्ध वैदिक पूजा एवं हवन - नलखेड़ा धाम"
   },
   description: {
-    en: "Authentic Maa Baglamukhi Havan and Vedic Pujas performed by Acharya Pt. Rudraksh Rajpurohit at the sacred Siddh Peeth of Nalkheda Dham.",
-    hi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा नलखेड़ा धाम के पवित्र सिद्ध पीठ में आयोजित प्रामाणिक माँ बगलामुखी हवन और वैदिक पूजा।"
+    en: "Acharya Pt. Rudraksh Rajpurohit is the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Maa Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham.",
+    hi: "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा में सर्वश्रेष्ठ माँ बगलामुखी पंडित हैं। सिद्ध पीठ नलखेड़ा धाम में प्रामाणिक माँ बगलामुखी हवन, अनुष्ठान और वैदिक पूजा बुक करें।"
   },
   phone: "+91 79095 97033",
   whatsapp: "+917909597033",

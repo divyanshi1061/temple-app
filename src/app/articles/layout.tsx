@@ -4,6 +4,13 @@ export const metadata: Metadata = {
   title: "Vedic Guidance & Spiritual Knowledge Hub | Pandit Maa Baglamukhi",
   description:
     "Explore authentic articles on Maa Baglamukhi temple history, ritual benefits, mantra meanings, hawan processes, travel guides, and festival updates at Nalkheda Dham.",
+  keywords: [
+    "Maa Baglamukhi Pandit Nalkheda",
+    "Ma Baglamukhi Pandit Nalkheda",
+    "Pandit Maa Baglamukhi",
+    "Bagalamukhi Pandit",
+    "Nalkheda Pandit",
+  ],
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com/articles",
     languages: {

@@ -132,8 +132,8 @@ export default function HeroSection() {
               </h1>
               <h2 className="text-[10px] sm:text-xs lg:text-sm text-gold font-semibold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' 
-                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित • सिद्ध पीठ नलखेड़ा धाम" 
-                  : "by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
+                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित • सर्वश्रेष्ठ माँ बगलामुखी पंडित नलखेड़ा" 
+                  : "by Acharya Pt. Rudraksh Rajpurohit • Best Maa Baglamukhi Pandit in Nalkheda"
                 }
               </h2>
             </div>
