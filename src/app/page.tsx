@@ -69,6 +69,42 @@ export default function Home() {
         }
       },
       {
+        "@type": "ProfessionalService",
+        "@id": "https://www.panditmaabaglamukhi.com/#service-provider",
+        "name": "Acharya Pt. Rudraksh Rajpurohit - Best Pandit for Maa Baglamukhi Puja & Havan in Nalkheda",
+        "alternateName": [
+          "Maa Baglamukhi Pandit Nalkheda Dham",
+          "Maa Baglamukhi Pandit Naval Sharma Services Nalkheda",
+          "Maa Baglamukhi Pandit Arun Sharma Services Nalkheda",
+          "Baglamukhi Pujan Pandit Bajrang Sharma Ji Services Nalkheda",
+          "बगलामुखी पूजा पंडित नलखेड़ा",
+          "बगलामुखी हवन पंडित"
+        ],
+        "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
+        "priceRange": "$$",
+        "telephone": "+91 79095 97033",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Near Maa Baglamukhi Mandir",
+          "addressLocality": "Nalkheda",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "465445",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.9576,
+          "longitude": 76.2415
+        },
+        "url": "https://www.panditmaabaglamukhi.com",
+        "logo": "https://www.panditmaabaglamukhi.com/logo.webp",
+        "sameAs": [
+          "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/",
+          "https://instagram.com/maabaglamukhidarshan",
+          "https://youtube.com/@maabaglamukhidarshan-d2e"
+        ]
+      },
+      {
         "@type": "WebSite",
         "@id": "https://www.panditmaabaglamukhi.com/#website",
         "url": "https://www.panditmaabaglamukhi.com",

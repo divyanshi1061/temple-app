@@ -279,13 +279,12 @@ export const ARTICLES: ArticleItem[] = [
     date: "2026-05-27",
     sections: [
       {
-        heading: { en: "How can I book a puja if I cannot visit Nalkheda Dham personally?", hi: "यदि मैं स्वयं नलखेड़ा धाम नहीं आ सकता, तो पूजा कैसे बुक करूँ?"
+        heading: { en: "How can I book a puja if I cannot visit Nalkheda Dham personally?", hi: "यदि मैं स्वयं नलखेड़ा धाम नहीं आ सकता, तो पूजा कैसे बुक करूँ?" },
+        content: {
+          en: "If you cannot travel to Nalkheda, you can easily book **Maa Baglamukhi Havan online**. Acharya Pt. Rudraksh Rajpurohit conducts the **Online Sankalp** process. On the scheduled date, you connect via a video call or WhatsApp call, where Acharya Ji recites your name, gotra, and birth details to establish the sankalp. The priests then perform the ritual on your behalf, and the holy Prasad and Havan Bhasma (sacred ashes) are mailed to your address.",
+          hi: "यदि आप नलखेड़ा की यात्रा नहीं कर सकते, तो आप आसानी से **माँ बगलामुखी हवन ऑनलाइन** बुक कर सकते हैं। आचार्य पं. रुद्राक्ष राजपुरोहित **ऑनलाइन संकल्प** प्रक्रिया आयोजित करते हैं। निर्धारित तिथि पर, आप वीडियो कॉल या व्हाट्सएप कॉल के माध्यम से जुड़ते हैं, जहाँ आचार्य जी संकल्प स्थापित करने के लिए आपका नाम, गोत्र और जन्म स्थान बोलते हैं। इसके बाद पुरोहित आपकी ओर से अनुष्ठान संपन्न करते हैं, और पवित्र प्रसाद एवं हवन भस्म डाक द्वारा आपके पते पर भेज दी जाती है।"
+        }
       },
-      content: {
-        en: "If you cannot travel to Nalkheda, you can easily book **Maa Baglamukhi Havan online**. Acharya Pt. Rudraksh Rajpurohit conducts the **Online Sankalp** process. On the scheduled date, you connect via a video call or WhatsApp call, where Acharya Ji recites your name, gotra, and birth details to establish the sankalp. The priests then perform the ritual on your behalf, and the holy Prasad and Havan Bhasma (sacred ashes) are mailed to your address.",
-        hi: "यदि आप नलखेड़ा की यात्रा नहीं कर सकते, तो आप आसानी से **माँ बगलामुखी हवन ऑनलाइन** बुक कर सकते हैं। आचार्य पं. रुद्राक्ष राजपुरोहित **ऑनलाइन संकल्प** प्रक्रिया आयोजित करते हैं। निर्धारित तिथि पर, आप वीडियो कॉल या व्हाट्सएप कॉल के माध्यम से जुड़ते हैं, जहाँ आचार्य जी संकल्प स्थापित करने के लिए आपका नाम, गोत्र और जन्म स्थान बोलते हैं। इसके बाद पुरोहित आपकी ओर से अनुष्ठान संपन्न करते हैं, और पवित्र प्रसाद एवं हवन भस्म डाक द्वारा आपके पते पर भेज दी जाती है।"
-      }
-    },
     {
       heading: { en: "What are the rules regarding clothing during the puja?", hi: "पूजा के दौरान कपड़ों से संबंधित क्या नियम हैं?" },
       content: {
