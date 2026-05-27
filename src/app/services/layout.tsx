@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/havan-upload-1.webp",
-        width: 800,
-        height: 600,
+        width: 1024,
+        height: 819,
         alt: "Sacred Vedic Havan at Nalkheda Dham",
       },
     ],

@@ -108,10 +108,10 @@ export const metadata: Metadata = {
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
       {
-        url: "/logo.webp",
-        width: 500,
-        height: 500,
-        alt: "Pandit Maa Baglamukhi Logo",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pandit Maa Baglamukhi Nalkheda Dham",
       }
     ],
     type: "website",
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Maa Baglamukhi Havan & Pujas | Pt Rudraksh Nalkheda",
     description: "Book authentic Maa Baglamukhi Havan, Vedic Pujas & Anusthans by Pt Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. 🙏",
-    images: ["/logo.webp"],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/logo.webp",

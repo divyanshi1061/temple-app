@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
       {
-        url: "/mata-baglamukhi.webp",
-        width: 800,
-        height: 600,
-        alt: "Maa Baglamukhi Divine Idol at Nalkheda Dham",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pandit Maa Baglamukhi Nalkheda Dham",
       },
     ],
     type: "website",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "About Maa Baglamukhi Dham & Acharya Pt. Rudraksh | Nalkheda",
     description:
       "Discover the sacred Siddh Peeth Maa Baglamukhi Temple and its history at Nalkheda Dham, Madhya Pradesh.",
-    images: ["/mata-baglamukhi.webp"],
+    images: ["/og-image.png"],
   },
 };
 

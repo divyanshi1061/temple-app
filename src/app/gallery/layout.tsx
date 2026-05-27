@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/temple-night-1.webp",
-        width: 800,
-        height: 600,
+        width: 1024,
+        height: 576,
         alt: "Maa Baglamukhi Temple at Night",
       },
     ],
