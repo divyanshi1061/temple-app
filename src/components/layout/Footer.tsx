@@ -182,6 +182,27 @@ export default function Footer() {
 
         {/* Bottom copyright, policy links and slow-moving mantra */}
         <div className="flex flex-col items-center gap-3 text-center">
+          <div className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-1 text-[10px] md:text-xs font-bold text-amber-800/80 mb-1">
+            <Link href="/articles/baglamukhi-temple-history" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Temple History' : 'मंदिर इतिहास'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/articles/benefits-of-baglamukhi-puja" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Puja Benefits' : 'पूजा के लाभ'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/articles/baglamukhi-mantra-meaning" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Mantra Meaning' : 'मंत्र का अर्थ'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/articles/authentic-hawan-process" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Hawan Process' : 'हवन विधि'}
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/articles/nalkheda-temple-travel-guide" className="hover:text-gold transition-colors">
+              {lang === 'en' ? 'Travel Guide' : 'यात्रा मार्गदर्शिका'}
+            </Link>
+          </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-[10px] md:text-xs font-bold text-gray-500">
             <Link href="/privacy" className="hover:text-gold transition-colors">
               {lang === 'en' ? 'Privacy Policy' : 'गोपनीयता नीति'}

@@ -35,6 +35,7 @@ export const NAV_LINKS = [
   { label: { en: "Services", hi: "सेवाएं" }, href: "/services" },
   { label: { en: "About", hi: "परिचय" }, href: "/about" },
   { label: { en: "Gallery", hi: "गैलरी" }, href: "/gallery" },
+  { label: { en: "Guidance", hi: "लेख" }, href: "/articles" },
   { label: { en: "Contact", hi: "संपर्क" }, href: "/#contact" },
 ];
 
