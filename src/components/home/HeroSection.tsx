@@ -43,7 +43,7 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-fit lg:min-h-screen flex flex-col justify-between overflow-hidden bg-white pt-20 lg:pt-24 pb-6 lg:pb-0"
+      className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-white pt-24 sm:pt-28 pb-12 lg:py-0"
       style={{
         backgroundImage: "url('/hero-spiritual-bg.webp')",
         backgroundSize: 'cover',
@@ -107,7 +107,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Grid Content (Split 50/50) */}
-      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex-grow flex items-center" style={{ opacity }}>
+      <motion.div className="relative z-10 container-sacred max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 flex-grow flex items-center" style={{ opacity }}>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full text-center lg:text-left">
           
@@ -115,22 +115,22 @@ export default function HeroSection() {
           <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
  
             {/* Shloka Banner */}
-            <div className="inline-flex px-3 sm:px-3.5 py-1.5 rounded-full border border-gold/20 bg-white/70 backdrop-blur-sm shadow-sm items-center gap-1.5 max-w-[90vw] sm:max-w-none">
+            <div className="inline-flex px-3.5 py-1.5 rounded-full border border-gold/20 bg-white/70 backdrop-blur-sm shadow-sm items-center gap-1.5 max-w-[90vw] sm:max-w-none">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
-              <p className="text-[9px] sm:text-[10px] text-gold-dim tracking-[0.02em] sm:tracking-[0.05em] font-semibold leading-relaxed sm:leading-none text-center sm:text-left sm:whitespace-nowrap">
+              <p className="text-[11px] sm:text-xs text-gold-dim tracking-[0.02em] sm:tracking-[0.05em] font-semibold leading-relaxed sm:leading-none text-center sm:text-left sm:whitespace-nowrap">
                 {MANTRAS[0]}
               </p>
             </div>
  
             {/* Main Headline & Subheading */}
             <div className="space-y-2 lg:space-y-3">
-              <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] lg:leading-[1.1] uppercase">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] lg:leading-[1.1] uppercase">
                 {lang === 'hi' 
                   ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
                   : "Maa Baglamukhi Havan & Vedic Pujas"
                 }
               </h1>
-              <h2 className="text-[10px] sm:text-xs lg:text-sm text-gold font-semibold tracking-wider uppercase font-cinzel">
+              <h2 className="text-xs sm:text-sm lg:text-base text-gold font-semibold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' 
                   ? "आचार्य पं. रुद्राक्ष राजपुरोहित • सिद्ध पीठ नलखेड़ा धाम" 
                   : "by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
@@ -139,7 +139,7 @@ export default function HeroSection() {
             </div>
  
             {/* Description */}
-            <p className="text-[11px] sm:text-xs lg:text-sm text-gray-600 max-w-md lg:max-w-lg leading-relaxed font-medium px-2 lg:px-0 text-center lg:text-left">
+            <p className="text-xs sm:text-sm lg:text-base text-gray-600 max-w-md lg:max-w-lg leading-relaxed font-medium px-2 lg:px-0 text-center lg:text-left">
               {SITE_CONFIG.description[lang]}
             </p>
  
@@ -153,7 +153,7 @@ export default function HeroSection() {
                   if (target) target.scrollIntoView({ behavior: "smooth" });
                 }}
                 suppressHydrationWarning={true}
-                className="btn-sacred text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center"
+                className="btn-sacred text-xs sm:text-sm px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center"
               >
                 {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
               </Link>
@@ -162,7 +162,7 @@ export default function HeroSection() {
               <button
                 onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
                 suppressHydrationWarning={true}
-                className="text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
+                className="text-xs sm:text-sm px-8 lg:px-10 py-3.5 lg:py-4 rounded-full font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-gold hover:text-gold transition-all uppercase tracking-wider shadow-sm"
               >
                 {lang === 'en' ? 'Review Us' : 'समीक्षा करें'}
               </button>
@@ -170,7 +170,7 @@ export default function HeroSection() {
  
             {/* Social Media Links */}
             <div className="flex items-center gap-3 pt-2 lg:pt-3">
-              <span className="text-[10px] lg:text-xs font-bold text-gray-500 lg:text-gray-600 uppercase tracking-widest">
+              <span className="text-xs lg:text-sm font-bold text-gray-500 lg:text-gray-600 uppercase tracking-widest">
                 {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
               </span>
               <div className="flex items-center gap-3">
@@ -190,7 +190,7 @@ export default function HeroSection() {
  
           {/* RIGHT COLUMN: Premium Sacred Visuals (Image) */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center relative py-2 lg:py-6">
-            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem]">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem]">
               
               {/* Circular Background Decor */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-gold/15 to-orange-100/10 border border-gold/10 scale-[1.08] pointer-events-none" />

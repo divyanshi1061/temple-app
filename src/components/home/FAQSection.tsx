@@ -181,7 +181,7 @@ export default function FAQSection({ className = "" }: { className?: string }) {
                   className="w-full flex items-center justify-between p-5 md:p-6 text-left font-cinzel font-bold text-gray-900 hover:text-gold transition-colors duration-300 cursor-pointer select-none"
                 >
                   <span className="text-xs md:text-sm lg:text-base leading-snug pr-4">
-                    {idx + 1}. {item.q[lang]}
+                    {item.q[lang]}
                   </span>
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
