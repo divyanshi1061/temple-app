@@ -113,42 +113,25 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
       >
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/5 rounded-bl-[100%] blur-[80px] pointer-events-none" />
         
-        <div className="container-sacred relative z-10 flex flex-col lg:flex-row items-center gap-12">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex-1 max-w-4xl">
+        <div className="container-sacred max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl text-center flex flex-col items-center">
             {/* Breadcrumbs */}
-            <div className="flex items-center gap-2 text-gray-400 text-xs font-bold mb-8 uppercase tracking-[0.2em]">
+            <div className="flex items-center justify-center gap-2 text-gray-400 text-xs font-bold mb-6 uppercase tracking-[0.2em]">
               <Link href="/" className="hover:text-gold transition-colors">{lang === 'en' ? 'Home' : 'मुख्य पृष्ठ'}</Link>
               <span className="text-gray-300">/</span>
               <Link href="/#services" className="hover:text-gold transition-colors">{lang === 'en' ? 'Services' : 'सेवाएं'}</Link>
               <span className="text-gray-300">/</span>
-              <span className="text-gold">{title}</span>
+              <span className="text-gold line-clamp-1">{title}</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 font-bold tracking-tight font-cinzel leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl text-gray-900 font-bold tracking-tight font-cinzel leading-tight mb-6 uppercase">
               {title}
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium max-w-2xl">
               {description}
             </p>
           </motion.div>
-
-          {service.image && (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex-1 w-full lg:w-auto"
-            >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
-                <img 
-                  src={service.image.startsWith('http') ? service.image : (service.image.startsWith('/') ? service.image : '/' + service.image)} 
-                  alt={`${title} Puja Havan Ceremony performed by Vedic Priest Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Maa Baglamukhi Dham, Nalkheda`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-          )}
         </div>
       </section>
 
@@ -158,11 +141,20 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
           
           {/* Main Column */}
           <motion.div
-            className="lg:col-span-2 space-y-16"
+            className="lg:col-span-2 space-y-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
+            {service.image && (
+              <div className="relative w-full rounded-[2rem] overflow-hidden bg-gray-50 border border-gray-100 shadow-lg mb-10">
+                <img 
+                  src={service.image.startsWith('http') ? service.image : (service.image.startsWith('/') ? service.image : '/' + service.image)} 
+                  alt={`${title} Puja Havan Ceremony performed by Vedic Priest Acharya Pt. Rudraksh Rajpurohit`}
+                  className="w-full h-auto object-cover max-h-[480px]"
+                />
+              </div>
+            )}
             {/* Description Section */}
             <div className="prose prose-lg max-w-none text-gray-700">
               <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
