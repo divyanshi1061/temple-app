@@ -74,13 +74,14 @@ export default function ServicesPage() {
 
 
       {/* Services Grid */}
-      <section className="container-sacred mt-20 lg:mt-24">
-        <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-        >
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-sacred max-w-7xl mx-auto px-6">
+          <motion.div
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
           {services.map((service) => (
             <motion.div
               key={service._id}
@@ -139,7 +140,8 @@ export default function ServicesPage() {
             </motion.div>
           ))}
         </motion.div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
   );
 }
