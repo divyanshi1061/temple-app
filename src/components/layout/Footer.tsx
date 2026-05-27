@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[180px] bg-gold/3 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="container-sacred relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 text-left mb-4 md:mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left mb-6 md:mb-8">
           
           {/* Column 1: Divine Identity */}
           <motion.div 
@@ -86,7 +86,7 @@ export default function Footer() {
             <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
               {lang === 'en' ? 'Quick Navigation' : 'त्वरित नेविगेशन'}
             </h4>
-            <ul className="grid grid-cols-2 gap-y-2 md:gap-y-3 gap-x-4 text-xs font-bold text-gray-600">
+            <ul className="flex flex-col gap-y-2 md:gap-y-3 text-xs font-bold text-gray-600">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   {link.href.startsWith("/") ? (
@@ -100,6 +100,36 @@ export default function Footer() {
                       {link.label[lang]}
                     </a>
                   )}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Column 3: Popular Services */}
+          <motion.div 
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
+              {lang === 'en' ? 'Popular Services' : 'लोकप्रिय सेवाएं'}
+            </h4>
+            <ul className="flex flex-col gap-y-2 md:gap-y-3 text-xs font-bold text-gray-600">
+              {[
+                { id: "baglamukhi-36-sawa-lakh", title: { en: "Sawa Lakh Jaap", hi: "सवा लाख जाप" } },
+                { id: "baglamukhi-vishesh-havan", title: { en: "Vishesh Havan", hi: "विशेष हवन" } },
+                { id: "lal-mirchi-havan", title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" } },
+                { id: "nyayalay-vijay", title: { en: "Court Case Victory", hi: "न्यायालय विजय पूजा" } },
+                { id: "shatru-stambhan", title: { en: "Shatru Stambhan", hi: "शत्रु स्तंभन" } },
+                { id: "maha-mrityunjay", title: { en: "Mrityunjay Anusthan", hi: "मृत्युंजय अनुष्ठान" } },
+              ].map((service) => (
+                <li key={service.id}>
+                  <Link href={`/services/${service.id}`} className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                    <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
+                    {service.title[lang]}
+                  </Link>
                 </li>
               ))}
             </ul>

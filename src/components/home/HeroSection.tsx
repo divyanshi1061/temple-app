@@ -6,6 +6,7 @@ import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -114,9 +115,9 @@ export default function HeroSection() {
           <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
  
             {/* Shloka Banner */}
-            <div className="transform scale-[0.62] xs:scale-[0.68] sm:scale-[0.8] lg:scale-[0.85] origin-center lg:origin-left px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full border border-gold/20 bg-white/70 backdrop-blur-sm shadow-sm inline-flex items-center gap-1.5 max-w-[98vw] sm:max-w-none">
-              <span className="w-1 h-1 rounded-full bg-gold animate-pulse flex-shrink-0" />
-              <p className="whitespace-nowrap text-[8.5px] sm:text-[10px] text-gold-dim tracking-[0.01em] sm:tracking-[0.05em] font-semibold leading-none text-center">
+            <div className="inline-flex px-3 sm:px-3.5 py-1.5 rounded-full border border-gold/20 bg-white/70 backdrop-blur-sm shadow-sm items-center gap-1.5 max-w-[90vw] sm:max-w-none">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
+              <p className="text-[9px] sm:text-[10px] text-gold-dim tracking-[0.02em] sm:tracking-[0.05em] font-semibold leading-relaxed sm:leading-none text-center sm:text-left sm:whitespace-nowrap">
                 {MANTRAS[0]}
               </p>
             </div>
@@ -144,16 +145,18 @@ export default function HeroSection() {
  
             {/* Solid Clean Action CTA Buttons */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-4 pt-1">
-              <button 
-                onClick={() => {
+              <Link 
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
                   const target = document.getElementById("services");
                   if (target) target.scrollIntoView({ behavior: "smooth" });
                 }}
                 suppressHydrationWarning={true}
-                className="btn-sacred text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
+                className="btn-sacred text-xs px-8 lg:px-10 py-3.5 lg:py-4 rounded-full cursor-pointer font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center"
               >
                 {lang === "en" ? "Explore Pujas" : "पूजा अनुष्ठान देखें"}
-              </button>
+              </Link>
  
               {/* Review Us Button */}
               <button

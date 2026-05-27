@@ -8,8 +8,8 @@ import { GiFlame, GiShield } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
 import ParticleField from "@/components/effects/ParticleField";
-
 import ImageReel from "@/components/effects/ImageReel";
+import FAQSection from "@/components/home/FAQSection";
 
 export default function AboutPage() {
   const { lang } = useLanguage();
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
               {/* Sanskrit Mantra Overlay */}
               <div className="mt-8 text-center px-4 max-w-[400px]">
-                <p className="text-sm font-bold text-gold font-cinzel leading-relaxed bg-gold/5 border border-gold/15 py-3 px-5 rounded-2xl">
+                <p className="text-xs sm:text-sm font-bold text-gold font-cinzel leading-relaxed bg-gold/5 border border-gold/15 py-2.5 px-4 sm:py-3 sm:px-5 rounded-2xl">
                   ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं स्तम्भय जिह्वां कीलय बुद्धिं विनाशाय ह्लीं ॐ स्वाहा।
                 </p>
                 <p className="text-[10px] text-gray-500 uppercase font-extrabold tracking-wider mt-2.5">
@@ -269,6 +269,7 @@ export default function AboutPage() {
                 <img 
                   src="/acharya-new.webp" 
                   alt="Acharya Pt. Rudraksh Rajpurohit" 
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/acharya-new.webp';
@@ -443,6 +444,8 @@ export default function AboutPage() {
 
         </div>
       </section>
+
+      <FAQSection />
 
     </main>
   );

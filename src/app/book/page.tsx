@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Book Online Puja & Havan | Acharya Pt Rudraksh Rajpurohit",
   description: "Book authentic Maa Baglamukhi Pujas, Havans, and Vedic Anusthans at Siddh Peeth Nalkheda Dham, guided by Acharya Pt Rudraksh Rajpurohit.",
   keywords: [
+    "Pandit Maa Baglamukhi",
+    "Bagalamukhi Pandit",
+    "Mandir Pujari",
+    "Baglamukhi Pujari",
     "Maa Baglamukhi Havan booking",
     "online puja booking",
     "Nalkheda Dham book puja",
@@ -13,6 +17,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com/book",
+    languages: {
+      "en-IN": "https://www.panditmaabaglamukhi.com/book",
+      "hi-IN": "https://www.panditmaabaglamukhi.com/book",
+    },
   },
 };
 

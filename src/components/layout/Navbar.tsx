@@ -7,9 +7,12 @@ import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { navbarVariants, slideInFromLeft } from "@/animations/variants";
 import { useLanguage } from "@/context/LanguageContext";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 import Logo from "@/components/layout/Logo";
 import ReviewModal from "@/components/ReviewModal";
 import { FaStar } from "react-icons/fa";
+
+const MotionLink = motion(Link);
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -97,6 +100,20 @@ export default function Navbar() {
     }
   };
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsMobileOpen(false);
+    
+    // Check if the link is a hash link for the current page
+    if (href.startsWith("#") || (href.startsWith("/#") && pathname === "/")) {
+      const hash = href.startsWith("/#") ? href.substring(1) : href;
+      const target = document.querySelector(hash);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   const isActive = (href: string) => {
     if (href.startsWith("/")) {
       if (href === "/") return pathname === "/";
@@ -150,9 +167,10 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1.5">
               {NAV_LINKS.map((link) => (
-                <motion.button
+                <MotionLink
                   key={link.href}
-                  onClick={() => handleNavClick(link.href)}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   suppressHydrationWarning={true}
                   className={`relative px-4 py-2 text-sm transition-all duration-300 rounded-full font-bold cursor-pointer ${
                     isActive(link.href)
@@ -164,7 +182,7 @@ export default function Navbar() {
                   whileTap={{ scale: 0.95 }}
                 >
                   {link.label[lang]}
-                </motion.button>
+                </MotionLink>
               ))}
             </div>
 
@@ -189,15 +207,16 @@ export default function Navbar() {
               >
                 {lang === 'en' ? 'अ' : 'EN'}
               </motion.button>
-              <motion.button
-                onClick={() => handleNavClick("/book")}
+              <MotionLink
+                href="/book"
+                onClick={() => setIsMobileOpen(false)}
                 suppressHydrationWarning={true}
-                className="btn-sacred text-xs px-6 py-2.5 shadow-sm rounded-full cursor-pointer font-bold uppercase tracking-wider"
+                className="btn-sacred text-xs px-6 py-2.5 shadow-sm rounded-full cursor-pointer font-bold uppercase tracking-wider inline-flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
-              </motion.button>
+              </MotionLink>
             </div>
 
             {/* Mobile Menu Toggle & Lang Toggle */}
@@ -257,11 +276,12 @@ export default function Navbar() {
                   {/* Nav Links */}
                   <div className="flex flex-col gap-2 w-full max-w-[250px]">
                     {NAV_LINKS.map((link, i) => (
-                      <motion.button
+                      <MotionLink
                         key={link.href}
-                        onClick={() => handleNavClick(link.href)}
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
                         suppressHydrationWarning={true}
-                        className={`text-center py-4 text-base transition-all duration-300 font-bold tracking-wider border-b border-gray-100 uppercase ${
+                        className={`text-center py-4 text-base transition-all duration-300 font-bold tracking-wider border-b border-gray-100 uppercase block ${
                           isActive(link.href)
                             ? "text-gold"
                             : "text-gray-600 hover:text-gold"
@@ -271,7 +291,7 @@ export default function Navbar() {
                         transition={{ delay: 0.1 + i * 0.05 }}
                       >
                         {link.label[lang]}
-                      </motion.button>
+                      </MotionLink>
                     ))}
                   </div>
                 </div>
@@ -279,16 +299,17 @@ export default function Navbar() {
                 <div className="w-full max-w-[250px] mx-auto mt-8">
                   {/* Actions */}
                   <div className="flex flex-col gap-4">
-                    <motion.button
-                      onClick={() => handleNavClick("/book")}
+                    <MotionLink
+                      href="/book"
+                      onClick={() => setIsMobileOpen(false)}
                       suppressHydrationWarning={true}
-                      className="btn-sacred w-full text-center py-4 rounded-full font-bold uppercase tracking-wider text-sm shadow-md"
+                      className="btn-sacred w-full text-center py-4 rounded-full font-bold uppercase tracking-wider text-sm shadow-md block"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
                     >
                       {lang === 'en' ? 'Book Puja' : 'पूजा बुक करें'}
-                    </motion.button>
+                    </MotionLink>
 
                     <motion.button
                       onClick={() => {

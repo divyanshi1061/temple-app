@@ -347,6 +347,7 @@ export default function GalleryPage() {
       <img
         src={item.url}
         alt={lang === "en" ? item.titleEn : item.titleHi}
+        loading="lazy"
         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
       {/* Progressive blur overlay */}
@@ -428,7 +429,8 @@ export default function GalleryPage() {
                     title={lang === 'en' ? vid.titleEn : vid.titleHi}
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen>
+                    allowFullScreen
+                    loading="lazy">
                   </iframe>
                 ) : (
                   <div 
@@ -438,6 +440,7 @@ export default function GalleryPage() {
                     <img 
                       src={`https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`} 
                       alt={lang === 'en' ? vid.titleEn : vid.titleHi}
+                      loading="lazy"
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300"
                     />
                     <div className="absolute w-16 h-11 bg-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:bg-red-700 group-hover:scale-105 transition-all duration-300">
@@ -536,6 +539,7 @@ export default function GalleryPage() {
             <img
               src="/banner-new.webp"
               alt="Maa Baglamukhi Divine Banner"
+              loading="lazy"
               className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
             />
           </motion.div>

@@ -29,6 +29,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: titleText,
     description: descriptionText.substring(0, 155),
     keywords: [
+      "Pandit Maa Baglamukhi",
+      "Bagalamukhi Pandit",
+      "Mandir Pujari",
+      "Baglamukhi Pujari",
       service.title.en,
       service.title.hi,
       "Maa Baglamukhi Temple Nalkheda",
@@ -38,6 +42,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     ].join(", "),
     alternates: {
       canonical: `https://www.panditmaabaglamukhi.com/services/${id}`,
+      languages: {
+        "en-IN": `https://www.panditmaabaglamukhi.com/services/${id}`,
+        "hi-IN": `https://www.panditmaabaglamukhi.com/services/${id}`,
+      },
     },
     openGraph: {
       title: `${service.title.en} | Maa Baglamukhi Nalkheda`,

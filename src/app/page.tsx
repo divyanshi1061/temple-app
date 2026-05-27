@@ -5,6 +5,7 @@ import AboutSection from "@/components/home/AboutSection";
 import GallerySection from "@/components/home/GallerySection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ContactSection from "@/components/home/ContactSection";
+import FAQSection from "@/components/home/FAQSection";
 
 export default function Home() {
   const schemaData = {
@@ -214,12 +215,64 @@ export default function Home() {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Maa Baglamukhi Havan and how is it performed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maa Baglamukhi Havan is a sacred Vedic fire ritual (Yajna) dedicated to Goddess Baglamukhi, the eighth Mahavidya. It is performed by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham using Tantrokt Samagri and strict scriptural protocols. The Havan is performed for victory, protection, enemy neutralization, and fulfillment of desires."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Maa Baglamukhi Temple Nalkheda Dham located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Siddh Peeth Maa Baglamukhi Temple is located in Nalkheda, Agar Malwa district, Madhya Pradesh, India (PIN 465445), approximately 100 km from Ujjain. It is situated on the banks of the Lakhundar River."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I book a puja or havan online at Nalkheda Dham?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book pujas and havans online through our website at panditmaabaglamukhi.com/book or by contacting Acharya Pt. Rudraksh Rajpurohit directly on WhatsApp at +91 79095 97033. Provide your name, gotra, and birth details for personalized rituals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services does Acharya Pt. Rudraksh Rajpurohit offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acharya Pt. Rudraksh Rajpurohit offers 19+ sacred services including Maa Baglamukhi Havan, Lal Mirchi Havan, Sawa Lakh & 36 Lakh Jaap, Court Case Victory Puja (Nyayalay Vijay), Shatru Stambhan, Nav Graha Shanti, Maha Mrityunjay Anusthan, Santan Prapti, Vyapar Vraddhi, Vastu Shastra consultation, and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Maa Baglamukhi Temple at Nalkheda historically significant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the temple is over 500 years old and its idol dates back to the Pandava era, as mentioned in the Kalika Purana. The temple houses Tri-Shakti — Maa Baglamukhi (center), Maa Lakshmi (right), and Maa Saraswati (left). Sacred trees like Bel, Champa, Neem, and Peepal grow conjoined in the courtyard."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       {/* Schema.org Structured Data for Rich Snippet SEO indexing */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      {/* FAQ Schema for Google Rich Results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <HeroSection />
       {/* ─── Seamless Infinite Image Reel ─── */}
@@ -245,6 +298,7 @@ export default function Home() {
       <GallerySection />
       <TestimonialsSection />
       <ContactSection />
+      <FAQSection />
     </>
   );
 }

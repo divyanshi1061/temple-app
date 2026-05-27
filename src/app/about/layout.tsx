@@ -1,21 +1,61 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Acharya Pt Rudraksh Rajpurohit & Siddh Peeth Nalkheda Dham",
-  description: "Learn about the ancient history of Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham and the spiritual lineage of Vedic Priest Acharya Pt Rudraksh Rajpurohit.",
+  title: "About Maa Baglamukhi Dham & Acharya Pt. Rudraksh Rajpurohit | Nalkheda",
+  description:
+    "Learn about the ancient Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham, its Pandava-era history, the sacred Lakhundar River, and the revered priest Acharya Pt. Rudraksh Rajpurohit.",
   keywords: [
-    "Acharya Pt Rudraksh Rajpurohit",
+    "Pandit Maa Baglamukhi",
+    "Bagalamukhi Pandit",
+    "Mandir Pujari",
+    "Baglamukhi Pujari",
+    "Nalkheda temple pujari",
     "Maa Baglamukhi Temple Nalkheda history",
-    "Baglamukhi Sadhak Nalkheda",
-    "Vedic Priest Nalkheda Dham",
-    "Pandava era temple Nalkheda",
-    "Nalkheda temple history"
-  ].join(", "),
+    "Acharya Pt Rudraksh Rajpurohit biography",
+    "Siddh Peeth Nalkheda Dham",
+    "Baglamukhi Devi temple Agar Malwa",
+    "Lakhundar River temple",
+    "Pandava era temple Madhya Pradesh",
+    "Vedic priest Nalkheda",
+    "Bagalmukhi Sadhak",
+  ],
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com/about",
+    languages: {
+      "en-IN": "https://www.panditmaabaglamukhi.com/about",
+      "hi-IN": "https://www.panditmaabaglamukhi.com/about",
+    },
+  },
+  openGraph: {
+    title: "About Maa Baglamukhi Dham & Acharya Pt. Rudraksh | Nalkheda",
+    description:
+      "Discover the 500+ year old Siddh Peeth Maa Baglamukhi Temple, its Pandava-era origins, and the spiritual legacy of Acharya Pt. Rudraksh Rajpurohit at Nalkheda Dham.",
+    url: "https://www.panditmaabaglamukhi.com/about",
+    siteName: "Maa Baglamukhi Nalkheda Dham",
+    images: [
+      {
+        url: "/mata-baglamukhi.webp",
+        width: 800,
+        height: 600,
+        alt: "Maa Baglamukhi Divine Idol at Nalkheda Dham",
+      },
+    ],
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Maa Baglamukhi Dham & Acharya Pt. Rudraksh | Nalkheda",
+    description:
+      "Discover the sacred Siddh Peeth Maa Baglamukhi Temple and its history at Nalkheda Dham, Madhya Pradesh.",
+    images: ["/mata-baglamukhi.webp"],
   },
 };
 
-export default function AboutLayout({ children }: { children: React.ReactNode }) {
+export default function AboutLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }
