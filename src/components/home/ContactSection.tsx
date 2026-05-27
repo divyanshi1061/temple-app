@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/animations/variants";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -10,6 +10,36 @@ export default function ContactSection() {
   const { lang } = useLanguage();
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+
+  const [phone, setPhone] = useState(SITE_CONFIG.phone);
+  const [whatsapp, setWhatsapp] = useState(SITE_CONFIG.whatsapp);
+  const [email, setEmail] = useState(SITE_CONFIG.email);
+  const [addressHi, setAddressHi] = useState(SITE_CONFIG.address.hi);
+  const [addressEn, setAddressEn] = useState(SITE_CONFIG.address.en);
+
+  useEffect(() => {
+    async function fetchContact() {
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${apiBase}/contact?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          if (data) {
+            if (data.phone) setPhone(data.phone);
+            if (data.whatsapp) setWhatsapp(data.whatsapp);
+            if (data.email) setEmail(data.email);
+            if (data.address) {
+              setAddressHi(data.address);
+              setAddressEn(data.address);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("Notice: Custom contact details not loaded (Backend offline). Using system defaults.");
+      }
+    }
+    fetchContact();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +62,7 @@ export default function ContactSection() {
     // Detect user OS for SMS format compatibility
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     const bodyDelimiter = isIOS ? '&' : '?';
-    const cleanPhone = SITE_CONFIG.phone.replace(/\s+/g, '');
+    const cleanPhone = phone.replace(/\s+/g, '');
     const smsUrl = `sms:${cleanPhone}${bodyDelimiter}body=${encodeURIComponent(messageText)}`;
 
     // Set submit state and trigger redirect to SMS app
@@ -46,10 +76,10 @@ export default function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: FaPhone, label: { en: "Phone", hi: "फ़ोन" }, value: SITE_CONFIG.phone, href: `tel:${SITE_CONFIG.phone}` },
-    { icon: FaWhatsapp, label: { en: "WhatsApp", hi: "व्हाट्सएप" }, value: { en: "Chat with us", hi: "हमसे चैट करें" }, href: `https://wa.me/${SITE_CONFIG.whatsapp}` },
-    { icon: FaEnvelope, label: { en: "Email", hi: "ईमेल" }, value: SITE_CONFIG.email, href: `mailto:${SITE_CONFIG.email}` },
-    { icon: FaMapMarkerAlt, label: { en: "Address", hi: "पता" }, value: { en: "Nalkheda, MP 465445", hi: "नलखेड़ा, मध्य प्रदेश 465445" }, href: SITE_CONFIG.mapUrl },
+    { icon: FaPhone, label: { en: "Phone", hi: "फ़ोन" }, value: phone, href: `tel:${phone}` },
+    { icon: FaWhatsapp, label: { en: "WhatsApp", hi: "व्हाट्सएप" }, value: { en: "Chat with us", hi: "हमसे चैट करें" }, href: `https://wa.me/${whatsapp}` },
+    { icon: FaEnvelope, label: { en: "Email", hi: "ईमेल" }, value: email, href: `mailto:${email}` },
+    { icon: FaMapMarkerAlt, label: { en: "Address", hi: "पता" }, value: { en: addressEn, hi: addressHi }, href: SITE_CONFIG.mapUrl },
   ];
 
   const travelInfo = [

@@ -67,47 +67,49 @@ export default function ServicesSection() {
               .filter((s): s is ServiceItem => !!s);
 
               return filteredServices.map((service) => (
-                <motion.div key={service._id} variants={staggerItem}
-                  className="group relative bg-white border border-gray-100 rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-xl hover:border-gold/30 transition-all duration-300 flex flex-col justify-between"
-                  whileHover={{ y: -4 }}>
-                  
-                  <div>
-                    {/* Image above name */}
-                    {service.image && (
-                      <div className="relative w-full h-28 md:h-40 mb-3 rounded-xl overflow-hidden shadow-sm">
-                        <Image 
-                          src={service.image} 
-                          alt={lang === 'en' ? service.titleEn : service.titleHi} 
-                          fill 
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ objectFit: "cover" }}
-                          className="transition-transform duration-500 group-hover:scale-105"
-                        />
+                <Link key={service._id} href={`/services/${service._id}`} className="block">
+                  <motion.div
+                    variants={staggerItem}
+                    className="group relative bg-white border border-gray-100 rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-xl hover:border-gold/30 transition-all duration-300 flex flex-col justify-between h-full cursor-pointer"
+                    whileHover={{ y: -4 }}
+                  >
+                    <div>
+                      {/* Image above name */}
+                      {service.image && (
+                        <div className="relative w-full h-28 md:h-40 mb-3 rounded-xl overflow-hidden shadow-sm">
+                          <Image 
+                            src={service.image} 
+                            alt={lang === 'en' ? service.titleEn : service.titleHi} 
+                            fill 
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            style={{ objectFit: "cover" }}
+                            className="transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+
+                      {/* Gold accent line */}
+                      <div className="w-10 h-1 rounded-full bg-gold/40 mb-4 group-hover:w-16 group-hover:bg-gold transition-all duration-300" />
+                      
+                      {/* Title */}
+                      <h3 className="text-base md:text-xl text-gray-900 mb-2 font-bold tracking-tight group-hover:text-gold transition-colors font-cinzel leading-snug relative z-10">
+                        {lang === 'en' ? service.titleEn : service.titleHi}
+                      </h3>
+                      
+                      {/* Description */}
+                      <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-3 font-medium relative z-10">
+                        {lang === 'en' ? service.descriptionEn : service.descriptionHi}
+                      </p>
+                    </div>
+
+                    <div className="relative z-10">
+                      <div className="w-full py-2.5 bg-white border-2 border-gold/30 text-gold font-bold text-[10px] md:text-xs rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:border-gold group-hover:shadow-md uppercase tracking-wider">
+                        {lang === 'en' ? 'Inquiry / Details' : 'पूछताछ / विवरण'}
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
                       </div>
-                    )}
-
-                    {/* Gold accent line */}
-                    <div className="w-10 h-1 rounded-full bg-gold/40 mb-4 group-hover:w-16 group-hover:bg-gold transition-all duration-300" />
-                    
-                    {/* Title */}
-                    <h3 className="text-base md:text-xl text-gray-900 mb-2 font-bold tracking-tight group-hover:text-gold transition-colors font-cinzel leading-snug relative z-10">
-                      {lang === 'en' ? service.titleEn : service.titleHi}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-3 font-medium relative z-10">
-                      {lang === 'en' ? service.descriptionEn : service.descriptionHi}
-                    </p>
-                  </div>
-
-                  <div className="relative z-10">
-                    <Link href={`/services/${service._id}`} className="w-full py-2.5 bg-white border-2 border-gold/30 text-gold font-bold text-[10px] md:text-xs rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 hover:bg-gold hover:text-white hover:border-gold hover:shadow-md uppercase tracking-wider">
-                      {lang === 'en' ? 'Inquiry / Details' : 'पूछताछ / विवरण'}
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
-                    </Link>
-                  </div>
-                  
-                </motion.div>
+                    </div>
+                  </motion.div>
+                </Link>
               ));
             })()}
           </motion.div>

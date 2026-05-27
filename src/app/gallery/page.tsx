@@ -75,6 +75,42 @@ export default function GalleryPage() {
 
   // Active videos map to lazy-load YouTube iframes
   const [activeVideos, setActiveVideos] = useState<Record<string, boolean>>({});
+
+  // Dynamic photos list starting with hardcoded values
+  const [photos, setPhotos] = useState<PhotoItem[]>(ALL_PHOTOS);
+
+  useEffect(() => {
+    async function fetchDynamicPhotos() {
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${apiBase}/gallery?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            const getAssetUrl = (url: string) => {
+              if (!url) return "";
+              if (url.startsWith("http://") || url.startsWith("https://")) return url;
+              const host = apiBase.replace('/api', '');
+              return `${host}${url}`;
+            };
+            const mappedPhotos: PhotoItem[] = data.map((item: any) => ({
+              id: item._id,
+              url: getAssetUrl(item.url),
+              aspect: "aspect-[3/4]",
+              titleEn: item.caption || "Ritual",
+              titleHi: item.caption || "अनुष्ठान",
+              descEn: item.caption || "Maa Baglamukhi temple ritual",
+              descHi: item.caption || "माँ बगलामुखी मंदिर अनुष्ठान"
+            }));
+            setPhotos([...ALL_PHOTOS, ...mappedPhotos]);
+          }
+        }
+      } catch (err) {
+        console.warn("Notice: Custom gallery images not loaded (Backend offline). Using system default images.");
+      }
+    }
+    fetchDynamicPhotos();
+  }, []);
   
   // Custom scroll lock for lightbox
   useEffect(() => {
@@ -119,7 +155,7 @@ export default function GalleryPage() {
     </motion.div>
   );
 
-  const photoRows = chunkArray(ALL_PHOTOS, 3);
+  const photoRows = chunkArray(photos, 3);
 
   const gallerySchema = {
     "@context": "https://schema.org",
@@ -128,9 +164,9 @@ export default function GalleryPage() {
     "description": lang === "en"
       ? "Photographs capturing the shringar, daily darshan, and sacred details of Maa Baglamukhi Temple at Nalkheda Dham."
       : "माँ बगलामुखी मंदिर नलखेड़ा धाम के दैनिक दर्शन, श्रृंगार और पवित्र अनुष्ठानों की तस्वीरें।",
-    "image": ALL_PHOTOS.map((photo) => ({
+    "image": photos.map((photo) => ({
       "@type": "ImageObject",
-      "contentUrl": `https://www.panditmaabaglamukhi.com${photo.url}`,
+      "contentUrl": `https://www.panditmaabaglamukhi.com${photo.url.startsWith('/') ? photo.url : '/' + photo.url}`,
       "name": lang === "en" ? photo.titleEn : photo.titleHi,
       "description": lang === "en" ? photo.descEn : photo.descHi
     }))

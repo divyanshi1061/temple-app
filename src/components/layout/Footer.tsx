@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   FaFacebookF,
@@ -18,6 +19,34 @@ import Link from "next/link";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { lang } = useLanguage();
+
+  const [phone, setPhone] = useState(SITE_CONFIG.phone);
+  const [email, setEmail] = useState(SITE_CONFIG.email);
+  const [addressHi, setAddressHi] = useState(SITE_CONFIG.address.hi);
+  const [addressEn, setAddressEn] = useState(SITE_CONFIG.address.en);
+
+  useEffect(() => {
+    async function fetchContact() {
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${apiBase}/contact?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          if (data) {
+            if (data.phone) setPhone(data.phone);
+            if (data.email) setEmail(data.email);
+            if (data.address) {
+              setAddressHi(data.address);
+              setAddressEn(data.address);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("Notice: Custom contact details in footer not loaded (Backend offline). Using system defaults.");
+      }
+    }
+    fetchContact();
+  }, []);
 
   return (
     <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-6 pb-3 sacred-pattern">
@@ -149,17 +178,17 @@ export default function Footer() {
               {lang === 'en' ? 'Contact Mandir' : 'मंदिर संपर्क'}
             </h4>
             <div className="flex flex-col gap-2 md:gap-3.5 text-xs font-bold text-gray-600">
-              <a href={`tel:${SITE_CONFIG.phone}`} className="flex items-center gap-3 hover:text-gold transition-colors">
+              <a href={`tel:${phone}`} className="flex items-center gap-3 hover:text-gold transition-colors">
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaPhoneAlt size={12} />
                 </div>
-                <span>{SITE_CONFIG.phone}</span>
+                <span>{phone}</span>
               </a>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-center gap-3 hover:text-gold transition-colors">
+              <a href={`mailto:${email}`} className="flex items-center gap-3 hover:text-gold transition-colors">
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaEnvelope size={12} />
                 </div>
-                <span className="break-all">{SITE_CONFIG.email}</span>
+                <span className="break-all">{email}</span>
               </a>
               <a 
                 href={SITE_CONFIG.mapUrl} 
@@ -170,7 +199,7 @@ export default function Footer() {
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0 mt-0.5">
                   <FaMapMarkerAlt size={12} />
                 </div>
-                <span className="leading-relaxed">{SITE_CONFIG.address[lang]}</span>
+                <span className="leading-relaxed">{lang === 'en' ? addressEn : addressHi}</span>
               </a>
             </div>
           </motion.div>
@@ -232,9 +261,9 @@ export default function Footer() {
             <span key={idx} className="flex items-center gap-8 pr-8">
               <span>{lang === 'en' ? 'Acharya Pt. Rudraksh Rajpurohit' : 'आचार्य पं. रुद्राक्ष राजपुरोहित'}</span>
               <span className="text-gold/60">ॐ</span>
-              <a href={`tel:${SITE_CONFIG.phone}`} className="hover:text-gold transition-colors">{SITE_CONFIG.phone}</a>
+              <a href={`tel:${phone}`} className="hover:text-gold transition-colors">{phone}</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-gold transition-colors">{SITE_CONFIG.email}</a>
+              <a href={`mailto:${email}`} className="hover:text-gold transition-colors">{email}</a>
               <span className="text-gold/60">ॐ</span>
               <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Instagram: @maa.baglamukhidarshan</a>
               <span className="text-gold/60">ॐ</span>

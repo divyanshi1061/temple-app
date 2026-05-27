@@ -15,6 +15,7 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const { lang } = useLanguage();
   
+  const [acharyaImage, setAcharyaImage] = useState("/acharya-new.webp");
   const [particles, setParticles] = useState<Array<{
     id: number;
     width: string;
@@ -24,6 +25,30 @@ export default function HeroSection() {
     duration: string;
     delay: string;
   }>>([]);
+
+  useEffect(() => {
+    async function fetchAcharyaImage() {
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${apiBase}/hero?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.url) {
+            const getAssetUrl = (url: string) => {
+              if (!url) return "";
+              if (url.startsWith("http://") || url.startsWith("https://")) return url;
+              const host = apiBase.replace('/api', '');
+              return `${host}${url}`;
+            };
+            setAcharyaImage(getAssetUrl(data.url));
+          }
+        }
+      } catch (err) {
+        console.warn("Notice: Custom Acharya portrait not loaded (Backend offline). Using system default.");
+      }
+    }
+    fetchAcharyaImage();
+  }, []);
 
   useEffect(() => {
     setParticles(
@@ -200,7 +225,7 @@ export default function HeroSection() {
               {/* Main Photo Cutout Frame */}
               <div className="absolute inset-0 rounded-full overflow-hidden border-6 lg:border-8 border-white bg-white shadow-xl lg:shadow-2xl scale-95 flex items-center justify-center">
                 <Image
-                  src="/acharya-new.webp"
+                  src={acharyaImage}
                   alt="Acharya Pt. Rudraksh Rajpurohit portrait"
                   fill
                   priority

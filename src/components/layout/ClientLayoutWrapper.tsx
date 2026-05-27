@@ -9,6 +9,13 @@ const FloatingContact = dynamic(() => import("@/components/layout/FloatingContac
 const SpiritualMusicPlayer = dynamic(() => import("@/components/layout/SpiritualMusicPlayer"), { ssr: false });
 
 export default function ClientLayoutWrapper({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isAdminRoute = pathname?.startsWith('/admin');
+
+  if (isAdminRoute) {
+    return <>{children}</>;
+  }
+
   return (
     <>
       <LoadingScreen />

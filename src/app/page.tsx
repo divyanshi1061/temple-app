@@ -3,6 +3,7 @@ import ImageReel from "@/components/effects/ImageReel";
 import ServicesSection from "@/components/home/ServicesSection";
 import AboutSection from "@/components/home/AboutSection";
 import GallerySection from "@/components/home/GallerySection";
+import VideoSection from "@/components/home/VideoSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ContactSection from "@/components/home/ContactSection";
 import FAQSection from "@/components/home/FAQSection";
@@ -348,6 +349,7 @@ export default function Home() {
       <ServicesSection />
       <AboutSection />
       <GallerySection />
+      <VideoSection />
       <TestimonialsSection />
       <ContactSection />
       <FAQSection />

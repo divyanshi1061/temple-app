@@ -83,61 +83,61 @@ export default function ServicesPage() {
             animate="visible"
           >
           {services.map((service) => (
-            <motion.div
-              key={service._id}
-              variants={staggerItem}
-              className="group relative bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/40 transition-all duration-500 flex flex-col h-full"
-              whileHover={{ y: -8 }}
-            >
-              {/* Image flush to top */}
-              {service.image && (
-                <div className="relative h-56 md:h-60 w-full overflow-hidden bg-gray-50 border-b border-gray-50 shrink-0">
-                  <img 
-                    src={service.image} 
-                    alt={lang === 'en' ? service.titleEn : service.titleHi} 
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              )}
+            <Link key={service._id} href={`/services/${service._id}`} className="block">
+              <motion.div
+                variants={staggerItem}
+                className="group relative bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/40 transition-all duration-500 flex flex-col h-full cursor-pointer"
+                whileHover={{ y: -8 }}
+              >
+                {/* Image flush to top */}
+                {service.image && (
+                  <div className="relative h-56 md:h-60 w-full overflow-hidden bg-gray-50 border-b border-gray-50 shrink-0">
+                    <img 
+                      src={service.image} 
+                      alt={lang === 'en' ? service.titleEn : service.titleHi} 
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
 
-              {/* Body Content with padding */}
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                {/* Gold accent line */}
-                <div className="w-10 h-1 rounded-full bg-gold/40 mb-5 group-hover:w-16 group-hover:bg-gold transition-all duration-300" />
+                {/* Body Content with padding */}
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  {/* Gold accent line */}
+                  <div className="w-10 h-1 rounded-full bg-gold/40 mb-5 group-hover:w-16 group-hover:bg-gold transition-all duration-300" />
 
-                <h3 className="text-xl md:text-2xl text-gray-900 mb-3 font-bold tracking-tight font-cinzel group-hover:text-gold transition-colors duration-300 relative z-10 leading-snug">
-                  {lang === 'en' ? service.titleEn : service.titleHi}
-                </h3>
-                
-                <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow font-medium relative z-10">
-                  {lang === 'en' ? service.descriptionEn : service.descriptionHi}
-                </p>
+                  <h3 className="text-xl md:text-2xl text-gray-900 mb-3 font-bold tracking-tight font-cinzel group-hover:text-gold transition-colors duration-300 relative z-10 leading-snug">
+                    {lang === 'en' ? service.titleEn : service.titleHi}
+                  </h3>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow font-medium relative z-10">
+                    {lang === 'en' ? service.descriptionEn : service.descriptionHi}
+                  </p>
 
-                {/* Duration + Category */}
-                <div className="flex items-center gap-3 mb-6 relative z-10 mt-auto">
-                  <span className="text-[10px] text-gray-500 font-bold bg-gray-50 border border-gray-100 px-4 py-1.5 rounded-lg uppercase tracking-wider">
-                    {service.category || 'Puja'}
-                  </span>
-                </div>
+                  {/* Duration + Category */}
+                  <div className="flex items-center gap-3 mb-6 relative z-10 mt-auto">
+                    <span className="text-[10px] text-gray-500 font-bold bg-gray-50 border border-gray-100 px-4 py-1.5 rounded-lg uppercase tracking-wider">
+                      {service.category || 'Puja'}
+                    </span>
+                  </div>
 
-                {/* Learn More */}
-                <Link
-                  href={`/services/${service._id}`}
-                  className="w-full py-4 bg-gray-50 border border-gray-100 text-gray-900 font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:border-gold group-hover:shadow-md relative z-10"
-                >
-                  {lang === 'en' ? 'Inquiry & Details' : 'पूछताछ एवं विवरण'}
-                  <motion.svg 
-                    className="w-4 h-4" 
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  {/* Learn More */}
+                  <div
+                    className="w-full py-4 bg-gray-50 border border-gray-100 text-gray-900 font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:border-gold group-hover:shadow-md relative z-10"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </motion.svg>
-                </Link>
-              </div>
-            </motion.div>
+                    {lang === 'en' ? 'Inquiry & Details' : 'पूछताछ एवं विवरण'}
+                    <motion.svg 
+                      className="w-4 h-4" 
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </motion.svg>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
