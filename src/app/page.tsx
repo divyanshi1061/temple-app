@@ -29,7 +29,7 @@ export default function Home() {
         },
         "sameAs": [
           "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/?mibextid=wwXIfr&rdid=Jgsjq9UYv0FIJt4Z&share_url=https%3A%2F%2Fwww.facebook.com",
-          "https://instagram.com/maabaglamukhidarshan",
+          "https://www.instagram.com/maa.baglamukhidarshan",
           "https://youtube.com/@maabaglamukhidarshan-d2e"
         ]
       },
@@ -241,7 +241,7 @@ export default function Home() {
         "url": "https://www.panditmaabaglamukhi.com",
         "sameAs": [
           "https://www.facebook.com/people/Maa-Baglamukhi-Darshan/61586592862432/?mibextid=wwXIfr&rdid=Jgsjq9UYv0FIJt4Z&share_url=https%3A%2F%2Fwww.facebook.com",
-          "https://instagram.com/maabaglamukhidarshan",
+          "https://www.instagram.com/maa.baglamukhidarshan",
           "https://youtube.com/@maabaglamukhidarshan-d2e"
         ],
         "openingHoursSpecification": {

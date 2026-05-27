@@ -174,13 +174,13 @@ export default function HeroSection() {
                 {lang === 'en' ? 'Follow Us:' : 'हमें फॉलो करें:'}
               </span>
               <div className="flex items-center gap-3">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#1877F2] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaFacebook className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="https://youtube.com/@maabaglamukhidarshan-d2e" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href={SITE_CONFIG.socials.youtube} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#FF0000] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaYoutube className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
+                <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-400 hover:text-[#E4405F] transition-colors p-2 rounded-full hover:bg-gray-100 shadow-sm border border-gray-200 lg:border-transparent lg:hover:border-gray-200 bg-white lg:bg-white/50 backdrop-blur-sm">
                   <FaInstagram className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
               </div>
