@@ -7,6 +7,7 @@ import VideoSection from "@/components/home/VideoSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ContactSection from "@/components/home/ContactSection";
 import FAQSection from "@/components/home/FAQSection";
+import HindiSEOSection from "@/components/home/HindiSEOSection";
 
 export default function Home() {
   const schemaData = {
@@ -351,6 +352,7 @@ export default function Home() {
       <GallerySection />
       <VideoSection />
       <TestimonialsSection />
+      <HindiSEOSection />
       <ContactSection />
       <FAQSection />
     </>

@@ -424,6 +424,66 @@ export const SERVICES = [
     icon: "MU",
     image: "/moh-ucchatan.webp",
     category: "anusthan",
+  },
+  {
+    id: "uchchatan-prayog",
+    title: { en: "Uchchatan Prayog (उच्चाटन प्रयोग)", hi: "उच्चाटन प्रयोग" },
+    description: {
+      en: "Powerful Tantric Uchchatan Prayog to create disinterest, separation, and confusion in enemies or harmful individuals targeting you.",
+      hi: "शत्रुओं या आपको निशाना बनाने वाले हानिकारक व्यक्तियों में अरुचि, पृथकता और भ्रम उत्पन्न करने के लिए शक्तिशाली तांत्रिक उच्चाटन प्रयोग।"
+    },
+    longDescription: {
+      en: "Uchchatan Prayog is one of the six supreme Tantric Karmas (Shatkarma) prescribed in ancient Vedic and Tantric scriptures. This powerful ritual is performed to create severe mental confusion, restlessness, and disinterest in the mind of an enemy or harmful individual who is causing obstacles in your life, business, or personal affairs. Unlike Maran or Stambhan, Uchchatan does not cause harm — it simply causes the adversary to lose focus, interest, and motivation to continue their hostile actions against you. Acharya Pt. Rudraksh Rajpurohit performs this prayog at Siddh Peeth Nalkheda Dham using specific Tantrokt mantras and offerings, targeting only those forces that are genuinely harmful. This is an ethical Vedic practice performed with pure intent for protection and peace. It is especially recommended for cases of workplace harassment, persistent enemy interference, stalking, and sustained malicious opposition in legal or personal matters.",
+      hi: "उच्चाटन प्रयोग प्राचीन वैदिक और तांत्रिक शास्त्रों में वर्णित छह सर्वोच्च तांत्रिक कर्मों (षट्कर्म) में से एक है। यह शक्तिशाली अनुष्ठान उस शत्रु या हानिकारक व्यक्ति के मन में गंभीर मानसिक भ्रम, बेचैनी और अरुचि उत्पन्न करने के लिए किया जाता है जो आपके जीवन, व्यवसाय या व्यक्तिगत मामलों में बाधाएं उत्पन्न कर रहा है। मारण या स्तंभन के विपरीत, उच्चाटन कोई हानि नहीं पहुंचाता — यह केवल विरोधी को अपना ध्यान, रुचि और प्रेरणा खो देने का कारण बनता है ताकि वह आपके विरुद्ध अपने शत्रुतापूर्ण कार्य जारी न रख सके। आचार्य पं. रुद्राक्ष राजपुरोहित सिद्ध पीठ नलखेड़ा धाम में विशिष्ट तंत्रोक्त मंत्रों और आहुतियों का उपयोग करके यह प्रयोग संपन्न करते हैं। यह कार्यस्थल उत्पीड़न, निरंतर शत्रु हस्तक्षेप, पीछा करने और कानूनी या व्यक्तिगत मामलों में निरंतर दुर्भावनापूर्ण विरोध के मामलों के लिए विशेष रूप से अनुशंसित है।"
+    },
+    benefits: {
+      en: ["Causes disinterest in enemies", "Breaks hostile focus and motivation", "Ethical Vedic protection without harm", "Relief from persistent harassment"],
+      hi: ["शत्रुओं में अरुचि उत्पन्न करता है", "शत्रुतापूर्ण ध्यान और प्रेरणा को तोड़ता है", "बिना हानि के नैतिक वैदिक सुरक्षा", "निरंतर उत्पीड़न से राहत"]
+    },
+    duration: { en: "3-5 Days", hi: "3-5 दिन" },
+    icon: "UP",
+    image: "/moh-ucchatan.webp",
+    category: "anusthan",
+  },
+  {
+    id: "political-puja",
+    title: { en: "Political Victory Puja (राजनैतिक विजय पूजा)", hi: "राजनैतिक विजय पूजा" },
+    description: {
+      en: "Special Baglamukhi Havan and Anusthan for political leaders seeking divine blessings for election victory, public influence, and governance success.",
+      hi: "चुनावी विजय, जनसेवा में प्रभाव और शासन की सफलता के लिए दिव्य आशीर्वाद चाहने वाले राजनेताओं के लिए विशेष बगलामुखी हवन और अनुष्ठान।"
+    },
+    longDescription: {
+      en: "Maa Baglamukhi is the supreme deity for Stambhan (paralysis) of opponents and Vashikaran (attraction) of masses. This specialized Political Victory Puja is designed for political leaders, candidates, and public figures who are contesting elections or seeking to strengthen their public presence and governance. Acharya Pt. Rudraksh Rajpurohit performs a customized multi-day Anusthan combining Baglamukhi Havan, Sawa Lakh Jaap, and specific Yantra Prana Pratishtha to ensure divine backing in political endeavors. The ritual is known to enhance the individual's charisma, decision-making abilities, and public appeal while neutralizing the machinations of political opponents. Many successful political leaders across Madhya Pradesh and India have sought Acharya Ji's guidance before major electoral contests. This puja is performed with complete secrecy and spiritual discipline at Siddh Peeth Nalkheda Dham.",
+      hi: "माँ बगलामुखी शत्रुओं के स्तंभन (पंगु करने) और जनता के वशीकरण (आकर्षण) की सर्वोच्च देवी हैं। यह विशेष राजनैतिक विजय पूजा उन राजनीतिक नेताओं, उम्मीदवारों और सार्वजनिक हस्तियों के लिए डिज़ाइन की गई है जो चुनाव लड़ रहे हैं या अपनी सार्वजनिक उपस्थिति और शासन को मजबूत करना चाहते हैं। आचार्य पं. रुद्राक्ष राजपुरोहित बगलामुखी हवन, सवा लाख जाप और विशिष्ट यंत्र प्राण प्रतिष्ठा को मिलाकर एक अनुकूलित बहु-दिवसीय अनुष्ठान करते हैं। यह अनुष्ठान व्यक्ति के आकर्षण, निर्णय लेने की क्षमता और जनता में लोकप्रियता को बढ़ाने के लिए जाना जाता है जबकि राजनीतिक विरोधियों की चालों को बेअसर करता है। मध्य प्रदेश और भारत भर के कई सफल राजनीतिक नेताओं ने प्रमुख चुनावी लड़ाइयों से पहले आचार्य जी का मार्गदर्शन लिया है। यह पूजा सिद्ध पीठ नलखेड़ा धाम में पूर्ण गोपनीयता और आध्यात्मिक अनुशासन के साथ संपन्न की जाती है।"
+    },
+    benefits: {
+      en: ["Divine backing in elections", "Enhanced public charisma and influence", "Neutralization of political opponents", "Strengthened governance and decision-making"],
+      hi: ["चुनावों में दिव्य सहायता", "बढ़ा हुआ सार्वजनिक आकर्षण और प्रभाव", "राजनीतिक विरोधियों का निष्प्रभावीकरण", "मजबूत शासन और निर्णय क्षमता"]
+    },
+    duration: { en: "5-11 Days", hi: "5-11 दिन" },
+    icon: "PV",
+    image: "/baglamukhi-anusthan-main.webp",
+    category: "anusthan",
+  },
+  {
+    id: "kundali-astrology",
+    title: { en: "Kundali Analysis & Astrology (कुंडली विश्लेषण)", hi: "कुंडली विश्लेषण एवं ज्योतिष" },
+    description: {
+      en: "Expert Vedic Kundali (birth chart) analysis by Acharya Ji to identify planetary doshas, predict life events, and recommend specific remedial pujas.",
+      hi: "ग्रह दोषों की पहचान, जीवन की घटनाओं की भविष्यवाणी और विशिष्ट उपचारात्मक पूजाओं की सिफारिश के लिए आचार्य जी द्वारा विशेषज्ञ वैदिक कुंडली (जन्म कुंडली) विश्लेषण।"
+    },
+    longDescription: {
+      en: "Acharya Pt. Rudraksh Rajpurohit provides comprehensive Vedic Kundali (Janam Patri) analysis using classical Jyotish Shastra methods. Based on your exact birth date, time, and location, he prepares a detailed horoscope chart mapping the positions of all nine planets (Navagraha) and their influence on different houses of your life. This analysis reveals hidden doshas such as Manglik Dosh, Kaal Sarp Dosh, Pitra Dosh, Shani Dasha, and Rahu-Ketu transit effects that may be causing obstacles in marriage, career, health, or finances. After diagnosis, Acharya Ji recommends personalized Vedic remedies including specific Havan, Mantra Jaap, Gemstone therapy, and Yantra Dharana. He also provides Muhurta (auspicious timing) analysis for important life events like marriage, Griha Pravesh (housewarming), business launch, and travel. Online Kundali consultation is available via WhatsApp or phone for devotees who cannot visit Nalkheda Dham in person.",
+      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित शास्त्रीय ज्योतिष शास्त्र विधियों का उपयोग करके व्यापक वैदिक कुंडली (जन्म पत्री) विश्लेषण प्रदान करते हैं। आपकी सटीक जन्म तिथि, समय और स्थान के आधार पर, वे सभी नौ ग्रहों (नवग्रह) की स्थिति और आपके जीवन के विभिन्न भावों पर उनके प्रभाव को दर्शाने वाली विस्तृत जन्मकुंडली तैयार करते हैं। यह विश्लेषण मांगलिक दोष, काल सर्प दोष, पितृ दोष, शनि दशा और राहु-केतु गोचर प्रभावों जैसे छिपे हुए दोषों को उजागर करता है जो विवाह, करियर, स्वास्थ्य या वित्त में बाधाएं उत्पन्न कर रहे हो सकते हैं। निदान के बाद, आचार्य जी विशिष्ट हवन, मंत्र जाप, रत्न चिकित्सा और यंत्र धारण सहित व्यक्तिगत वैदिक उपायों की सिफारिश करते हैं। वे विवाह, गृह प्रवेश, व्यापार शुभारंभ और यात्रा जैसी महत्वपूर्ण जीवन घटनाओं के लिए मुहूर्त (शुभ समय) विश्लेषण भी प्रदान करते हैं। जो भक्त नलखेड़ा धाम नहीं आ सकते, उनके लिए व्हाट्सएप या फोन के माध्यम से ऑनलाइन कुंडली परामर्श उपलब्ध है।"
+    },
+    benefits: {
+      en: ["Complete Kundali/birth chart analysis", "Identification of planetary doshas and remedies", "Muhurta for marriage, business, travel", "Online Kundali consultation available"],
+      hi: ["संपूर्ण कुंडली/जन्म पत्री विश्लेषण", "ग्रह दोषों की पहचान और उपाय", "विवाह, व्यापार, यात्रा के लिए मुहूर्त", "ऑनलाइन कुंडली परामर्श उपलब्ध"]
+    },
+    duration: { en: "Consultation", hi: "परामर्श" },
+    icon: "KA",
+    image: "/nav-graha-shanti.webp",
+    category: "paramarsh",
   }
 ];
 

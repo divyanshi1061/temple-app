@@ -51,6 +51,36 @@ const DEFAULT_TESTIMONIALS = [
     textEn: "The spiritual ambiance at Nalkheda Dham is filled with massive energy. Acharya Pt. Rudraksh Rajpurohit conducts every mantra and offering with extreme Vedic precision and purity.",
     textHi: "नलखेड़ा धाम का आध्यात्मिक वातावरण विशाल ऊर्जा से भरा है। आचार्य पं. रुद्राक्ष राजपुरोहित हर मंत्र और आहुति को अत्यंत वैदिक सटीकता और पवित्रता के साथ संपन्न करते हैं।",
     rating: 5,
+  },
+  {
+    _id: "4",
+    nameEn: "Meena Agarwal",
+    nameHi: "मीना अग्रवाल",
+    locationEn: "Jaipur, Rajasthan",
+    locationHi: "जयपुर, राजस्थान",
+    textEn: "My daughter's marriage was getting delayed for years despite all efforts. Acharya Ji performed Vyavahik Badha Nivaran at Nalkheda Dham. Within 3 months, she found an excellent match and is now happily married. We are forever grateful.",
+    textHi: "सब प्रयासों के बावजूद मेरी बेटी की शादी सालों से नहीं हो रही थी। आचार्य जी ने नलखेड़ा धाम में वैवाहिक बाधा निवारण किया। 3 महीने के भीतर उसे एक उत्कृष्ट रिश्ता मिला और अब वह खुशहाल विवाहित जीवन जी रही है। हम सदैव आभारी हैं।",
+    rating: 5,
+  },
+  {
+    _id: "5",
+    nameEn: "Ajay Tiwari",
+    nameHi: "अजय तिवारी",
+    locationEn: "Bhopal, Madhya Pradesh",
+    locationHi: "भोपाल, मध्य प्रदेश",
+    textEn: "I was drowning in debt and my business was on the verge of collapse. Acharya Ji recommended Rin Mukti and Vyapar Vraddhi Puja together. The results were miraculous — debts cleared within months and new contracts started flowing in.",
+    textHi: "मैं कर्ज में डूब रहा था और मेरा व्यवसाय बंद होने की कगार पर था। आचार्य जी ने ऋण मुक्ति और व्यापार वृद्धि पूजा दोनों कराने की सलाह दी। परिणाम चमत्कारी रहे — कुछ ही महीनों में सारा कर्ज चुक गया और नए ठेके आने लगे।",
+    rating: 5,
+  },
+  {
+    _id: "6",
+    nameEn: "Kavita Singh",
+    nameHi: "कविता सिंह",
+    locationEn: "Lucknow, Uttar Pradesh",
+    locationHi: "लखनऊ, उत्तर प्रदेश",
+    textEn: "My father was critically ill and doctors had lost hope. I contacted Acharya Ji for Maha Mrityunjay Anusthan. He conducted it with immense devotion at Siddh Peeth Nalkheda Dham. By Maa Baglamukhi's grace, my father recovered completely. A true divine miracle.",
+    textHi: "मेरे पिताजी गंभीर रूप से बीमार थे और डॉक्टरों ने उम्मीद छोड़ दी थी। मैंने आचार्य जी से महामृत्युंजय अनुष्ठान के लिए संपर्क किया। उन्होंने सिद्ध पीठ नलखेड़ा धाम में पूर्ण भक्ति के साथ इसे संपन्न किया। माँ बगलामुखी की कृपा से मेरे पिताजी पूरी तरह स्वस्थ हो गए। एक सच्चा दिव्य चमत्कार।",
+    rating: 5,
   }
 ];
 

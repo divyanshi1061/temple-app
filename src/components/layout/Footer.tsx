@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[180px] bg-gold/3 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="container-sacred relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left mb-6 md:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left mb-6 md:mb-8">
           
           {/* Column 1: Divine Identity */}
           <motion.div 
@@ -104,7 +104,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Column 2: Navigation Links */}
+          {/* Column 2: Quick Navigation */}
           <motion.div 
             className="flex flex-col gap-4"
             initial={{ opacity: 0, y: 20 }}
@@ -134,45 +134,13 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 3: Popular Services */}
-          <motion.div 
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
-              {lang === 'en' ? 'Popular Services' : 'लोकप्रिय सेवाएं'}
-            </h4>
-            <ul className="flex flex-col gap-y-2 md:gap-y-3 text-xs font-bold text-gray-600">
-              {[
-                { id: "baglamukhi-36-sawa-lakh", title: { en: "Sawa Lakh Jaap", hi: "सवा लाख जाप" } },
-                { id: "baglamukhi-vishesh-havan", title: { en: "Vishesh Havan", hi: "विशेष हवन" } },
-                { id: "lal-mirchi-havan", title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" } },
-                { id: "nyayalay-vijay", title: { en: "Court Case Victory", hi: "न्यायालय विजय पूजा" } },
-                { id: "shatru-stambhan", title: { en: "Shatru Stambhan", hi: "शत्रु स्तंभन" } },
-                { id: "maha-mrityunjay", title: { en: "Mrityunjay Anusthan", hi: "मृत्युंजय अनुष्ठान" } },
-              ].map((service) => (
-                <li key={service.id}>
-                  <Link href={`/services/${service.id}`} className="hover:text-gold transition-colors flex items-center gap-1.5 group">
-                    <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
-                    {service.title[lang]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-
-
-          {/* Column 4: Mandir Contact & Location */}
+          {/* Column 3: Contact */}
           <motion.div 
             className="flex flex-col gap-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
               {lang === 'en' ? 'Contact Mandir' : 'मंदिर संपर्क'}
@@ -209,29 +177,8 @@ export default function Footer() {
         {/* Separator line */}
         <div className="h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent my-4" />
 
-        {/* Bottom copyright, policy links and slow-moving mantra */}
+        {/* Bottom copyright & policy links */}
         <div className="flex flex-col items-center gap-3 text-center">
-          <div className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-1 text-[10px] md:text-xs font-bold text-amber-800/80 mb-1">
-            <Link href="/articles/baglamukhi-temple-history" className="hover:text-gold transition-colors">
-              {lang === 'en' ? 'Temple History' : 'मंदिर इतिहास'}
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/articles/benefits-of-baglamukhi-puja" className="hover:text-gold transition-colors">
-              {lang === 'en' ? 'Puja Benefits' : 'पूजा के लाभ'}
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/articles/baglamukhi-mantra-meaning" className="hover:text-gold transition-colors">
-              {lang === 'en' ? 'Mantra Meaning' : 'मंत्र का अर्थ'}
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/articles/authentic-hawan-process" className="hover:text-gold transition-colors">
-              {lang === 'en' ? 'Hawan Process' : 'हवन विधि'}
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/articles/nalkheda-temple-travel-guide" className="hover:text-gold transition-colors">
-              {lang === 'en' ? 'Travel Guide' : 'यात्रा मार्गदर्शिका'}
-            </Link>
-          </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-[10px] md:text-xs font-bold text-gray-500">
             <Link href="/privacy" className="hover:text-gold transition-colors">
               {lang === 'en' ? 'Privacy Policy' : 'गोपनीयता नीति'}

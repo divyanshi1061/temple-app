@@ -300,5 +300,38 @@ export const ARTICLES: ArticleItem[] = [
       }
     }
   ]
+},
+{
+  id: "baglamukhi-temple-timings",
+  category: { en: "Temple Guide", hi: "दर्शन निर्देश" },
+  title: { en: "Maa Baglamukhi Mata Mandir Nalkheda: Complete Darshan & Aarti Timings", hi: "माँ बगलामुखी माता मंदिर नलखेड़ा: दर्शन एवं आरती समय सारणी" },
+  description: {
+    en: "Devotees planning to visit the sacred Baglamukhi Mata Mandir should know the temple timings in advance to enjoy a peaceful and comfortable darshan experience.",
+    hi: "पवित्र बगलामुखी माता मंदिर के दर्शन की योजना बना रहे श्रद्धालुओं को एक शांतिपूर्ण और सुखद दर्शन अनुभव के लिए मंदिर के समय की पहले से जानकारी होनी चाहिए।"
+  },
+  metaTitle: { en: "Maa Baglamukhi Mandir Nalkheda Darshan & Aarti Timings", hi: "माँ बगलामुखी मंदिर नलखेड़ा दर्शन और आरती का समय" },
+  metaDescription: {
+    en: "Find authentic timings for daily Darshan (5:00 AM - 12:00 PM, 4:00 PM - 9:00 PM) and Aarti (Morning 6:00 AM, Bhog 12:00 PM, Evening 7:00 PM) at Nalkheda Dham.",
+    hi: "नलखेड़ा धाम में दैनिक दर्शन (सुबह 5:00 - दोपहर 12:00, शाम 4:00 - रात्रि 9:00) और आरती (सुबह 6:00, भोग दोपहर 12:00, शाम 7:00) का सही समय जानें।"
+  },
+  image: "/temple-entrance-1.webp",
+  readTime: { en: "3 min read", hi: "3 मिनट पठन" },
+  date: "2026-05-28",
+  sections: [
+    {
+      heading: { en: "Temple Darshan Timings", hi: "मंदिर दर्शन का समय" },
+      content: {
+        en: "The temple is open for devotees during the following hours daily:\n\n*   **Morning Darshan:** 5:00 AM – 12:00 PM\n*   **Evening Darshan:** 4:00 PM – 9:00 PM\n\nSome local listings also provide approximate temple opening hours as follows:\n\n*   **Daily Temple Hours:** 6:00 AM – 9:30 PM\n\nFor a more divine and spiritual experience, it is advisable to visit early in the morning or during the evening aarti.",
+        hi: "श्रद्धालुओं के लिए मंदिर प्रतिदिन निम्नलिखित समय पर खुला रहता है:\n\n*   **प्रातःकाल दर्शन:** सुबह 5:00 बजे से दोपहर 12:00 बजे तक\n*   **सायंकाल दर्शन:** शाम 4:00 बजे से रात्रि 9:00 बजे तक\n\nकुछ स्थानीय सूचियों के अनुसार मंदिर के खुलने का कुल समय इस प्रकार भी है:\n\n*   **दैनिक मंदिर समय:** सुबह 6:00 बजे से रात्रि 9:30 बजे तक\n\nएक अत्यंत दिव्य और आध्यात्मिक अनुभव के लिए, सुबह जल्दी या संध्या आरती के समय मंदिर जाना सबसे उत्तम रहता है।"
+      }
+    },
+    {
+      heading: { en: "Daily Aarti Timings", hi: "दैनिक आरती का समय" },
+      content: {
+        en: "The temple conducts powerful spiritual rituals daily with the following schedule:\n\n*   **Morning Aarti:** 6:00 AM – 7:00 AM\n*   **Afternoon Bhog/Aarti:** 12:00 PM\n*   **Evening Aarti:** 7:00 PM – 8:00 PM\n\nThe atmosphere during Aarti is very devotional, with chanting of mantras, ringing of bells and spiritual rituals creating a powerful divine energy inside the temple premises.",
+        hi: "मंदिर में प्रतिदिन निम्नलिखित समय पर महाआरती और पूजा अनुष्ठान किए जाते हैं:\n\n*   **मंगला / प्रातःकालीन आरती:** सुबह 6:00 बजे से सुबह 7:00 बजे तक\n*   **मध्याह्न भोग / आरती:** दोपहर 12:00 बजे\n*   **संध्या महाआरती:** शाम 7:00 बजे से रात्रि 8:00 बजे तक\n\nआरती के समय मंदिर परिसर का वातावरण अत्यंत भक्तिमय हो जाता है। मंत्रों के सस्वर पाठ, घंटियों की गूंज और तांत्रिक पूजा अनुष्ठानों से मंदिर के भीतर एक अद्भुत दिव्य सकारात्मक ऊर्जा का संचार होता है।"
+      }
+    }
+  ]
 }
 ];

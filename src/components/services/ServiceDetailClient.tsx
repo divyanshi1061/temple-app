@@ -100,6 +100,19 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {/* BreadcrumbList Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.panditmaabaglamukhi.com" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.panditmaabaglamukhi.com/services" },
+            { "@type": "ListItem", "position": 3, "name": title, "item": `https://www.panditmaabaglamukhi.com/services/${service._id}` }
+          ]
+        }) }}
+      />
       {/* Premium Split Hero without big image */}
       <section
         className="relative pt-32 pb-16 bg-white border-b border-gray-100 sacred-pattern overflow-hidden"
@@ -152,6 +165,7 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
                   src={service.image.startsWith('http') ? service.image : (service.image.startsWith('/') ? service.image : '/' + service.image)} 
                   alt={`${title} Puja Havan Ceremony performed by Vedic Priest Acharya Pt. Rudraksh Rajpurohit`}
                   className="w-full h-auto object-cover max-h-[480px]"
+                  loading="lazy"
                 />
               </div>
             )}

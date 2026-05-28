@@ -48,14 +48,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
-    template: "%s | Siddh Peeth Nalkheda"
+    default: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit | Havan, Puja & Anusthan",
+    template: "%s | Acharya Pt. Rudraksh Rajpurohit | Siddh Peeth Nalkheda"
   },
   description:
-    "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
+    "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran, Shatru Stambhan, Lal Mirchi Havan & more. Call +91 79095 97033 for online booking.",
   keywords: [
     // Brand & Person keywords
-    "Maa Baglamukhi Pandit Nalkheda", "Maa Bagalamukhi Pandit Nalkheda",
+    "Best Maa Baglamukhi Pandit Nalkheda", "Maa Baglamukhi Pandit Nalkheda",
+    "Maa Bagalamukhi Pandit Nalkheda",
     "Ma Baglamukhi Pandit Nalkheda", "Ma Bagalamukhi Pandit Nalkheda",
     "Baglamukhi Pandit Nalkheda", "Nalkheda Baglamukhi Pandit",
     "Pandit Maa Baglamukhi", "Pandit Maa Bagalamukhi", "Pandit Ma Baglamukhi",
@@ -81,11 +82,13 @@ export const metadata: Metadata = {
     "Vastu Shastra Paramarsh", "Santan Prapti Puja",
     "Vyapar Vraddhi Puja", "Rin Mukti Puja",
     "Vashikaran Anusthan", "Akarshan Anusthan",
+    "Uchchatan Prayog", "Political Puja", "Kundali Astrology",
     // Generic spiritual keywords
     "Vedic Pandit Nalkheda", "Tantra Sadhana",
     "Vedic Puja online", "Havan Puja near me",
     "online pandit booking", "Tantrik Pandit",
     "Baglamukhi Mantra Jaap", "Bagalamukhi Mantra",
+    "Baglamukhi Beej Mantra", "Baglamukhi Yantra",
     // Hindi keywords
     "बगलामुखी पंडित", "बगलामुखी हवन", "बगलामुखी मंदिर नलखेड़ा",
     "माँ बगलामुखी हवन", "माँ बगलामुखी पूजा",
@@ -95,6 +98,8 @@ export const metadata: Metadata = {
     "बगलामुखी अनुष्ठान", "लाल मिर्ची हवन",
     "कोर्ट केस विजय पूजा", "शत्रु स्तंभन",
     "न्यायालय विजय पूजा", "वशीकरण अनुष्ठान",
+    "बगलामुखी बीज मंत्र", "नलखेड़ा धाम का महत्व",
+    "उच्चाटन प्रयोग", "कुंडली ज्योतिष",
   ].join(", "),
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com",
@@ -104,17 +109,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
+    title: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit | Havan, Puja & Anusthan",
     description:
-      "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
+      "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran, Shatru Stambhan, Lal Mirchi Havan & more. Call +91 79095 97033.",
     url: "https://www.panditmaabaglamukhi.com",
-    siteName: "Maa Baglamukhi Nalkheda Dham",
+    siteName: "Maa Baglamukhi Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pandit Maa Baglamukhi Nalkheda Dham",
+        alt: "Best Maa Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Nalkheda Dham",
       }
     ],
     type: "website",
@@ -122,8 +127,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maa Baglamukhi Pandit Nalkheda | Pt. Rudraksh Rajpurohit",
-    description: "Acharya Pt. Rudraksh Rajpurohit is widely regarded as the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham. 🙏",
+    title: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit",
+    description: "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran & more.",
     images: ["/og-image.png"],
   },
   icons: {
