@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
-import { FaArrowLeft, FaCalendarAlt, FaClock, FaBookOpen, FaUser, FaWhatsapp, FaPhoneAlt, FaOm } from "react-icons/fa";
-import { SITE_CONFIG } from "@/lib/constants";
+import { FaArrowLeft, FaCalendarAlt, FaClock, FaBookOpen, FaUser, FaWhatsapp, FaPhoneAlt, FaOm, FaArrowRight } from "react-icons/fa";
+import { SITE_CONFIG, SERVICES } from "@/lib/constants";
+import { ARTICLES } from "@/lib/articles";
 
 type ArticleSection = {
   heading: { en: string; hi: string };

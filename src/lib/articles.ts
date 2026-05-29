@@ -333,5 +333,151 @@ export const ARTICLES: ArticleItem[] = [
       }
     }
   ]
+},
+{
+  id: "baglamukhi-havan-cost-booking",
+  category: { en: "Havan Booking", hi: "हवन बुकिंग" },
+  title: { en: "Maa Baglamukhi Havan Cost & Booking Process at Nalkheda Dham", hi: "माँ बगलामुखी हवन लागत और नलखेड़ा धाम में बुकिंग की प्रक्रिया" },
+  description: {
+    en: "An ultimate guide detailing the cost structure, types, and online/offline booking process for the sacred Maa Baglamukhi Havan at Nalkheda.",
+    hi: "नलखेड़ा में माँ बगलामुखी हवन की लागत, विभिन्न प्रकार और ऑनलाइन/ऑफलाइन बुकिंग प्रक्रिया के बारे में संपूर्ण विवरण।"
+  },
+  metaTitle: { en: "Maa Baglamukhi Havan Cost & Online Booking | Nalkheda", hi: "माँ बगलामुखी हवन खर्च और ऑनलाइन बुकिंग प्रक्रिया नलखेड़ा" },
+  metaDescription: {
+    en: "Check the pricing structure, materials list, and complete step-by-step booking process for Maa Baglamukhi Puja and Havan at Siddh Peeth Nalkheda.",
+    hi: "सिद्ध पीठ नलखेड़ा में माँ बगलामुखी पूजा और हवन की दरें, आवश्यक सामग्री और बुकिंग प्रक्रिया की पूरी जानकारी प्राप्त करें।"
+  },
+  image: "/new-havan-2.webp",
+  readTime: { en: "6 min read", hi: "6 मिनट पठन" },
+  date: "2026-05-29",
+  sections: [
+    {
+      heading: { en: "Understanding the Havan Cost Structure", hi: "हवन की लागत संरचना को समझना" },
+      content: {
+        en: "The cost of performing Maa Baglamukhi Havan at Nalkheda varies depending on the scale, the number of chants (Jaap), and the amount of ingredients (Samagri) used. For a basic daily havan, the cost of ingredients and priest dakshina is very nominal. However, for special large-scale rituals like the **Sawa Lakh (125,000) Mantra Jaap Anusthan**, which requires multiple Vedic pandits chanting over several days, the cost depends on the number of pandits involved, yellow cloths, fruits, and pure cow ghee. Devotees are advised to contact Acharya Pt. Rudraksh Rajpurohit directly for customized and transparent pricing.",
+        hi: "नलखेड़ा में माँ बगलामुखी हवन की लागत अनुष्ठान के आकार, मंत्र जाप की संख्या (जैसे 11,000, 21,000, 51,000 या सवा लाख जाप) और प्रयुक्त होने वाली हवन सामग्री की मात्रा पर निर्भर करती है। सामान्य दैनिक हवन के लिए सामग्री और पुरोहित दक्षिणा काफी सामान्य होती है। जबकि विशेष और बड़े स्तर के अनुष्ठान जैसे **सवा लाख मंत्र जाप अनुष्ठान** के लिए, जिसमें कई पंडितों द्वारा कई दिनों तक जाप किया जाता है, कुल लागत आवश्यक पीत वस्त्रों, फल, शुद्ध देसी घी और पंडितों की संख्या के अनुसार तय होती है। पारदर्शी और सही मूल्य जानने के लिए भक्त सीधे आचार्य पं. रुद्राक्ष राजपुरोहित से संपर्क कर सकते हैं।"
+      }
+    },
+    {
+      heading: { en: "Step-by-Step Booking Process", hi: "चरण-दर-चरण बुकिंग प्रक्रिया" },
+      content: {
+        en: "To book a puja at Nalkheda Dham, you can choose between two main methods:\n\n1. **In-Person Booking:** You can visit the temple and schedule the ritual directly with Acharya Pt. Rudraksh Rajpurohit.\n2. **Online/Remote Booking:** If you cannot travel to Nalkheda, you can schedule an online sankalp. Contact Acharya Ji via WhatsApp or phone at **+91 79095 97033**. Provide your birth details (Name, Gotra, Date of Birth, and specific purpose). A video call is arranged on the day of the havan so you can participate in the initial Sankalp and final Poornahuti from your home. The sacred Prasad and Havan Bhasma will be dispatched to you via courier.",
+        hi: "नलखेड़ा धाम में पूजा बुक करने के लिए आप दो मुख्य तरीकों में से किसी एक को चुन सकते हैं:\n\n1. **व्यक्तिगत रूप से बुकिंग:** आप मंदिर परिसर में आकर सीधे आचार्य पं. रुद्राक्ष राजपुरोहित से मिलकर अनुष्ठान का समय तय कर सकते हैं।\n2. **ऑनलाइन/रिमोट बुकिंग:** यदि आप नलखेड़ा नहीं आ सकते, तो आप ऑनलाइन संकल्प के साथ पूजा करा सकते हैं। इसके लिए आप व्हाट्सएप या फोन **+91 79095 97033** पर आचार्य जी से संपर्क करें। अपना नाम, गोत्र, जन्म विवरण और पूजा का उद्देश्य भेजें। हवन के दिन वीडियो कॉल के माध्यम से आपको जोड़ा जाएगा ताकि आप संकल्प और पूर्णाहुति देख सकें। पूजा संपन्न होने के बाद पवित्र प्रसाद और भस्म कूरियर द्वारा आपके पते पर भेज दी जाएगी।"
+      }
+    },
+    {
+      heading: { en: "Guidelines for Devotees Booking the Havan", hi: "हवन बुक करने वाले भक्तों के लिए दिशानिर्देश" },
+      content: {
+        en: "If you have booked a Maa Baglamukhi Puja, it is essential to observe the following rules:\n\n*   **Dietary Restrictions:** Maintain a strictly vegetarian diet (avoiding onion, garlic, and alcohol) for at least 3 days prior to the ritual.\n*   **Celibacy (Brahmacharya):** Keep mental and physical purity during the entire period of the anusthan.\n*   **Yellow Theme:** Arrange yellow attire for yourself and family members participating in the sankalp. Yellow symbolizes the Pitambara form of the Goddess and is highly auspicious.",
+        hi: "यदि आपने माँ बगलामुखी पूजा बुक की है, तो इन नियमों का पालन करना अनिवार्य है:\n\n*   **आहार नियम:** अनुष्ठान से कम से कम 3 दिन पहले और अनुष्ठान के दौरान पूरी तरह से सात्विक भोजन लें (लहसुन, प्याज और नशीले पदार्थों से पूरी तरह दूर रहें)।\n*   **ब्रह्मचर्य:** अनुष्ठान की अवधि में मानसिक और शारीरिक शुद्धता (ब्रह्मचर्य) का पालन करें।\n*   **पीला रंग:** संकल्प में भाग लेने वाले परिवार के सभी सदस्यों के लिए पीले वस्त्रों की व्यवस्था करें। पीला रंग देवी पीताम्बरा का प्रतीक है और उनके पूजन में परम आवश्यक है।"
+      }
+    }
+  ]
+},
+{
+  id: "difference-baglamukhi-bagalamukhi",
+  category: { en: "Mythology", hi: "पौराणिक कथा" },
+  title: { en: "Difference Between Baglamukhi and Bagalamukhi: Myth and Reality", hi: "बगलामुखी और बगालामुखी (Bagalamukhi) में क्या अंतर है? जानें तथ्य" },
+  description: {
+    en: "Explore the etymological origin, correct Sanskrit pronunciation, and scriptural truth behind the spellings Baglamukhi and Bagalamukhi.",
+    hi: "बगलामुखी और बगालामुखी (Bagalamukhi) वर्तनी के पीछे के भाषाई मूल, शुद्ध संस्कृत उच्चारण और शास्त्रीय सत्य का अन्वेषण करें।"
+  },
+  metaTitle: { en: "Baglamukhi vs Bagalamukhi Spelling & Pronunciation", hi: "बगलामुखी और बगालामुखी में अंतर | जानिए सही नाम और अर्थ" },
+  metaDescription: {
+    en: "Wondering if it is Baglamukhi or Bagalamukhi? Learn the scriptural meaning, correct Vedic pronunciation, and root word 'Valga' of the Goddess of speech control.",
+    hi: "क्या आप उलझन में हैं कि सही नाम बगलामुखी है या बगालामुखी? वाणी नियंत्रण की देवी के शास्त्रीय अर्थ, शुद्ध वैदिक उच्चारण और मूल शब्द 'वल्गा' के बारे में जानें।"
+  },
+  image: "/mata-baglamukhi.webp",
+  readTime: { en: "5 min read", hi: "5 मिनट पठन" },
+  date: "2026-05-29",
+  sections: [
+    {
+      heading: { en: "The Root Word 'Valga' (वल्गा) and Etymology", hi: "मूल शब्द 'वल्गा' और भाषा विज्ञान" },
+      content: {
+        en: "In ancient Sanskrit texts, the original name of the Goddess is **Valgamukhi** (वल्गामुखी). The word 'Valga' means a bridle or rein (used to control a horse). Hence, Valgamukhi translates to 'the one whose face has the power to control or bridle (the speech and intellect of enemies)'. Over centuries, through colloquial language shifts (Apabhramsha), the word **Valga** gradually transformed into **Bagla** (बगला) or **Bagala** (बगला). Both spellings are used today to refer to the eighth Mahavidya, representing the same supreme power of cosmic freeze.",
+        hi: "प्राचीन संस्कृत ग्रंथों में, देवी का मूल नाम **वल्गामुखी** (Valgamukhi) है। संस्कृत में 'वल्गा' का अर्थ होता है लगाम (जैसे घोड़े को नियंत्रित करने वाली लगाम)। इसलिए, वल्गामुखी का अर्थ है 'वह देवी जिसके मुख में (शत्रुओं की वाणी और बुद्धि पर) लगाम लगाने की शक्ति है'। सदियों से आम बोलचाल की भाषा के प्रभाव (अपभ्रंश) के कारण, **वल्गा** शब्द धीरे-धीरे **बगला** या **बगलामुखी** में परिवर्तित हो गया। आज दोनों ही नाम उस परम शक्ति के लिए प्रयोग किए जाते हैं जो ब्रह्मांडीय स्तंभन का प्रतीक हैं।"
+      }
+    },
+    {
+      heading: { en: "Is it 'Bagalamukhi' or 'Baglamukhi'?", hi: "सही शब्द 'बगलामुखी' है या 'बगलामुखी'?" },
+      content: {
+        en: "From a purely grammatical perspective in Sanskrit and Hindi, both names refer to the exact same deity. In Hindi, it is commonly written as **बगलामुखी** (Baglamukhi), whereas in South Indian scripts, English translations of Tantric texts, and official academic papers, it is often spelled as **Bagalamukhi** (with an extra 'a'). This variation is simply a transliteration difference between regional languages and English. There is absolutely no difference in their divine powers, mantras, or blessings. Whether you pray to Maa Baglamukhi or Maa Bagalamukhi, she grants victory and protection equally.",
+        hi: "संस्कृत और हिंदी व्याकरण के दृष्टिकोण से, दोनों नाम एक ही देवी की ओर संकेत करते हैं। उत्तरी भारत में इसे सामान्यतः **बगलामुखी** (Baglamukhi) लिखा और बोला जाता है, जबकि दक्षिण भारतीय भाषाओं, तांत्रिक ग्रंथों के अंग्रेजी अनुवादों और अकादमिक लेखों में इसे अक्सर **Bagalamukhi** (अतिरिक्त 'a' के साथ) लिखा जाता है। यह अंतर केवल अंग्रेजी लिप्यंतरण और क्षेत्रीय भाषाओं के उच्चारण के अंतर के कारण है। देवी के दिव्य स्वरूप, मंत्र, पूजा फल या आशीर्वाद में कोई अंतर नहीं है। चाहे आप माँ बगलामुखी कहें या माँ बगालामुखी, वे भक्तों को समान रूप से विजय और अभय प्रदान करती हैं।"
+      }
+    }
+  ]
+},
+{
+  id: "lal-mirchi-havan-benefits-vidhi",
+  category: { en: "Special Rituals", hi: "विशेष अनुष्ठान" },
+  title: { en: "Lal Mirchi Havan Benefits, Vidhi & Puja Process at Nalkheda", hi: "लाल मिर्ची हवन के लाभ, विधि और नलखेड़ा में विशेष पूजा प्रक्रिया" },
+  description: {
+    en: "Learn the secrets of the highly protective Lal Mirchi (Red Chili) Havan of Maa Baglamukhi, its benefits, precautions, and authentic Vidhi performed at Nalkheda Dham.",
+    hi: "माँ बगलामुखी के अत्यंत प्रभावशाली और सुरक्षात्मक लाल मिर्ची हवन के रहस्यों, इसके लाभों, सावधानियों और नलखेड़ा धाम में की जाने वाली प्रामाणिक विधि को जानें।"
+  },
+  metaTitle: { en: "Lal Mirchi Havan Benefits & Vidhi | Maa Baglamukhi Puja", hi: "लाल मिर्ची हवन के लाभ और प्रामाणिक विधि | बगलामुखी पूजा" },
+  metaDescription: {
+    en: "Discover why Lal Mirchi Havan is performed at Maa Baglamukhi Temple Nalkheda. Learn about enemy destruction, court cases resolution, and step-by-step Vidhi.",
+    hi: "जानें कि माँ बगलामुखी मंदिर नलखेड़ा में लाल मिर्ची हवन क्यों किया जाता है। शत्रु शमन, कोर्ट केस निवारण और चरण-दर-चरण हवन विधि के बारे में जानें।"
+  },
+  image: "/new-havan-3.webp",
+  readTime: { en: "5 min read", hi: "5 मिनट पठन" },
+  date: "2026-05-29",
+  sections: [
+    {
+      heading: { en: "What is Lal Mirchi Havan and Why is it Performed?", hi: "लाल मिर्ची हवन क्या है और यह क्यों किया जाता है?" },
+      content: {
+        en: "The **Lal Mirchi Havan** (offering dry red chilies to the sacred fire) is a highly specialized and powerful Tantric ritual dedicated to Goddess Maa Baglamukhi. It is specifically performed in times of extreme distress, when a devotee is facing severe threats from hidden enemies, false allegations, intense business competition, or malicious black magic. The fiery nature of red chilies, combined with the neutralizing power of Maa Baglamukhi, acts as a spiritual shield that paralyzes the negative designs of adversaries, turning obstacles into stepping stones for success.",
+        hi: "**लाल मिर्ची हवन** (यज्ञ की अग्नि में साबुत सूखी लाल मिर्च की आहुति देना) देवी माँ बगलामुखी को समर्पित एक अत्यंत प्रभावशाली और विशिष्ट तांत्रिक अनुष्ठान है। यह विशेष रूप से तब किया जाता है जब कोई भक्त छिपे हुए शत्रुओं, झूठे आरोपों, गंभीर व्यापारिक प्रतिस्पर्धा या नकारात्मक शक्तियों (तंत्र बाधा) से अत्यधिक संकट में हो। लाल मिर्च की तीक्ष्ण प्रकृति, जब माँ बगलामुखी की स्तंभन शक्ति के साथ मिलती है, तो एक आध्यात्मिक ढाल का काम करती है जो विरोधियों के बुरे इरादों को नष्ट कर देती है।"
+      }
+    },
+    {
+      heading: { en: "Key Benefits of Lal Mirchi Havan", hi: "लाल मिर्ची हवन के मुख्य लाभ" },
+      content: {
+        en: "Performing this specialized havan offers rapid resolution to chronic problems:\n\n*   **Enemy Stambhan:** Neutralizes the negative actions, speech, and conspiracies of enemies without physically harming them.\n*   **Resolution of False Disputes:** Clears the path for victory in prolonged litigations and official inquiries.\n*   **Evil Eye Protection:** Eliminates negative energy, jealousy, and bad luck affecting your household or business.\n*   **Business Breakthroughs:** Removes structural obstacles caused by competitors, paving the way for financial stability.",
+        hi: "यह विशेष हवन करवाने से पुरानी और जटिल समस्याओं का त्वरित समाधान मिलता है:\n\n*   **शत्रु स्तंभन:** शत्रुओं की बुरी योजनाओं, कटु वचनों और षड्यंत्रों को पूरी तरह से शांत कर देता है।\n*   **झूठे विवादों से मुक्ति:** लंबे समय से चल रहे मुकदमों और विभागीय जांचों में सत्य की विजय सुनिश्चित करता है।\n*   **नकारात्मक ऊर्जा निवारण (नजर दोष):** घर या व्यापार को प्रभावित करने वाली बुरी नजर, ईर्ष्या और दुर्भाग्य को दूर करता है।\n*   **व्यवसाय में उन्नति:** प्रतिस्पर्धियों द्वारा खड़ी की गई रुकावटों को हटाकर व्यापार में वृद्धि लाता है।"
+      }
+    },
+    {
+      heading: { en: "Precautions & Correct Vidhi", hi: "सावधानियां और शुद्ध पूजन विधि" },
+      content: {
+        en: "Because the Lal Mirchi Havan is a fierce ritual, it **must never be done at home** or without professional guidance. The fumes from burning red chilies can cause severe respiratory distress unless neutralized through specific Vedic mantras, ghee ratios, and specialized Havan Kund ventilation. At Siddh Peeth Nalkheda, Acharya Pt. Rudraksh Rajpurohit conducts this ritual with utmost precision, ensuring that the smoke is completely harmless and that the ritual strictly adheres to the scriptures. Devotees must always consult an experienced priest before organizing a Lal Mirchi Havan.",
+        hi: "चूंकि लाल मिर्ची हवन एक उग्र अनुष्ठान है, इसलिए इसे **भूलकर भी घर पर नहीं करना चाहिए** और न ही बिना मार्गदर्शन के करना चाहिए। जलती हुई लाल मिर्च का धुआं फेफड़ों के लिए कष्टदायक हो सकता है, जिसे विशेष वैदिक मंत्रों, गाय के घी के सही अनुपात और विशिष्ट हवन कुंड की व्यवस्था द्वारा ही नियंत्रित किया जाता है। सिद्ध पीठ नलखेड़ा में आचार्य पं. रुद्राक्ष राजपुरोहित इस हवन को अत्यंत सूक्ष्मता से करते हैं, जिससे यह धुआं शांत रहता है और शास्त्रों के नियमों का पूर्ण पालन होता है। लाल मिर्ची हवन करने से पहले हमेशा अनुभवी पुरोहित की सलाह लें।"
+      }
+    }
+  ]
+},
+{
+  id: "baglamukhi-puja-court-case-victory",
+  category: { en: "Legal Remedies", hi: "कानूनी समाधान" },
+  title: { en: "How Maa Baglamukhi Puja Helps in Court Case & Legal Victory", hi: "माँ बगलामुखी पूजा कोर्ट केस और कानूनी विवादों में कैसे मदद करती है?" },
+  description: {
+    en: "An in-depth explanation of how performing Maa Baglamukhi Puja at Nalkheda Dham can help resolve legal battles, property disputes, and secure justice.",
+    hi: "नलखेड़ा धाम में माँ बगलामुखी पूजा कराने से कानूनी लड़ाइयों, संपत्ति के विवादों को सुलझाने और न्याय प्राप्त करने में कैसे मदद मिलती है, इसका विस्तृत विश्लेषण।"
+  },
+  metaTitle: { en: "Maa Baglamukhi Puja for Court Case Victory | Nalkheda", hi: "कोर्ट केस में विजय के लिए माँ बगलामुखी पूजा | नलखेड़ा धाम" },
+  metaDescription: {
+    en: "Learn about the Nyayalay Vijay Puja of Maa Baglamukhi at Nalkheda. Discover how Stambhan powers resolve legal cases, disputes, and secure true justice.",
+    hi: "नलखेड़ा धाम में माँ बगलामुखी की न्यायालय विजय पूजा के बारे में जानें। जानें कि स्तंभन शक्ति किस प्रकार कानूनी मुकदमों और विवादों को सुलझाकर न्याय दिलाती है।"
+  },
+  image: "/nyayalay-vijay.webp",
+  readTime: { en: "6 min read", hi: "6 मिनट पठन" },
+  date: "2026-05-29",
+  sections: [
+    {
+      heading: { en: "The Legal Battle and Goddess Baglamukhi's Stambhan", hi: "कानूनी लड़ाई और देवी बगलामुखी की स्तंभन शक्ति" },
+      content: {
+        en: "Legal battles can be emotionally exhausting, financially draining, and mentally stressful. When truth is on your side but circumstances are unfavorable due to false witness or conspiracies, Maa Baglamukhi is the supreme refuge. As the Goddess of **Stambhan** (paralyzing hostile actions), her energy directly influences the speech and mind of the opposition. Performing the specialized **Nyayalay Vijay Puja** (Court Victory Ritual) helps silence false claims and ensures that truth is presented clearly before the court.",
+        hi: "कानूनी लड़ाइयां मानसिक रूप से थका देने वाली, आर्थिक रूप से नुकसानदेह और तनावपूर्ण होती हैं। जब सत्य आपके पक्ष में हो लेकिन झूठे गवाहों या साजिशों के कारण परिस्थितियाँ विपरीत हों, तो माँ बगलामुखी की शरण लेना सर्वोत्तम माना जाता है। **स्तंभन** (नकारात्मकता को रोकने) की देवी होने के कारण, उनकी ऊर्जा विपक्षियों की बुद्धि और वाणी को प्रभावित करती है। नलखेड़ा में की जाने वाली **न्यायालय विजय पूजा** झूठे दावों को शांत करने और न्यायालय के समक्ष सत्य को स्पष्ट रूप से प्रस्तुत करने में सहायक होती है।"
+      }
+    },
+    {
+      heading: { en: "Scriptural Importance & Ritual Method", hi: "शास्त्रीय महत्व और पूजन विधि" },
+      content: {
+        en: "Tantric and Vedic scriptures highly glorify the worship of Goddess Pitambara for overcoming enemies in court disputes. The ritual involves chanting the **Baglamukhi Shatru Vinashak Mantra** combined with offering yellow flowers, honey, and yellow mustard seeds into the Havan. The devotee takes a formal **Sankalp** with their specific case details. Acharya Pt. Rudraksh Rajpurohit and his team of pandits perform this puja on the banks of the Lakhundar River, which is known for hosting exceptionally powerful spiritual alignments for legal remedies.",
+        hi: "तांत्रिक और वैदिक ग्रंथों में कोर्ट कचहरी के विवादों में शत्रुओं पर विजय प्राप्त करने के लिए देवी पीताम्बरा की पूजा की भारी महिमा बताई गई है। इस पूजा में **बगलामुखी शत्रु विनाशक मंत्र** का जाप करते हुए यज्ञ में पीले फूल, शहद और पीली सरसों की आहुति दी जाती है। भक्त अपने विशिष्ट मुकदमों के विवरण के साथ संकल्प लेते हैं। आचार्य पं. रुद्राक्ष राजपुरोहित और उनके सहयोगी पंडित लखुंदर नदी के तट पर इस विशेष अनुष्ठान को संपन्न करते हैं, जो कानूनी विवादों के समाधान के लिए एक जागृत स्थल है।"
+      }
+    }
+  ]
 }
 ];

@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, SERVICES } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
-import { FaCheckCircle, FaArrowLeft, FaOm, FaWhatsapp, FaInfoCircle } from "react-icons/fa";
+import { FaCheckCircle, FaArrowLeft, FaOm, FaWhatsapp, FaInfoCircle, FaArrowRight } from "react-icons/fa";
+import { ARTICLES } from "@/lib/articles";
 
 type ServiceItem = {
   _id: string;
@@ -244,6 +245,75 @@ export default function ServiceDetailClient({ rawService }: ServiceDetailClientP
           </motion.div>
         </div>
       </section>
+
+      {/* ─── Related Articles (Internal Linking for SEO) ─── */}
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+        <div className="container-sacred max-w-7xl mx-auto px-6">
+          <h2 className="text-lg md:text-xl font-bold font-cinzel text-gray-900 mb-6 tracking-tight flex items-center gap-2">
+            <span className="text-gold">ॐ</span>
+            {lang === 'en' ? 'Read Related Articles' : 'संबंधित लेख पढ़ें'}
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ARTICLES
+              .slice(0, 3)
+              .map((article) => (
+                <Link 
+                  key={article.id} 
+                  href={`/articles/${article.id}`}
+                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-gold/30 transition-all duration-300"
+                >
+                  <div className="h-36 overflow-hidden">
+                    <img 
+                      src={article.image} 
+                      alt={lang === 'en' ? article.title.en : article.title.hi}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-sm font-bold font-cinzel text-gray-900 group-hover:text-gold transition-colors line-clamp-2 mb-2">
+                      {lang === 'en' ? article.title.en : article.title.hi}
+                    </h3>
+                    <span className="text-[10px] font-bold text-amber-800 uppercase tracking-widest flex items-center gap-1">
+                      {lang === 'en' ? 'Read' : 'पढ़ें'} <FaArrowRight size={8} />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Explore Other Services (Cross-linking for SEO) ─── */}
+      <section className="py-12 md:py-16 bg-sacred-white border-t border-gray-100">
+        <div className="container-sacred max-w-7xl mx-auto px-6">
+          <h2 className="text-lg md:text-xl font-bold font-cinzel text-gray-900 mb-6 tracking-tight flex items-center gap-2">
+            <span className="text-gold">ॐ</span>
+            {lang === 'en' ? 'Explore Other Sacred Services' : 'अन्य पवित्र सेवाएं देखें'}
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {SERVICES
+              .filter(s => s.id !== service._id)
+              .slice(0, 4)
+              .map((otherService) => (
+                <Link 
+                  key={otherService.id} 
+                  href={`/services/${otherService.id}`}
+                  className="group bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:border-gold/30 transition-all duration-300"
+                >
+                  <div className="w-10 h-[2px] bg-gold/40 mb-3 group-hover:w-14 group-hover:bg-gold transition-all duration-300" />
+                  <h3 className="text-sm font-bold font-cinzel text-gray-900 group-hover:text-gold transition-colors mb-2 line-clamp-2">
+                    {lang === 'en' ? otherService.title.en : otherService.title.hi}
+                  </h3>
+                  <span className="text-[10px] font-bold text-amber-800 uppercase tracking-widest flex items-center gap-1">
+                    {lang === 'en' ? 'View' : 'देखें'} <FaArrowRight size={8} />
+                  </span>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
+
       {/* Sticky Bottom Bar on Mobile */}
       <div className="lg:hidden fixed bottom-[37px] left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-3 flex gap-3 shadow-lg shadow-gold/5">
         <a
