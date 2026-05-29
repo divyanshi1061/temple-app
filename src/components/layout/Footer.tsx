@@ -54,7 +54,11 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[180px] bg-gold/3 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="container-sacred relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left mb-6 md:mb-8">
+        <div 
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-left mb-6 md:mb-8"
+          itemScope 
+          itemType="https://schema.org/PlaceOfWorship"
+        >
           
           {/* Column 1: Divine Identity */}
           <motion.div 
@@ -67,10 +71,10 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Logo size={40} />
               <div>
-                <h3 className="text-base font-extrabold text-gray-900 tracking-tight font-cinzel leading-tight">
+                <h3 itemProp="name" className="text-base font-extrabold text-gray-900 tracking-tight font-cinzel leading-tight">
                   {SITE_CONFIG.name[lang]}
                 </h3>
-                <span className="text-[9px] tracking-[0.2em] text-gold font-bold uppercase block mt-1">
+                <span itemProp="description" className="text-[9px] tracking-[0.2em] text-gold font-bold uppercase block mt-1">
                   {SITE_CONFIG.tagline[lang]}
                 </span>
               </div>
@@ -78,8 +82,8 @@ export default function Footer() {
             
             <p className="text-gray-600 text-xs font-semibold leading-relaxed">
               {lang === 'en'
-                ? 'Dedicated to providing authentic Vedic rituals, Maa Baglamukhi Havans, and holy guidance at the sacred Siddh Peeth Nalkheda Dham.'
-                : 'पवित्र सिद्ध पीठ नलखेड़ा धाम में प्रामाणिक वैदिक अनुष्ठान, माँ बगलामुखी हवन और श्रद्धापूर्ण मार्गदर्शन के लिए समर्पित।'}
+                ? 'Dedicated to providing authentic Vedic rituals, Maa Baglamukhi Havans, and holy guidance at the sacred Siddh Peeth Nalkheda Dham by Acharya Pt. Rudraksh Rajpurohit.'
+                : 'पवित्र सिद्ध पीठ नलखेड़ा धाम में आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा प्रामाणिक वैदिक अनुष्ठान, माँ बगलामुखी हवन और श्रद्धापूर्ण मार्गदर्शन के लिए समर्पित।'}
             </p>
 
             <div className="flex gap-2 mt-2">
@@ -134,7 +138,46 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 3: Contact */}
+          {/* Column 3: Sacred Guides (SEO Internal Link Architecture) */}
+          <motion.div 
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <h4 className="text-xs md:text-sm font-extrabold text-gray-900 uppercase tracking-widest border-l-2 border-gold pl-2.5">
+              {lang === 'en' ? 'Sacred Guides' : 'पवित्र लेख'}
+            </h4>
+            <ul className="flex flex-col gap-y-2 md:gap-y-3 text-xs font-bold text-gray-600">
+              <li>
+                <Link href="/articles/baglamukhi-havan-cost-booking" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                  <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
+                  {lang === 'en' ? 'Havan Cost & Booking' : 'हवन लागत और बुकिंग'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles/lal-mirchi-havan-benefits-vidhi" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                  <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
+                  {lang === 'en' ? 'Lal Mirchi Havan' : 'लाल मिर्ची हवन लाभ'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles/baglamukhi-puja-court-case-victory" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                  <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
+                  {lang === 'en' ? 'Court Case Puja' : 'कोर्ट केस विजय पूजा'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles/baglamukhi-mantra-meaning" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                  <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
+                  {lang === 'en' ? 'Mantra Chanting Rules' : 'मंत्र जाप के नियम'}
+                </Link>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Column 4: Contact */}
           <motion.div 
             className="flex flex-col gap-3"
             initial={{ opacity: 0, y: 20 }}
@@ -146,13 +189,13 @@ export default function Footer() {
               {lang === 'en' ? 'Contact Mandir' : 'मंदिर संपर्क'}
             </h4>
             <div className="flex flex-col gap-2 md:gap-3.5 text-xs font-bold text-gray-600">
-              <a href={`tel:${phone}`} className="flex items-center gap-3 hover:text-gold transition-colors">
+              <a href={`tel:${phone}`} itemProp="telephone" className="flex items-center gap-3 hover:text-gold transition-colors">
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaPhoneAlt size={12} />
                 </div>
                 <span>{phone}</span>
               </a>
-              <a href={`mailto:${email}`} className="flex items-center gap-3 hover:text-gold transition-colors">
+              <a href={`mailto:${email}`} itemProp="email" className="flex items-center gap-3 hover:text-gold transition-colors">
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0">
                   <FaEnvelope size={12} />
                 </div>
@@ -163,15 +206,17 @@ export default function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer nofollow" 
                 className="flex items-start gap-3 hover:text-gold transition-colors"
+                itemProp="address" 
+                itemScope 
+                itemType="https://schema.org/PostalAddress"
               >
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gold/5 flex items-center justify-center text-gold border border-gold/10 shrink-0 mt-0.5">
                   <FaMapMarkerAlt size={12} />
                 </div>
-                <span className="leading-relaxed">{lang === 'en' ? addressEn : addressHi}</span>
+                <span itemProp="streetAddress" className="leading-relaxed">{lang === 'en' ? addressEn : addressHi}</span>
               </a>
             </div>
           </motion.div>
-
         </div>
 
         {/* Separator line */}
