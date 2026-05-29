@@ -6,16 +6,16 @@
    ============================================================ */
 
 @theme {
-  /* Override default Tailwind colors to globally transform components into premium light ivory & elegant gray/gold */
+  /* Override default Tailwind colors to globally transform components into premium light ivory & elegant orange/saffron */
   --color-white: #ffffff; /* Crisp white for premium card elements */
   --color-gray-50: #fafaf9; /* Elegant soft ivory-grey background */
-  --color-gray-100: #fbf2e6; /* Elegant soft champagne border */
-  --color-gray-200: #f6dfc4; /* Medium warm peach border */
-  --color-gray-300: #dcd7cc; /* Warm stone-300 border */
-  --color-gray-400: #b0aaa0; /* Warm stone-400 secondary text */
-  --color-gray-500: #8a8377; /* Warm stone-500 medium body copy */
-  --color-gray-600: #665f54; /* Warm stone-600 rich copy */
-  --color-gray-700: #4e483e; /* Warm stone-700 deep copy */
+  --color-gray-100: #fbf2e6; /* Elegant soft champagne orange border */
+  --color-gray-200: #f6dfc4; /* Medium warm peach-orange border */
+  --color-gray-300: #ffb87a;
+  --color-gray-400: #ffa152;
+  --color-gray-500: #f97316; /* Core vibrant saffron orange text */
+  --color-gray-600: #ea580c; /* Rich core orange highlights */
+  --color-gray-700: #c2410c; /* Deep royal crimson orange */
   --color-gray-800: #332f27; /* Rich charcoal stone for highly readable body copy */
   --color-gray-900: #12100e; /* Deep royal charcoal heading color */
 
@@ -24,11 +24,11 @@
   --color-saffron-light: #fff7ed;
   --color-saffron-dark: #c2410c;
   
-  /* Core Luxury Gold values (real gold/amber tones!) */
-  --color-gold: #c5a059;
-  --color-gold-light: #fbf2e6;
-  --color-gold-bright: #d97706;
-  --color-gold-dim: #b45309;
+  /* Core Luxury Orange values (named gold for maximum backward compatibility with existing styles) */
+  --color-gold: #f97316;
+  --color-gold-light: #ffedd5;
+  --color-gold-bright: #ff9100;
+  --color-gold-dim: #c2410c;
   
   /* Light luxury background mappings */
   --color-cosmic-black: #fafaf9;

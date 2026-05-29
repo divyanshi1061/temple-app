@@ -356,7 +356,7 @@ export default function GalleryPageClient() {
                     setSelectedPhoto(null);
                     router.push("/book");
                   }}
-                  className="text-[10px] tracking-[0.25em] uppercase font-bold text-gray-900 border-b border-gray-900 pb-1 hover:text-gold hover:border-gold transition-colors"
+                  className="text-[10px] tracking-[0.25em] uppercase font-bold text-gray-900 border-b border-gray-900 pb-1 hover:text-orange-600 hover:border-orange-600 transition-colors"
                 >
                   {lang === "en" ? "Consult About This Ritual" : "इस अनुष्ठान के बारे में परामर्श लें"}
                 </button>

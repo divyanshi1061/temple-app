@@ -169,9 +169,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/articles/baglamukhi-mantra-meaning" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
+                <Link href="/articles/difference-baglamukhi-bagalamukhi" className="hover:text-gold transition-colors flex items-center gap-1.5 group">
                   <FaChevronRight size={8} className="text-gold/50 group-hover:text-gold transition-colors" />
-                  {lang === 'en' ? 'Mantra Chanting Rules' : 'मंत्र जाप के नियम'}
+                  {lang === 'en' ? 'Baglamukhi Spelling' : 'बगलामुखी नाम का रहस्य'}
                 </Link>
               </li>
             </ul>
