@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
@@ -18,37 +18,101 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
   const [location, setLocation] = useState("");
   const [text, setText] = useState("");
   const [rating, setRating] = useState(5);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [deviceId, setDeviceId] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      let storedId = localStorage.getItem("visitor_device_uuid");
+      if (!storedId) {
+        storedId = "device_" + Math.random().toString(36).substring(2, 15) + "_" + Date.now().toString(36);
+        localStorage.setItem("visitor_device_uuid", storedId);
+      }
+      setDeviceId(storedId);
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !text) return;
+    if (!name || !text || !deviceId) return;
 
-    const newReview = {
-      _id: Date.now().toString(),
-      nameEn: name,
-      nameHi: name, // simplify by using the same input
-      locationEn: location || "India",
-      locationHi: location || "India",
-      textEn: text,
-      textHi: text,
-      rating: rating,
-    };
+    setIsSubmitting(true);
+    setErrorMessage("");
+    setSuccessMessage("");
 
-    // Save to localStorage
-    const saved = localStorage.getItem("user_reviews");
-    const reviews = saved ? JSON.parse(saved) : [];
-    reviews.push(newReview);
-    localStorage.setItem("user_reviews", JSON.stringify(reviews));
+    try {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+      const res = await fetch(`${apiBase}/reviews`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          location,
+          text,
+          rating,
+          deviceId,
+        }),
+      });
 
-    // Dispatch custom event to notify TestimonialsSection
-    window.dispatchEvent(new Event("reviewsUpdated"));
+      const data = await res.json();
 
-    // Reset and close
-    setName("");
-    setLocation("");
-    setText("");
-    setRating(5);
-    onClose();
+      if (res.ok) {
+        setSuccessMessage(
+          lang === "en"
+            ? "Thank you! Your review has been submitted for approval."
+            : "धन्यवाद! आपकी समीक्षा स्वीकृति के लिए सबमिट कर दी गई है।"
+        );
+        
+        // Local state backup for instant preview matching old behavior
+        const localReview = {
+          _id: data.review?._id || Date.now().toString(),
+          nameEn: name,
+          nameHi: name,
+          locationEn: location || "India",
+          locationHi: location || "India",
+          textEn: text,
+          textHi: text,
+          rating: rating,
+        };
+        const saved = localStorage.getItem("user_reviews");
+        const reviews = saved ? JSON.parse(saved) : [];
+        reviews.push(localReview);
+        localStorage.setItem("user_reviews", JSON.stringify(reviews));
+
+        // Dispatch update event
+        window.dispatchEvent(new Event("reviewsUpdated"));
+
+        // Reset inputs
+        setName("");
+        setLocation("");
+        setText("");
+        setRating(5);
+        
+        // Auto-close after delay
+        setTimeout(() => {
+          setSuccessMessage("");
+          onClose();
+        }, 3000);
+      } else {
+        setErrorMessage(
+          lang === "en" 
+            ? data.message || "Failed to submit review."
+            : "आप पहले ही एक समीक्षा सबमिट कर चुके हैं।"
+        );
+      }
+    } catch (err) {
+      setErrorMessage(
+        lang === "en"
+          ? "Network error. Please try again later."
+          : "नेटवर्क त्रुटि। कृपया बाद में पुनः प्रयास करें।"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -78,6 +142,17 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
             <h2 className="text-2xl font-cinzel font-bold text-gray-900 mb-6 text-center">
               {lang === "en" ? "Share Your Experience" : "अपना अनुभव साझा करें"}
             </h2>
+
+            {successMessage && (
+              <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs md:text-sm font-semibold rounded-lg p-3 text-center mb-4">
+                {successMessage}
+              </div>
+            )}
+            {errorMessage && (
+              <div className="bg-red-50 border border-red-200 text-red-800 text-xs md:text-sm font-semibold rounded-lg p-3 text-center mb-4">
+                {errorMessage}
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div>
@@ -141,9 +216,19 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
 
               <button
                 type="submit"
-                className="btn-sacred w-full py-3 rounded-xl font-bold uppercase tracking-wider text-sm mt-2"
+                disabled={isSubmitting || !!successMessage}
+                className={`btn-sacred w-full py-3 rounded-xl font-bold uppercase tracking-wider text-sm mt-2 flex items-center justify-center gap-2 ${
+                  isSubmitting || !!successMessage ? "opacity-75 cursor-not-allowed" : ""
+                }`}
               >
-                {lang === "en" ? "Submit Review" : "समीक्षा सबमिट करें"}
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>{lang === "en" ? "Submitting..." : "सबमिट किया जा रहा है..."}</span>
+                  </>
+                ) : (
+                  <span>{lang === "en" ? "Submit Review" : "समीक्षा सबमिट करें"}</span>
+                )}
               </button>
             </form>
           </motion.div>

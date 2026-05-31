@@ -12,8 +12,8 @@ export const SITE_CONFIG = {
     hi: "सिद्ध वैदिक पूजा एवं हवन - नलखेड़ा धाम"
   },
   description: {
-    en: "Acharya Pt. Rudraksh Rajpurohit is the best Maa Baglamukhi Pandit in Nalkheda. Book authentic Maa Baglamukhi Havans, Anusthans & Vedic Pujas at Siddh Peeth Nalkheda Dham.",
-    hi: "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा में सर्वश्रेष्ठ माँ बगलामुखी पंडित हैं। सिद्ध पीठ नलखेड़ा धाम में प्रामाणिक माँ बगलामुखी हवन, अनुष्ठान और वैदिक पूजा बुक करें।"
+    en: "Welcome to Siddh Peeth Nalkheda Dham. I, Acharya Pt. Rudraksh Rajpurohit, invite you to book authentic Maa Baglamukhi Havans, Anusthans, and Vedic Pujas performed with complete scriptural purity for your protection and prosperity.",
+    hi: "सिद्ध पीठ नलखेड़ा धाम में आपका स्वागत है। मैं, आचार्य पं. रुद्राक्ष राजपुरोहित, आपको जीवन के संकटों के निवारण और आध्यात्मिक सुरक्षा के लिए पूर्ण शास्त्रीय शुद्धता के साथ आयोजित माँ बगलामुखी हवन, अनुष्ठान और वैदिक पूजा बुक करने के लिए आमंत्रित करता हूँ।"
   },
   phone: "+91 79095 97033",
   whatsapp: "+917909597033",
@@ -42,18 +42,18 @@ export const NAV_LINKS = [
 export const SERVICES = [
   {
     id: "baglamukhi-36-sawa-lakh",
-    title: { en: "Maa Baglamukhi 36 Lakh & Sawa Lakh Jaap", hi: "माँ बगलामुखी 36 लाख एवं सवा लाख जाप" },
+    title: { en: "Maa Baglamukhi 36 Lakh & Sawa Lakh Chanting (जाप)", hi: "माँ बगलामुखी 36 लाख एवं सवा लाख जाप" },
     description: {
-      en: "Extensive chanting of Maa Baglamukhi mantras for ultimate protection and fulfillment of all desires.",
-      hi: "परम सुरक्षा और सभी इच्छाओं की पूर्ति के लिए माँ बगलामुखी मंत्रों का व्यापक जाप।"
+      en: "Experience ultimate protection and obstacle removal through our dedicated chanting of Sawa Lakh or 36 Lakh mantras.",
+      hi: "सवा लाख या 36 लाख मंत्रों के हमारे समर्पित जाप के माध्यम से परम सुरक्षा और बाधा निवारण का अनुभव करें।"
     },
     longDescription: {
-      en: "A grand and highly potent spiritual discipline involving the chanting of either Sawa Lakh (1,25,000) or 36 Lakh mantras of Goddess Baglamukhi. This immense anusthan is performed by specialized Vedic scholars to create an impenetrable shield of protection around the devotee, ensuring absolute victory, wealth, and spiritual awakening.",
-      hi: "देवी बगलामुखी के सवा लाख (1,25,000) या 36 लाख मंत्रों के जाप से जुड़ा एक भव्य और अत्यधिक शक्तिशाली आध्यात्मिक अनुष्ठान। यह विशाल अनुष्ठान भक्त के चारों ओर सुरक्षा की एक अभेद्य ढाल बनाने, पूर्ण विजय, धन और आध्यात्मिक जागृति सुनिश्चित करने के लिए विशेष वैदिक विद्वानों द्वारा किया जाता है।"
+      en: "**What is the significance of the Maa Baglamukhi Sawa Lakh / 36 Lakh Jaap?** Chanting 1,25,000 (Sawa Lakh) or 36,000,000 (36 Lakh) sacred mantras of Goddess Baglamukhi is a grand Vedic discipline of supreme intensity. Grounded in the teachings of the *Rudrayamala Tantra*, we perform this anusthan using yellow turmeric beads, yellow robes, and specialized offering materials. I, along with our team of learned scholars at Siddh Peeth Nalkheda Dham, chant these mantras under strict Vedic rules. This creates an impenetrable shield of protection around you, helping you overcome severe life obstacles, financial blockages, and negative influences.",
+      hi: "**माँ बगलामुखी सवा लाख एवं 36 लाख जाप का क्या महत्व है?** देवी बगलामुखी के सवा लाख (1,25,000) या 36 लाख मंत्रों का जाप करना सर्वोच्च तीव्रता का एक महान वैदिक अनुष्ठान है। *रुद्रयामल तंत्र* के सिद्धांतों के अनुसार, हम पीले वस्त्र, हल्दी की माला और विशिष्ट पूजन सामग्री का उपयोग करके यह जाप करते हैं। मैं और हमारे विद्वान पंडित सिद्ध पीठ नलखेड़ा धाम में शास्त्र सम्मत नियमों के तहत यह अनुष्ठान संपन्न करते हैं, जो आपके चारों ओर एक अभेद्य सुरक्षा कवच निर्मित करता है और जीवन की बड़ी बाधाओं को दूर करता है।"
     },
     benefits: {
-      en: ["Ultimate spiritual protection", "Fulfillment of grand desires", "Eradication of profound life obstacles", "Divine grace of Maa Baglamukhi"],
-      hi: ["परम आध्यात्मिक सुरक्षा", "बड़ी इच्छाओं की पूर्ति", "जीवन की गंभीर बाधाओं का उन्मूलन", "माँ बगलामुखी की असीम कृपा"]
+      en: ["Impenetrable shield of spiritual protection", "Removal of deep ancestral and planetary obstacles", "Attraction of peace, prosperity, and divine grace", "Strict observance of yellow-clothed Vedic protocols"],
+      hi: ["आध्यात्मिक सुरक्षा का अभेद्य कवच", "गहरे पितृ और ग्रह दोषों का निवारण", "शांति, समृद्धि और देवी की असीम कृपा", "पीत वस्त्रों और शास्त्रीय नियमों का पूर्ण पालन"]
     },
     duration: { en: "Extended Days", hi: "विस्तारित दिन" },
     icon: "B3",
@@ -65,16 +65,16 @@ export const SERVICES = [
     id: "baglamukhi-vishesh-havan",
     title: { en: "Maa Baglamukhi Vishesh/Maha-Vishesh Havan", hi: "माँ बगलामुखी विशेष / महाविशेष हवन" },
     description: {
-      en: "Special and highly intense fire ritual dedicated to Maa Baglamukhi for immediate relief from severe crises.",
-      hi: "गंभीर संकटों से तत्काल राहत के लिए माँ बगलामुखी को समर्पित विशेष और अत्यधिक तीव्र अग्नि अनुष्ठान।"
+      en: "We perform intense fire rituals with custom samagri for immediate relief from severe crises and enemies.",
+      hi: "हम गंभीर संकटों और शत्रुओं से तत्काल राहत के लिए विशेष सामग्रियों के साथ गहन अग्नि अनुष्ठान करते हैं।"
     },
     longDescription: {
-      en: "The Vishesh (Special) and Maha-Vishesh (Highly Special) Havan for Maa Baglamukhi involves offering highly specific Tantrokt samagri (ingredients) into the sacred fire. This ritual is extremely powerful and is typically performed for urgent interventions in severe crises, life-threatening situations, or intractable enemy problems.",
-      hi: "माँ बगलामुखी के लिए विशेष और महा-विशेष हवन में पवित्र अग्नि में अत्यधिक विशिष्ट तंत्रोक्त सामग्री (सामग्री) चढ़ाना शामिल है। यह अनुष्ठान अत्यंत शक्तिशाली है और आमतौर पर गंभीर संकटों, जीवन के लिए खतरे वाली स्थितियों या अनसुलझे शत्रु समस्याओं में तत्काल हस्तक्षेप के लिए किया जाता है।"
+      en: "**When should you perform the Maa Baglamukhi Vishesh/Maha-Vishesh Havan?** We recommend this special fire ritual (Havan) for devotees who need immediate relief from severe crises, sudden health issues, or hostile enemy actions. Following the instructions in the *Mantra Mahodadhi*, we offer specific Tantrokt samagri (ingredients like yellow mustard, pure cow ghee, and yellow flowers) to the sacred fire. I guide this ritual personally at Nalkheda Dham to ensure the pure channelization of Maa Baglamukhi's Stambhan power.",
+      hi: "**माँ बगलामुखी विशेष / महाविशेष हवन कब करना चाहिए?** हम यह विशेष हवन उन भक्तों के लिए अनुशंसित करते हैं जो अचानक आए संकटों, गंभीर कानूनी मुकदमों या शत्रुओं के बड़े षड्यंत्रों से तत्काल राहत चाहते हैं। *मंत्र महोदधि* के शास्त्रीय विधानों का पालन करते हुए, हम पवित्र अग्नि में पीली सरसों, शुद्ध घी और पीले पुष्पों जैसी विशिष्ट सामग्रियों की आहुति देते हैं। नलखेड़ा धाम में मैं स्वयं इस अनुष्ठान का मार्गदर्शन करता हूँ।"
     },
     benefits: {
-      en: ["Immediate relief from crises", "Complete paralysis of enemy actions", "Overcoming severe life threats"],
-      hi: ["संकटों से तत्काल राहत", "शत्रु के कार्यों का पूर्ण शमन", "जीवन के गंभीर खतरों पर विजय"]
+      en: ["Immediate relief from active personal or legal crises", "Neutralization of malicious plots and hidden enemies", "Empowerment through energized Tantrokt samagri"],
+      hi: ["सक्रिय व्यक्तिगत या कानूनी संकटों से तुरंत राहत", "शत्रुओं के कुचक्रों और षड्यंत्रों का शमन", "अभिमंत्रित तंत्रोक्त सामग्रियों द्वारा सशक्तिकरण"]
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "MV",
@@ -86,16 +86,16 @@ export const SERVICES = [
     id: "lal-mirchi-havan",
     title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" },
     description: {
-      en: "Fierce Tantric havan using red chilies to completely neutralize hidden and known enemies.",
-      hi: "छिपे और ज्ञात शत्रुओं को पूरी तरह से बेअसर करने के लिए लाल मिर्च का उपयोग करने वाला भयंकर तांत्रिक हवन।"
+      en: "Neutralize hostile conspiracies and malevolent forces with red chili Tantric offerings under scriptural safety.",
+      hi: "शास्त्रीय सुरक्षा के तहत लाल मिर्च की तांत्रिक आहुतियों से शत्रुतापूर्ण षड्यंत्रों और बुरी शक्तियों को शांत करें।"
     },
     longDescription: {
-      en: "A specialized and highly secretive Tantric ritual where whole red chilies are offered into the sacrificial fire while chanting potent Baglamukhi mantras. This Ugra (fierce) sadhana is strictly performed under expert guidance to instantly neutralize the malicious intents of enemies, evildoers, and black magic practitioners.",
-      hi: "एक विशेष और अत्यंत गुप्त तांत्रिक अनुष्ठान जहां शक्तिशाली बगलामुखी मंत्रों का जाप करते हुए यज्ञ की आग में साबुत लाल मिर्च चढ़ाई जाती है। यह उग्र (भयंकर) साधना विशेष रूप से दुश्मनों, दुष्टों और काले जादू के अभ्यासियों के दुर्भावनापूर्ण इरादों को तुरंत बेअसर करने के लिए विशेषज्ञ के मार्गदर्शन में की जाती है।"
+      en: "**What are the rules of Lal Mirchi Havan?** Lal Mirchi Havan is a highly specialized and fierce (Ugra) Tantric ritual that we perform at the banks of the Lakhundar River in Nalkheda Dham. In this ritual, whole dried red chilies are offered into the sacrificial fire while chanting potent Baglamukhi mantras. Following *Shatkarma* rules, this is strictly done under my personal guidance to ensure the negative energies are safely neutralized without causing harm to anyone. It is a powerful remedy for business jealousy and false allegations.",
+      hi: "**लाल मिर्ची हवन के क्या नियम हैं?** लाल मिर्ची हवन नलखेड़ा धाम में लखुंदर नदी के तट पर किया जाने वाला एक अत्यधिक विशिष्ट और उग्र तांत्रिक अनुष्ठान है। इस हवन में, शक्तिशाली बगलामुखी मंत्रों के साथ पवित्र अग्नि में साबुत लाल मिर्च अर्पित की जाती है। *षट्कर्म* ग्रंथों के नियमों के अनुसार, इसे मेरे प्रत्यक्ष मार्गदर्शन में किया जाता है ताकि नकारात्मक ऊर्जाओं को सुरक्षित रूप से बेअसर किया जा सके।"
     },
     benefits: {
-      en: ["Destruction of enemy conspiracies", "Instant neutralization of evil eye", "Protection against aggressive black magic"],
-      hi: ["शत्रु की साजिशों का विनाश", "बुरी नज़र का त्वरित बेअसर", "आक्रामक काले जादू से सुरक्षा"]
+      en: ["Direct neutralization of evil eye and business envy", "Safe defense against aggressive black magic", "Resolution of false allegations and disputes"],
+      hi: ["बुरी नज़र और व्यावसायिक प्रतिस्पर्धात्मक ईर्ष्या का नाश", "काले जादू के नकारात्मक प्रभावों से सुरक्षित बचाव", "झूठे आरोपों और मुकदमों का शांतिपूर्ण समाधान"]
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "LM",
@@ -107,16 +107,16 @@ export const SERVICES = [
     id: "baglamukhi-anushthan",
     title: { en: "Maa Baglamukhi Anusthan", hi: "माँ बगलामुखी अनुष्ठान" },
     description: {
-      en: "Powerful Vedic and Tantric ritual of Maa Baglamukhi for victory, obstacle removal, and divine blessings.",
-      hi: "विजय, बाधा निवारण और दिव्य आशीर्वाद के लिए माँ बगलामुखी का शक्तिशाली वैदिक और तांत्रिक अनुष्ठान।"
+      en: "Invite the divine presence of the eighth Mahavidya to clear paths in career, business, and daily life.",
+      hi: "करियर, व्यवसाय और दैनिक जीवन में सफलता का मार्ग प्रशस्त करने के लिए अष्टम महाविद्या का आह्वान करें।"
     },
     longDescription: {
-      en: "Maa Baglamukhi Anusthan is a sacred and highly powerful ritual performed to invoke the eighth Mahavidya, Goddess Baglamukhi. It is specifically designed to eliminate all blockages in career, life, or business, resolve deep conflicts, and bestow strong divine protection against negative energies and opponents. Conducted with exact Vedic protocols and offerings.",
-      hi: "माँ बगलामुखी अनुष्ठान आठवीं महाविद्या, देवी बगलामुखी का आह्वान करने के लिए किया जाने वाला एक पवित्र और अत्यधिक शक्तिशाली अनुष्ठान है। यह विशेष रूप से करियर, जीवन या व्यवसाय में सभी बाधाओं को दूर करने, गहरे संघर्षों को हल करने और नकारात्मक ऊर्जाओं और विरोधियों के खिलाफ मजबूत दिव्य सुरक्षा प्रदान करने के लिए डिज़ाइन किया गया है।"
+      en: "**Why is Maa Baglamukhi Anusthan performed at Nalkheda Dham?** This sacred multi-day ritual invokes Goddess Baglamukhi, the eighth Mahavidya, who is the ruler of speech and intellect. At our temple, we design this Anusthan specifically to clear persistent blockages in your career, business, or family life. We follow exact Vedic protocols, using yellow materials and chanting ancient hymns, to bring divine protection and mental peace to you and your family.",
+      hi: "**नलखेड़ा धाम में माँ बगलामुखी अनुष्ठान क्यों किया जाता है?** कई दिनों तक चलने वाला यह पवित्र अनुष्ठान आठवीं महाविद्या माँ बगलामुखी को समर्पित है, जो वाणी और बुद्धि की अधिष्ठात्री हैं। हमारे मंदिर में, हम आपके करियर, व्यवसाय या पारिवारिक जीवन में आ रही लगातार बाधाओं को दूर करने के लिए विशेष रूप से यह अनुष्ठान तैयार करते हैं। हम वैदिक नियमों का पूर्णतः पालन करते हैं।"
     },
     benefits: {
-      en: ["Victory over obstacles and challenges", "Destruction of negative influences", "Divine protection and mental peace", "Success in important endeavors"],
-      hi: ["बाधाओं और चुनौतियों पर विजय", "नकारात्मक प्रभावों का विनाश", "दिव्य सुरक्षा और मानसिक शांति", "महत्वपूर्ण प्रयासों में सफलता"]
+      en: ["Removal of career bottlenecks and growth blocks", "Protection against negative energies and household disputes", "Restoration of absolute mental clarity and focus"],
+      hi: ["करियर की बाधाओं और व्यापारिक रुकावटों का निवारण", "नकारात्मक शक्तियों और पारिवारिक कलह से सुरक्षा", "पूर्ण मानसिक शांति और एकाग्रता की प्राप्ति"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "BA",
@@ -128,16 +128,16 @@ export const SERVICES = [
     id: "nyayalay-vijay",
     title: { en: "Nyayalay Vijay (Court Case Victory)", hi: "न्यायालय विजय (कोर्ट केस विजय)" },
     description: {
-      en: "Specific rituals to gain favorable outcomes and victory in pending legal and court cases.",
-      hi: "लंबित कानूनी और अदालती मामलों में अनुकूल परिणाम और जीत हासिल करने के लिए विशिष्ट अनुष्ठान।"
+      en: "Turn legal proceedings in your favor and silence false witnesses with Maa Baglamukhi's Stambhan power.",
+      hi: "माँ बगलामुखी की स्तंभन शक्ति से कानूनी कार्यवाही को अपने पक्ष में करें और विरोधियों को शांत करें।"
     },
     longDescription: {
-      en: "Legal battles can drain wealth and peace of mind. Maa Baglamukhi is renowned as the ultimate deity for Stambhan (paralysis) of the opponent's intellect. This specialized Anusthan is performed to turn legal proceedings in your favor, silence false witnesses, and ensure justice and victory in long-pending court cases.",
-      hi: "कानूनी लड़ाइयाँ धन और मन की शांति को खत्म कर सकती हैं। माँ बगलामुखी प्रतिद्वंद्वी की बुद्धि के स्तंभन के लिए परम देवता के रूप में प्रसिद्ध हैं। यह विशेष अनुष्ठान कानूनी कार्यवाही को आपके पक्ष में करने, झूठे गवाहों को चुप कराने और लंबे समय से लंबित अदालती मामलों में न्याय और जीत सुनिश्चित करने के लिए किया जाता है।"
+      en: "**How does Maa Baglamukhi help in securing Court Case Victory?** Legal disputes can be emotionally exhausting and financially draining. According to the *Kalika Purana*, Maa Baglamukhi possesses the divine power of 'Stambhan'—the capability to paralyze the negative thoughts and speech of opponents. We conduct the Nyayalay Vijay Anusthan using yellow offerings and specialized Sanskrit chants to help you secure justice, turn legal proceedings in your favor, and silence false accusations.",
+      hi: "**कोर्ट केस में विजय के लिए माँ बगलामुखी कैसे सहायता करती हैं?** कानूनी विवाद मानसिक और आर्थिक रूप से व्यक्ति को तोड़ देते हैं। *कालिका पुराण* के अनुसार, माँ बगलामुखी में 'स्तंभन' (विरोधियों की नकारात्मक बुद्धि और वाणी को पंगु बनाने) की दिव्य शक्ति है। हम पीले रंग के उपहारों और विशेष संस्कृत मंत्रों के साथ यह न्यायालय विजय अनुष्ठान करते हैं ताकि आपको न्याय मिल सके।"
     },
     benefits: {
-      en: ["Favorable court verdicts", "Silencing of opponents", "Swift resolution of legal matters"],
-      hi: ["अनुकूल अदालती फैसले", "विरोधियों को चुप कराना", "कानूनी मामलों का त्वरित समाधान"]
+      en: ["Favorable progress in long-pending court disputes", "Neutralization of false allegations and conspiracy", "Restoration of peace of mind and family wealth"],
+      hi: ["लंबे समय से लंबित अदालती मुकदमों में अनुकूल प्रगति", "झूठे आरोपों और शत्रुओं के षड्यंत्रों का शमन", "मन की शांति और संपत्ति की सुरक्षा"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "NV",
@@ -149,16 +149,16 @@ export const SERVICES = [
     id: "nav-graha-shanti",
     title: { en: "Nav Graha Shanti", hi: "नव ग्रह शांति" },
     description: {
-      en: "Pacification of all nine astrological planets to remove life hurdles and attract prosperity.",
+      en: "Harmonize the influence of the nine celestial planets to bring prosperity and peace to your life.",
       hi: "जीवन की बाधाओं को दूर करने और समृद्धि आकर्षित करने के लिए सभी नौ ज्योतिषीय ग्रहों की शांति।"
     },
     longDescription: {
-      en: "The Nav Graha Shanti Puja is a comprehensive Vedic ritual to pacify the nine celestial bodies that influence human destiny. Based on your birth chart, specific planetary remedies are performed to neutralize malefic influences, reduce the impact of harsh dashas, and bring absolute balance and auspiciousness to your life.",
-      hi: "नव ग्रह शांति पूजा नौ आकाशीय पिंडों को शांत करने के लिए एक व्यापक वैदिक अनुष्ठान है जो मानव भाग्य को प्रभावित करते हैं। आपकी जन्म कुंडली के आधार पर, अशुभ प्रभावों को बेअसर करने, कठोर दशाओं के प्रभाव को कम करने और आपके जीवन में पूर्ण संतुलन और शुभता लाने के लिए विशिष्ट ग्रह उपाय किए जाते हैं।"
+      en: "**What is the purpose of Nav Graha Shanti Puja?** Your birth chart (Kundali) maps the planetary positions that influence your health, career, and marriage. When planets like Saturn, Rahu, or Ketu have a malefic placement, life can feel stagnant. I conduct this comprehensive Nav Graha Shanti Puja to pacify these planetary energies. We chant specific Vedic mantras for each of the nine planets and perform custom homam to restore balance and invite positive energy into your life.",
+      hi: "**नवग्रह शांति पूजा का क्या उद्देश्य है?** आपकी कुंडली ग्रहों की उन स्थितियों को दर्शाती है जो आपके स्वास्थ्य, करियर और विवाह को प्रभावित करती हैं। जब शनि, राहु या केतु जैसे ग्रह प्रतिकूल होते हैं, तो जीवन में ठहराव आ जाता है। मैं इन ग्रहों की ऊर्जाओं को शांत करने के लिए यह व्यापक नवग्रह शांति पूजा आयोजित करता हूँ, जिससे सकारात्मक ऊर्जा का संचार होता है।"
     },
     benefits: {
-      en: ["Relief from planetary doshas", "Overall harmony and peace", "Smooth progression in life and career"],
-      hi: ["ग्रह दोषों से राहत", "समग्र सद्भाव और शांति", "जीवन और करियर में सुचारू प्रगति"]
+      en: ["Reduction of malefic planet influences (Shani, Rahu, Ketu)", "Auspicious alignment for health, wealth, and marriage", "Stabilization of mind and reduction of mental anxiety"],
+      hi: ["अशुभ ग्रहों (शनि, राहु, केतु) के प्रभावों में कमी", "स्वास्थ्य, धन और विवाह के लिए शुभ संयोगों का निर्माण", "मन की स्थिरता और मानसिक तनाव से मुक्ति"]
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "NG",
@@ -169,16 +169,16 @@ export const SERVICES = [
     id: "maha-mrityunjay",
     title: { en: "Maha Mrityunjay Anusthan", hi: "महामृत्युंजय अनुष्ठान" },
     description: {
-      en: "Intense chanting of the Maha Mrityunjay mantra for severe illness recovery and longevity.",
-      hi: "गंभीर बीमारी से उबरने और दीर्घायु के लिए महामृत्युंजय मंत्र का गहन जाप।"
+      en: "Invoke Lord Shiva's ultimate healing energy for recovery from severe illness and protection from untimely accidents.",
+      hi: "गंभीर बीमारी से उबरने और अकाल मृत्यु के संकट से बचाव के लिए भगवान शिव की परम आरोग्य शक्ति का आह्वान करें।"
     },
     longDescription: {
-      en: "Dedicated to Lord Shiva, the conqueror of death. This anusthan involves extensive Jaap (recitation) and Havan to protect against untimely death, heal chronic illnesses, and bestow spiritual and physical rejuvenation. Conducted with supreme devotion at Nalkheda Dham.",
-      hi: "मृत्यु के विजेता भगवान शिव को समर्पित। इस अनुष्ठान में अकाल मृत्यु से बचाने, पुरानी बीमारियों को ठीक करने और आध्यात्मिक और शारीरिक कायाकल्प प्रदान करने के लिए व्यापक जाप और हवन शामिल हैं। नलखेड़ा धाम में सर्वोच्च भक्ति के साथ आयोजित किया जाता है।"
+      en: "**How does the Maha Mrityunjay Anusthan protect life?** Dedicated to Lord Shiva, the conqueror of death, this intense Vedic anusthan involves chanting the sacred Maha Mrityunjay mantra 1,25,000 times. We perform this ritual at Nalkheda Dham for devotees or their family members who are battling chronic diseases, facing critical medical conditions, or seeking protection from accidents. The high-vibration chants restore health, vitality, and mental strength.",
+      hi: "**महामृत्युंजय अनुष्ठान जीवन की रक्षा कैसे करता है?** मृत्युंजय भगवान शिव को समर्पित इस गहन वैदिक अनुष्ठान में पवित्र महामृत्युंजय मंत्र का सवा लाख बार जाप किया जाता है। हम नलखेड़ा धाम में यह अनुष्ठान उन भक्तों के लिए करते हैं जो पुरानी बीमारियों से जूझ रहे हैं, गंभीर स्वास्थ्य समस्याओं का सामना कर रहे हैं या अकाल मृत्यु के संकट से बचना चाहते हैं।"
     },
     benefits: {
-      en: ["Recovery from severe illnesses", "Protection from accidents", "Mental peace and long life"],
-      hi: ["गंभीर बीमारियों से उबरना", "दुर्घटनाओं से सुरक्षा", "मानसिक शांति और लंबी उम्र"]
+      en: ["Divine healing and recovery from critical illnesses", "Impenetrable shield against accidents and untimely death", "Restoration of physical energy and spiritual peace"],
+      hi: ["गंभीर बीमारियों से उबरने में दैवीय सहायता", "दुर्घटनाओं और अकाल मृत्यु के संकटों से अभेद्य सुरक्षा", "शारीरिक ऊर्जा और मानसिक शांति की पुनर्प्राप्ति"]
     },
     duration: { en: "7-11 Days", hi: "7-11 दिन" },
     icon: "MM",
@@ -189,16 +189,16 @@ export const SERVICES = [
     id: "shatru-stambhan",
     title: { en: "Shatru Stambhan", hi: "शत्रु स्तंभन" },
     description: {
-      en: "Tantric rituals to paralyze enemy actions and freeze their hostile plots or speech.",
+      en: "Freeze the hostile actions, speech, and conspiracies of opponents to regain absolute peace of mind.",
       hi: "शत्रु के हानिकारक कार्यों को पंगु बनाने और उनकी शत्रुतापूर्ण योजनाओं व वाणी का स्तंभन करने के लिए तांत्रिक अनुष्ठान।"
     },
     longDescription: {
-      en: "This intense invocation of Maa Baglamukhi is performed to freeze the actions, thoughts, and speech of hostile opponents. It renders adversaries powerless, offering complete protection and peace of mind to the devotee in legal, personal, or professional conflicts.",
-      hi: "माँ बगलामुखी का यह तीव्र अनुष्ठान शत्रुओं के कार्यों, विचारों और वाणी को स्थिर (स्तंभित) करने के लिए किया जाता है। यह विरोधियों को निष्प्रभावी कर साधक को कानूनी, व्यक्तिगत या व्यावसायिक विवादों में पूर्ण सुरक्षा प्रदान करता है।"
+      en: "**What is Shatru Stambhan and how does it work?** Shatru Stambhan is a sacred ritual of Maa Baglamukhi designed to freeze the negative intent and actions of adversaries. If you are facing harassment at work, business rivalries, or false litigation, this puja paralyzes the opponent's hostile motivation without causing harm. I perform this with exact Vedic and Tantric mantras at Siddh Peeth Nalkheda Dham to ensure your safety and victory.",
+      hi: "**शत्रु स्तंभन क्या है और यह कैसे कार्य करता है?** शत्रु स्तंभन माँ बगलामुखी का एक पवित्र अनुष्ठान है जिसे विरोधियों के दुर्भावनापूर्ण इरादों और कार्यों को रोकने के लिए किया जाता है। यदि आप कार्यस्थल पर प्रताड़ना, व्यावसायिक प्रतिद्वंद्विता या झूठे मुकदमों का सामना कर रहे हैं, तो यह पूजा बिना किसी को नुकसान पहुँचाए विरोधी के प्रयासों को निष्प्रभावी कर देती है।"
     },
     benefits: {
-      en: ["Paralysis and freezing of enemy plots", "Absolute victory in conflicts", "Impenetrable shield of protection"],
-      hi: ["शत्रु की साजिशों का स्तंभन", "विवादों और मुकदमों में पूर्ण विजय", "सुरक्षा का अभेद्य कवच"]
+      en: ["Freezing of enemy speech and false witness statements", "Overcoming professional and personal rivalries", "Complete protection in conflict situations"],
+      hi: ["शत्रुओं की वाणी और झूठे गवाहों के बयानों का स्तंभन", "व्यावसायिक और व्यक्तिगत प्रतिद्वंद्विता पर विजय", "विवादों और संघर्ष की स्थितियों में पूर्ण सुरक्षा"]
     },
     duration: { en: "Custom", hi: "कस्टम" },
     icon: "SV",
@@ -209,16 +209,16 @@ export const SERVICES = [
     id: "rog-nash",
     title: { en: "Rog Nash Anusthan", hi: "रोग नाश अनुष्ठान" },
     description: {
-      en: "Divine Tantric invocation of Maa Baglamukhi to eradicate chronic diseases and restore physical wellness.",
+      en: "Eradicate persistent health issues and physical ailments through dedicated healing offerings and mantra chanting.",
       hi: "पुरानी व गंभीर बीमारियों को नष्ट करने और शारीरिक स्वास्थ्य की पुनः प्राप्ति के लिए माँ बगलामुखी का दिव्य अनुष्ठान।"
     },
     longDescription: {
-      en: "When medical treatments fall short or when plagued by persistent physical or mental ailments, the Rog Nash Anusthan invokes the healing and protective energies of Goddess Baglamukhi. Special herb offerings and Vedic chanting are conducted to eliminate toxins, disease-causing doshas, and restore complete health.",
-      hi: "जब चिकित्सीय उपचारों से पर्याप्त लाभ न मिल रहा हो या लगातार शारीरिक और मानसिक कष्ट परेशान कर रहे हों, तब माँ बगलामुखी के रोग नाश अनुष्ठान द्वारा स्वास्थ्य प्रदाता ऊर्जाओं का आह्वान किया जाता है। विशेष औषधियों की आहुति और मंत्र जाप के द्वारा रोगों और शारीरिक दोषों का निवारण किया जाता है।"
+      en: "**How does Rog Nash Anusthan assist in restoring physical wellness?** When medical science is supported by spiritual energy, healing accelerates. In the Rog Nash Anusthan, we invoke the healing aspect of Maa Baglamukhi. I and our Vedic priests chant specific health-giving mantras and offer sacred Ayurvedic herbs into the Havan fire to eliminate bodily toxins, balance the doshas, and relieve mental anxiety regarding health.",
+      hi: "**रोग नाश अनुष्ठान शारीरिक स्वास्थ्य बहाल करने में कैसे मदद करता है?** जब चिकित्सा विज्ञान को आध्यात्मिक ऊर्जा का समर्थन मिलता है, तो उपचार की गति तेज हो जाती है। इस अनुष्ठान में, हम माँ बगलामुखी की स्वास्थ्य प्रदाता शक्ति का आह्वान करते हैं। मैं और हमारे वैदिक पुरोहित विशिष्ट मंत्रों का जाप करते हैं और पवित्र जड़ी-बूटियों की आहुति देते हैं।"
     },
     benefits: {
-      en: ["Eradication of chronic and persistent diseases", "Restoration of health and physical strength", "Mental peace and elimination of health anxiety"],
-      hi: ["पुरानी और लाइलाज बीमारियों का अंत", "उत्तम स्वास्थ्य और शारीरिक बल की प्राप्ति", "मानसिक शांति और स्वास्थ्य संबंधी चिंताओं से मुक्ति"]
+      en: ["Supports recovery from chronic and unexplained ailments", "Clears negative energy that blocks healing", "Eradicates health anxiety and restores vitality"],
+      hi: ["पुरानी और अज्ञात बीमारियों से उबरने में सहायक", "उपचार में बाधा डालने वाली नकारात्मक ऊर्जा का नाश", "स्वास्थ्य संबंधी चिंताओं से मुक्ति और जीवन शक्ति का संचार"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "RN",
@@ -229,16 +229,16 @@ export const SERVICES = [
     id: "santan-prapti",
     title: { en: "Santan Prapti", hi: "संतान प्राप्ति" },
     description: {
-      en: "Divine rituals seeking blessings for conceiving a healthy and virtuous child.",
+      en: "Seek divine blessings to clear progeny obstacles and receive the joy of a healthy, virtuous child.",
       hi: "स्वस्थ और गुणवान संतान की प्राप्ति के लिए आशीर्वाद मांगने वाले दिव्य अनुष्ठान।"
     },
     longDescription: {
-      en: "For couples facing unexplained delays or medical hurdles in childbirth. This anusthan invokes the blessings of Santhana Gopala and divine mother to remove any doshas (such as Pitra Dosh or Nadi Dosh) obstructing progeny, ensuring the birth of a healthy child.",
-      hi: "उन जोड़ों के लिए जो प्रसव में अस्पष्ट देरी या चिकित्सा बाधाओं का सामना कर रहे हैं। यह अनुष्ठान संतान प्राप्ति में बाधा डालने वाले किसी भी दोष (जैसे पितृ दोष या नाड़ी दोष) को दूर करने, एक स्वस्थ बच्चे के जन्म को सुनिश्चित करने के लिए संतान गोपाल और दिव्य माता के आशीर्वाद का आह्वान करता है।"
+      en: "**How does the Santan Prapti Puja help couples?** For couples facing delays or difficulties in conceiving, this ritual invokes the blessings of Santana Gopala and Maa Baglamukhi. We perform this puja to clear planetary obstacles (like Pitra Dosha or Nadi Dosha) that might be blocking child birth. We chant specialized mantras and offer fruits and pure ingredients, welcoming auspicious energies into the family.",
+      hi: "**संतान प्राप्ति पूजा दम्पतियों के लिए कैसे सहायक है?** गर्भधारण में देरी या समस्याओं का सामना कर रहे दंपतियों के लिए, यह अनुष्ठान संतान गोपाल और माँ बगलामुखी के आशीर्वाद का आह्वान करता है। हम पितृ दोष या नाड़ी दोष जैसी बाधाओं को दूर करने के लिए यह पूजा करते हैं जो संतान उत्पत्ति में बाधक हो सकते हैं।"
     },
     benefits: {
-      en: ["Removal of obstacles in conceiving", "Blessings for a healthy baby", "Eradication of progeny-related doshas"],
-      hi: ["गर्भधारण में बाधाओं को दूर करना", "स्वस्थ बच्चे के लिए आशीर्वाद", "संतान संबंधी दोषों का उन्मूलन"]
+      en: ["Clears astrological obstacles in childbirth", "Blesses the family with a healthy and virtuous child", "Removes progeny-related planetary doshas"],
+      hi: ["संतान जन्म में आने वाले ज्योतिषीय अवरोधों का निवारण", "परिवार को एक स्वस्थ और गुणी बच्चे का आशीर्वाद", "संतान संबंधी पितृ और ग्रह दोषों का उन्मूलन"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "SP",
@@ -249,16 +249,16 @@ export const SERVICES = [
     id: "vyavahik-badha",
     title: { en: "Vyavahik Badha Nivaran", hi: "वैवाहिक बाधा निवारण" },
     description: {
-      en: "Removal of obstacles in marriage, finding the right partner, and ensuring marital bliss.",
+      en: "Remove marital delays and planetary doshas to invite a compatible partner and ensure marriage bliss.",
       hi: "विवाह में आने वाली बाधाओं को दूर करना, सही जीवनसाथी ढूँढना और वैवाहिक आनंद सुनिश्चित करना।"
     },
     longDescription: {
-      en: "If marriages are getting delayed, broken, or suffering from severe discords, this ritual eliminates the negative astrological planetary effects (like Mangal Dosh) and evil eyes, smoothing the path to a harmonious and joyful married life.",
-      hi: "यदि विवाह में देरी हो रही है, टूट रहा है, या गंभीर कलह से पीड़ित है, तो यह अनुष्ठान नकारात्मक ज्योतिषीय ग्रहों के प्रभाव (जैसे मंगल दोष) और बुरी नज़र को समाप्त करता है, एक सामंजस्यपूर्ण और आनंदमय वैवाहिक जीवन का मार्ग प्रशस्त करता है।"
+      en: "**How is Vyavahik Badha Nivaran Puja performed?** If your marriage proposals are getting delayed, cancelled, or facing severe conflicts, this puja is designed to restore planetary harmony. We target negative astrological effects (such as Mangal Dosha or Gana Dosha) and clear obstacles created by jealousy or negative intentions of others. The rituals help pave the way for a peaceful and happy married life.",
+      hi: "**वैवाहिक बाधा निवारण पूजा कैसे की जाती है?** यदि विवाह प्रस्तावों में देरी हो रही है, रुकावट आ रही है, या आपसी मनमुटाव का सामना करना पड़ रहा है, तो यह पूजा ग्रहों की अनुकूलता बहाल करने के लिए की जाती है। हम मंगल दोष या अन्य कुंडली दोषों के नकारात्मक प्रभावों को दूर करते हैं।"
     },
     benefits: {
-      en: ["Timely and suitable marriage", "Resolution of marital conflicts", "Removal of Manglik/other doshas"],
-      hi: ["समय पर और उपयुक्त विवाह", "वैवाहिक संघर्षों का समाधान", "मांगलिक / अन्य दोषों को दूर करना"]
+      en: ["Expedites finding a suitable and compatible partner", "Neutralizes Manglik Dosha and other relationship blockages", "Restores harmony and understanding between couples"],
+      hi: ["एक उपयुक्त और अनुकूल जीवनसाथी की शीघ्र प्राप्ति", "मंगल दोष और अन्य वैवाहिक रुकावटों का निवारण", "दंपतियों के बीच सामंजस्य और आपसी समझ की बहाली"]
     },
     duration: { en: "3 Days", hi: "3 दिन" },
     icon: "VB",
@@ -269,36 +269,37 @@ export const SERVICES = [
     id: "vyapar-vraddhi",
     title: { en: "Vyapar Vraddhi (Baglamukhi)", hi: "व्यापार वृद्धि (बगलामुखी)" },
     description: {
-      en: "Sacred rituals for immense business growth, overcoming financial blocks and debts.",
+      en: "Dissolve financial stagnation and business blocks to attract growth and overcome competitor actions.",
       hi: "अपार व्यापार वृद्धि, वित्तीय बाधाओं और ऋणों पर काबू पाने के लिए पवित्र अनुष्ठान।"
     },
     longDescription: {
-      en: "Business stagnation, sudden losses, or hidden competitor attacks can be devastating. The Vyapar Vraddhi Anusthan harnesses Maa Baglamukhi's power to destroy business obstacles, attract wealth, clear heavy debts, and ensure exponential growth in your trade.",
-      hi: "व्यापार में ठहराव, अचानक नुकसान, या छिपे हुए प्रतियोगी हमले विनाशकारी हो सकते हैं। व्यापार वृद्धि अनुष्ठान व्यावसायिक बाधाओं को नष्ट करने, धन को आकर्षित करने, भारी ऋणों को चुकाने और आपके व्यापार में घातीय वृद्धि सुनिश्चित करने के लिए माँ बगलामुखी की शक्ति का उपयोग करता है।"
+      en: "**How does Maa Baglamukhi Vyapar Vraddhi Anusthan restore business growth?** Business stagnation, sudden cash losses, or intense competitor jealousy can damage your livelihood. In this specialized Anusthan, we harness the protective and expansive energies of Goddess Baglamukhi to clear your path. Chanting wealth-attracting Vedic mantras and performing dedicated Havan at Nalkheda Dham helps dissolve debts, protect your workspace, and invite steady prosperity.",
+      hi: "**माँ बगलामुखी व्यापार वृद्धि अनुष्ठान व्यापार में वृद्धि कैसे लाता है?** व्यापार में रुकावट, अचानक वित्तीय हानि या प्रतिस्पर्धियों की ईर्ष्या आपके व्यवसाय को नुकसान पहुँचा सकती है। इस अनुष्ठान में, हम बाधाओं को दूर करने के लिए माँ बगलामुखी की रक्षात्मक और समृद्धि प्रदाता ऊर्जा का आह्वान करते हैं।"
     },
     benefits: {
-      en: ["Unblocking business growth", "Victory over market competitors", "Attracting steady wealth and prosperity"],
-      hi: ["व्यापार विकास को अनब्लॉक करना", "बाजार के प्रतिस्पर्धियों पर विजय", "स्थिर धन और समृद्धि को आकर्षित करना"]
+      en: ["Unblocks stagnating sales and business opportunities", "Protects premises from negative intentions of competitors", "Attracts steady financial flow and debt clearance"],
+      hi: ["रुके हुए व्यापार और नए अवसरों को अनब्लॉक करना", "प्रतिस्पर्धियों के दुर्भावनापूर्ण प्रयासों से व्यापार की रक्षा", "स्थिर वित्तीय प्रवाह और ऋणों से मुक्ति"]
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "VV",
     image: "/vyapar-vraddhi.webp",
     category: "anusthan",
+    popular: true,
   },
   {
     id: "rin-mukti",
     title: { en: "Rin Mukti (Debt Relief)", hi: "ऋण मुक्ति (कर्ज से राहत)" },
     description: {
-      en: "Special puja, jaap, and havan dedicated to relieve debt burdens and restore financial freedom.",
+      en: "Restore financial freedom and resolve heavy debt burdens through focused Vedic Pujas and Havan.",
       hi: "ऋण मुक्ति (कर्ज से राहत) के लिए विशेष पूजा, जप और हवन।"
     },
     longDescription: {
-      en: "This sacred ritual is performed to remove heavy debt burdens, financial stress, and blocked cash flow. Through focused puja, mantra jaap, and havan, Acharya Ji invokes Maa Baglamukhi's grace to free devotees from chronic borrowing and monetary anxiety.",
-      hi: "यह पवित्र अनुष्ठान भारी कर्ज, वित्तीय तनाव और अवरुद्ध नकदी प्रवाह को दूर करने के लिए किया जाता है। विशेष पूजा, मंत्र जाप और हवन के माध्यम से आचार्य जी माँ बगलामुखी की कृपा को बुलाते हैं ताकि भक्तों को दीर्घकालिक उधारी और मौद्रिक चिंता से मुक्ति मिल सके।"
+      en: "**What is the process of the Rin Mukti Puja?** Persistent debt can lead to severe mental stress and family disputes. The Rin Mukti Puja is a sacred remedy performed to clear obstacles in your income and cash flow. Chanting specific mantras of Maa Baglamukhi and offering special ingredients to the fire, I pray for your financial liberation, helping you clear outstanding debts and regain monetary stability.",
+      hi: "**ऋण मुक्ति पूजा की क्या प्रक्रिया है?** लगातार कर्ज का बोझ मानसिक तनाव और पारिवारिक विवादों का कारण बनता है। ऋण मुक्ति पूजा आपकी आय और धन प्रवाह में आने वाली बाधाओं को दूर करने के लिए किया जाने वाला एक पवित्र उपाय है। माँ बगलामुखी के मंत्रों के साथ मैं आपके कर्ज निवारण की प्रार्थना करता हूँ।"
     },
     benefits: {
-      en: ["Relief from outstanding debts", "Clearing financial blockages", "Restored money flow and peace"],
-      hi: ["बकाया ऋण से मुक्ति", "वित्तीय अवरोधों का निवारण", "धन के प्रवाह और मन की शांति की बहाली"]
+      en: ["Clears financial blockages that obstruct loan repayment", "Restores peaceful cash flow and business income", "Eradicates monetary anxiety and family stress"],
+      hi: ["ऋण चुकाने में बाधा डालने वाले वित्तीय अवरोधों का निवारण", "सुचारू धन प्रवाह और व्यावसायिक आय की बहाली", "आर्थिक चिंता और पारिवारिक तनाव से मुक्ति"]
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "RM",
@@ -309,16 +310,16 @@ export const SERVICES = [
     id: "karya-mukti",
     title: { en: "Karya Mukti / Kasht Mukti", hi: "कार्य मुक्ति / कष्ट मुक्ति" },
     description: {
-      en: "Special puja, jaap, and havan to remove obstacles and hardship in work, career, and daily life.",
+      en: "Dissolve karmic blockages creating continuous delays, struggles, and hardships in your life.",
       hi: "कार्य मुक्ति / कष्ट मुक्ति के लिए विशेष पूजा, जप और हवन।"
     },
     longDescription: {
-      en: "This powerful ritual dissolves karmic obstacles that create struggles, delays, and hardship in your professional and personal life. Specific puja, mantra chanting, and havan bring relief from blocked paths, stress, and continuous difficulties, restoring momentum and success.",
-      hi: "यह शक्तिशाली अनुष्ठान उन कर्मिक बाधाओं को दूर करता है जो आपके पेशेवर और व्यक्तिगत जीवन में संघर्ष, देरी और कष्ट पैदा करती हैं। विशिष्ट पूजा, मंत्र जाप और हवन अवरुद्ध मार्गों, तनाव और निरंतर कठिनाइयों से मुक्ति दिलाते हैं और गति तथा सफलता को बहाल करते हैं।"
+      en: "**How does the Kasht Mukti Puja bring relief from ongoing struggles?** Sometimes, despite hard work, you face continuous hurdles and delays in every task (Karya). This indicates karmic blocks or planetary obstructions. Our Karya/Kasht Mukti Puja is designed to dissolve these invisible blockages. I guide this ritual with focused Vedic chants and Havan, creating a smooth path for your career and daily efforts.",
+      hi: "**कष्ट मुक्ति पूजा चल रहे संघर्षों से कैसे राहत दिलाती है?** कभी-कभी, कड़ी मेहनत के बावजूद, आपको हर कार्य (कार्य) में लगातार बाधाओं और देरी का सामना करना पड़ता है। यह कर्मिक बाधाओं या ग्रहों के अवरोधों का संकेत देता है। हमारी कष्ट मुक्ति पूजा इन बाधाओं को दूर करने के लिए है।"
     },
     benefits: {
-      en: ["Removal of career and work obstacles", "Ease from ongoing struggles", "Renewed momentum and progress"],
-      hi: ["कार्य और रोजगार में बाधाओं का निवारण", "चल रहे संघर्षों से राहत", "नई गति और प्रगति की बहाली"]
+      en: ["Dissolves mysterious blocks affecting job promotion and career", "Brings ease and flow into daily life operations", "Restores momentum in pending works and personal goals"],
+      hi: ["नौकरी में पदोन्नति और करियर को प्रभावित करने वाले अदृश्य अवरोधों का नाश", "दैनिक जीवन के कार्यों में सुगमता और प्रवाह", "लंबित कार्यों और व्यक्तिगत लक्ष्यों में गति की बहाली"]
     },
     duration: { en: "1-3 Days", hi: "1-3 दिन" },
     icon: "KM",
@@ -329,16 +330,16 @@ export const SERVICES = [
     id: "lakshmi-prapti",
     title: { en: "Lakshmi Prapti", hi: "लक्ष्मी प्राप्ति" },
     description: {
-      en: "Invoking Goddess Lakshmi for steady inflow of wealth, abundance, and financial stability.",
+      en: "Invoke Goddess Lakshmi to invite steady abundance, wealth accumulation, and household harmony.",
       hi: "धन, प्रचुरता और वित्तीय स्थिरता के निरंतर प्रवाह के लिए देवी लक्ष्मी का आह्वान।"
     },
     longDescription: {
-      en: "Dedicated to the Goddess of Wealth, this ritual aligns your stars to attract financial abundance. Whether you are facing blocked funds, continuous poverty, or want to elevate your current financial status, Lakshmi Prapti puja opens the divine doors of prosperity.",
+      en: "**Why should you perform the Lakshmi Prapti Puja?** Dedicated to Goddess Lakshmi, the deity of wealth and abundance, this ritual aligns your stars to attract financial stability. Whether you are facing blocked funds, struggle to accumulate savings, or want to invite prosperity into your new home, I perform this Vedic puja to open the doors of abundance and clear poverty-inducing planetary blocks.",
       hi: "धन की देवी को समर्पित, यह अनुष्ठान वित्तीय प्रचुरता को आकर्षित करने के लिए आपके सितारों को संरेखित करता है। चाहे आप अवरुद्ध धन, निरंतर गरीबी का सामना कर रहे हों, या अपनी वर्तमान वित्तीय स्थिति को बढ़ाना चाहते हों, लक्ष्मी प्राप्ति पूजा समृद्धि के दिव्य द्वार खोलती है।"
     },
     benefits: {
-      en: ["Removal of financial blockages", "Steady accumulation of wealth", "Overall prosperity and happiness"],
-      hi: ["वित्तीय बाधाओं को दूर करना", "धन का स्थिर संचय", "समग्र समृद्धि और खुशी"]
+      en: ["Attracts new avenues for income and wealth accumulation", "Dissolves planetary blocks that cause poverty and loss", "Brings peace, happiness, and auspiciousness to the household"],
+      hi: ["आय के नए स्रोतों और धन संचय को आकर्षित करना", "आर्थिक तंगी और हानि का कारण बनने वाले ग्रह दोषों का शमन", "घर में शांति, खुशी और शुभता का वास"]
     },
     duration: { en: "1 Day", hi: "1 दिन" },
     icon: "LP",
@@ -349,16 +350,16 @@ export const SERVICES = [
     id: "vastu-shastra",
     title: { en: "Vastu Shastra Paramarsh", hi: "वास्तु शास्त्र परामर्श" },
     description: {
-      en: "Expert Vastu consultation to harmonize energy flows in your home or workspace.",
+      en: "Correct energy imbalances in your home or workspace with authentic Vedic Vastu remedies without demolition.",
       hi: "आपके घर या कार्यक्षेत्र में ऊर्जा प्रवाह को सुसंगत बनाने के लिए विशेषज्ञ वास्तु परामर्श।"
     },
     longDescription: {
-      en: "Imbalanced architectural energies can lead to health, wealth, and relationship issues. Acharya Ji provides authentic Vedic Vastu consultations to correct structural flaws using spiritual remedies and Yantras without requiring physical demolition of your property.",
+      en: "**How does Vastu Shastra consultation resolve architectural imbalances?** Imbalanced directions in a building can disrupt health, harmony, and wealth flow. Using classical Vedic Vastu Shastra principles, I analyze your property's layout. I recommend non-destructive spiritual remedies, including specific Yantras, colors, and spatial adjustments, to harmonize the energy flow without requiring any physical demolition of your house or office.",
       hi: "असंतुलित वास्तुशिल्प ऊर्जा स्वास्थ्य, धन और संबंध संबंधी समस्याओं का कारण बन सकती है। आचार्य जी आपकी संपत्ति के भौतिक विध्वंस की आवश्यकता के बिना आध्यात्मिक उपचार और यंत्रों का उपयोग करके संरचनात्मक खामियों को ठीक करने के लिए प्रामाणिक वैदिक वास्तु परामर्श प्रदान करते हैं।"
     },
     benefits: {
-      en: ["Harmonizing environmental energies", "Non-destructive Vastu corrections", "Promoting peace and prosperity in premises"],
-      hi: ["पर्यावरणीय ऊर्जा को सुसंगत बनाना", "गैर-विनाशकारी वास्तु सुधार", "परिसर में शांति और समृद्धि को बढ़ावा देना"]
+      en: ["Restores positive energy and harmony in the living space", "Non-destructive corrections using spiritual Yantras and remedies", "Unlocks wealth flow and improves health of residents"],
+      hi: ["रहने के स्थान में सकारात्मक ऊर्जा और सद्भाव की बहाली", "यंत्रों और वैदिक उपायों द्वारा बिना तोड़-फोड़ के सुधार", "धन के प्रवाह को बढ़ाना और निवासियों के स्वास्थ्य में सुधार"]
     },
     duration: { en: "Consultation", hi: "परामर्श" },
     icon: "VS",
@@ -369,15 +370,15 @@ export const SERVICES = [
     id: "vashikaran",
     title: { en: "Vashikaran Anusthan", hi: "वशीकरण अनुष्ठान" },
     description: {
-      en: "Ethical Tantric ritual to positively influence someone's mind and resolve estrangement in relationships.",
+      en: "Ethically influence relationship dynamics and resolve deep-seated conflicts to restore harmony.",
       hi: "किसी के मन को सकारात्मक रूप से प्रभावित करने और रिश्तों में मनमुटाव दूर करने के लिए नैतिक तांत्रिक अनुष्ठान।"
     },
     longDescription: {
-      en: "Vashikaran is an ancient Vedic science used to attract and influence a desired person's thoughts and emotions positively. When performed ethically, it resolves severe relationship conflicts, brings back lost love, and restores harmony between couples or family members. Acharya Pt. Rudraksh Rajpurohit performs this ritual using pure and positive mantras only.",
+      en: "**What are the rules of ethical Vashikaran Anusthan?** Vashikaran is an ancient Vedic science of attraction used to influence a desired person's thoughts positively. When performed ethically, it resolves relationship conflicts and restores harmony. Under my guidance at Siddh Peeth Nalkheda Dham, we perform this ritual using only positive and pure mantras to resolve disputes and bring back mutual understanding.",
       hi: "वशीकरण एक प्राचीन वैदिक विज्ञान है जिसका उपयोग किसी वांछित व्यक्ति के विचारों और भावनाओं को सकारात्मक रूप से आकर्षित और प्रभावित करने के लिए किया जाता है। जब इसे नैतिक रूप से किया जाता है, तो यह गंभीर संबंध संघर्षों को हल करता है, खोया हुआ प्यार वापस लाता है और जोड़ों या परिवार के सदस्यों के बीच सद्भाव बहाल करता है।"
     },
     benefits: {
-      en: ["Resolve relationship disputes", "Reunite with estranged partner", "Ethical and positive influence", "Restoration of love and understanding"],
+      en: ["Resolves severe disputes between married couples or family members", "Ethical and positive mantra energy with no negative side effects", "Restores mutual love, trust, and understanding in relationships"],
       hi: ["रिश्ते के विवादों का समाधान", "अलग हुए साथी के साथ पुनर्मिलन", "नैतिक और सकारात्मक प्रभाव", "प्रेम और आपसी समझ की बहाली"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
@@ -389,15 +390,15 @@ export const SERVICES = [
     id: "akarshan",
     title: { en: "Akarshan Anusthan", hi: "आकर्षण अनुष्ठान" },
     description: {
-      en: "Sacred ritual to enhance personal magnetism, attraction, and command respect in social and professional circles.",
+      en: "Enhance your personal magnetism, self-confidence, and command respect in social and professional circles.",
       hi: "व्यक्तिगत आकर्षण, चुंबकीय व्यक्तित्व बढ़ाने और सामाजिक व व्यावसायिक हलकों में सम्मान पाने के लिए पवित्र अनुष्ठान।"
     },
     longDescription: {
-      en: "Akarshan Anusthan is focused on enhancing the devotee's personal charisma, self-confidence, and aura. It helps in gaining favor from superiors, resolving communication gaps, and attracting favorable circumstances. The positive energies of this ritual help make one's presence impactful and respected everywhere.",
+      en: "**What is the purpose of the Akarshan Anusthan?** Akarshan Anusthan focuses on purifying and strengthening the devotee's personal aura and self-confidence. If you suffer from social anxiety or want to improve your influence at your workplace, this ritual enhances your charisma. Chanting specific Vedic mantras under my guidance helps you project positive energy, resolving communication gaps and attracting new opportunities.",
       hi: "आकर्षण अनुष्ठान भक्त के व्यक्तिगत आकर्षण, आत्मविश्वास और आभा को बढ़ाने पर केंद्रित है। यह वरिष्ठों से अनुकूलता प्राप्त करने, संचार अंतराल को हल करने और अनुकूल परिस्थितियों को आकर्षित करने में मदद करता है।"
     },
     benefits: {
-      en: ["Enhanced personal magnetism and charisma", "Improved social and professional relationships", "Overcoming shyness and self-doubt", "Attracting positive opportunities"],
+      en: ["Enhances personal aura, charisma, and confidence", "Improves public speaking and social relationship dynamics", "Attracts favorable circumstances and career opportunities"],
       hi: ["बढ़ा हुआ व्यक्तिगत आकर्षण और करिश्मा", "बेहतर सामाजिक और व्यावसायिक संबंध", "संकोच और आत्म-संदेह पर विजय", "सकारात्मक अवसरों को आकर्षित करना"]
     },
     duration: { en: "3 Days", hi: "3 दिन" },
@@ -409,15 +410,15 @@ export const SERVICES = [
     id: "moh-ucchatan",
     title: { en: "Moh Ucchatan", hi: "मोह उच्चाटन" },
     description: {
-      en: "Rituals to break negative attachments, toxic relationships, and harmful addictions.",
+      en: "Break toxic relationship attachments, negative company, and harmful habits to regain mental freedom.",
       hi: "नकारात्मक लगाव, जहरीले रिश्तों और हानिकारक व्यसनों को तोड़ने के लिए अनुष्ठान।"
     },
     longDescription: {
-      en: "Ucchatan is a powerful Tantric act used to create disinterest and separation. It is utilized to break toxic bonds, rescue individuals from bad company, or cure severe addictions by systematically detaching the person's mind from the negative influence.",
+      en: "**How does Moh Ucchatan help in detaching from toxic influences?** When an individual is trapped in a toxic relationship, bad company, or harmful habits, it ruins their life. The Moh Ucchatan ritual creates mental disinterest and separation from these negative forces. Chanting specific Vedic detachment mantras helps release the mind from harmful attachments, restoring clarity and personal freedom.",
       hi: "उच्चाटन एक शक्तिशाली तांत्रिक कार्य है जिसका उपयोग अरुचि और अलगाव पैदा करने के लिए किया जाता है। इसका उपयोग जहरीले बंधनों को तोड़ने, व्यक्तियों को बुरी संगति से बचाने, या व्यक्ति के दिमाग को नकारात्मक प्रभाव से व्यवस्थित रूप से अलग करके गंभीर व्यसनों को ठीक करने के लिए किया जाता है।"
     },
     benefits: {
-      en: ["Breaking toxic relationships", "Curing harmful addictions", "Mental liberation and clarity"],
+      en: ["Helps break toxic, codependent relationship attachments", "Rescues family members from harmful company and habits", "Restores mental clarity, strength, and personal freedom"],
       hi: ["जहरीले रिश्तों को तोड़ना", "हानिकारक व्यसनों को ठीक करना", "मानसिक मुक्ति और स्पष्टता"]
     },
     duration: { en: "Custom", hi: "कस्टम" },
@@ -429,15 +430,15 @@ export const SERVICES = [
     id: "uchchatan-prayog",
     title: { en: "Uchchatan Prayog (उच्चाटन प्रयोग)", hi: "उच्चाटन प्रयोग" },
     description: {
-      en: "Powerful Tantric Uchchatan Prayog to create disinterest, separation, and confusion in enemies or harmful individuals targeting you.",
+      en: "Distract and confuse persistent enemies targeting your life or business to make them lose interest in harming you.",
       hi: "शत्रुओं या आपको निशाना बनाने वाले हानिकारक व्यक्तियों में अरुचि, पृथकता और भ्रम उत्पन्न करने के लिए शक्तिशाली तांत्रिक उच्चाटन प्रयोग।"
     },
     longDescription: {
-      en: "Uchchatan Prayog is one of the six supreme Tantric Karmas (Shatkarma) prescribed in ancient Vedic and Tantric scriptures. This powerful ritual is performed to create severe mental confusion, restlessness, and disinterest in the mind of an enemy or harmful individual who is causing obstacles in your life, business, or personal affairs. Unlike Maran or Stambhan, Uchchatan does not cause harm — it simply causes the adversary to lose focus, interest, and motivation to continue their hostile actions against you. Acharya Pt. Rudraksh Rajpurohit performs this prayog at Siddh Peeth Nalkheda Dham using specific Tantrokt mantras and offerings, targeting only those forces that are genuinely harmful. This is an ethical Vedic practice performed with pure intent for protection and peace. It is especially recommended for cases of workplace harassment, persistent enemy interference, stalking, and sustained malicious opposition in legal or personal matters.",
+      en: "**What is Uchchatan Prayog and when is it recommended?** Uchchatan is one of the six supreme Tantric Karmas (Shatkarma) detailed in Vedic scriptures. This ritual creates mental confusion and restlessness in the mind of an enemy who is actively trying to ruin your career, business, or family. Unlike harmful practices, Uchchatan simply causes the adversary to lose focus and interest in continuing their hostile actions against you, leading them to leave you in peace.",
       hi: "उच्चाटन प्रयोग प्राचीन वैदिक और तांत्रिक शास्त्रों में वर्णित छह सर्वोच्च तांत्रिक कर्मों (षट्कर्म) में से एक है। यह शक्तिशाली अनुष्ठान उस शत्रु या हानिकारक व्यक्ति के मन में गंभीर मानसिक भ्रम, बेचैनी और अरुचि उत्पन्न करने के लिए किया जाता है जो आपके जीवन, व्यवसाय या व्यक्तिगत मामलों में बाधाएं उत्पन्न कर रहा है। मारण या स्तंभन के विपरीत, उच्चाटन कोई हानि नहीं पहुंचाता — यह केवल विरोधी को अपना ध्यान, रुचि और प्रेरणा खो देने का कारण बनता है ताकि वह आपके विरुद्ध अपने शत्रुतापूर्ण कार्य जारी न रख सके। आचार्य पं. रुद्राक्ष राजपुरोहित सिद्ध पीठ नलखेड़ा धाम में विशिष्ट तंत्रोक्त मंत्रों और आहुतियों का उपयोग करके यह प्रयोग संपन्न करते हैं। यह कार्यस्थल उत्पीड़न, निरंतर शत्रु हस्तक्षेप, पीछा करने और कानूनी या व्यक्तिगत मामलों में निरंतर दुर्भावनापूर्ण विरोध के मामलों के लिए विशेष रूप से अनुशंसित है।"
     },
     benefits: {
-      en: ["Causes disinterest in enemies", "Breaks hostile focus and motivation", "Ethical Vedic protection without harm", "Relief from persistent harassment"],
+      en: ["Safely redirects enemy focus away from your life and business", "Resolves persistent harassment and stalking issues", "Ethical protection performed with pure Vedic intent"],
       hi: ["शत्रुओं में अरुचि उत्पन्न करता है", "शत्रुतापूर्ण ध्यान और प्रेरणा को तोड़ता है", "बिना हानि के नैतिक वैदिक सुरक्षा", "निरंतर उत्पीड़न से राहत"]
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
@@ -449,11 +450,11 @@ export const SERVICES = [
     id: "political-puja",
     title: { en: "Political Victory Puja (राजनैतिक विजय पूजा)", hi: "राजनैतिक विजय पूजा" },
     description: {
-      en: "Special Baglamukhi Havan and Anusthan for political leaders seeking divine blessings for election victory, public influence, and governance success.",
-      hi: "चुनावी विजय, जनसेवा में प्रभाव और शासन की सफलता के लिए दिव्य आशीर्वाद चाहने वाले राजनेताओं के लिए विशेष बगलामुखी हवन और अनुष्ठान।"
+      en: "Special multi-day Baglamukhi Anusthan for political leaders seeking election victory, public influence, and governance success.",
+      hi: "चुनावी विजय, जनसेवा में प्रभाव और शासन की सफलता के लिए राजनेताओं के लिए विशेष बहु-दिवसीय बगलामुखी अनुष्ठान।"
     },
     longDescription: {
-      en: "Maa Baglamukhi is the supreme deity for Stambhan (paralysis) of opponents and Vashikaran (attraction) of masses. This specialized Political Victory Puja is designed for political leaders, candidates, and public figures who are contesting elections or seeking to strengthen their public presence and governance. Acharya Pt. Rudraksh Rajpurohit performs a customized multi-day Anusthan combining Baglamukhi Havan, Sawa Lakh Jaap, and specific Yantra Prana Pratishtha to ensure divine backing in political endeavors. The ritual is known to enhance the individual's charisma, decision-making abilities, and public appeal while neutralizing the machinations of political opponents. Many successful political leaders across Madhya Pradesh and India have sought Acharya Ji's guidance before major electoral contests. This puja is performed with complete secrecy and spiritual discipline at Siddh Peeth Nalkheda Dham.",
+      en: "**How does the Political Victory Puja assist public figures?** Maa Baglamukhi is revered as the ultimate deity for Stambhan (freeing opponents' speech) and Akarshan (attracting masses). We perform this specialized Political Victory Puja at Nalkheda Dham for candidates and leaders contesting elections. Chanting Sawa Lakh mantras and performing customized Havans helps enhance your public charisma, decision-making, and public appeal while neutralizing political conspiracies.",
       hi: "माँ बगलामुखी शत्रुओं के स्तंभन (पंगु करने) और जनता के वशीकरण (आकर्षण) की सर्वोच्च देवी हैं। यह विशेष राजनैतिक विजय पूजा उन राजनीतिक नेताओं, उम्मीदवारों और सार्वजनिक हस्तियों के लिए डिज़ाइन की गई है जो चुनाव लड़ रहे हैं या अपनी सार्वजनिक उपस्थिति और शासन को मजबूत करना चाहते हैं। आचार्य पं. रुद्राक्ष राजपुरोहित बगलामुखी हवन, सवा लाख जाप और विशिष्ट यंत्र प्राण प्रतिष्ठा को मिलाकर एक अनुकूलित बहु-दिवसीय अनुष्ठान करते हैं। यह अनुष्ठान व्यक्ति के आकर्षण, निर्णय लेने की क्षमता और जनता में लोकप्रियता को बढ़ाने के लिए जाना जाता है जबकि राजनीतिक विरोधियों की चालों को बेअसर करता है। मध्य प्रदेश और भारत भर के कई सफल राजनीतिक नेताओं ने प्रमुख चुनावी लड़ाइयों से पहले आचार्य जी का मार्गदर्शन लिया है। यह पूजा सिद्ध पीठ नलखेड़ा धाम में पूर्ण गोपनीयता और आध्यात्मिक अनुशासन के साथ संपन्न की जाती है।"
     },
     benefits: {
@@ -469,12 +470,12 @@ export const SERVICES = [
     id: "kundali-astrology",
     title: { en: "Kundali Analysis & Astrology (कुंडली विश्लेषण)", hi: "कुंडली विश्लेषण एवं ज्योतिष" },
     description: {
-      en: "Expert Vedic Kundali (birth chart) analysis by Acharya Ji to identify planetary doshas, predict life events, and recommend specific remedial pujas.",
-      hi: "ग्रह दोषों की पहचान, जीवन की घटनाओं की भविष्यवाणी और विशिष्ट उपचारात्मक पूजाओं की सिफारिश के लिए आचार्य जी द्वारा विशेषज्ञ वैदिक कुंडली (जन्म कुंडली) विश्लेषण।"
+      en: "Expert birth chart analysis to identify planetary doshas, predict events, and recommend Vedic remedies.",
+      hi: "ग्रह दोषों की पहचान, जीवन की भविष्यवाणियों और वैदिक उपायों के लिए जन्म कुंडली का विशेषज्ञ विश्लेषण।"
     },
     longDescription: {
-      en: "Acharya Pt. Rudraksh Rajpurohit provides comprehensive Vedic Kundali (Janam Patri) analysis using classical Jyotish Shastra methods. Based on your exact birth date, time, and location, he prepares a detailed horoscope chart mapping the positions of all nine planets (Navagraha) and their influence on different houses of your life. This analysis reveals hidden doshas such as Manglik Dosh, Kaal Sarp Dosh, Pitra Dosh, Shani Dasha, and Rahu-Ketu transit effects that may be causing obstacles in marriage, career, health, or finances. After diagnosis, Acharya Ji recommends personalized Vedic remedies including specific Havan, Mantra Jaap, Gemstone therapy, and Yantra Dharana. He also provides Muhurta (auspicious timing) analysis for important life events like marriage, Griha Pravesh (housewarming), business launch, and travel. Online Kundali consultation is available via WhatsApp or phone for devotees who cannot visit Nalkheda Dham in person.",
-      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित शास्त्रीय ज्योतिष शास्त्र विधियों का उपयोग करके व्यापक वैदिक कुंडली (जन्म पत्री) विश्लेषण प्रदान करते हैं। आपकी सटीक जन्म तिथि, समय और स्थान के आधार पर, वे सभी नौ ग्रहों (नवग्रह) की स्थिति और आपके जीवन के विभिन्न भावों पर उनके प्रभाव को दर्शाने वाली विस्तृत जन्मकुंडली तैयार करते हैं। यह विश्लेषण मांगलिक दोष, काल सर्प दोष, पितृ दोष, शनि दशा और राहु-केतु गोचर प्रभावों जैसे छिपे हुए दोषों को उजागर करता है जो विवाह, करियर, स्वास्थ्य या वित्त में बाधाएं उत्पन्न कर रहे हो सकते हैं। निदान के बाद, आचार्य जी विशिष्ट हवन, मंत्र जाप, रत्न चिकित्सा और यंत्र धारण सहित व्यक्तिगत वैदिक उपायों की सिफारिश करते हैं। वे विवाह, गृह प्रवेश, व्यापार शुभारंभ और यात्रा जैसी महत्वपूर्ण जीवन घटनाओं के लिए मुहूर्त (शुभ समय) विश्लेषण भी प्रदान करते हैं। जो भक्त नलखेड़ा धाम नहीं आ सकते, उनके लिए व्हाट्सएप या फोन के माध्यम से ऑनलाइन कुंडली परामर्श उपलब्ध है।"
+      en: "**What insights do you get from Kundali Analysis?** Using classical Jyotish Shastra principles, I perform a detailed analysis of your birth chart (Janam Patri). This reveals planetary influences (Navagraha) and diagnoses doshas like Manglik Dosh, Kaal Sarp Dosh, or Pitra Dosh that may block your progress. I recommend personalized remedies, gemstone therapy, and auspicious timings (Muhurtas) for your business, marriage, or travels.",
+      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित शास्त्रीय ज्योतिष शास्त्र विधियों का उपयोग करके व्यापक वैदिक कुंडली (जन्म पत्री) विश्लेषण प्रदान करते हैं। आपकी सटीक जन्म तिथि, समय और स्थान के आधार पर, वे सभी नौ ग्रहों (नवग्रह) की स्थिति और आपके जीवन के विभिन्न भावों पर उनके प्रभाव को दर्शाने वाली विस्तृत जन्मकुंडली तैयार करते हैं। यह विश्लेषण मांगलिक दोष, काल सर्प दोष, पितृ दोष, शनि दशा और राहु-केतु गोचर प्रभावों जैसे छिपे हुए दोषों को उजागर करता है जो विवाह, करियर, स्वास्थ्य या वित्त में बाधाएं उत्पन्न कर रहे हो सकते हैं। निदान के बाद, आचार्य जी विशिष्ट हवन, मंत्र जाप, रत्न चिकित्सा और यंत्र धारण सहित व्यक्तिगत वैदिक उपायों की सिफारिश करते हैं।"
     },
     benefits: {
       en: ["Complete Kundali/birth chart analysis", "Identification of planetary doshas and remedies", "Muhurta for marriage, business, travel", "Online Kundali consultation available"],

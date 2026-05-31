@@ -89,18 +89,49 @@ export default function TestimonialsSection() {
   const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
 
   useEffect(() => {
-    const loadReviews = () => {
+    const loadReviews = async () => {
+      let apiReviews: TestimonialItem[] = [];
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+        const res = await fetch(`${apiBase}/reviews?t=${Date.now()}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data)) {
+            apiReviews = data.map((r: any) => ({
+              _id: r._id,
+              nameEn: r.name,
+              nameHi: r.name,
+              locationEn: r.location || "India",
+              locationHi: r.location || "भारत",
+              textEn: r.text,
+              textHi: r.text,
+              rating: r.rating || 5,
+            }));
+          }
+        }
+      } catch (err) {
+        console.warn("Failed to load approved reviews from backend, using defaults.");
+      }
+
+      // Merge with offline user backup from localStorage (so user sees their submitted pending review locally)
       const saved = localStorage.getItem("user_reviews");
+      let localReviews: TestimonialItem[] = [];
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            setTestimonials([...DEFAULT_TESTIMONIALS, ...parsed]);
+          if (Array.isArray(parsed)) {
+            localReviews = parsed;
           }
         } catch (e) {
-          console.error("Failed to parse reviews", e);
+          console.error("Failed to parse local reviews", e);
         }
       }
+
+      // Filter out local reviews that have already been approved and returned in apiReviews
+      const apiIds = new Set(apiReviews.map(r => r._id));
+      const pendingLocalReviews = localReviews.filter(r => !apiIds.has(r._id));
+
+      setTestimonials([...DEFAULT_TESTIMONIALS, ...apiReviews, ...pendingLocalReviews]);
     };
 
     loadReviews();

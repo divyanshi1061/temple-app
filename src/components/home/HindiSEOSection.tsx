@@ -41,7 +41,7 @@ export default function HindiSEOSection() {
                 <FaOm className="text-lg" />
               </div>
               <h3 className="text-lg md:text-2xl font-bold font-cinzel text-gray-900">
-                {lang === "en" ? "Maa Baglamukhi Beej Mantra" : "माँ बगलामुखी बीज मंत्र"}
+                {lang === "en" ? "How to Chant the Maa Baglamukhi Beej Mantra?" : "माँ बगलामुखी बीज मंत्र का जाप कैसे करें?"}
               </h3>
             </div>
 
@@ -55,13 +55,13 @@ export default function HindiSEOSection() {
             <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
               <p>
                 {lang === "en"
-                  ? "The Baglamukhi Beej Mantra (ॐ ह्लीं) is one of the most potent mantras in Tantric traditions. Goddess Baglamukhi, the eighth Mahavidya, is also known as 'Pitambara Devi' because of her yellow-robed form. This mantra is specifically chanted to paralyze (Stambhan) the speech, movement, and intellect of enemies and hostile forces. It is widely used by sadhaks across India for court case victory, shatru nashak, and protection from black magic."
-                  : "बगलामुखी बीज मंत्र (ॐ ह्लीं) तांत्रिक परंपराओं में सबसे शक्तिशाली मंत्रों में से एक है। देवी बगलामुखी, आठवीं महाविद्या, को उनके पीले वस्त्रों के कारण 'पीताम्बरा देवी' के नाम से भी जाना जाता है। यह मंत्र विशेष रूप से शत्रुओं और शत्रुतापूर्ण शक्तियों की वाणी, गति और बुद्धि को स्तंभित (पंगु) करने के लिए जपा जाता है। इसका उपयोग भारत भर के साधकों द्वारा न्यायालय विजय, शत्रु नाश और काले जादू से सुरक्षा के लिए व्यापक रूप से किया जाता है।"}
+                  ? "**Summary: Chanting the Beej Mantra (ॐ ह्लीं) with yellow turmeric beads under the guidance of a qualified Pandit activates its protective shield.** As a dedicated sadhak at Siddh Peeth Nalkheda Dham, I guide devotees on how to correctly chant the Beej Mantra (ॐ ह्लीं). Goddess Baglamukhi, the eighth Mahavidya, is also known as 'Pitambara Devi' (the yellow-robed Mother). This mantra is chanted to paralyze (Stambhan) the malicious speech, movement, and negative intentions of adversaries. Devotees throughout India use this practice to secure victory in long-standing legal cases, destroy enemy plots, and seek protection from black magic."
+                  : "**सारांश: एक योग्य पंडित के मार्गदर्शन में हल्दी की माला से बीज मंत्र (ॐ ह्लीं) का जाप करने से सुरक्षा कवच सक्रिय होता है।** सिद्ध पीठ नलखेड़ा धाम में एक साधक के रूप में, मैं भक्तों को बीज मंत्र (ॐ ह्लीं) के सही जप विधान का मार्गदर्शन करता हूँ। देवी बगलामुखी, जो आठवीं महाविद्या हैं, उन्हें पीले वस्त्रों के कारण 'पीताम्बरा देवी' भी कहा जाता है। यह मंत्र विशेष रूप से शत्रुओं की कुत्सित वाणी, दुर्भावना और गतिविधियों को स्तंभित (शांत) करने के लिए जपा जाता है। भारत भर के श्रद्धालु न्यायालयों में विजय, शत्रु बाधा से मुक्ति और नकारात्मक शक्तियों से सुरक्षा के लिए इस साधना का आश्रय लेते हैं।"}
               </p>
               <p>
                 {lang === "en"
-                  ? "At Siddh Peeth Nalkheda Dham, Acharya Pt. Rudraksh Rajpurohit performs Sawa Lakh (1,25,000) and 36 Lakh Baglamukhi Mantra Jaap with extreme Vedic discipline. The mantra jaap is performed with specific Tantrokt Samagri, under auspicious muhurta, ensuring maximum spiritual potency and divine protection for the devotee."
-                  : "सिद्ध पीठ नलखेड़ा धाम में, आचार्य पं. रुद्राक्ष राजपुरोहित सवा लाख (1,25,000) और 36 लाख बगलामुखी मंत्र जाप अत्यंत वैदिक अनुशासन के साथ संपन्न करते हैं। मंत्र जाप विशिष्ट तंत्रोक्त सामग्री के साथ, शुभ मुहूर्त में किया जाता है, जिससे भक्त को अधिकतम आध्यात्मिक शक्ति और दिव्य सुरक्षा सुनिश्चित होती है।"}
+                  ? "At our temple, we perform the Sawa Lakh (1,25,000) and 36 Lakh Baglamukhi Mantra Jaap under strict Vedic discipline. I lead our team of learned scholars in conducting these recitations with energized Tantrokt samagri under astrologically auspicious muhurtas, ensuring that the devotee receives maximum spiritual energy and divine safety."
+                  : "हमारे सिद्ध पीठ में, हम अत्यंत कड़े वैदिक अनुशासन के साथ सवा लाख (1,25,000) और 36 लाख बगलामुखी मंत्र जाप अनुष्ठान संपन्न करते हैं। मैं स्वयं हमारे योग्य पुरोहितों के साथ शुभ मुहूर्त में अभिमंत्रित तंत्रोक्त सामग्रियों द्वारा यह जाप करता हूँ, जिससे भक्त को माँ की असीम सुरक्षा और ऊर्जा प्राप्त हो सके।"}
               </p>
             </div>
           </motion.div>
@@ -79,20 +79,20 @@ export default function HindiSEOSection() {
                 <FaOm className="text-lg" />
               </div>
               <h3 className="text-lg md:text-2xl font-bold font-cinzel text-gray-900">
-                {lang === "en" ? "Significance of Nalkheda Dham (नलखेड़ा धाम का महत्व)" : "नलखेड़ा धाम का महत्व"}
+                {lang === "en" ? "Why is Siddh Peeth Nalkheda Dham so spiritually powerful?" : "सिद्ध पीठ नलखेड़ा धाम आध्यात्मिक रूप से इतना शक्तिशाली क्यों है?"}
               </h3>
             </div>
 
             <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
               <p>
                 {lang === "en"
-                  ? "Siddh Peeth Maa Baglamukhi Temple at Nalkheda, Agar Malwa, Madhya Pradesh is one of the most ancient and spiritually potent Shakti Peethas in India. Situated on the banks of the sacred Lakhundar River, this temple dates back to the Pandava era as mentioned in the Kalika Purana. The temple houses the divine Tri-Shakti — Maa Baglamukhi (center), Maa Lakshmi (right), and Maa Saraswati (left)."
-                  : "नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली शक्ति पीठों में से एक है। पवित्र लखुंदर नदी के तट पर स्थित यह मंदिर कालिका पुराण में वर्णित पांडव कालीन है। मंदिर में दिव्य त्रि-शक्ति विराजमान हैं — माँ बगलामुखी (मध्य में), माँ लक्ष्मी (दाईं ओर) और माँ सरस्वती (बाईं ओर)।"}
+                  ? "**Summary: Nalkheda Dham is an ancient, self-manifested Siddh Peeth situated on the Lakhundar River where Lord Krishna advised the Pandavas to perform Baglamukhi Sadhana.** Our temple is situated on the sacred banks of the Lakhundar River (ancient Lakshmana River) in Nalkheda, Madhya Pradesh, representing one of the oldest Shakti Peethas in India. According to the *Kalika Purana*, the divine Tri-Shakti—Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati—reside here together. The self-manifested idol dates back to the Dwapara Yuga. When the Pandavas faced their greatest crisis before the Kurukshetra war, Lord Krishna personally directed them to perform sadhana here to secure victory."
+                  : "**सारांश: नलखेड़ा धाम लखुंदर नदी के तट पर स्थित एक प्राचीन सिद्ध पीठ है, जहाँ भगवान श्रीकृष्ण ने पांडवों को महाभारत युद्ध में विजय के लिए बगलामुखी साधना करने का निर्देश दिया था।** हमारा यह मंदिर मध्य प्रदेश के नलखेड़ा में पवित्र लखुंदर नदी (प्राचीन लक्ष्मणा नदी) के पावन तट पर स्थित है, जो भारत के सबसे प्राचीन और जाग्रत शक्तिपीठों में से एक है। *कालिका पुराण* के अनुसार, यहाँ त्रि-शक्ति—माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती पिंडी रूप में विराजमान हैं। द्वापर युग में जब पांडवों पर बड़ा संकट आया, तब स्वयं भगवान श्रीकृष्ण ने उन्हें यहाँ विजय साधना करने का मार्गदर्शन दिया था।"}
               </p>
               <p>
                 {lang === "en"
-                  ? "In the temple courtyard, sacred trees including Bel, Champa, Neem, and Peepal grow intertwined from a single root — a divine phenomenon found nowhere else. Thousands of devotees from across India visit Nalkheda Dham annually seeking blessings for court case victory, enemy protection, business growth, and removal of life obstacles. The temple's spiritual potency is believed to amplify the effects of every Havan and Anusthan performed within its premises."
-                  : "मंदिर के प्रांगण में बेल, चंपा, नीम और पीपल के पवित्र वृक्ष एक ही जड़ से जुड़े हुए उगते हैं — एक ऐसा दिव्य चमत्कार जो अन्यत्र कहीं नहीं मिलता। पूरे भारत से हजारों भक्त प्रतिवर्ष नलखेड़ा धाम में न्यायालय विजय, शत्रु सुरक्षा, व्यापार वृद्धि और जीवन की बाधाओं के निवारण के लिए आशीर्वाद लेने आते हैं। माना जाता है कि मंदिर की आध्यात्मिक शक्ति इसके परिसर में किए गए प्रत्येक हवन और अनुष्ठान के प्रभाव को कई गुना बढ़ा देती है।"}
+                  ? "In our temple courtyard, you will witness a divine phenomenon: sacred trees of Bel, Champa, Neem, and Peepal all grow conjoined from a single root. Thousands of devotees journey to Nalkheda Dham every year to seek blessings for business growth, debt relief, health issues, and legal resolution. The high spiritual vibration of this land amplifies the impact of every havan and anusthan we perform."
+                  : "हमारे मंदिर के प्रांगण में एक अद्भुत प्राकृतिक चमत्कार दिखाई देता है, जहाँ बेल, चंपा, नीम और पीपल के पवित्र वृक्ष एक ही जड़ से जुड़े उग रहे हैं। हर वर्ष हजारों श्रद्धालु व्यापारिक उन्नति, ऋण मुक्ति, आरोग्य और अदालती विजय के लिए यहाँ आते हैं। इस भूमि की पवित्र ऊर्जा हमारे द्वारा किए जाने वाले प्रत्येक हवन और अनुष्ठान के प्रभाव को कई गुना बढ़ा देती है।"}
               </p>
             </div>
           </motion.div>
@@ -110,20 +110,20 @@ export default function HindiSEOSection() {
                 <FaOm className="text-lg" />
               </div>
               <h3 className="text-lg md:text-2xl font-bold font-cinzel text-gray-900">
-                {lang === "en" ? "About Acharya Pt. Rudraksh Rajpurohit" : "आचार्य पं. रुद्राक्ष राजपुरोहित के बारे में"}
+                {lang === "en" ? "Who is Acharya Pt. Rudraksh Rajpurohit?" : "आचार्य पं. रुद्राक्ष राजपुरोहित कौन हैं?"}
               </h3>
             </div>
 
             <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
               <p>
                 {lang === "en"
-                  ? "Acharya Pt. Rudraksh Rajpurohit is a highly revered Vedic Priest, Bagalmukhi Sadhak, and Tantric scholar based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda Dham, Madhya Pradesh. With decades of dedication to Vedic Sadhana and Tantra, he has guided thousands of devotees through transformative rituals including Baglamukhi Havan, Lal Mirchi Havan, Nyayalay Vijay Puja, and Shatru Stambhan."
-                  : "आचार्य पं. रुद्राक्ष राजपुरोहित मध्य प्रदेश के पवित्र सिद्ध पीठ माँ बगलामुखी मंदिर, नलखेड़ा धाम में स्थित एक अत्यंत प्रतिष्ठित वैदिक पुजारी, बगलामुखी साधक और तांत्रिक विद्वान हैं। वैदिक साधना और तंत्र के प्रति दशकों के समर्पण के साथ, उन्होंने बगलामुखी हवन, लाल मिर्ची हवन, न्यायालय विजय पूजा और शत्रु स्तंभन सहित परिवर्तनकारी अनुष्ठानों के माध्यम से हजारों भक्तों का मार्गदर्शन किया है।"}
+                  ? "**Summary: Acharya Pt. Rudraksh Rajpurohit is a traditional Vedic Priest and Tantric scholar dedicated to preserving scriptural purity at Maa Baglamukhi Siddh Peeth.** I am Acharya Pt. Rudraksh Rajpurohit, a dedicated servant and priest at the Siddh Peeth Maa Baglamukhi Temple. Carrying forward the sacred legacy of our ancestors, I have dedicated decades to the study and practice of Vedic sadhana and Tantra. I help devotees navigate life's challenges by conducting authentic rituals like the Baglamukhi Havan, Lal Mirchi Havan, Nyayalay Vijay Puja, and Shatru Stambhan."
+                  : "**सारांश: आचार्य पं. रुद्राक्ष राजपुरोहित माँ बगलामुखी सिद्ध पीठ में शास्त्रीय शुद्धता बनाए रखने के लिए समर्पित एक पारंपरिक वैदिक पुजारी और तांत्रिक विद्वान हैं।** मैं, आचार्य पं. रुद्राक्ष राजपुरोहित, सिद्ध पीठ माँ बगलामुखी मंदिर में पीढ़ियों से चली आ रही परंपरा का निर्वहन करने वाला एक विनम्र पुरोहित और साधक हूँ। दशकों से वैदिक साधना और तंत्र के अध्ययन में लीन रहते हुए, मैंने देश-विदेश के हजारों श्रद्धालुओं का मार्गदर्शन किया है। मैं उनके जीवन की समस्याओं के निवारण के लिए बगलामुखी हवन, उग्र लाल मिर्ची हवन, न्यायालय विजय पूजा और शत्रु स्तंभन जैसे वैदिक अनुष्ठानों का संचालन करता हूँ।"}
               </p>
               <p>
                 {lang === "en"
-                  ? "He strictly follows authentic Vedic scriptures and uses only pure Tantrokt Samagri (prescribed offerings) in every ritual. Known for his compassion and spiritual integrity, Acharya Ji offers both in-person and online Havan and Anusthan services for devotees across India and abroad. Whether you need Vashikaran, Vyapar Vraddhi, Santan Prapti, Maha Mrityunjay Anusthan, or any other Vedic remedy — Acharya Pt. Rudraksh Rajpurohit provides personalized guidance with guaranteed spiritual purity."
-                  : "वे प्रत्येक अनुष्ठान में प्रामाणिक वैदिक शास्त्रों का सख्ती से पालन करते हैं और केवल शुद्ध तंत्रोक्त सामग्री (निर्धारित आहुतियाँ) का उपयोग करते हैं। अपनी करुणा और आध्यात्मिक सत्यनिष्ठा के लिए जाने जाने वाले आचार्य जी भारत और विदेशों के भक्तों के लिए व्यक्तिगत और ऑनलाइन दोनों प्रकार की हवन और अनुष्ठान सेवाएं प्रदान करते हैं। चाहे आपको वशीकरण, व्यापार वृद्धि, संतान प्राप्ति, महामृत्युंजय अनुष्ठान या कोई अन्य वैदिक उपाय चाहिए — आचार्य पं. रुद्राक्ष राजपुरोहित गारंटीड आध्यात्मिक शुद्धता के साथ व्यक्तिगत मार्गदर्शन प्रदान करते हैं।"}
+                  ? "I strictly adhere to the guidelines of the scriptures, using only pure, authentic Tantrokt samagri in every ceremony. Whether you require guidance for relationship resolution, business expansion, family protection, or planetary remedies, I provide personal consultations and perform these pujas both in-person and online with absolute spiritual dedication."
+                  : "मैं प्रत्येक अनुष्ठान में पूर्ण शुद्धता का ध्यान रखता हूँ और केवल शास्त्रों में वर्णित पीत एवं तंत्रोक्त पूजन सामग्रियों का ही उपयोग करता हूँ। चाहे आपको वैवाहिक कलह, व्यापारिक रुकावटों, शत्रु भय या ग्रह बाधाओं के निवारण के लिए उपाय चाहिए—मैं व्यक्तिगत रूप से या ऑनलाइन माध्यम से पूर्ण वैदिक निष्ठा के साथ पूजा संपन्न कर आपका मार्गदर्शन करता हूँ।"}
               </p>
               <p className="text-xs text-gray-500 font-bold mt-4">
                 {lang === "en"

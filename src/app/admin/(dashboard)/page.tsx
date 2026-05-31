@@ -10,7 +10,8 @@ import {
   FaPhone, 
   FaCheckCircle, 
   FaExclamationTriangle,
-  FaArrowRight
+  FaArrowRight,
+  FaStar
 } from "react-icons/fa";
 
 export default function AdminDashboardPage() {
@@ -19,6 +20,8 @@ export default function AdminDashboardPage() {
     videoCount: 0,
     hasHeroImage: false,
     hasContactConfig: false,
+    reviewCount: 0,
+    pendingReviewCount: 0,
   });
   
   const [connectionStatus, setConnectionStatus] = useState<"loading" | "connected" | "disconnected">("loading");
@@ -29,23 +32,29 @@ export default function AdminDashboardPage() {
         setConnectionStatus("loading");
         
         // Parallel fetch of public details to extract counts & statuses
-        const [galleryRes, videosRes, heroRes, contactRes] = await Promise.all([
+        const [galleryRes, videosRes, heroRes, contactRes, reviewsRes] = await Promise.all([
           fetch(`${API_BASE}/gallery`),
           fetch(`${API_BASE}/videos`),
           fetch(`${API_BASE}/hero`),
           fetch(`${API_BASE}/contact`),
+          fetchWithAuth(`${API_BASE}/admin/reviews`).catch(() => null),
         ]);
 
         const gallery = galleryRes.ok ? await galleryRes.json() : [];
         const videos = videosRes.ok ? await videosRes.json() : [];
         const hero = heroRes.ok ? await heroRes.json() : null;
         const contact = contactRes.ok ? await contactRes.json() : null;
+        const reviews = reviewsRes && reviewsRes.ok ? await reviewsRes.json() : [];
+
+        const pending = Array.isArray(reviews) ? reviews.filter((r: any) => !r.approved).length : 0;
 
         setStats({
           galleryCount: Array.isArray(gallery) ? gallery.length : 0,
           videoCount: Array.isArray(videos) ? videos.length : 0,
           hasHeroImage: !!hero,
           hasContactConfig: !!contact,
+          reviewCount: Array.isArray(reviews) ? reviews.length : 0,
+          pendingReviewCount: pending,
         });
 
         setConnectionStatus("connected");
@@ -78,6 +87,16 @@ export default function AdminDashboardPage() {
       color: "from-blue-50/50 to-indigo-50/20",
       borderColor: "border-blue-200/50",
       iconColor: "text-blue-700",
+    },
+    {
+      title: "Review Manager",
+      desc: "Approve or delete dynamic user reviews. Pending reviews must be verified before showing live.",
+      icon: FaStar,
+      count: `${stats.pendingReviewCount} Pending / ${stats.reviewCount} Total`,
+      path: "/admin/reviews",
+      color: "from-yellow-50/50 to-amber-50/20",
+      borderColor: "border-gold/20",
+      iconColor: "text-amber-800",
     },
     {
       title: "Acharya Portrait Manager",

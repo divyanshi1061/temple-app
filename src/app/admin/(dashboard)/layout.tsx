@@ -14,7 +14,8 @@ import {
   FaGlobe, 
   FaBars, 
   FaTimes,
-  FaCogs
+  FaCogs,
+  FaStar
 } from "react-icons/fa";
 
 export default function DashboardLayout({
@@ -63,6 +64,7 @@ export default function DashboardLayout({
     { label: "Overview", icon: FaCogs, path: "/admin" },
     { label: "Gallery Manager", icon: FaImage, path: "/admin/gallery" },
     { label: "Video Manager", icon: FaVideo, path: "/admin/videos" },
+    { label: "Review Manager", icon: FaStar, path: "/admin/reviews" },
     { label: "Acharya Portrait", icon: FaSun, path: "/admin/hero" },
     { label: "Contact Details", icon: FaPhone, path: "/admin/contact" },
   ];
