@@ -78,8 +78,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "सिद्ध पीठ माँ बगलामुखी मंदिर नलखेड़ा धाम क्या है और इसका आध्यात्मिक महत्व क्या है?"
     },
     a: {
-      en: "**Siddh Peeth Maa Baglamukhi Mandir Nalkheda Dham** is one of the most powerful **Baglamukhi Shakti Peethas** in India, situated on the banks of the sacred **Lakhundar River** in Nalkheda, District Agar Malwa, Madhya Pradesh. Dating back to the **Pandava era**, this ancient temple is world-renowned for its intense **Vedic Pujas and Tantra Havans**. It is believed that prayers offered here yield **swift and powerful results** due to the immense spiritual energy of the Siddh Peeth.",
-      hi: "**सिद्ध पीठ माँ बगलामुखी मंदिर नलखेड़ा धाम** भारत में सबसे शक्तिशाली **बगलामुखी शक्ति पीठों** में से एक है, जो मध्य प्रदेश के आगर मालवा जिले के नलखेड़ा में पवित्र **लखूंदर नदी** के तट पर स्थित है। **पांडव काल** का यह प्राचीन मंदिर अपने गहन **वैदिक पूजा और तंत्र हवन** के लिए दुनिया भर में प्रसिद्ध है। ऐसा माना जाता है कि सिद्ध पीठ की असीम आध्यात्मिक ऊर्जा के कारण यहाँ की गई प्रार्थनाओं के **शीघ्र और शक्तिशाली परिणाम** मिलते हैं।"
+      en: "**Siddh Peeth Maa Baglamukhi Mandir Nalkheda Dham** is one of the most ancient and spiritually powerful **Maa Baglamukhi Devi Temples** in India, situated on the banks of the sacred **Lakhundar River** in Nalkheda, District Agar Malwa, Madhya Pradesh. Dating back to the **Pandava era**, this ancient temple is world-renowned for its intense **Vedic Pujas and Tantra Havans**. It is believed that prayers offered here yield **swift and powerful results** due to the immense spiritual energy of the Siddh Peeth.",
+      hi: "**सिद्ध पीठ माँ बगलामुखी मंदिर नलखेड़ा धाम** भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली **माँ बगलामुखी देवी मंदिरों** में से एक है, जो मध्य प्रदेश के आगर मालवा जिले के नलखेड़ा में पवित्र **लखूंदर नदी** के तट पर स्थित है। **पांडव काल** का यह प्राचीन मंदिर अपने गहन **वैदिक पूजा और तंत्र हवन** के लिए दुनिया भर में प्रसिद्ध है। ऐसा माना जाता है कि सिद्ध पीठ की असीम आध्यात्मिक ऊर्जा के कारण यहाँ की गई प्रार्थनाओं के **शीघ्र और शक्तिशाली परिणाम** मिलते हैं।"
     }
   },
   {
