@@ -425,6 +425,25 @@ main {
   }
 }
 
+/* Spin slow reverse for hero graphics */
+@keyframes spin-slow-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 30s linear infinite;
+}
 
-
-
+/* Image reel marquee loop and fading edges mask */
+.animate-marquee-loop {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+.animate-marquee-loop:hover {
+  animation-play-state: paused;
+}
+.mask-fade-edges {
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}

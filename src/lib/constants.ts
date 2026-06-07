@@ -42,18 +42,18 @@ export const NAV_LINKS = [
 export const SERVICES = [
   {
     id: "baglamukhi-36-sawa-lakh",
-    title: { en: "Maa Baglamukhi 36 Lakh & Sawa Lakh Chanting (जाप)", hi: "माँ बगलामुखी 36 लाख एवं सवा लाख जाप" },
+    title: { en: "Maa Baglamukhi Sawa Lakh & 36 Lakh Mantra Chanting", hi: "Maa Baglamukhi Sawa Lakh & 36 Lakh Mantra Chanting" },
     description: {
-      en: "Experience ultimate protection and obstacle removal through our dedicated chanting of Sawa Lakh or 36 Lakh mantras.",
-      hi: "सवा लाख या 36 लाख मंत्रों के हमारे समर्पित जाप के माध्यम से परम सुरक्षा और बाधा निवारण का अनुभव करें।"
+      en: "Seek divine protection and remove life-altering blockages by performing the sacred Sawa Lakh (125,000) or 36 Lakh mantra chanting under strict Vedic disciplines.",
+      hi: "सवा लाख या 36 लाख वैदिक मंत्रों के अनुष्ठानिक जाप द्वारा अपने जीवन में सुरक्षा कवच निर्मित करें और कठिन बाधाओं का निवारण करें।"
     },
     longDescription: {
-      en: "**What is the significance of the Maa Baglamukhi Sawa Lakh / 36 Lakh Jaap?** Chanting 1,25,000 (Sawa Lakh) or 36,000,000 (36 Lakh) sacred mantras of Goddess Baglamukhi is a grand Vedic discipline of supreme intensity. Grounded in the teachings of the *Rudrayamala Tantra*, we perform this anusthan using yellow turmeric beads, yellow robes, and specialized offering materials. I, along with our team of learned scholars at Siddh Peeth Nalkheda Dham, chant these mantras under strict Vedic rules. This creates an impenetrable shield of protection around you, helping you overcome severe life obstacles, financial blockages, and negative influences.",
-      hi: "**माँ बगलामुखी सवा लाख एवं 36 लाख जाप का क्या महत्व है?** देवी बगलामुखी के सवा लाख (1,25,000) या 36 लाख मंत्रों का जाप करना सर्वोच्च तीव्रता का एक महान वैदिक अनुष्ठान है। *रुद्रयामल तंत्र* के सिद्धांतों के अनुसार, हम पीले वस्त्र, हल्दी की माला और विशिष्ट पूजन सामग्री का उपयोग करके यह जाप करते हैं। मैं और हमारे विद्वान पंडित सिद्ध पीठ नलखेड़ा धाम में शास्त्र सम्मत नियमों के तहत यह अनुष्ठान संपन्न करते हैं, जो आपके चारों ओर एक अभेद्य सुरक्षा कवच निर्मित करता है और जीवन की बड़ी बाधाओं को दूर करता है।"
+      en: "Chanting the sacred mantras of Goddess Baglamukhi 1,25,000 (Sawa Lakh) or 36,000,000 (36 Lakh) times is an intense spiritual discipline of supreme energy, rooted in the ancient Rudrayamala Tantra. At our sanctum in Siddh Peeth Nalkheda Dham, our team of dedicated Vedic scholars and I perform this intensive Anusthan wearing yellow robes and using energized turmeric beads. This sacred chanting creates a protective spiritual shield around you, helping dissolve deep-seated life crises, severe financial stagnancy, and persistent negative influences.",
+      hi: "माँ देवी बगलामुखी के सवा लाख (1,25,000) या 36 लाख दिव्य मंत्रों का अनुष्ठानिक जाप करना असाधारण ऊर्जा का संचार करने वाला एक महान यज्ञ विधान है। रुद्रयामल तंत्र के सिद्धांतों के अनुसार, हम सिद्ध पीठ नलखेड़ा धाम में पीले वस्त्र, हल्दी की माला और पीली पूजन सामग्रियों का उपयोग करके यह जाप करते हैं। मैं और हमारे विद्वान आचार्य शास्त्र-सम्मत नियमों के तहत पूर्ण पवित्रता के साथ यह अनुष्ठान संपन्न करते हैं, जो आपके जीवन के संकटों, शत्रु बाधाओं और नकारात्मक प्रभावों को निष्प्रभावी कर एक अभेद्य रक्षा चक्र निर्मित करता है।"
     },
     benefits: {
-      en: ["Impenetrable shield of spiritual protection", "Removal of deep ancestral and planetary obstacles", "Attraction of peace, prosperity, and divine grace", "Strict observance of yellow-clothed Vedic protocols"],
-      hi: ["आध्यात्मिक सुरक्षा का अभेद्य कवच", "गहरे पितृ और ग्रह दोषों का निवारण", "शांति, समृद्धि और देवी की असीम कृपा", "पीत वस्त्रों और शास्त्रीय नियमों का पूर्ण पालन"]
+      en: ["Creates an impenetrable shield of spiritual protection", "Helps clear ancestral and planetary obstacles", "Restores peace, prosperity, and mental clarity", "Strict observance of scriptural yellow-robe protocols"],
+      hi: ["आकस्मिक विपत्तियों से आध्यात्मिक सुरक्षा का कवच", "गहरे पितृ और कुंडली जनित ग्रह दोषों का निवारण", "मानसिक शांति, पारिवारिक समृद्धि और देवी कृपा", "पीत वस्त्रों और वैदिक मर्यादाओं का पूर्ण शास्त्रीय पालन"]
     },
     duration: { en: "Extended Days", hi: "विस्तारित दिन" },
     icon: "B3",
@@ -63,14 +63,14 @@ export const SERVICES = [
   },
   {
     id: "baglamukhi-vishesh-havan",
-    title: { en: "Maa Baglamukhi Vishesh/Maha-Vishesh Havan", hi: "माँ बगलामुखी विशेष / महाविशेष हवन" },
+    title: { en: "Maa Baglamukhi Vishesh & Maha-Vishesh Havan", hi: "Maa Baglamukhi Vishesh & Maha-Vishesh Havan" },
     description: {
-      en: "We perform intense fire rituals with custom samagri for immediate relief from severe crises and enemies.",
-      hi: "हम गंभीर संकटों और शत्रुओं से तत्काल राहत के लिए विशेष सामग्रियों के साथ गहन अग्नि अनुष्ठान करते हैं।"
+      en: "This special fire ritual is recommended for devotees seeking immediate spiritual intervention during severe personal crises, sudden health concerns, or hostile actions.",
+      hi: "गंभीर संकटों, मुकदमों और शत्रुओं के कुचक्रों से तत्काल राहत के लिए विशेष सामग्रियों के साथ गहन अग्नि अनुष्ठान।"
     },
     longDescription: {
-      en: "**When should you perform the Maa Baglamukhi Vishesh/Maha-Vishesh Havan?** We recommend this special fire ritual (Havan) for devotees who need immediate relief from severe crises, sudden health issues, or hostile enemy actions. Following the instructions in the *Mantra Mahodadhi*, we offer specific Tantrokt samagri (ingredients like yellow mustard, pure cow ghee, and yellow flowers) to the sacred fire. I guide this ritual personally at Nalkheda Dham to ensure the pure channelization of Maa Baglamukhi's Stambhan power.",
-      hi: "**माँ बगलामुखी विशेष / महाविशेष हवन कब करना चाहिए?** हम यह विशेष हवन उन भक्तों के लिए अनुशंसित करते हैं जो अचानक आए संकटों, गंभीर कानूनी मुकदमों या शत्रुओं के बड़े षड्यंत्रों से तत्काल राहत चाहते हैं। *मंत्र महोदधि* के शास्त्रीय विधानों का पालन करते हुए, हम पवित्र अग्नि में पीली सरसों, शुद्ध घी और पीले पुष्पों जैसी विशिष्ट सामग्रियों की आहुति देते हैं। नलखेड़ा धाम में मैं स्वयं इस अनुष्ठान का मार्गदर्शन करता हूँ।"
+      en: "This special fire ritual (Havan) is recommended for devotees seeking immediate spiritual intervention during severe personal crises, sudden health concerns, or hostile actions. Guided by the principles of Mantra Mahodadhi, we offer specific Tantrokt samagri (ingredients like yellow mustard, pure cow ghee, and yellow flowers) to the sacred fire. I personally lead this ritual at Nalkheda Dham to ensure that the divine power of Maa Baglamukhi is channelled purely for your protection and relief.",
+      hi: "मंत्र महोदधि के शास्त्रीय विधानों का अनुसरण करते हुए, हम पवित्र अग्नि में पीली सरसों, शुद्ध घी और पीले पुष्पों जैसी विशिष्ट सामग्रियों की आहुति समर्पित करते हैं। नलखेड़ा धाम में मैं स्वयं इस अनुष्ठान का मार्गदर्शन करता हूँ ताकि देवी की दिव्य शक्ति का संचार सीधे आपकी रक्षा के लिए हो सके।"
     },
     benefits: {
       en: ["Immediate relief from active personal or legal crises", "Neutralization of malicious plots and hidden enemies", "Empowerment through energized Tantrokt samagri"],
@@ -84,14 +84,14 @@ export const SERVICES = [
   },
   {
     id: "lal-mirchi-havan",
-    title: { en: "Lal Mirchi Havan", hi: "लाल मिर्ची हवन" },
+    title: { en: "Lal Mirchi Havan", hi: "Lal Mirchi Havan" },
     description: {
       en: "Neutralize hostile conspiracies and malevolent forces with red chili Tantric offerings under scriptural safety.",
       hi: "शास्त्रीय सुरक्षा के तहत लाल मिर्च की तांत्रिक आहुतियों से शत्रुतापूर्ण षड्यंत्रों और बुरी शक्तियों को शांत करें।"
     },
     longDescription: {
-      en: "**What are the rules of Lal Mirchi Havan?** Lal Mirchi Havan is a highly specialized and fierce (Ugra) Tantric ritual that we perform at the banks of the Lakhundar River in Nalkheda Dham. In this ritual, whole dried red chilies are offered into the sacrificial fire while chanting potent Baglamukhi mantras. Following *Shatkarma* rules, this is strictly done under my personal guidance to ensure the negative energies are safely neutralized without causing harm to anyone. It is a powerful remedy for business jealousy and false allegations.",
-      hi: "**लाल मिर्ची हवन के क्या नियम हैं?** लाल मिर्ची हवन नलखेड़ा धाम में लखुंदर नदी के तट पर किया जाने वाला एक अत्यधिक विशिष्ट और उग्र तांत्रिक अनुष्ठान है। इस हवन में, शक्तिशाली बगलामुखी मंत्रों के साथ पवित्र अग्नि में साबुत लाल मिर्च अर्पित की जाती है। *षट्कर्म* ग्रंथों के नियमों के अनुसार, इसे मेरे प्रत्यक्ष मार्गदर्शन में किया जाता है ताकि नकारात्मक ऊर्जाओं को सुरक्षित रूप से बेअसर किया जा सके।"
+      en: "Lal Mirchi Havan is a specialized and intense (Ugra) ritual performed on the sacred banks of the Lakhundar River in Nalkheda. During this Yajna, whole dried red chilies are offered to the consecrated fire alongside powerful Baglamukhi mantras. Following the strict rules of Shatkarma, this ritual is performed under my direct supervision to safely neutralize hostile conspiracies, professional jealousy, and negative energy without causing harm.",
+      hi: "लाल मिर्ची Havan नलखेड़ा धाम में लखुंदर नदी के तट पर किया जाने वाला एक अत्यधिक विशिष्ट और उग्र तांत्रिक अनुष्ठान है। इस हवन में, शक्तिशाली बगलामुखी मंत्रों के साथ पवित्र अग्नि में साबुत लाल मिर्च अर्पित की जाती है। षट्कर्म ग्रंथों के नियमों के अनुसार, इसे मेरे प्रत्यक्ष मार्गदर्शन में किया जाता है ताकि नकारात्मक ऊर्जाओं को सुरक्षित रूप से बेअसर किया जा सके।"
     },
     benefits: {
       en: ["Direct neutralization of evil eye and business envy", "Safe defense against aggressive black magic", "Resolution of false allegations and disputes"],
@@ -105,14 +105,14 @@ export const SERVICES = [
   },
   {
     id: "baglamukhi-anushthan",
-    title: { en: "Maa Baglamukhi Anusthan", hi: "माँ बगलामुखी अनुष्ठान" },
+    title: { en: "Maa Baglamukhi Anusthan", hi: "Maa Baglamukhi Anusthan" },
     description: {
       en: "Invite the divine presence of the eighth Mahavidya to clear paths in career, business, and daily life.",
       hi: "करियर, व्यवसाय और दैनिक जीवन में सफलता का मार्ग प्रशस्त करने के लिए अष्टम महाविद्या का आह्वान करें।"
     },
     longDescription: {
-      en: "**Why is Maa Baglamukhi Anusthan performed at Nalkheda Dham?** This sacred multi-day ritual invokes Goddess Baglamukhi, the eighth Mahavidya, who is the ruler of speech and intellect. At our temple, we design this Anusthan specifically to clear persistent blockages in your career, business, or family life. We follow exact Vedic protocols, using yellow materials and chanting ancient hymns, to bring divine protection and mental peace to you and your family.",
-      hi: "**नलखेड़ा धाम में माँ बगलामुखी अनुष्ठान क्यों किया जाता है?** कई दिनों तक चलने वाला यह पवित्र अनुष्ठान आठवीं महाविद्या माँ बगलामुखी को समर्पित है, जो वाणी और बुद्धि की अधिष्ठात्री हैं। हमारे मंदिर में, हम आपके करियर, व्यवसाय या पारिवारिक जीवन में आ रही लगातार बाधाओं को दूर करने के लिए विशेष रूप से यह अनुष्ठान तैयार करते हैं। हम वैदिक नियमों का पूर्णतः पालन करते हैं।"
+      en: "This sacred multi-day ritual invokes Goddess Baglamukhi, the eighth Mahavidya, who rules speech, intellect, and victory. At Nalkheda Dham, we perform this Anusthan to clear persistent delays and hurdles in your career, business, or family life. By observing exact Vedic protocols, using yellow offerings, and chanting ancient hymns, we help restore harmony, clarity, and peace to your household.",
+      hi: "कई दिनों तक चलने वाला यह पवित्र अनुष्ठान आठवीं महाविद्या माँ बगलामुखी को समर्पित है, जो वाणी और बुद्धि की अधिष्ठात्री हैं। हमारे मंदिर में, हम आपके करियर, व्यवसाय या पारिवारिक जीवन में आ रही लगातार बाधाओं को दूर करने के लिए विशेष रूप से यह अनुष्ठान तैयार करते हैं। हम वैदिक नियमों का पूर्णतः पालन करते हैं।"
     },
     benefits: {
       en: ["Removal of career bottlenecks and growth blocks", "Protection against negative energies and household disputes", "Restoration of absolute mental clarity and focus"],
@@ -120,20 +120,20 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "BA",
-    image: "/baglamukhi-anusthan-main.webp",
+    image: "/baglamukhi-anushthan-main.webp",
     category: "anusthan",
     popular: true,
   },
   {
     id: "nyayalay-vijay",
-    title: { en: "Nyayalay Vijay (Court Case Victory)", hi: "न्यायालय विजय (कोर्ट केस विजय)" },
+    title: { en: "Nyayalay Vijay Anusthan (Court Case)", hi: "Nyayalay Vijay Anusthan (Court Case)" },
     description: {
-      en: "Turn legal proceedings in your favor and silence false witnesses with Maa Baglamukhi's Stambhan power.",
+      en: "Ongoing legal disputes can be emotionally exhausting and financially draining. Seek justice and resolve false allegations through Maa Baglamukhi's Stambhan power.",
       hi: "माँ बगलामुखी की स्तंभन शक्ति से कानूनी कार्यवाही को अपने पक्ष में करें और विरोधियों को शांत करें।"
     },
     longDescription: {
-      en: "**How does Maa Baglamukhi help in securing Court Case Victory?** Legal disputes can be emotionally exhausting and financially draining. According to the *Kalika Purana*, Maa Baglamukhi possesses the divine power of 'Stambhan'—the capability to paralyze the negative thoughts and speech of opponents. We conduct the Nyayalay Vijay Anusthan using yellow offerings and specialized Sanskrit chants to help you secure justice, turn legal proceedings in your favor, and silence false accusations.",
-      hi: "**कोर्ट केस में विजय के लिए माँ बगलामुखी कैसे सहायता करती हैं?** कानूनी विवाद मानसिक और आर्थिक रूप से व्यक्ति को तोड़ देते हैं। *कालिका पुराण* के अनुसार, माँ बगलामुखी में 'स्तंभन' (विरोधियों की नकारात्मक बुद्धि और वाणी को पंगु बनाने) की दिव्य शक्ति है। हम पीले रंग के उपहारों और विशेष संस्कृत मंत्रों के साथ यह न्यायालय विजय अनुष्ठान करते हैं ताकि आपको न्याय मिल सके।"
+      en: "Ongoing legal disputes can be emotionally exhausting and financially draining. According to the ancient Kalika Purana, Goddess Baglamukhi represents the divine power of 'Stambhan'—the capability to freeze and neutralize negative speech, hostility, and false testimonies of opponents. We conduct the Nyayalay Vijay Anusthan using yellow offerings and specialized Sanskrit chants to help you secure justice and protect your reputation.",
+      hi: "कानूनी विवाद मानसिक और आर्थिक रूप से व्यक्ति को तोड़ देते हैं। कालिका पुराण के अनुसार, माँ बगलामुखी में 'स्तंभन' (विरोधियों की नकारात्मक बुद्धि और वाणी को पंगु बनाने) की दिव्य शक्ति है। हम पीले रंग के उपहारों और विशेष संस्कृत मंत्रों के साथ यह न्यायालय विजय अनुष्ठान करते हैं ताकि आपको न्याय मिल सके।"
     },
     benefits: {
       en: ["Favorable progress in long-pending court disputes", "Neutralization of false allegations and conspiracy", "Restoration of peace of mind and family wealth"],
@@ -147,14 +147,14 @@ export const SERVICES = [
   },
   {
     id: "nav-graha-shanti",
-    title: { en: "Nav Graha Shanti", hi: "नव ग्रह शांति" },
+    title: { en: "Nav Graha Shanti Puja", hi: "Nav Graha Shanti Puja" },
     description: {
       en: "Harmonize the influence of the nine celestial planets to bring prosperity and peace to your life.",
       hi: "जीवन की बाधाओं को दूर करने और समृद्धि आकर्षित करने के लिए सभी नौ ज्योतिषीय ग्रहों की शांति।"
     },
     longDescription: {
-      en: "**What is the purpose of Nav Graha Shanti Puja?** Your birth chart (Kundali) maps the planetary positions that influence your health, career, and marriage. When planets like Saturn, Rahu, or Ketu have a malefic placement, life can feel stagnant. I conduct this comprehensive Nav Graha Shanti Puja to pacify these planetary energies. We chant specific Vedic mantras for each of the nine planets and perform custom homam to restore balance and invite positive energy into your life.",
-      hi: "**नवग्रह शांति पूजा का क्या उद्देश्य है?** आपकी कुंडली ग्रहों की उन स्थितियों को दर्शाती है जो आपके स्वास्थ्य, करियर और विवाह को प्रभावित करती हैं। जब शनि, राहु या केतु जैसे ग्रह प्रतिकूल होते हैं, तो जीवन में ठहराव आ जाता है। मैं इन ग्रहों की ऊर्जाओं को शांत करने के लिए यह व्यापक नवग्रह शांति पूजा आयोजित करता हूँ, जिससे सकारात्मक ऊर्जा का संचार होता है।"
+      en: "Planetary transits and malefic placements in your birth chart (Kundali) can cause stagnation in health, marriage, or career. We perform the Nav Graha Shanti Puja to pacify adverse planetary energies (such as Saturn, Rahu, or Ketu) and align your stars. By chanting dedicated Vedic mantras for each of the nine planets and conducting custom homam, we invite auspiciousness and balance into your life.",
+      hi: "आपकी कुंडली ग्रहों की उन स्थितियों को दर्शाती है जो आपके स्वास्थ्य, करियर और विवाह को प्रभावित करती हैं। जब शनि, राहु या केतु जैसे ग्रह प्रतिकूल होते हैं, तो जीवन में ठहराव आ जाता है। मैं इन ग्रहों की ऊर्जाओं को शांत करने के लिए यह व्यापक नवग्रह शांति पूजा आयोजित करता हूँ, जिससे सकारात्मक ऊर्जा का संचार होता है।"
     },
     benefits: {
       en: ["Reduction of malefic planet influences (Shani, Rahu, Ketu)", "Auspicious alignment for health, wealth, and marriage", "Stabilization of mind and reduction of mental anxiety"],
@@ -167,14 +167,14 @@ export const SERVICES = [
   },
   {
     id: "maha-mrityunjay",
-    title: { en: "Maha Mrityunjay Anusthan", hi: "महामृत्युंजय अनुष्ठान" },
+    title: { en: "Maha Mrityunjay Anusthan", hi: "Maha Mrityunjay Anusthan" },
     description: {
       en: "Invoke Lord Shiva's ultimate healing energy for recovery from severe illness and protection from untimely accidents.",
       hi: "गंभीर बीमारी से उबरने और अकाल मृत्यु के संकट से बचाव के लिए भगवान शिव की परम आरोग्य शक्ति का आह्वान करें।"
     },
     longDescription: {
-      en: "**How does the Maha Mrityunjay Anusthan protect life?** Dedicated to Lord Shiva, the conqueror of death, this intense Vedic anusthan involves chanting the sacred Maha Mrityunjay mantra 1,25,000 times. We perform this ritual at Nalkheda Dham for devotees or their family members who are battling chronic diseases, facing critical medical conditions, or seeking protection from accidents. The high-vibration chants restore health, vitality, and mental strength.",
-      hi: "**महामृत्युंजय अनुष्ठान जीवन की रक्षा कैसे करता है?** मृत्युंजय भगवान शिव को समर्पित इस गहन वैदिक अनुष्ठान में पवित्र महामृत्युंजय मंत्र का सवा लाख बार जाप किया जाता है। हम नलखेड़ा धाम में यह अनुष्ठान उन भक्तों के लिए करते हैं जो पुरानी बीमारियों से जूझ रहे हैं, गंभीर स्वास्थ्य समस्याओं का सामना कर रहे हैं या अकाल मृत्यु के संकट से बचना चाहते हैं।"
+      en: "Dedicated to Lord Shiva, the conqueror of death and disease, this intense Vedic Anusthan involves chanting the sacred Maha Mrityunjay mantra 1,25,000 times. We perform this ritual at Nalkheda Dham for family members battling chronic illness, facing critical medical conditions, or seeking protection from accidents. The high-vibration Vedic chants invoke Lord Shiva's healing energy to restore health, longevity, and vitality.",
+      hi: "मृत्युंजय भगवान शिव को समर्पित इस गहन वैदिक अनुष्ठान में पवित्र महामृत्युंजय मंत्र का सवा लाख बार जाप किया जाता है। हम नलखेड़ा धाम में यह अनुष्ठान उन भक्तों के लिए करते हैं जो पुरानी बीमारियों से जूझ रहे हैं, गंभीर स्वास्थ्य समस्याओं का सामना कर रहे हैं या अकाल मृत्यु के संकट से बचना चाहते हैं।"
     },
     benefits: {
       en: ["Divine healing and recovery from critical illnesses", "Impenetrable shield against accidents and untimely death", "Restoration of physical energy and spiritual peace"],
@@ -187,14 +187,14 @@ export const SERVICES = [
   },
   {
     id: "shatru-stambhan",
-    title: { en: "Shatru Stambhan", hi: "शत्रु स्तंभन" },
+    title: { en: "Shatru Stambhan", hi: "Shatru Stambhan" },
     description: {
       en: "Freeze the hostile actions, speech, and conspiracies of opponents to regain absolute peace of mind.",
       hi: "शत्रु के हानिकारक कार्यों को पंगु बनाने और उनकी शत्रुतापूर्ण योजनाओं व वाणी का स्तंभन करने के लिए तांत्रिक अनुष्ठान।"
     },
     longDescription: {
-      en: "**What is Shatru Stambhan and how does it work?** Shatru Stambhan is a sacred ritual of Maa Baglamukhi designed to freeze the negative intent and actions of adversaries. If you are facing harassment at work, business rivalries, or false litigation, this puja paralyzes the opponent's hostile motivation without causing harm. I perform this with exact Vedic and Tantric mantras at Siddh Peeth Nalkheda Dham to ensure your safety and victory.",
-      hi: "**शत्रु स्तंभन क्या है और यह कैसे कार्य करता है?** शत्रु स्तंभन माँ बगलामुखी का एक पवित्र अनुष्ठान है जिसे विरोधियों के दुर्भावनापूर्ण इरादों और कार्यों को रोकने के लिए किया जाता है। यदि आप कार्यस्थल पर प्रताड़ना, व्यावसायिक प्रतिद्वंद्विता या झूठे मुकदमों का सामना कर रहे हैं, तो यह पूजा बिना किसी को नुकसान पहुँचाए विरोधी के प्रयासों को निष्प्रभावी कर देती है।"
+      en: "Shatru Stambhan is a sacred ritual aimed at freezing and neutralizing the hostile intent and actions of adversaries. If you are facing harassment, unfair business rivalries, or malicious allegations, this puja helps pacify the opponent's aggressive motivation without causing harm. I perform this with exact Vedic and Tantric mantras at Siddh Peeth Nalkheda Dham to ensure your safety and victory.",
+      hi: "शत्रु स्तंभन माँ बगलामुखी का एक पवित्र अनुष्ठान है जिसे विरोधियों के दुर्भावनापूर्ण इरादों और कार्यों को रोकने के लिए किया जाता है। यदि आप कार्यस्थल पर प्रताड़ना, व्यावसायिक प्रतिद्वंद्विता या झूठे मुकदमों का सामना कर रहे हैं, तो यह पूजा बिना किसी को नुकसान पहुँचाए विरोधी के प्रयासों को निष्प्रभावी कर देती है।"
     },
     benefits: {
       en: ["Freezing of enemy speech and false witness statements", "Overcoming professional and personal rivalries", "Complete protection in conflict situations"],
@@ -207,14 +207,14 @@ export const SERVICES = [
   },
   {
     id: "rog-nash",
-    title: { en: "Rog Nash Anusthan", hi: "रोग नाश अनुष्ठान" },
+    title: { en: "Rog Nash Anusthan", hi: "Rog Nash Anusthan" },
     description: {
       en: "Eradicate persistent health issues and physical ailments through dedicated healing offerings and mantra chanting.",
       hi: "पुरानी व गंभीर बीमारियों को नष्ट करने और शारीरिक स्वास्थ्य की पुनः प्राप्ति के लिए माँ बगलामुखी का दिव्य अनुष्ठान।"
     },
     longDescription: {
-      en: "**How does Rog Nash Anusthan assist in restoring physical wellness?** When medical science is supported by spiritual energy, healing accelerates. In the Rog Nash Anusthan, we invoke the healing aspect of Maa Baglamukhi. I and our Vedic priests chant specific health-giving mantras and offer sacred Ayurvedic herbs into the Havan fire to eliminate bodily toxins, balance the doshas, and relieve mental anxiety regarding health.",
-      hi: "**रोग नाश अनुष्ठान शारीरिक स्वास्थ्य बहाल करने में कैसे मदद करता है?** जब चिकित्सा विज्ञान को आध्यात्मिक ऊर्जा का समर्थन मिलता है, तो उपचार की गति तेज हो जाती है। इस अनुष्ठान में, हम माँ बगलामुखी की स्वास्थ्य प्रदाता शक्ति का आह्वान करते हैं। मैं और हमारे वैदिक पुरोहित विशिष्ट मंत्रों का जाप करते हैं और पवित्र जड़ी-बूटियों की आहुति देते हैं।"
+      en: "When medical science is supported by spiritual energy, healing accelerates. In the Rog Nash Anusthan, we invoke the healing aspect of Maa Baglamukhi. I and our Vedic priests chant specific health-giving mantras and offer sacred Ayurvedic herbs into the Havan fire to eliminate bodily toxins, balance the doshas, and relieve mental anxiety regarding health.",
+      hi: "जब चिकित्सा विज्ञान को आध्यात्मिक ऊर्जा का समर्थन मिलता है, तो उपचार की गति तेज हो जाती है। इस अनुष्ठान में, हम माँ बगलामुखी की स्वास्थ्य प्रदाता शक्ति का आह्वान करते हैं। मैं और हमारे वैदिक पुरोहित विशिष्ट मंत्रों का जाप करते हैं और पवित्र जड़ी-बूटियों की आहुति देते हैं।"
     },
     benefits: {
       en: ["Supports recovery from chronic and unexplained ailments", "Clears negative energy that blocks healing", "Eradicates health anxiety and restores vitality"],
@@ -227,14 +227,14 @@ export const SERVICES = [
   },
   {
     id: "santan-prapti",
-    title: { en: "Santan Prapti", hi: "संतान प्राप्ति" },
+    title: { en: "Santan Prapti", hi: "Santan Prapti" },
     description: {
       en: "Seek divine blessings to clear progeny obstacles and receive the joy of a healthy, virtuous child.",
       hi: "स्वस्थ और गुणवान संतान की प्राप्ति के लिए आशीर्वाद मांगने वाले दिव्य अनुष्ठान।"
     },
     longDescription: {
-      en: "**How does the Santan Prapti Puja help couples?** For couples facing delays or difficulties in conceiving, this ritual invokes the blessings of Santana Gopala and Maa Baglamukhi. We perform this puja to clear planetary obstacles (like Pitra Dosha or Nadi Dosha) that might be blocking child birth. We chant specialized mantras and offer fruits and pure ingredients, welcoming auspicious energies into the family.",
-      hi: "**संतान प्राप्ति पूजा दम्पतियों के लिए कैसे सहायक है?** गर्भधारण में देरी या समस्याओं का सामना कर रहे दंपतियों के लिए, यह अनुष्ठान संतान गोपाल और माँ बगलामुखी के आशीर्वाद का आह्वान करता है। हम पितृ दोष या नाड़ी दोष जैसी बाधाओं को दूर करने के लिए यह पूजा करते हैं जो संतान उत्पत्ति में बाधक हो सकते हैं।"
+      en: "For couples facing delays or difficulties in conceiving, this ritual invokes the blessings of Santana Gopala and Maa Baglamukhi. We perform this puja to clear planetary obstacles (like Pitra Dosha or Nadi Dosha) that might be blocking child birth. We chant specialized mantras and offer fruits and pure ingredients, welcoming auspicious energies into the family.",
+      hi: "गर्भधारण में देरी या समस्याओं का सामना कर रहे दंपतियों के लिए, यह अनुष्ठान संतान गोपाल और माँ बगलामुखी के आशीर्वाद का आह्वान करता है। हम पितृ दोष या नाड़ी दोष जैसी बाधाओं को दूर करने के लिए यह पूजा करते हैं जो संतान उत्पत्ति में बाधक हो सकते हैं।"
     },
     benefits: {
       en: ["Clears astrological obstacles in childbirth", "Blesses the family with a healthy and virtuous child", "Removes progeny-related planetary doshas"],
@@ -247,14 +247,14 @@ export const SERVICES = [
   },
   {
     id: "vyavahik-badha",
-    title: { en: "Vyavahik Badha Nivaran", hi: "वैवाहिक बाधा निवारण" },
+    title: { en: "Vyavahik Badha Nivaran", hi: "Vyavahik Badha Nivaran" },
     description: {
       en: "Remove marital delays and planetary doshas to invite a compatible partner and ensure marriage bliss.",
       hi: "विवाह में आने वाली बाधाओं को दूर करना, सही जीवनसाथी ढूँढना और वैवाहिक आनंद सुनिश्चित करना।"
     },
     longDescription: {
-      en: "**How is Vyavahik Badha Nivaran Puja performed?** If your marriage proposals are getting delayed, cancelled, or facing severe conflicts, this puja is designed to restore planetary harmony. We target negative astrological effects (such as Mangal Dosha or Gana Dosha) and clear obstacles created by jealousy or negative intentions of others. The rituals help pave the way for a peaceful and happy married life.",
-      hi: "**वैवाहिक बाधा निवारण पूजा कैसे की जाती है?** यदि विवाह प्रस्तावों में देरी हो रही है, रुकावट आ रही है, या आपसी मनमुटाव का सामना करना पड़ रहा है, तो यह पूजा ग्रहों की अनुकूलता बहाल करने के लिए की जाती है। हम मंगल दोष या अन्य कुंडली दोषों के नकारात्मक प्रभावों को दूर करते हैं।"
+      en: "If marriage prospects are getting delayed, cancelled, or facing severe conflicts, this puja is designed to restore relationship harmony. We target negative astrological effects (such as Mangal Dosha or Gana Dosha) and clear obstacles created by jealousy or negative intentions of others, paving the way for a peaceful and happy married life.",
+      hi: "यदि विवाह प्रस्तावों में देरी हो रही है, रुकावट आ रही है, या आपसी मनमुटाव का सामना करना पड़ रहा है, तो यह पूजा ग्रहों की अनुकूलता बहाल करने के लिए की जाती है। हम मंगल दोष या अन्य कुंडली दोषों के नकारात्मक प्रभावों को दूर करते हैं।"
     },
     benefits: {
       en: ["Expedites finding a suitable and compatible partner", "Neutralizes Manglik Dosha and other relationship blockages", "Restores harmony and understanding between couples"],
@@ -267,14 +267,14 @@ export const SERVICES = [
   },
   {
     id: "vyapar-vraddhi",
-    title: { en: "Vyapar Vraddhi (Baglamukhi)", hi: "व्यापार वृद्धि (बगलामुखी)" },
+    title: { en: "Vyapar Vraddhi Anusthan", hi: "Vyapar Vraddhi Anusthan" },
     description: {
       en: "Dissolve financial stagnation and business blocks to attract growth and overcome competitor actions.",
       hi: "अपार व्यापार वृद्धि, वित्तीय बाधाओं और ऋणों पर काबू पाने के लिए पवित्र अनुष्ठान।"
     },
     longDescription: {
-      en: "**How does Maa Baglamukhi Vyapar Vraddhi Anusthan restore business growth?** Business stagnation, sudden cash losses, or intense competitor jealousy can damage your livelihood. In this specialized Anusthan, we harness the protective and expansive energies of Goddess Baglamukhi to clear your path. Chanting wealth-attracting Vedic mantras and performing dedicated Havan at Nalkheda Dham helps dissolve debts, protect your workspace, and invite steady prosperity.",
-      hi: "**माँ बगलामुखी व्यापार वृद्धि अनुष्ठान व्यापार में वृद्धि कैसे लाता है?** व्यापार में रुकावट, अचानक वित्तीय हानि या प्रतिस्पर्धियों की ईर्ष्या आपके व्यवसाय को नुकसान पहुँचा सकती है। इस अनुष्ठान में, हम बाधाओं को दूर करने के लिए माँ बगलामुखी की रक्षात्मक और समृद्धि प्रदाता ऊर्जा का आह्वान करते हैं।"
+      en: "Business stagnation, sudden cash losses, or intense competitor jealousy can damage your livelihood. In this specialized Anusthan, we harness the protective and expansive energies of Goddess Baglamukhi to clear your path. Chanting wealth-attracting Vedic mantras and performing dedicated Havan at Nalkheda Dham helps dissolve debts, protect your workspace, and invite steady prosperity.",
+      hi: "व्यापार में रुकावट, अचानक वित्तीय हानि या प्रतिस्पर्धियों की ईर्ष्या आपके व्यवसाय को नुकसान पहुँचा सकती है। इस अनुष्ठान में, हम बाधाओं को दूर करने के लिए माँ बगलामुखी की रक्षात्मक और समृद्धि प्रदाता ऊर्जा का आह्वान करते हैं।"
     },
     benefits: {
       en: ["Unblocks stagnating sales and business opportunities", "Protects premises from negative intentions of competitors", "Attracts steady financial flow and debt clearance"],
@@ -288,14 +288,14 @@ export const SERVICES = [
   },
   {
     id: "rin-mukti",
-    title: { en: "Rin Mukti (Debt Relief)", hi: "ऋण मुक्ति (कर्ज से राहत)" },
+    title: { en: "Rin Mukti (Debt Relief)", hi: "Rin Mukti (Debt Relief)" },
     description: {
       en: "Restore financial freedom and resolve heavy debt burdens through focused Vedic Pujas and Havan.",
       hi: "ऋण मुक्ति (कर्ज से राहत) के लिए विशेष पूजा, जप और हवन।"
     },
     longDescription: {
-      en: "**What is the process of the Rin Mukti Puja?** Persistent debt can lead to severe mental stress and family disputes. The Rin Mukti Puja is a sacred remedy performed to clear obstacles in your income and cash flow. Chanting specific mantras of Maa Baglamukhi and offering special ingredients to the fire, I pray for your financial liberation, helping you clear outstanding debts and regain monetary stability.",
-      hi: "**ऋण मुक्ति पूजा की क्या प्रक्रिया है?** लगातार कर्ज का बोझ मानसिक तनाव और पारिवारिक विवादों का कारण बनता है। ऋण मुक्ति पूजा आपकी आय और धन प्रवाह में आने वाली बाधाओं को दूर करने के लिए किया जाने वाला एक पवित्र उपाय है। माँ बगलामुखी के मंत्रों के साथ मैं आपके कर्ज निवारण की प्रार्थना करता हूँ।"
+      en: "Persistent debt can lead to severe mental stress and family disputes. The Rin Mukti Puja is a sacred remedy performed to clear obstacles in your income and cash flow. By chanting specific mantras of Maa Baglamukhi and offering special ingredients to the fire, I pray for your financial liberation, helping you clear outstanding debts and regain monetary stability.",
+      hi: "लगातार कर्ज का बोझ मानसिक तनाव और पारिवारिक विवादों का कारण बनता है। ऋण मुक्ति पूजा आपकी आय और धन प्रवाह में आने वाली बाधाओं को दूर करने के लिए किया जाने वाला एक पवित्र उपाय है। माँ बगलामुखी के मंत्रों के साथ मैं आपके कर्ज निवारण की प्रार्थना करता हूँ।"
     },
     benefits: {
       en: ["Clears financial blockages that obstruct loan repayment", "Restores peaceful cash flow and business income", "Eradicates monetary anxiety and family stress"],
@@ -308,14 +308,14 @@ export const SERVICES = [
   },
   {
     id: "karya-mukti",
-    title: { en: "Karya Mukti / Kasht Mukti", hi: "कार्य मुक्ति / कष्ट मुक्ति" },
+    title: { en: "Karya Mukti & Kasht Mukti", hi: "Karya Mukti & Kasht Mukti" },
     description: {
       en: "Dissolve karmic blockages creating continuous delays, struggles, and hardships in your life.",
       hi: "कार्य मुक्ति / कष्ट मुक्ति के लिए विशेष पूजा, जप और हवन।"
     },
     longDescription: {
-      en: "**How does the Kasht Mukti Puja bring relief from ongoing struggles?** Sometimes, despite hard work, you face continuous hurdles and delays in every task (Karya). This indicates karmic blocks or planetary obstructions. Our Karya/Kasht Mukti Puja is designed to dissolve these invisible blockages. I guide this ritual with focused Vedic chants and Havan, creating a smooth path for your career and daily efforts.",
-      hi: "**कष्ट मुक्ति पूजा चल रहे संघर्षों से कैसे राहत दिलाती है?** कभी-कभी, कड़ी मेहनत के बावजूद, आपको हर कार्य (कार्य) में लगातार बाधाओं और देरी का सामना करना पड़ता है। यह कर्मिक बाधाओं या ग्रहों के अवरोधों का संकेत देता है। हमारी कष्ट मुक्ति पूजा इन बाधाओं को दूर करने के लिए है।"
+      en: "Sometimes, despite hard work, you face continuous hurdles and delays in every task (Karya). This indicates karmic blocks or planetary obstructions. Our Karya/Kasht Mukti Puja is designed to dissolve these invisible blockages. I guide this ritual with focused Vedic chants and Havan, creating a smooth path for your career and daily efforts.",
+      hi: "कभी-कभी, कड़ी मेहनत के बावजूद, आपको हर कार्य (कार्य) में लगातार बाधाओं और देरी का सामना करना पड़ता है। यह कर्मिक बाधाओं या ग्रहों के अवरोधों का संकेत देता है। हमारी कष्ट मुक्ति पूजा इन बाधाओं को दूर करने के लिए है।"
     },
     benefits: {
       en: ["Dissolves mysterious blocks affecting job promotion and career", "Brings ease and flow into daily life operations", "Restores momentum in pending works and personal goals"],
@@ -328,7 +328,7 @@ export const SERVICES = [
   },
   {
     id: "lakshmi-prapti",
-    title: { en: "Lakshmi Prapti", hi: "लक्ष्मी प्राप्ति" },
+    title: { en: "Lakshmi Prapti Puja", hi: "Lakshmi Prapti Puja" },
     description: {
       en: "Invoke Goddess Lakshmi to invite steady abundance, wealth accumulation, and household harmony.",
       hi: "धन, प्रचुरता और वित्तीय स्थिरता के निरंतर प्रवाह के लिए देवी लक्ष्मी का आह्वान।"

@@ -10,6 +10,7 @@ export default function ContactSection() {
   const { lang } = useLanguage();
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [showMap, setShowMap] = useState(false);
 
   const [phone, setPhone] = useState(SITE_CONFIG.phone);
   const [whatsapp, setWhatsapp] = useState(SITE_CONFIG.whatsapp);
@@ -248,13 +249,61 @@ export default function ContactSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12 md:mt-16 w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden border border-gray-200/60 bg-white p-2 shadow-lg"
         >
-          <iframe 
-            src="https://maps.google.com/maps?q=Maa%20Baglamukhi%20Temple%20Nalkheda&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-            className="w-full h-80 md:h-[400px] rounded-[1.85rem] border-0"
-            allowFullScreen
-            loading="lazy"
-            title={lang === "en" ? "Maa Baglamukhi Temple, Nalkheda Location Map" : "माँ बगलामुखी मंदिर, नलखेड़ा स्थान मानचित्र"}
-          />
+          {showMap ? (
+            <iframe 
+              src="https://maps.google.com/maps?q=Maa%20Baglamukhi%20Temple%20Nalkheda&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              className="w-full h-80 md:h-[400px] rounded-[1.85rem] border-0"
+              allowFullScreen
+              loading="lazy"
+              title={lang === "en" ? "Maa Baglamukhi Temple, Nalkheda Location Map" : "माँ बगलामुखी मंदिर, नलखेड़ा स्थान मानचित्र"}
+            />
+          ) : (
+            <div 
+              onClick={() => setShowMap(true)}
+              className="w-full h-80 md:h-[400px] rounded-[1.85rem] relative overflow-hidden bg-[#FAF8F5] border border-gold/10 flex flex-col items-center justify-center cursor-pointer group transition-all duration-500 hover:border-gold/30 hover:shadow-inner select-none"
+            >
+              {/* Decorative watermark background */}
+              <div 
+                className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none filter grayscale transition-all duration-700 group-hover:scale-105"
+                style={{ backgroundImage: "url('/hero-spiritual-bg.webp')" }}
+              />
+              {/* Subtle grid pattern overlay */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:24px_24px] opacity-15 pointer-events-none" />
+              
+              <div className="relative z-10 flex flex-col items-center text-center px-6 space-y-4">
+                {/* Pin Icon with pulse effect */}
+                <div className="relative flex items-center justify-center">
+                  <span className="absolute inline-flex h-12 w-12 rounded-full bg-gold/20 animate-ping opacity-75" />
+                  <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-gold to-orange-500 text-white flex items-center justify-center shadow-lg border border-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-base font-bold font-cinzel text-gray-900 tracking-wide uppercase">
+                    {lang === 'en' ? 'Siddh Peeth Maa Baglamukhi Temple' : 'सिद्ध पीठ माँ बगलामुखी मंदिर'}
+                  </h3>
+                  <p className="text-xs text-gold font-medium tracking-wide">
+                    {lang === 'en' ? 'Nalkheda Dham, Agar Malwa, Madhya Pradesh' : 'नलखेड़ा धाम, आगर मालवा, मध्य प्रदेश'}
+                  </p>
+                  <p className="text-[10px] md:text-xs text-gray-500 font-outfit max-w-sm mt-2 leading-relaxed">
+                    {lang === 'en' 
+                      ? 'Click anywhere on this card to load the interactive Google Map and get navigation directions.' 
+                      : 'इंटरैक्टिव गूगल मानचित्र लोड करने और मार्ग निर्देश प्राप्त करने के लिए कहीं भी क्लिक करें।'}
+                  </p>
+                </div>
+
+                <button 
+                  className="px-6 py-2.5 rounded-full bg-white border border-gold/30 hover:border-gold hover:text-gold text-gray-800 text-[10px] font-bold uppercase tracking-wider shadow-sm transition-all duration-300 transform group-hover:scale-105"
+                >
+                  {lang === 'en' ? 'Load Interactive Map' : 'नक्शा लोड करें'}
+                </button>
+              </div>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

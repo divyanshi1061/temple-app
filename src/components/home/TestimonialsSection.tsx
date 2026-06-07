@@ -28,8 +28,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "राजेश शर्मा",
     locationEn: "Delhi",
     locationHi: "दिल्ली",
-    textEn: "Acharya Ji guided us in performing the Maa Baglamukhi Anusthan for our critical legal case. Within 11 days of the puja completion, the court decision was entirely in our favor. Absolute miraculous power!",
-    textHi: "आचार्य जी ने हमारे महत्वपूर्ण कानूनी मामले के लिए माँ बगलामुखी अनुष्ठान करने में हमारा मार्गदर्शन किया। पूजा पूरी होने के 11 दिनों के भीतर, अदालत का फैसला पूरी तरह से हमारे पक्ष में था। पूर्ण चमत्कारी शक्ति!",
+    textEn: "We were caught in a stressful legal dispute that dragged on for four years, draining us financially and mentally. When we contacted Acharya Ji, he listened to our troubles with so much patience and conducted the Baglamukhi Puja at Nalkheda Dham on our behalf. His calmness gave us hope, and the dispute was resolved peacefully shortly after. We are deeply grateful for his guidance.",
+    textHi: "हम चार साल से एक मानसिक और आर्थिक रूप से थका देने वाले कानूनी विवाद में फंसे हुए थे। जब हमने आचार्य जी से संपर्क किया, तो उन्होंने बड़े धैर्य से हमारी बात सुनी और हमारी ओर से नलखेड़ा धाम में बगलामुखी पूजा संपन्न कराई। उनके मार्गदर्शन से हमें संबल मिला और जल्द ही विवाद का शांतिपूर्ण समाधान हो गया। हम उनके हृदय से आभारी हैं।",
     rating: 5,
   },
   {
@@ -38,8 +38,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "सुनीता देशमुख",
     locationEn: "Mumbai",
     locationHi: "मुंबई",
-    textEn: "We were facing severe obstacles in our business expansion and malicious enemy blockages. Acharya Ji conducted a special Shatru Nashak Havan for us. The business has now doubled and all issues resolved.",
-    textHi: "हमें अपने व्यवसाय विस्तार में गंभीर बाधाओं और दुर्भावनापूर्ण शत्रु रुकावटों का सामना करना पड़ रहा था। आचार्य जी ने हमारे लिए एक विशेष शत्रु नाशक हवन आयोजित किया। व्यापार अब दोगुना हो गया है और सभी समस्याएं हल हो गई हैं।",
+    textEn: "Our family business was facing severe setbacks, and we felt constant blockages around us. Acharya Ji suggested a special Vishesh Havan. Unlike others, he didn't demand complex things; he just asked us to have faith in Maa Pitambara. The positive energy in our office returned within weeks, and our relationships with clients smoothed out. He is a genuine guide.",
+    textHi: "हमारे पारिवारिक व्यवसाय में काफी गिरावट आ रही थी और चारों तरफ से रुकावटें महसूस हो रही थीं। आचार्य जी ने विशेष हवन कराने का सुझाव दिया। उन्होंने हमें केवल माँ पीताम्बरा पर अटूट विश्वास रखने को कहा। कुछ ही हफ्तों में सकारात्मक ऊर्जा लौट आई और व्यापारिक संबंध सुधर गए। वे एक सच्चे मार्गदर्शक हैं।",
     rating: 5,
   },
   {
@@ -48,8 +48,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "विक्रम राठौड़",
     locationEn: "Indore",
     locationHi: "इंदौर",
-    textEn: "The spiritual ambiance at Nalkheda Dham is filled with massive energy. Acharya Pt. Rudraksh Rajpurohit conducts every mantra and offering with extreme Vedic precision and purity.",
-    textHi: "नलखेड़ा धाम का आध्यात्मिक वातावरण विशाल ऊर्जा से भरा है। आचार्य पं. रुद्राक्ष राजपुरोहित हर मंत्र और आहुति को अत्यंत वैदिक सटीकता और पवित्रता के साथ संपन्न करते हैं।",
+    textEn: "Visiting the temple at Nalkheda Dham with my family was a transformative experience. Acharya Pt. Rudraksh Rajpurohit explained the meaning of each ritual step to us instead of just chanting fast. You can feel the purity in how he handles the offerings and chants the mantras. It felt less like a service and more like a spiritual homecoming.",
+    textHi: "अपने परिवार के साथ नलखेड़ा धाम मंदिर के दर्शन करना हमारे लिए जीवन बदलने वाला अनुभव था। आचार्य जी ने हमें केवल मंत्रोच्चार सुनाने के बजाय पूजा के प्रत्येक चरण का महत्व समझाया। हवन की आहुतियों और मंत्रों की शुचिता को स्पष्ट रूप से महसूस किया जा सकता है। यह एक अत्यंत दिव्य अनुभव था।",
     rating: 5,
   },
   {
@@ -58,8 +58,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "मीना अग्रवाल",
     locationEn: "Jaipur, Rajasthan",
     locationHi: "जयपुर, राजस्थान",
-    textEn: "My daughter's marriage was getting delayed for years despite all efforts. Acharya Ji performed Vyavahik Badha Nivaran at Nalkheda Dham. Within 3 months, she found an excellent match and is now happily married. We are forever grateful.",
-    textHi: "सब प्रयासों के बावजूद मेरी बेटी की शादी सालों से नहीं हो रही थी। आचार्य जी ने नलखेड़ा धाम में वैवाहिक बाधा निवारण किया। 3 महीने के भीतर उसे एक उत्कृष्ट रिश्ता मिला और अब वह खुशहाल विवाहित जीवन जी रही है। हम सदैव आभारी हैं।",
+    textEn: "My daughter's marriage was facing unexpected delays and obstacles for nearly three years, causing great worry at home. Acharya Ji performed the Vyavahik Badha Nivaran Puja with complete Vedic protocols. Within a few months, we met a wonderful family and her marriage was finalized. Acharya Ji's prayers brought peace back to our family.",
+    textHi: "मेरी बेटी के विवाह में लगभग तीन वर्षों से लगातार अड़चनें आ रही थीं, जिससे पूरा परिवार चिंतित रहता था। आचार्य जी ने पूरे विधि-विधान से वैवाहिक बाधा निवारण पूजा संपन्न की। कुछ ही महीनों में हमें एक बहुत अच्छा परिवार मिला और उसका विवाह तय हो गया। आचार्य जी की प्रार्थनाओं ने हमारे घर में खुशियाँ लौटा दीं।",
     rating: 5,
   },
   {
@@ -68,8 +68,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "अजय तिवारी",
     locationEn: "Bhopal, Madhya Pradesh",
     locationHi: "भोपाल, मध्य प्रदेश",
-    textEn: "I was drowning in debt and my business was on the verge of collapse. Acharya Ji recommended Rin Mukti and Vyapar Vraddhi Puja together. The results were miraculous — debts cleared within months and new contracts started flowing in.",
-    textHi: "मैं कर्ज में डूब रहा था और मेरा व्यवसाय बंद होने की कगार पर था। आचार्य जी ने ऋण मुक्ति और व्यापार वृद्धि पूजा दोनों कराने की सलाह दी। परिणाम चमत्कारी रहे — कुछ ही महीनों में सारा कर्ज चुक गया और नए ठेके आने लगे।",
+    textEn: "I was under immense pressure due to growing debts and a complete standstill in my career. Acharya Ji suggested the Rin Mukti Havan. He did not promise instant magic but told me to work with dedication while he prayed for me. Gradually, new opportunities opened up, and I cleared my major dues. His practical guidance alongside rituals is what makes him different.",
+    textHi: "बढ़ते कर्ज और करियर में ठहराव के कारण मैं बहुत तनाव में था। आचार्य जी ने ऋण मुक्ति हवन कराने की सलाह दी। उन्होंने कोई हवाई दावा नहीं किया, बल्कि मुझे कर्म करने और माँ पर भरोसा रखने को कहा। धीरे-धीरे नए रास्ते खुले और मैंने अपना कर्ज चुका दिया। अनुष्ठानों के साथ उनका व्यावहारिक मार्गदर्शन ही उन्हें सबसे अलग बनाता है।",
     rating: 5,
   },
   {
@@ -78,8 +78,8 @@ const DEFAULT_TESTIMONIALS = [
     nameHi: "कविता सिंह",
     locationEn: "Lucknow, Uttar Pradesh",
     locationHi: "लखनऊ, उत्तर प्रदेश",
-    textEn: "My father was critically ill and doctors had lost hope. I contacted Acharya Ji for Maha Mrityunjay Anusthan. He conducted it with immense devotion at Siddh Peeth Nalkheda Dham. By Maa Baglamukhi's grace, my father recovered completely. A true divine miracle.",
-    textHi: "मेरे पिताजी गंभीर रूप से बीमार थे और डॉक्टरों ने उम्मीद छोड़ दी थी। मैंने आचार्य जी से महामृत्युंजय अनुष्ठान के लिए संपर्क किया। उन्होंने सिद्ध पीठ नलखेड़ा धाम में पूर्ण भक्ति के साथ इसे संपन्न किया। माँ बगलामुखी की कृपा से मेरे पिताजी पूरी तरह स्वस्थ हो गए। एक सच्चा दिव्य चमत्कार।",
+    textEn: "During a time of severe health crisis in our family, we felt completely helpless. A well-wisher recommended Acharya Ji. We booked the Maha Mrityunjay Anusthan online since we couldn't travel. Acharya Ji sent us videos of the Sankalp and daily updates of the path. The mental strength we received was immense, and our family recovered. We feel blessed to have connected with him.",
+    textHi: "हमारे परिवार में अचानक आए स्वास्थ्य संकट के समय हम खुद को बहुत असहाय महसूस कर रहे थे। एक शुभचिंतक के सुझाव पर हमने आचार्य जी से संपर्क किया। हम यात्रा करने में असमर्थ थे, इसलिए ऑनलाइन महामृत्युंजय अनुष्ठान बुक किया। आचार्य जी ने संकल्प का वीडियो और प्रतिदिन की पूजा की जानकारी भेजी। इससे हमें बहुत संबल मिला और परिवार में स्थिति सामान्य हो गई।",
     rating: 5,
   }
 ];

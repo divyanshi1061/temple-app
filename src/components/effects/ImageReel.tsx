@@ -19,21 +19,6 @@ const REEL_IMAGES = [
   { src: "/nyayalay-vijay.webp", alt: "Nyayalay Vijay" },
   { src: "/nav-graha-shanti.webp", alt: "Nav Graha Shanti" },
   { src: "/pitra-kaal-sarp.webp", alt: "Pitra Dosh & Kaal Sarp" },
-  { src: "/santan-prapti.webp", alt: "Santan Prapti" },
-  { src: "/vyavahik-badha.webp", alt: "Vyavahik Badha" },
-  { src: "/vyapar-vraddhi.webp", alt: "Vyapar Vraddhi" },
-  { src: "/lakshmi-prapti.webp", alt: "Lakshmi Prapti" },
-  { src: "/vastu-shastra.webp", alt: "Vastu Shastra" },
-  { src: "/moh-ucchatan.webp", alt: "Moh Ucchatan" },
-  { src: "/new-havan-1.webp", alt: "Sacred Ritual" },
-  { src: "/new-havan-2.webp", alt: "Pandit Ji at Havan" },
-  { src: "/new-havan-3.webp", alt: "Divine Havan" },
-  { src: "/new-havan-5.webp", alt: "Maa Baglamukhi Idol" },
-  { src: "/new-upload-6.webp", alt: "Maa Baglamukhi Ritual" },
-  { src: "/new-upload-7.webp", alt: "Pandit Rudraksh Rajpurohit" },
-  { src: "/new-upload-8.webp", alt: "Sacred Temple Fire" },
-  { src: "/new-upload-9.webp", alt: "Vedic Puja Session" },
-  { src: "/new-upload-10.webp", alt: "Divine Havan" },
 ];
 
 export default function ImageReel() {
@@ -42,29 +27,7 @@ export default function ImageReel() {
 
   return (
     <div className="w-full overflow-hidden py-4 md:py-8 relative z-20 select-none">
-      {/* Scoped CSS marquee styling */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee-loop {
-          display: flex;
-          width: max-content;
-          animation: marquee 50s linear infinite;
-        }
-        .animate-marquee-loop:hover {
-          animation-play-state: paused;
-        }
-        .mask-fade-edges {
-          mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-          -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-        }
-      `}} />
+      {/* Marquee animations are defined in globals.css */}
 
       {/* Main Reels Slider */}
       <div className="mask-fade-edges w-full overflow-hidden flex">
@@ -81,6 +44,7 @@ export default function ImageReel() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                loading="lazy"
                 sizes="(max-width: 768px) 112px, 208px"
                 style={{ objectFit: "cover" }}
                 className="transition-transform duration-700 group-hover:scale-105"

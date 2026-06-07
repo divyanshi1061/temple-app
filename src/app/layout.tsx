@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Cinzel, Cormorant_Garamond, Outfit, Playball } from "next/font/google";
+import { Inter, Cinzel, Outfit } from "next/font/google";
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -13,31 +13,20 @@ const inter = Inter({
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
   variable: "--font-outfit",
   display: "swap",
 });
 
 const cinzel = Cinzel({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["700", "800"],
   variable: "--font-cinzel",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const playball = Playball({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-playball",
-  display: "swap",
-});
+// Removed Cormorant_Garamond (5 weights, ~70KB) and Playball (~20KB) — barely used.
+// Total font savings: ~150KB+ fewer downloads on first load.
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -48,59 +37,36 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit | Havan, Puja & Anusthan",
+    default: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
     template: "%s | Acharya Pt. Rudraksh Rajpurohit | Siddh Peeth Nalkheda"
   },
   description:
-    "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran, Shatru Stambhan, Lal Mirchi Havan & more. Call +91 79095 97033 for online booking.",
+    "Acharya Pt. Rudraksh Rajpurohit personally performs authentic Maa Baglamukhi Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham, Madhya Pradesh. Every ritual follows strict scriptural purity — consult with Acharya Ji directly to resolve legal disputes, enemies, or family issues.",
   keywords: [
     // Brand & Person keywords
-    "Best Maa Baglamukhi Pandit Nalkheda", "Maa Baglamukhi Pandit Nalkheda",
-    "Maa Bagalamukhi Pandit Nalkheda",
-    "Ma Baglamukhi Pandit Nalkheda", "Ma Bagalamukhi Pandit Nalkheda",
-    "Baglamukhi Pandit Nalkheda", "Nalkheda Baglamukhi Pandit",
-    "Pandit Maa Baglamukhi", "Pandit Maa Bagalamukhi", "Pandit Ma Baglamukhi",
-    "Bagalamukhi Pandit", "Baglamukhi Pandit", "Ma Baglamukhi Pandit",
-    "Acharya Pt Rudraksh Rajpurohit", "Rudraksh Rajpurohit",
-    "Pt Rudraksh Rajpurohit Nalkheda",
-    // Temple & Location keywords
-    "Maa Baglamukhi Dham Nalkheda", "Maa Bagalamukhi Mandir Nalkheda",
-    "Baglamukhi Temple Nalkheda", "Bagalamukhi Temple Nalkheda",
-    "Nalkheda Mandir Pujari", "Nalkheda Temple Pujari",
-    "Siddh Peeth Nalkheda", "Maa Baglamukhi Siddh Peeth",
-    "Nalkheda Dham Madhya Pradesh", "Baglamukhi Mandir Agar Malwa",
-    // Service keywords
-    "Maa Baglamukhi Havan Nalkheda", "Maa Bagalamukhi Havan",
-    "Baglamukhi Havan online booking", "Bagalamukhi Havan booking",
-    "Maa Baglamukhi Havan online booking",
-    "best pandit for baglamukhi havan", "best pandit for bagalamukhi havan",
-    "Baglamukhi Havan vidhi", "Bagalamukhi puja vidhi",
-    "Lal Mirchi Havan", "Court Case Victory Puja",
-    "Nyayalay Vijay Puja", "Shatru Stambhan Puja",
-    "Maa Baglamukhi 36 Lakh Jaap", "Sawa Lakh Jaap",
-    "Maha Mrityunjay Anusthan", "Nav Graha Shanti Puja",
-    "Vastu Shastra Paramarsh", "Santan Prapti Puja",
-    "Vyapar Vraddhi Puja", "Rin Mukti Puja",
-    "Vashikaran Anusthan", "Akarshan Anusthan",
-    "Uchchatan Prayog", "Political Puja", "Kundali Astrology",
-    // Generic spiritual keywords
-    "Vedic Pandit Nalkheda", "Tantra Sadhana",
-    "Vedic Puja online", "Havan Puja near me",
-    "online pandit booking", "Tantrik Pandit",
-    "Baglamukhi Mantra Jaap", "Bagalamukhi Mantra",
-    "Baglamukhi Beej Mantra", "Baglamukhi Yantra",
-    // Hindi keywords
-    "बगलामुखी पंडित", "बगलामुखी हवन", "बगलामुखी मंदिर नलखेड़ा",
-    "माँ बगलामुखी हवन", "माँ बगलामुखी पूजा",
-    "नलखेड़ा धाम पूजारी", "नलखेड़ा मंदिर पंडित",
-    "पंडित माँ बगलामुखी", "बगलामुखी सिद्ध पीठ",
-    "रुद्राक्ष राजपुरोहित", "आचार्य रुद्राक्ष",
-    "बगलामुखी अनुष्ठान", "लाल मिर्ची हवन",
-    "कोर्ट केस विजय पूजा", "शत्रु स्तंभन",
-    "न्यायालय विजय पूजा", "वशीकरण अनुष्ठान",
-    "बगलामुखी बीज मंत्र", "नलखेड़ा धाम का महत्व",
-    "उच्चाटन प्रयोग", "कुंडली ज्योतिष",
+    "Acharya Pt Rudraksh Rajpurohit", "Rudraksh Rajpurohit Nalkheda",
+    "Maa Baglamukhi Pandit Nalkheda", "Baglamukhi Mandir Pujari",
+    "Siddh Peeth Nalkheda Dham", "Maa Baglamukhi Havan Nalkheda",
+    "Lal Mirchi Havan Nalkheda", "Court Case Victory Puja",
+    "Shatru Stambhan Puja", "Maa Baglamukhi Sawa Lakh Jaap",
+    "Maha Mrityunjay Anusthan Nalkheda", "Nav Graha Shanti Puja",
+    "Vastu Shastra Consultation", "Vedic Pandit booking Nalkheda",
+    "बगलामुखी पंडित नलखेड़ा", "बगलामुखी हवन नलखेड़ा",
+    "आचार्य रुद्राक्ष राजपुरोहित", "नलखेड़ा मंदिर पंडित जी",
+    "लाल मिर्ची हवन विधि", "कोर्ट केस विजय पूजा",
+    "शत्रु स्तंभन अनुष्ठान", "बगलामुखी सिद्ध पीठ नलखेड़ा"
   ].join(", "),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com",
     languages: {
@@ -109,9 +75,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit | Havan, Puja & Anusthan",
+    title: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
     description:
-      "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran, Shatru Stambhan, Lal Mirchi Havan & more. Call +91 79095 97033.",
+      "Connect with Acharya Pt. Rudraksh Rajpurohit for authentic Maa Baglamukhi Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham, Madhya Pradesh. Experience pure Vedic rituals for protection, peace, and prosperity.",
     url: "https://www.panditmaabaglamukhi.com",
     siteName: "Maa Baglamukhi Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
     images: [
@@ -119,7 +85,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Best Maa Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Nalkheda Dham",
+        alt: "Acharya Pt. Rudraksh Rajpurohit conducting rituals at Nalkheda Dham",
       }
     ],
     type: "website",
@@ -127,8 +93,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Maa Baglamukhi Pandit Nalkheda | Acharya Pt. Rudraksh Rajpurohit",
-    description: "Book authentic Maa Baglamukhi Havan, Puja & Anusthan with Best Baglamukhi Pandit Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Expert in Court Case Vijay, Vashikaran & more.",
+    title: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
+    description: "Book authentic Maa Baglamukhi Havans, Pujas & Anusthans with Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Pure Vedic energy for overcoming active crises, legal battles, and obstacles.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -148,6 +114,8 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="google-site-verification" content="7_S9yO97cQVDJYkkx0yKx-ptQACVyyVP3S-GBn3-gNg" />
+        {/* Preload the LCP hero image so it starts downloading immediately */}
+        <link rel="preload" href="/acharya-new.webp" as="image" type="image/webp" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
@@ -156,7 +124,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} ${cinzel.variable} ${cormorant.variable} ${playball.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} ${cinzel.variable} antialiased`}
       >
         {/* Google Analytics */}
         <Script

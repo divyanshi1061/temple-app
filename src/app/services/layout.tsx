@@ -1,29 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sacred Vedic Services & Rituals | Maa Baglamukhi Havan Nalkheda",
+  title: "Vedic Pujas, Havans & Rituals | Maa Baglamukhi Nalkheda",
   description:
-    "Explore 19+ authentic Vedic Pujas, Tantric Havans, and powerful Anusthans. Book Baglamukhi Havan, Lal Mirchi Havan, Court Case Victory Puja, Shatru Stambhan & more at Siddh Peeth Nalkheda Dham.",
+    "Explore authentic Vedic Pujas and powerful Havans performed at Nalkheda Dham. Acharya Pt. Rudraksh Rajpurohit guides custom rituals like the Maa Baglamukhi Havan, Lal Mirchi Havan, and Shatru Stambhan following strict scriptural guidelines.",
   keywords: [
-    "Pandit Maa Baglamukhi",
-    "Bagalamukhi Pandit",
-    "Mandir Pujari",
-    "Baglamukhi Pujari",
-    "Nalkheda temple pujari",
-    "Maa Baglamukhi Havan services",
-    "Vedic puja booking online",
-    "Lal Mirchi Havan Nalkheda",
-    "Court case victory puja",
-    "Shatru Stambhan",
-    "Baglamukhi Anusthan",
-    "Nav Graha Shanti puja",
-    "Maha Mrityunjay Anusthan",
-    "Vyapar Vraddhi puja",
-    "Santan Prapti puja",
-    "Vashikaran Anusthan",
-    "Vastu Shastra consultation",
-    "Tantric rituals Nalkheda",
-    "Pt Rudraksh Rajpurohit services",
+    "Acharya Pt Rudraksh Rajpurohit services", "Maa Baglamukhi Havan Nalkheda",
+    "Lal Mirchi Havan", "Court case victory puja", "Shatru Stambhan ritual",
+    "Vedic puja booking online", "Maha Mrityunjay Anusthan", "Nav Graha Shanti"
   ],
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com/services",
@@ -33,9 +17,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sacred Services & Rituals | Maa Baglamukhi Nalkheda",
+    title: "Vedic Pujas, Havans & Rituals | Maa Baglamukhi Nalkheda",
     description:
-      "Book authentic Vedic Pujas, Tantric Havans & powerful Anusthans by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham.",
+      "Select and book authentic Vedic Pujas and powerful Havans guided by Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham.",
     url: "https://www.panditmaabaglamukhi.com/services",
     siteName: "Maa Baglamukhi Nalkheda Dham",
     images: [
@@ -51,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sacred Services & Rituals | Maa Baglamukhi Nalkheda",
+    title: "Vedic Pujas, Havans & Rituals | Maa Baglamukhi Nalkheda",
     description:
-      "Book authentic Maa Baglamukhi Havans & Pujas at Siddh Peeth Nalkheda Dham.",
+      "Discover the custom Vedic Pujas and Havans offered at Siddh Peeth Maa Baglamukhi Temple, Nalkheda.",
     images: ["/havan-upload-1.webp"],
   },
 };

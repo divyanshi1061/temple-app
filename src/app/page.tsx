@@ -1,13 +1,15 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/home/HeroSection";
 import ImageReel from "@/components/effects/ImageReel";
-import ServicesSection from "@/components/home/ServicesSection";
-import AboutSection from "@/components/home/AboutSection";
-import GallerySection from "@/components/home/GallerySection";
-import VideoSection from "@/components/home/VideoSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import ContactSection from "@/components/home/ContactSection";
-import FAQSection from "@/components/home/FAQSection";
-import HindiSEOSection from "@/components/home/HindiSEOSection";
+
+const ServicesSection = dynamic(() => import("@/components/home/ServicesSection"), { ssr: true });
+const AboutSection = dynamic(() => import("@/components/home/AboutSection"), { ssr: true });
+const GallerySection = dynamic(() => import("@/components/home/GallerySection"), { ssr: true });
+const VideoSection = dynamic(() => import("@/components/home/VideoSection"), { ssr: true });
+const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"), { ssr: true });
+const HindiSEOSection = dynamic(() => import("@/components/home/HindiSEOSection"), { ssr: true });
+const ContactSection = dynamic(() => import("@/components/home/ContactSection"), { ssr: true });
+const FAQSection = dynamic(() => import("@/components/home/FAQSection"), { ssr: true });
 
 export default function Home() {
   const schemaData = {
@@ -76,7 +78,11 @@ export default function Home() {
         "url": "https://www.panditmaabaglamukhi.com",
         "name": "Maa Baglamukhi Havan & Puja – Nalkheda Dham",
         "description": "Book authentic Vedic Pujas and Havans at Siddh Peeth Maa Baglamukhi Dham, Nalkheda",
-        "publisher": { "@id": "https://www.panditmaabaglamukhi.com/#person" }
+        "publisher": { "@id": "https://www.panditmaabaglamukhi.com/#person" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".speakable-title", ".speakable-description"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -265,6 +271,38 @@ export default function Home() {
           "ratingValue": "4.9",
           "reviewCount": "285"
         }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://www.panditmaabaglamukhi.com/#booking-howto",
+        "name": "How to Book Maa Baglamukhi Puja Online",
+        "description": "Step-by-step instructions to consult Acharya Pt. Rudraksh Rajpurohit and book an authentic Vedic Puja or Havan at Siddh Peeth Nalkheda Dham.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Select a Sacred Service",
+            "text": "Browse our 19+ Vedic services, including Maa Baglamukhi Havan, Lal Mirchi Havan, or Shatru Stambhan, to find the ritual that fits your spiritual needs.",
+            "url": "https://www.panditmaabaglamukhi.com/services"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Share Devotional Details",
+            "text": "Provide your name, gotra, birth details, and the specific purpose of the ritual. This ensures the Sankalp is personally customized for you.",
+            "url": "https://www.panditmaabaglamukhi.com/book"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Establish Sankalp Remotely or In-Person",
+            "text": "If visiting Nalkheda, join Pt. Rudraksh Rajpurohit at the temple. Otherwise, connect via video call for the live Sankalp recitation.",
+            "url": "https://www.panditmaabaglamukhi.com/book"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Receive Sacred Blessings & Prasad",
+            "text": "After the priests perform the ritual with pure Vedic guidelines, the holy Prasad and Havan Bhasma (sacred protection ashes) are delivered to your address.",
+            "url": "https://www.panditmaabaglamukhi.com/book"
+          }
+        ]
       }
     ]
   };

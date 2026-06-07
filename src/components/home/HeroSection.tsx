@@ -77,34 +77,9 @@ export default function HeroSection() {
         backgroundColor: 'white',
       }}
     >
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes spin-slow {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        @keyframes spin-slow-reverse {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(-360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 40s linear infinite;
-        }
-        .animate-spin-slow-reverse {
-          animation: spin-slow-reverse 30s linear infinite;
-        }
-      `}} />
+      {/* spin-slow and spin-slow-reverse animations are in globals.css */}
 
-      {/* Spiritual Background Image Watermark */}
-      <motion.div className="absolute inset-0 z-0 pointer-events-none opacity-[0.12]" style={{ y }}>
-        <Image
-          src="/hero-spiritual-bg.webp"
-          alt="Sacred Spiritual Background"
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center" }}
-        />
-      </motion.div>
+      {/* Background is rendered via CSS backgroundImage on the <section> — no duplicate <Image> needed */}
 
       {/* Soft blurred background orbs */}
       <motion.div className="absolute inset-0 z-0 pointer-events-none" style={{ y }}>
@@ -151,14 +126,14 @@ export default function HeroSection() {
             <div className="space-y-2 lg:space-y-3">
               <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] lg:leading-[1.1] uppercase">
                 {lang === 'hi' 
-                  ? "माँ बगलामुखी हवन एवं वैदिक पूजा"
-                  : "Maa Baglamukhi Havan & Vedic Pujas"
+                  ? "माँ बगलामुखी अनुष्ठान एवं वैदिक हवन"
+                  : "Maa Baglamukhi Havans & Vedic Pujas"
                 }
               </h1>
               <h2 className="text-[10px] sm:text-xs lg:text-sm text-gold font-semibold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' 
-                  ? "आचार्य पं. रुद्राक्ष राजपुरोहित • सर्वश्रेष्ठ माँ बगलामुखी पंडित नलखेड़ा" 
-                  : "by Acharya Pt. Rudraksh Rajpurohit • Best Maa Baglamukhi Pandit in Nalkheda"
+                  ? "मार्गदर्शन: आचार्य पं. रुद्राक्ष राजपुरोहित • सिद्ध पीठ नलखेड़ा धाम" 
+                  : "guided by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
                 }
               </h2>
             </div>

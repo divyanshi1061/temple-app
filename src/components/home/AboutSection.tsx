@@ -9,16 +9,16 @@ export default function AboutSection() {
   const { lang } = useLanguage();
 
   const title = lang === 'en' 
-    ? "Acharya Pt Rudraksh Rajpurohit" 
+    ? "Acharya Pt. Rudraksh Rajpurohit" 
     : "आचार्य पं. रुद्राक्ष राजपुरोहित";
     
   const desc = lang === 'en'
-    ? "Acharya Pt Rudraksh Rajpurohit is a highly revered Vedic Priest and Bagalmukhi Sadhak at Siddh Peeth Nalkheda Dham. He dedicates his life to preserving the absolute purity of Vedic rituals and directing Maa Baglamukhi's protective aura to devotees worldwide."
-    : "आचार्य पं. रुद्राक्ष राजपुरोहित नलखेड़ा धाम सिद्ध पीठ में एक अत्यंत प्रतिष्ठित वैदिक पुरोहित और बगलामुखी साधक हैं। वह वैदिक अनुष्ठानों की पूर्ण शुद्धता को बनाए रखने और दुनिया भर के भक्तों तक माँ बगलामुखी की सुरक्षात्मक ऊर्जा को निर्देशित करने के लिए अपना जीवन समर्पित करते हैं।";
+    ? "For generations, my family has served the sacred fire of Maa Baglamukhi. As a Vedic priest and Sadhak at Nalkheda Dham, I, Acharya Pt. Rudraksh Rajpurohit, welcome you. My life is dedicated to maintaining the precise scriptural purity of ancient rituals. Whether you visit our temple in person or connect with us from afar, my mission is to guide you safely through these powerful Vedic Havans to bring protection and harmony into your life."
+    : "पीढ़ियों से, मेरा परिवार माँ बगलामुखी की अखंड ज्योति और सेवा में समर्पित रहा है। नलखेड़ा धाम सिद्ध पीठ में एक पुरोहित और साधक के रूप में, मैं, आचार्य पं. रुद्राक्ष राजपुरोहित, आपका स्वागत करता हूँ। मेरा जीवन इन प्राचीन अनुष्ठानों की शास्त्रीय शुद्धता बनाए रखने के लिए समर्पित है। चाहे आप व्यक्तिगत रूप से हमारे मंदिर आएं या हमसे दूर से जुड़ें, मेरा संकल्प है कि मैं पूर्ण श्रद्धा और वैदिक मर्यादा के साथ यज्ञ संपन्न करवाकर आपके जीवन में सुरक्षा और समृद्धि का मार्ग प्रशस्त कर सकूं।";
 
   const templeSummary = lang === 'en'
-    ? "Experience divine blessings at the ancient Siddh Peeth of Maa Baglamukhi, situated on the banks of the sacred Lakhundar River in Nalkheda Dham. Dating back to the Pandava era, this spiritual powerhouse is world-renowned for its intense Vedic Pujas and specialized Tantra Havans conducted under pure scriptures."
-    : "नलखेड़ा धाम में पवित्र लखुंदर नदी के तट पर स्थित माँ बगलामुखी के प्राचीन सिद्ध पीठ में दिव्य आशीर्वाद का अनुभव करें। पांडव कालीन इतिहास से समृद्ध यह मंदिर अपने तीव्र वैदिक अनुष्ठानों और शास्त्र सम्मत तांत्रिक हवन के लिए विश्व प्रसिद्ध है।";
+    ? "Nestled on the banks of the sacred Lakhundar River, the ancient Siddh Peeth of Maa Baglamukhi in Nalkheda Dham is a site of immense spiritual energy. Dating back to the Pandava era, where Lord Krishna guided King Yudhishthir in sadhana, this temple remains a sanctuary for those seeking protection and victory. Here, we carry forward the legacy of intense Vedic Pujas and Tantra Havans, preserving the exact methods passed down through generations."
+    : "पवित्र लखुंदर नदी के पावन तट पर स्थित, नलखेड़ा धाम में माँ बगलामुखी का प्राचीन सिद्ध पीठ असीम दिव्य ऊर्जा का केंद्र है। द्वापर युग के पांडव काल से जुड़े इस इतिहास में, जहाँ स्वयं भगवान कृष्ण ने महाराज युधिष्ठिर को साधना का निर्देश दिया था, आज भी यह मंदिर एक जागृत धाम है। यहाँ हम सदियों पुरानी परंपरा को जीवित रखते हुए, शुद्ध शास्त्रीय विधि-विधान के साथ विशेष हवन और वैदिक अनुष्ठान संपन्न करते हैं।";
 
   return (
     <section id="about" className="relative py-10 md:py-16 lg:py-24 overflow-hidden bg-white">
@@ -93,10 +93,10 @@ export default function AboutSection() {
             {/* Core Values Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 md:mb-6">
               {[
-                { title: { en: "Authentic Rituals", hi: "प्रामाणिक अनुष्ठान" }, desc: { en: "100% adherence to pure Vedic scriptures.", hi: "शुद्ध वैदिक शास्त्रों का 100% पालन।" } },
-                { title: { en: "Global Reach", hi: "वैश्विक पहुंच" }, desc: { en: "Online sankalp for remote devotees.", hi: "दूरस्थ भक्तों के लिए ऑनलाइन संकल्प।" } },
-                { title: { en: "Online Havan & Anusthan", hi: "ऑनलाइन हवन व अनुष्ठान" }, desc: { en: "Live online havan and anusthan bookings for devotees worldwide.", hi: "विश्वभर के भक्तों के लिए लाइव ऑनलाइन हवन और अनुष्ठान बुकिंग।" } },
-                { title: { en: "Secure Booking", hi: "सुरक्षित बुकिंग" }, desc: { en: "Transparent and trusted process.", hi: "पारदर्शी और विश्वसनीय प्रक्रिया।" } },
+                { title: { en: "Vedic Purity", hi: "शास्त्रीय शुद्धता" }, desc: { en: "We follow the exact mantras and offerings prescribed in ancient Tantric texts.", hi: "हम प्राचीन ग्रंथों में बताए गए मंत्रों और सामग्रियों का ही उपयोग करते हैं।" } },
+                { title: { en: "Devotion Beyond Distance", hi: "भौगोलिक दूरी से परे" }, desc: { en: "Connect via live video call for your personal Sankalp recitation.", hi: "अपने व्यक्तिगत संकल्प के लिए लाइव वीडियो कॉल के माध्यम से जुड़ें।" } },
+                { title: { en: "Guided Anusthan", hi: "मार्गदर्शित अनुष्ठान" }, desc: { en: "Every step is personally explained and directed under scriptural safety.", hi: "हर चरण को शास्त्रीय सुरक्षा के तहत व्यक्तिगत रूप से समझाया और संपन्न किया जाता है।" } },
+                { title: { en: "Devotee Trust", hi: "भक्तों का विश्वास" }, desc: { en: "A transparent and respectful process with complete spiritual dedication.", hi: "पूर्ण समर्पण के साथ एक पारदर्शी, आदरणीय और प्रामाणिक प्रक्रिया।" } },
               ].map((val, i) => (
                 <div key={i} className="flex gap-2.5">
                   <div className="mt-0.5 flex-shrink-0">

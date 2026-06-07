@@ -18,8 +18,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "आचार्य पं. रुद्राक्ष राजपुरोहित कौन हैं और उन्हें नलखेड़ा में माँ बगलामुखी हवन के लिए सबसे अच्छा पंडित क्यों माना जाता है?"
     },
     a: {
-      en: "Acharya Pt. Rudraksh Rajpurohit is a highly revered **Vedic Pandit and Baglamukhi Sadhak** based at **Siddh Peeth Maa Baglamukhi Mandir, Nalkheda Dham**, Madhya Pradesh. With decades of experience in **Tantra Sadhana**, **Vedic Anusthan**, and authentic havan rituals, he is widely regarded as the **best pandit for Baglamukhi Havan in Nalkheda**. He strictly adheres to pure Vedic scriptures, making every ritual spiritually potent and result-oriented.",
-      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित मध्य प्रदेश के नलखेड़ा धाम में पवित्र सिद्ध पीठ माँ बगलामुखी मंदिर के एक अत्यंत प्रतिष्ठित **वैदिक पंडित और बगलामुखी साधक** हैं। **तंत्र साधना**, **वैदिक अनुष्ठान** और प्रामाणिक हवन अनुष्ठानों में दशकों के अनुभव के साथ, उन्हें व्यापक रूप से **नलखेड़ा में बगलामुखी हवन के लिए सर्वश्रेष्ठ पंडित** माना जाता है। वे विशुद्ध रूप से वैदिक शास्त्रों का पालन करते हैं, जिससे प्रत्येक अनुष्ठान आध्यात्मिक रूप से शक्तिशाली और फलदायी बनता है।"
+      en: "**Acharya Pt. Rudraksh Rajpurohit is a traditional Vedic Priest and lifelong Baglamukhi Sadhak based at the ancient Siddh Peeth Maa Baglamukhi Mandir in Nalkheda, Madhya Pradesh.** Descending from a lineage of spiritual guides, he performs Havans, Pujas, and Anusthans in strict accordance with the Atharvaveda and classic Tantric texts. Devotees revere him for his pure scriptural conduct, deep devotion, and compassionate personal guidance through difficult crises.",
+      hi: "**आचार्य पं. रुद्राक्ष राजपुरोहित मध्य प्रदेश के नलखेड़ा धाम स्थित प्राचीन सिद्ध पीठ माँ बगलामुखी मंदिर के एक पारंपरिक वैदिक पुरोहित और आजीवन बगलामुखी साधक हैं।** एक आध्यात्मिक परिवार से आने वाले आचार्य जी अथर्ववेद और प्राचीन तंत्र ग्रंथों के अनुसार पवित्र हवन, पूजा और अनुष्ठान संपन्न कराते हैं। श्रद्धालु उन्हें उनकी शास्त्रीय शुद्धता, गहरी साधना और संकटों के समय उनके द्वारा दिए जाने वाले स्नेहमय व्यक्तिगत मार्गदर्शन के लिए आदरपूर्वक याद करते हैं।"
     }
   },
   {
@@ -28,8 +28,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "माँ बगलामुखी हवन क्या है और इसके क्या लाभ हैं?"
     },
     a: {
-      en: "**Maa Baglamukhi Havan** is a powerful Tantric fire ritual performed by chanting the Baglamukhi Beej Mantra (*ॐ ह्लीं बगलामुखी*) with sacred offerings into the havan kund. It is believed to: **destroy enemies**, **remove evil eye (nazar dosha)**, grant **court case victory (Nyayalay Vijay)**, bring **protection from negative energies**, and **fulfill all desires**. Acharya Ji performs this havan at the energetically charged **Siddh Peeth Nalkheda Dham**.",
-      hi: "**माँ बगलामुखी हवन** एक शक्तिशाली तांत्रिक अग्नि अनुष्ठान है जो पवित्र अग्नि कुंड में विशेष आहुतियों के साथ बगलामुखी बीज मंत्र (*ॐ ह्लीं बगलामुखी*) का जाप करके किया जाता है। ऐसा माना जाता है कि यह: **शत्रुओं का नाश** करता है, **बुरी नजर (नजर दोष) को दूर** करता है, **अदालती मामले में विजय (न्यायालय विजय)** दिलाता है, **नकारात्मक ऊर्जाओं से सुरक्षा** प्रदान करता है, और **सभी इच्छाओं को पूरा** करता है। आचार्य जी इस हवन को ऊर्जा से भरे **सिद्ध पीठ नलखेड़ा धाम** में संपन्न करते हैं।"
+      en: "**Maa Baglamukhi Havan is a sacred fire ritual dedicated to the Goddess Pitambara (the yellow-robed Mother) to seek protection and stambhan (the power to neutralize negative forces).** Performing this Havan at the energized Siddh Peeth in Nalkheda under correct Muhurtas helps devotees overcome long-standing legal disputes, business obstacles, or personal crises. Every offering of yellow mustard, turmeric, and pure cow ghee is accompanied by precise Vedic chants to invoke the Goddess's protective energies.",
+      hi: "**माँ बगलामुखी हवन देवी पीताम्बरा को समर्पित एक अत्यंत शक्तिशाली और पवित्र अग्नि अनुष्ठान है, जो शत्रुओं की नकारात्मक बुद्धि, वाणी और क्रियाओं को स्तंभित (शांत) करने के लिए किया जाता है।** नलखेड़ा के जागृत सिद्ध पीठ में शुभ मुहूर्त में यह हवन करने से भक्तों को पुराने मुकदमों, व्यावसायिक बाधाओं और गृह क्लेश से मुक्ति मिलती है। पूजा में पीली सरसों, हल्दी और गाय के घी जैसी सात्विक सामग्रियों की आहुतियां माँ की दिव्य रक्षात्मक ऊर्जा को जागृत करती हैं।"
     }
   },
   {
@@ -38,8 +38,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "माँ बगलामुखी 36 लाख जाप और सवा लाख जाप क्या है? इसे किसे बुक करना चाहिए?"
     },
     a: {
-      en: "The **Maa Baglamukhi 36 Lakh Jaap** and **Sawa Lakh Jaap** are extensive mantra chanting anusthans where the **Baglamukhi mantra** is recited lakhs of times with complete Vedic discipline. These are recommended for people facing severe **enemy problems, legal disputes, business losses, black magic effects**, or those seeking ultimate divine protection. You can **book Baglamukhi Jaap online** through Acharya Ji's website.",
-      hi: "**माँ बगलामुखी 36 लाख जाप** और **सवा लाख जाप** व्यापक मंत्र जाप अनुष्ठान हैं जहाँ पूर्ण वैदिक अनुशासन के साथ **बगलामुखी मंत्र** का लाखों बार जाप किया जाता है। ये उन लोगों के लिए अनुशंसित हैं जो गंभीर **शत्रु समस्याओं, कानूनी विवादों, व्यावसायिक नुकसान, काले जादू के प्रभाव** का सामना कर रहे हैं या जो परम दिव्य सुरक्षा चाहते हैं। आप आचार्य जी की वेबसाइट के माध्यम से **बगलामुखी जाप ऑनलाइन बुक** कर सकते हैं।"
+      en: "**The Maa Baglamukhi Sawa Lakh Jaap (125,000 recitations) and 36 Lakh Jaap are extensive multi-day mantra chanting anusthans performed under strict Vedic discipline to invoke ultimate divine protection.** These recitations are undertaken for individuals facing extreme adversity, such as false legal allegations, severe business losses, or persistent negative energies. Acharya Pt. Rudraksh Rajpurohit and a team of qualified Vedic Brahmins conduct these recitations with complete discipline, wearing yellow robes and using energized turmeric rosaries.",
+      hi: "**माँ बगलामुखी सवा लाख (1,25,000) और 36 लाख मंत्र जाप अत्यंत गहन अनुष्ठानिक साधनाएँ हैं, जो बड़े संकटों के समय देवी माँ के अभेद्य संरक्षण को जाग्रत करने के लिए की जाती हैं।** यह जाप उन लोगों के लिए विशेष रूप से किया जाता है जो गंभीर अदालती मुकदमों, झूठे आरोपों, व्यापार में भारी नुकसान या अज्ञात नकारात्मक ऊर्जाओं से घिरे हों। आचार्य जी और उनके सहयोगी पुरोहित पीत वस्त्र धारण कर, हल्दी की पवित्र माला से पूर्ण नियमों के साथ यह जाप करते हैं।"
     }
   },
   {
@@ -48,8 +48,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "क्या मैं माँ बगलामुखी हवन ऑनलाइन बुक कर सकता हूँ? दूर रहने वाले भक्तों के लिए यह कैसे काम करता है?"
     },
     a: {
-      en: "Yes! Acharya Pt. Rudraksh Rajpurohit offers **Maa Baglamukhi Havan online booking** for devotees worldwide. The process involves an **online sankalp** (resolution taken on your behalf), after which the havan or anusthan is performed at **Nalkheda Dham Siddh Peeth** with full Vedic rituals. Devotees can connect via WhatsApp at **+91 79095 97033** or email **mabaglamukhi66@gmail.com** to schedule.",
-      hi: "हाँ! आचार्य पं. रुद्राक्ष राजपुरोहित दुनिया भर के भक्तों के लिए **माँ बगलामुखी हवन ऑनलाइन बुकिंग** की सुविधा प्रदान करते हैं। इस प्रक्रिया में एक **ऑनलाइन संकल्प** (आपकी ओर से लिया गया संकल्प) शामिल है, जिसके बाद पूर्ण वैदिक अनुष्ठानों के साथ **नलखेड़ा धाम सिद्ध पीठ** में हवन या अनुष्ठान किया जाता है। भक्त बुकिंग के लिए व्हाट्सएप पर **+91 79095 97033** या ईमेल **mabaglamukhi66@gmail.com** पर संपर्क कर सकते हैं।"
+      en: "**Yes, devotees worldwide can book and participate in the Maa Baglamukhi Havan online through a personalized virtual Sankalp (sacred resolution) performed by Acharya Ji.** Before the Havan begins, Acharya Ji connects with you directly via phone or video call to take your personal Sankalp, reciting your name, family details, and purpose of the ritual. The entire Havan is then conducted on your behalf at the ancient Siddh Peeth in Nalkheda Dham with the same scriptural purity as an in-person ritual, and the blessed offerings are sent to you.",
+      hi: "**हाँ, जो भक्त व्यक्तिगत रूप से नलखेड़ा नहीं आ सकते, वे फोन या वीडियो कॉल पर आचार्य जी के माध्यम से संकल्प लेकर ऑनलाइन माँ बगलामुखी हवन में भाग ले सकते हैं।** हवन शुरू होने से पहले, आचार्य जी सीधे आपसे जुड़ते हैं और आपका नाम, गोत्र एवं उद्देश्य बोलकर संकल्प करवाते हैं। इसके बाद पूर्ण नियमों के साथ नलखेड़ा धाम के प्राचीन मंदिर में आपकी ओर से पूजा संपन्न की जाती है और पूजा का प्रसाद आपको भेज दिया जाता है।"
     }
   },
   {
@@ -58,8 +58,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "क्या न्यायालय विजय पूजा मेरे कोर्ट केस को जीतने में मदद कर सकती है?"
     },
     a: {
-      en: "**Nyayalay Vijay Puja** is a specialized Tantric ritual performed to invoke Maa Baglamukhi's power to **stambhan** (paralyze) the opposition and ensure **court case victory**. Devotees from across India have reported favorable legal outcomes after this puja. Acharya Ji performs it with full **Vedic precision at Siddh Peeth Nalkheda**. Contact him for a personalized consultation based on your specific legal matter.",
-      hi: "**न्यायालय विजय पूजा** एक विशेष तांत्रिक अनुष्ठान है जो विरोधियों को **स्तंभित** करने और **अदालती मामले में जीत** सुनिश्चित करने के लिए माँ बगलामुखी की शक्ति का आह्वान करने के लिए किया जाता है। पूरे भारत से भक्तों ने इस पूजा के बाद अनुकूल कानूनी परिणामों का अनुभव किया है। आचार्य जी इसे **सिद्ध पीठ नलखेड़ा में पूर्ण वैदिक सटीकता** के साथ संपन्न करते हैं। अपने विशिष्ट कानूनी मामले के आधार पर व्यक्तिगत परामर्श के लिए उनसे संपर्क करें।"
+      en: "**Nyayalay Vijay Puja is a specialized Vedic ritual performed to invoke Maa Baglamukhi's Stambhan power to pacify legal disputes, false allegations, and hostility.** By aligning the spiritual energy of the devotee, the puja helps bring truth and fairness to the forefront, assisting in favorable resolutions. Acharya Ji performs this ritual at Nalkheda Dham with precise offerings tailored to the devotee's specific legal hurdles.",
+      hi: "**न्यायालय विजय पूजा एक विशेष तांत्रिक और शास्त्रीय अनुष्ठान है, जो कानूनी मुकदमों में विरोधियों की दुर्भावना, झूठे साक्ष्यों और नकारात्मक गतिविधियों को शांत (स्तंभित) करने के लिए किया जाता है।** यह अनुष्ठान भक्त की आंतरिक ऊर्जा को मजबूत करता है और न्यायपूर्ण निर्णय में सहायक होता है। आचार्य जी नलखेड़ा धाम में भक्त की कुंडली और मुकदमे की परिस्थितियों के अनुसार शुभ मुहूर्त में इसे विधिपूर्वक संपन्न करते हैं।"
     }
   },
   {
@@ -68,8 +68,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "आचार्य जी नलखेड़ा धाम में अन्य कौन सी वैदिक पूजा सेवाएं प्रदान करते हैं?"
     },
     a: {
-      en: "Acharya Pt. Rudraksh Rajpurohit offers a wide range of **Vedic and Tantric puja services** including:\n- **Vyavahik Badha Nivaran** (marriage obstacles removal)\n- **Santan Prapti Puja** (blessings for a child)\n- **Lakshmi Prapti Havan** (wealth and prosperity)\n- **Nav Graha Shanti Puja**\n- **Pitra Dosh & Kaal Sarp Dosh Nivaran**\n- **Vashikaran & Akarshan Puja**\n- **Vyapar Vriddhi Havan** (business growth)\n- **Shatru Nashak / Shatru Stambhan Havan**\n- **Moh Ucchatan Puja**\n- **Vastu Shastra Paramarsh** (Vastu consultation)",
-      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित **वैदिक और तांत्रिक पूजा सेवाओं** की एक विस्तृत श्रृंखला प्रदान करते हैं जिसमें शामिल हैं:\n- **वैवाहिक बाधा निवारण** (विवाह की बाधाओं को दूर करना)\n- **संतान प्राप्ति पूजा** (संतान सुख के लिए आशीर्वाद)\n- **लक्ष्मी प्राप्ति हवन** (धन और समृद्धि)\n- **नवग्रह शांति पूजा**\n- **पितृ दोष और काल सर्प दोष निवारण**\n- **वशीकरण और आकर्षण पूजा**\n- **व्यापार वृद्धि हवन** (व्यवसाय में वृद्धि)\n- **शत्रु नाशक / शत्रु स्तंभन हवन**\n- **मोह उच्चाटन पूजा**\n- **वास्तु शास्त्र परामर्श** (वास्तु सलाह)"
+      en: "**In addition to Maa Baglamukhi Havans, Acharya Ji offers various authentic Vedic ceremonies at Nalkheda Dham including Vyavahik Badha Nivaran, Santan Prapti Puja, and Lakshmi Prapti Havan.** He also conducts Pitra Dosh and Kaal Sarp Dosh remedies, planetary pacification (Navgraha Shanti), and business growth (Vyapar Vriddhi) rituals, ensuring that each follows sacred scriptural practices.",
+      hi: "**माँ बगलामुखी हवन के अलावा, आचार्य जी नलखेड़ा धाम में कई अन्य प्रामाणिक वैदिक पूजाएं संपन्न करते हैं जैसे वैवाहिक बाधा निवारण, संतान प्राप्ति पूजा, और लक्ष्मी प्राप्ति हवन।** वे पितृ दोष, कालसर्प दोष निवारण, नवग्रह शांति और व्यापार वृद्धि पूजा भी पूर्ण विधि-विधान से संपन्न करते हैं।"
     }
   },
   {
@@ -78,8 +78,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "सिद्ध पीठ माँ बगलामुखी मंदिर नलखेड़ा धाम क्या है और इसका आध्यात्मिक महत्व क्या है?"
     },
     a: {
-      en: "**Siddh Peeth Maa Baglamukhi Mandir Nalkheda Dham** is one of the most ancient and spiritually powerful **Maa Baglamukhi Devi Temples** in India, situated on the banks of the sacred **Lakhundar River** in Nalkheda, District Agar Malwa, Madhya Pradesh. Dating back to the **Pandava era**, this ancient temple is world-renowned for its intense **Vedic Pujas and Tantra Havans**. It is believed that prayers offered here yield **swift and powerful results** due to the immense spiritual energy of the Siddh Peeth.",
-      hi: "**सिद्ध पीठ माँ बगलामुखी मंदिर नलखेड़ा धाम** भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली **माँ बगलामुखी देवी मंदिरों** में से एक है, जो मध्य प्रदेश के आगर मालवा जिले के नलखेड़ा में पवित्र **लखूंदर नदी** के तट पर स्थित है। **पांडव काल** का यह प्राचीन मंदिर अपने गहन **वैदिक पूजा और तंत्र हवन** के लिए दुनिया भर में प्रसिद्ध है। ऐसा माना जाता है कि सिद्ध पीठ की असीम आध्यात्मिक ऊर्जा के कारण यहाँ की गई प्रार्थनाओं के **शीघ्र और शक्तिशाली परिणाम** मिलते हैं।"
+      en: "**Siddh Peeth Maa Baglamukhi Mandir in Nalkheda is one of India's oldest and most spiritually charged temples, dating back to the Mahabharata era when Yudhisthira installed the deity.** The temple houses a self-manifested (Swayambhu) idol of the Tri-Shakti (Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati), making it a powerful center of intense spiritual energy and swift divine blessings.",
+      hi: "**नलखेड़ा में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और जाग्रत शक्ति केंद्रों में से एक है, जिसकी स्थापना महाभारत काल में पांडवों द्वारा की गई थी।** मंदिर में माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती की स्वयंभू मूर्तियाँ एक साथ विराजमान हैं, जो इसे अत्यंत फलदायी और शक्तिशाली सिद्ध पीठ बनाती हैं।"
     }
   },
   {
@@ -88,8 +88,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "दर्शन और पूजा के लिए मैं नलखेड़ा धाम कैसे पहुँच सकता हूँ?"
     },
     a: {
-      en: "**Nalkheda Dham, MP 465445** is well-connected:\n- **By Air:** Nearest airport is **Devi Ahilya Bai Holkar Airport, Indore** (~150 km)\n- **By Train:** Nearest major station is **Ujjain Junction** (~100 km)\n- **By Road:** Easily accessible from **Ujjain (100 km), Indore (150 km), and Bhopal (220 km)**\n\nFor prior appointment or **puja booking at Nalkheda Dham**, call or WhatsApp: **+91 79095 97033**",
-      hi: "**नलखेड़ा धाम, मध्य प्रदेश 465445** अच्छी तरह से जुड़ा हुआ है:\n- **हवाई मार्ग:** निकटतम हवाई अड्डा **देवी अहिल्या बाई होलकर हवाई अड्डा, इंदौर** (~150 किमी) है।\n- **ट्रेन द्वारा:** निकटतम प्रमुख स्टेशन **उज्जैन जंक्शन** (~100 किमी) है।\n- **सड़क मार्ग:** **उज्जैन (100 किमी), इंदौर (150 किमी), और भोपाल (220 किमी)** से सड़क मार्ग द्वारा आसानी से पहुँचा जा सकता है।\n\nपूर्व नियुक्ति या **नलखेड़ा धाम में पूजा बुकिंग** के लिए कॉल या व्हाट्सएप करें: **+91 79095 97033**"
+      en: "**Nalkheda Dham in Madhya Pradesh is easily accessible by air through Indore Airport (~150 km) or by train via Ujjain Junction (~100 km).** Regular buses and private cabs connect Nalkheda to both cities. Since special rituals require specific Muhurtas and materials, it is highly recommended to speak with Acharya Ji at +91 79095 97033 before planning your visit.",
+      hi: "**मध्य प्रदेश में स्थित नलखेड़ा धाम हवाई मार्ग से इंदौर हवाई अड्डे (~150 किमी) या रेल मार्ग से उज्जैन जंक्शन (~100 किमी) के माध्यम से आसानी से पहुँचा जा सकता है।** यहाँ से मंदिर के लिए नियमित बसें और टैक्सियां उपलब्ध हैं। चूंकि विशेष अनुष्ठानों के लिए शुभ मुहूर्त और विशिष्ट सामग्रियों की आवश्यकता होती है, इसलिए आने से पहले आचार्य जी से +91 79095 97033 पर बात करने की सलाह दी जाती है।"
     }
   },
   {
@@ -98,8 +98,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "वास्तु शास्त्र परामर्श क्या है और आचार्य जी इसमें कैसे मदद कर सकते हैं?"
     },
     a: {
-      en: "**Vastu Shastra Paramarsh** by Acharya Pt. Rudraksh Rajpurohit is an expert consultation to identify and correct **Vastu doshas** in your home, office, or business premises. By harmonizing energy flows as per **Vedic Vastu principles**, it helps bring **prosperity, health, and peace** to the household. Online consultations are also available.",
-      hi: "आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा **वास्तु शास्त्र परामर्श** आपके घर, कार्यालय या व्यावसायिक परिसर में **वास्तु दोषों** की पहचान करने और उन्हें ठीक करने के लिए एक विशेषज्ञ परामर्श है। **वैदिक वास्तु सिद्धांतों** के अनुसार ऊर्जा प्रवाह को सुसंगत बनाकर, यह परिवार में **समृद्धि, स्वास्थ्य और शांति** लाने में मदद करता है। ऑनलाइन परामर्श भी उपलब्ध हैं।"
+      en: "**Vastu Shastra Paramarsh by Acharya Pt. Rudraksh Rajpurohit is a spiritual and architectural consultation to identify and correct energy blockages in your home, office, or business.** By harmonizing the five elements (Panchabhuta) as per Vedic Vastu principles, it helps resolve financial leaks, health issues, or family disputes without requiring destructive structural changes.",
+      hi: "**आचार्य पं. रुद्राक्ष राजपुरोहित द्वारा वास्तु शास्त्र परामर्श एक आध्यात्मिक एवं संरचनात्मक विश्लेषण है, जिसका उद्देश्य आपके निवास या व्यावसायिक स्थल में ऊर्जा का संतुलन स्थापित करना है।** वैदिक सिद्धांतों के अनुसार ऊर्जा प्रवाह को अनुकूल बनाकर, यह बिना किसी तोड़-फोड़ के घर में सुख-समृद्धि, उत्तम स्वास्थ्य और मानसिक शांति लाने में सहायक होता है।"
     }
   },
   {
@@ -108,8 +108,8 @@ const FAQ_DATA: FAQItem[] = [
       hi: "क्या पूजा प्रक्रिया पारदर्शी और विश्वसनीय है? बुकिंग के बाद मैं क्या उम्मीद कर सकता हूँ?"
     },
     a: {
-      en: "Absolutely. Acharya Ji follows a **secure and transparent booking process**. Once you connect via phone, WhatsApp, or the inquiry form on the website, you will receive complete details about the puja procedure, timing (**muhurta**), sankalp process, and expected outcomes. The entire **Maa Baglamukhi Havan or Anusthan** is conducted at **Siddh Peeth Nalkheda Dham** with full scriptural compliance. Many devotees across India and abroad have experienced life-changing results.",
-      hi: "बिल्कुल। आचार्य जी एक **सुरक्षित और पारदर्शी बुकिंग प्रक्रिया** का पालन करते हैं। एक बार जब आप फोन, व्हाट्सएप या वेबसाइट पर पूछताछ फॉर्म के माध्यम से जुड़ते हैं, तो आपको पूजा प्रक्रिया, समय (**मुहूर्त**), संकल्प प्रक्रिया और अपेक्षित परिणामों के बारे में पूरी जानकारी दी जाएगी। संपूर्ण **माँ बगलामुखी हवन या अनुष्ठान** पूर्ण शास्त्रीय अनुपालन के साथ **सिद्ध पीठ नलखेड़ा धाम** में आयोजित किया जाता है। भारत और विदेशों के कई भक्तों ने जीवन बदलने वाले परिणामों का अनुभव किया है।"
+      en: "**Yes, the booking and performing of every Havan or Puja under Acharya Ji is completely transparent, including a personal Sankalp and sending of sacred Prasad.** Once you contact Acharya Ji, he will consult your birth details or planetary alignments to suggest the appropriate ritual and Muhurta. The entire ritual is conducted with strict Vedic precision, and the blessed Prasad and Raksha Sutra are sent directly to your address.",
+      hi: "**हाँ, आचार्य जी के मार्गदर्शन में होने वाली प्रत्येक पूजा पूर्ण शुचिता, सत्यता और शास्त्रीय मर्यादा के साथ अत्यंत पारदर्शी तरीके से संपन्न की जाती है।** संपर्क करने पर आचार्य जी आपकी कुंडली या ग्रह बाधाओं का अध्ययन कर उचित अनुष्ठान एवं शुभ मुहूर्त तय करते हैं। संपूर्ण अनुष्ठान के बाद, अभिमंत्रित रक्षा सूत्र, भस्म और प्रसाद सीधे आपके पते पर भेज दिया जाता है।"
     }
   }
 ];
