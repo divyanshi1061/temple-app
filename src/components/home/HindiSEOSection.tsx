@@ -55,9 +55,15 @@ export default function HindiSEOSection() {
 
             <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
               <p>
-                {lang === "en"
-                  ? "**Summary: Chanting the sacred Beej Mantra (ॐ ह्लीं) with yellow turmeric beads under correct guidance invokes the protective grace of Pitambara Devi.** I guide devotees in the precise Vedic discipline of chanting this potent Beej Mantra. Goddess Baglamukhi, the eighth Mahavidya, represents the divine cosmic force of stambhan—the quiet power that silences negative criticism, halts hostile conspiracies, and pacifies legal disputes. By practicing this recitation with purity, devotees find mental strength and protection from unseen adversarial forces."
-                  : "**सारांश: एक योग्य मार्गदर्शक के तहत हल्दी की पवित्र माला से मंत्र का जाप करने से देवी का सुरक्षा चक्र जाग्रत होता है।** मैं भक्तों को इस अत्यंत प्रभावशाली बीज मंत्र (ॐ ह्लीं) के सही जप विधान और शुचिता के नियमों का अभ्यास कराता हूँ। अष्टम महाविद्या माँ बगलामुखी ब्रह्मांड की उस शक्ति का प्रतीक हैं जो शत्रुओं की नकारात्मक वाणी, दुर्भावना और अनुचित गतिविधियों को शांत (स्तंभित) करती है। पूर्ण निष्ठा के साथ इस मंत्र का आश्रय लेने से भक्तों को अदालती मामलों, व्यावसायिक ईर्ष्या और मानसिक चिंताओं से मुक्ति मिलती है।"}
+                {lang === "en" ? (
+                  <>
+                    <strong>Summary: Chanting the sacred Beej Mantra (ॐ ह्लीं) with yellow turmeric beads under correct guidance invokes the protective grace of Pitambara Devi.</strong> I guide devotees in the precise Vedic discipline of chanting this potent Beej Mantra. Goddess Baglamukhi, the eighth Mahavidya, represents the divine cosmic force of stambhan—the quiet power that silences negative criticism, halts hostile conspiracies, and pacifies legal disputes. By practicing this recitation with purity, devotees find mental strength and protection from unseen adversarial forces.
+                  </>
+                ) : (
+                  <>
+                    <strong>सारांश: एक योग्य मार्गदर्शक के तहत हल्दी की पवित्र माला से मंत्र का जाप करने से देवी का सुरक्षा चक्र जाग्रत होता है।</strong> मैं भक्तों को इस अत्यंत प्रभावशाली बीज मंत्र (ॐ ह्लीं) के सही जप विधान और शुचिता के नियमों का अभ्यास कराता हूँ। अष्टम महाविद्या माँ बगलामुखी ब्रह्मांड की उस शक्ति का प्रतीक हैं जो शत्रुओं की नकारात्मक वाणी, दुर्भावना और अनुचित गतिविधियों को शांत (स्तंभित) करती है। पूर्ण निष्ठा के साथ इस मंत्र का आश्रय लेने से भक्तों को अदालती मामलों, व्यावसायिक ईर्ष्या और मानसिक चिंताओं से मुक्ति मिलती है।
+                  </>
+                )}
               </p>
               <p>
                 {lang === "en"
@@ -87,9 +93,15 @@ export default function HindiSEOSection() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-7 text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
                 <p>
-                  {lang === "en"
-                    ? "**Summary: Situated in Nalkheda, Agar Malwa, Madhya Pradesh, the Siddh Peeth Maa Baglamukhi Temple is one of India's most ancient and spiritually powerful Goddess temples.** Our temple stands on the sacred banks of the Lakhundar River (ancient Lakshmana River) in Madhya Pradesh, carrying an aura that has drawn seekers for millennia. As documented in ancient chronicles, this sanctum is unique because the Tri-Shakti—Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati—are worshiped together in their self-manifested forms. It is here that the Pandavas sat in silent meditation before the battle of Kurukshetra, seeking the strength to overcome their formidable adversaries."
-                    : "**सारांश: नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली देवी मंदिरों में से एक है।** यह पावन मंदिर मध्य प्रदेश के नलखेड़ा में प्रवाहित पवित्र लखुंदर नदी (प्राचीन लक्ष्मणा नदी) के तट पर स्थित है, जो हजारों वर्षों से साधकों के लिए श्रद्धा का केंद्र रहा है। शास्त्रों के अनुसार, इस सिद्ध पीठ में त्रि-शक्ति—माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती एक ही वेदी पर विराजमान हैं। महाभारत युद्ध से पूर्व, विषम परिस्थितियों में पांडवों ने इसी स्थान पर अनुष्ठान कर विजयश्री का आशीर्वाद प्राप्त किया था।"}
+                  {lang === "en" ? (
+                    <>
+                      <strong>Summary: Situated in Nalkheda, Agar Malwa, Madhya Pradesh, the Siddh Peeth Maa Baglamukhi Temple is one of India's most ancient and spiritually powerful Goddess temples.</strong> Our temple stands on the sacred banks of the Lakhundar River (ancient Lakshmana River) in Madhya Pradesh, carrying an aura that has drawn seekers for millennia. As documented in ancient chronicles, this sanctum is unique because the Tri-Shakti—Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati—are worshiped together in their self-manifested forms. It is here that the Pandavas sat in silent meditation before the battle of Kurukshetra, seeking the strength to overcome their formidable adversaries.
+                    </>
+                  ) : (
+                    <>
+                      <strong>सारांश: नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली देवी मंदिरों में से एक है।</strong> यह पावन मंदिर मध्य प्रदेश के नलखेड़ा में प्रवाहित पवित्र लखुंदर नदी (प्राचीन लक्ष्मणा नदी) के तट पर स्थित है, जो हजारों वर्षों से साधकों के लिए श्रद्धा का केंद्र रहा है। शास्त्रों के अनुसार, इस सिद्ध पीठ में त्रि-शक्ति—माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती एक ही वेदी पर विराजमान हैं। महाभारत युद्ध से पूर्व, विषम परिस्थितियों में पांडवों ने इसी स्थान पर अनुष्ठान कर विजयश्री का आशीर्वाद प्राप्त किया था।
+                    </>
+                  )}
                 </p>
                 <p>
                   {lang === "en"
@@ -132,9 +144,15 @@ export default function HindiSEOSection() {
 
             <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
               <p>
-                {lang === "en"
-                  ? "**Summary: Acharya Pt. Rudraksh Rajpurohit dedicates his life to performing authentic Vedic Havans and guiding devotees through complex life crises.** Carrying forward the sacred traditions of my ancestors, I have devoted my life to serving Maa Baglamukhi and mastering the scriptures. I assist devotees from all walks of life by conducting traditional Vedic Pujas and Havans, ensuring that each mantra is chanted with absolute phonetic accuracy and pure intent to resolve planetary afflictions, legal troubles, and emotional blockages."
-                  : "**सारांश: आचार्य पं. रुद्राक्ष राजपुरोहित पूर्ण शास्त्रीय शुद्धता के साथ हवन संपन्न करने और श्रद्धालुओं को संकटों से उभारने के लिए समर्पित हैं।** अपने पूर्वजों की पवित्र गुरु-शिष्य परंपरा का निर्वहन करते हुए, मैंने अपना जीवन माँ बगलामुखी की सेवा और शास्त्रों के अध्ययन में समर्पित किया है। मैं देश-विदेश के भक्तों की सहायता के लिए शास्त्र-सम्मत वैदिक पूजा और हवन संपन्न करता हूँ, जिसमें प्रत्येक मंत्रोच्चार पूर्ण स्वर-शुद्धि और सात्विक संकल्प के साथ किया जाता है, ताकि उन्हें ग्रह बाधाओं, शत्रु बाधा और मानसिक तनाव से मुक्ति मिल सके।"}
+                {lang === "en" ? (
+                  <>
+                    <strong>Summary: Acharya Pt. Rudraksh Rajpurohit dedicates his life to performing authentic Vedic Havans and guiding devotees through complex life crises.</strong> Carrying forward the sacred traditions of my ancestors, I have devoted my life to serving Maa Baglamukhi and mastering the scriptures. I assist devotees from all walks of life by conducting traditional Vedic Pujas and Havans, ensuring that each mantra is chanted with absolute phonetic accuracy and pure intent to resolve planetary afflictions, legal troubles, and emotional blockages.
+                  </>
+                ) : (
+                  <>
+                    <strong>सारांश: आचार्य पं. रुद्राक्ष राजपुरोहित पूर्ण शास्त्रीय शुद्धता के साथ हवन संपन्न करने और श्रद्धालुओं को संकटों से उभारने के लिए समर्पित हैं।</strong> अपने पूर्वजों की पवित्र गुरु-शिष्य परंपरा का निर्वहन करते हुए, मैंने अपना जीवन माँ बगलामुखी की सेवा और शास्त्रों के अध्ययन में समर्पित किया है। मैं देश-विदेश के भक्तों की सहायता के लिए शास्त्र-सम्मत वैदिक पूजा और हवन संपन्न करता हूँ, जिसमें प्रत्येक मंत्रोच्चार पूर्ण स्वर-शुद्धि और सात्विक संकल्प के साथ किया जाता है, ताकि उन्हें ग्रह बाधाओं, शत्रु बाधा और मानसिक तनाव से मुक्ति मिल सके।
+                  </>
+                )}
               </p>
               <p>
                 {lang === "en"
