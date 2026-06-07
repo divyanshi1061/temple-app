@@ -63,11 +63,11 @@ export default function VideoManager() {
     if (!url) return "";
     if (url.includes("youtube.com/embed/")) return url;
 
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const regExp = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
     const match = url.match(regExp);
 
-    if (match && match[2].length === 11) {
-      return `https://www.youtube.com/embed/${match[2]}`;
+    if (match && match[1] && match[1].length === 11) {
+      return `https://www.youtube.com/embed/${match[1]}`;
     }
     return url; // fallback to user's URL if not a standard youtube link
   };
