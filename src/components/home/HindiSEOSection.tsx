@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaOm } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HindiSEOSection() {
   const { lang } = useLanguage();
@@ -83,17 +84,32 @@ export default function HindiSEOSection() {
               </h3>
             </div>
 
-            <div className="text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
-              <p>
-                {lang === "en"
-                  ? "**Summary: Situated in Nalkheda, Agar Malwa, Madhya Pradesh, the Siddh Peeth Maa Baglamukhi Temple is one of India's most ancient and spiritually powerful Goddess temples.** Our temple stands on the sacred banks of the Lakhundar River (ancient Lakshmana River) in Madhya Pradesh, carrying an aura that has drawn seekers for millennia. As documented in ancient chronicles, this sanctum is unique because the Tri-Shakti—Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati—are worshiped together in their self-manifested forms. It is here that the Pandavas sat in silent meditation before the battle of Kurukshetra, seeking the strength to overcome their formidable adversaries."
-                  : "**सारांश: नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली देवी मंदिरों में से एक है।** यह पावन मंदिर मध्य प्रदेश के नलखेड़ा में प्रवाहित पवित्र लखुंदर नदी (प्राचीन लक्ष्मणा नदी) के तट पर स्थित है, जो हजारों वर्षों से साधकों के लिए श्रद्धा का केंद्र रहा है। शास्त्रों के अनुसार, इस सिद्ध पीठ में त्रि-शक्ति—माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती एक ही वेदी पर विराजमान हैं। महाभारत युद्ध से पूर्व, विषम परिस्थितियों में पांडवों ने इसी स्थान पर अनुष्ठान कर विजयश्री का आशीर्वाद प्राप्त किया था।"}
-              </p>
-              <p>
-                {lang === "en"
-                  ? "In our temple courtyard, you will witness a divine phenomenon: sacred trees of Bel, Champa, Neem, and Peepal all grow conjoined from a single root. Thousands of devotees journey to Nalkheda Dham every year to seek blessings for business growth, debt relief, health issues, and legal resolution. The high spiritual vibration of this land amplifies the impact of every havan and anusthan we perform."
-                  : "हमारे मंदिर के प्रांगण में एक अद्भुत प्राकृतिक चमत्कार दिखाई देता है, जहाँ बेल, चंपा, नीम और पीपल के पवित्र वृक्ष एक ही जड़ से जुड़े उग रहे हैं। हर वर्ष हजारों श्रद्धालु व्यापारिक उन्नति, ऋण मुक्ति, आरोग्य और अदालती विजय के लिए यहाँ आते हैं। इस भूमि की पवित्र ऊर्जा हमारे द्वारा किए जाने वाले प्रत्येक हवन और अनुष्ठान के प्रभाव को कई गुना बढ़ा देती है।"}
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+              <div className="lg:col-span-7 text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-3">
+                <p>
+                  {lang === "en"
+                    ? "**Summary: Situated in Nalkheda, Agar Malwa, Madhya Pradesh, the Siddh Peeth Maa Baglamukhi Temple is one of India's most ancient and spiritually powerful Goddess temples.** Our temple stands on the sacred banks of the Lakhundar River (ancient Lakshmana River) in Madhya Pradesh, carrying an aura that has drawn seekers for millennia. As documented in ancient chronicles, this sanctum is unique because the Tri-Shakti—Maa Baglamukhi, Maa Lakshmi, and Maa Saraswati—are worshiped together in their self-manifested forms. It is here that the Pandavas sat in silent meditation before the battle of Kurukshetra, seeking the strength to overcome their formidable adversaries."
+                    : "**सारांश: नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से शक्तिशाली देवी मंदिरों में से एक है।** यह पावन मंदिर मध्य प्रदेश के नलखेड़ा में प्रवाहित पवित्र लखुंदर नदी (प्राचीन लक्ष्मणा नदी) के तट पर स्थित है, जो हजारों वर्षों से साधकों के लिए श्रद्धा का केंद्र रहा है। शास्त्रों के अनुसार, इस सिद्ध पीठ में त्रि-शक्ति—माँ बगलामुखी, माँ लक्ष्मी और माँ सरस्वती एक ही वेदी पर विराजमान हैं। महाभारत युद्ध से पूर्व, विषम परिस्थितियों में पांडवों ने इसी स्थान पर अनुष्ठान कर विजयश्री का आशीर्वाद प्राप्त किया था।"}
+                </p>
+                <p>
+                  {lang === "en"
+                    ? "In our temple courtyard, you will witness a divine phenomenon: sacred trees of Bel, Champa, Neem, and Peepal all grow conjoined from a single root. Thousands of devotees journey to Nalkheda Dham every year to seek blessings for business growth, debt relief, health issues, and legal resolution. The high spiritual vibration of this land amplifies the impact of every havan and anusthan we perform."
+                    : "हमारे मंदिर के प्रांगण में एक अद्भुत प्राकृतिक चमत्कार दिखाई देता है, जहाँ बेल, चंपा, नीम और पीपल के पवित्र वृक्ष एक ही जड़ से जुड़े उग रहे हैं। हर वर्ष हजारों श्रद्धालु व्यापारिक उन्नति, ऋण मुक्ति, आरोग्य और अदालती विजय के लिए यहाँ आते हैं। इस भूमि की पवित्र ऊर्जा हमारे द्वारा किए जाने वाले प्रत्येक हवन और अनुष्ठान के प्रभाव को कई गुना बढ़ा देती है।"}
+                </p>
+              </div>
+              <div className="lg:col-span-5 w-full">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border-2 border-gold/25 bg-gray-50/50">
+                  <Image
+                    src="/baglamukhi-anusthan-new.webp"
+                    alt="Maa Baglamukhi Anusthan"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: "cover" }}
+                    className="hover:scale-105 transition-transform duration-700 ease-in-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </div>
             </div>
           </motion.div>
 
