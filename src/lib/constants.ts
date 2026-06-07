@@ -120,7 +120,7 @@ export const SERVICES = [
     },
     duration: { en: "3-5 Days", hi: "3-5 दिन" },
     icon: "BA",
-    image: "/baglamukhi-anushthan-main.webp",
+    image: "/baglamukhi-anusthan-main.webp",
     category: "anusthan",
     popular: true,
   },

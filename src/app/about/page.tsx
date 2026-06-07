@@ -17,8 +17,8 @@ export default function AboutPage() {
         <article>
           <h2>The Sacred History of Siddh Peeth Maa Baglamukhi Temple, Nalkheda</h2>
           <p>
-            Located on the tranquil banks of the Lakhundar River in the historic town of Nalkheda, Madhya Pradesh, 
-            the Siddh Peeth Maa Baglamukhi Temple is one of India&apos;s most ancient and powerful spiritual sanctuaries. 
+            Located in Nalkheda, Agar Malwa, Madhya Pradesh, the Siddh Peeth Maa Baglamukhi Temple is one of India&apos;s 
+            most ancient and spiritually powerful Goddess temples. Located on the tranquil banks of the Lakhundar River, 
             According to the sacred texts of the Kalika Purana and local lore, this temple dates back to the Dwapara Yuga. 
             Before the great war of Kurukshetra, the Pandava prince Yudhisthira was guided by Lord Krishna to perform 
             a special stambhan sadhana of Goddess Baglamukhi here to ensure victory over the Kaurava forces. Yudhisthira 
@@ -32,8 +32,8 @@ export default function AboutPage() {
             have been conducted uninterrupted by generations of dedicated sadhaks.
           </p>
           <p>
-            मध्य प्रदेश के आगर मालवा जिले के प्राचीन नगर नलखेड़ा में पवित्र लखुंदर नदी के तट पर स्थित सिद्ध पीठ माँ बगलामुखी मंदिर 
-            भारत के सबसे प्राचीन और जाग्रत शक्तिपीठों में से एक है। कालिका पुराण और पौराणिक कथाओं के अनुसार, इस मंदिर का इतिहास 
+            नलखेड़ा, आगर मालवा, मध्य प्रदेश में स्थित सिद्ध पीठ माँ बगलामुखी मंदिर भारत के सबसे प्राचीन और आध्यात्मिक रूप से 
+            शक्तिशाली देवी मंदिरों में से एक है। पवित्र लखुंदर नदी के तट पर स्थित यह मंदिर कालिका पुराण और पौराणिक कथाओं के अनुसार, 
             द्वापर युग से जुड़ा है। महाभारत युद्ध के प्रारंभ होने से पूर्व, भगवान श्रीकृष्ण के निर्देश पर महाराज युधिष्ठिर ने युद्ध में 
             विजय प्राप्त करने के लिए इसी स्थान पर माँ बगलामुखी की विशेष स्तंभन साधना की थी। युधिष्ठिर द्वारा स्थापित देवी की स्वयंभू 
             प्रतिमा आज भी गर्भगृह में मुख्य देवी के रूप में विराजमान है। गर्भगृह में माँ बगलामुखी के मध्य में विराजमान होने के साथ ही, 
