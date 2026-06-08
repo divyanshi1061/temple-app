@@ -37,7 +37,7 @@ export default function AdminDashboardPage() {
           fetch(`${API_BASE}/videos`),
           fetch(`${API_BASE}/hero`),
           fetch(`${API_BASE}/contact`),
-          fetchWithAuth(`${API_BASE}/admin/reviews`).catch(() => null),
+          fetchWithAuth("/admin/reviews").catch(() => null),
         ]);
 
         const gallery = galleryRes.ok ? await galleryRes.json() : [];

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { fetchWithAuth, API_BASE } from "@/lib/adminApi";
+import { fetchWithAuth } from "@/lib/adminApi";
 import { 
   FaStar, 
   FaTrashAlt, 
@@ -33,7 +33,7 @@ export default function AdminReviewPage() {
     try {
       setLoading(true);
       setError("");
-      const res = await fetchWithAuth(`${API_BASE}/admin/reviews`);
+      const res = await fetchWithAuth("/admin/reviews");
       if (res.ok) {
         const data = await res.json();
         setReviews(Array.isArray(data) ? data : []);
@@ -55,7 +55,7 @@ export default function AdminReviewPage() {
   const handleToggleApprove = async (id: string, currentApproved: boolean) => {
     try {
       setActionLoading(id);
-      const res = await fetchWithAuth(`${API_BASE}/admin/reviews/${id}/approve`, {
+      const res = await fetchWithAuth(`/admin/reviews/${id}/approve`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ export default function AdminReviewPage() {
 
     try {
       setActionLoading(id);
-      const res = await fetchWithAuth(`${API_BASE}/admin/reviews/${id}`, {
+      const res = await fetchWithAuth(`/admin/reviews/${id}`, {
         method: "DELETE",
       });
 
