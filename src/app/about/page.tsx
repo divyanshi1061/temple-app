@@ -3,9 +3,62 @@ import AboutPageClient from "@/components/about/AboutPageClient";
 // SEO: This is a SERVER COMPONENT — all content below is rendered as static HTML
 // and is fully crawlable by search engines.
 
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.panditmaabaglamukhi.com/about/#webpage",
+      "url": "https://www.panditmaabaglamukhi.com/about",
+      "name": "About Pandit Maa Baglamukhi & Maa Bagalamukhi Pandit | Pt. Rudraksh Rajpurohit",
+      "description": "Discover the history of Siddh Peeth Maa Baglamukhi Temple in Nalkheda, MP and learn about the spiritual path of Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.panditmaabaglamukhi.com/#website",
+        "url": "https://www.panditmaabaglamukhi.com",
+        "name": "Pandit Maa Baglamukhi Temple Website"
+      }
+    },
+    {
+      "@type": "PlaceOfWorship",
+      "@id": "https://www.panditmaabaglamukhi.com/#temple",
+      "name": "Siddh Peeth Maa Baglamukhi Temple Dham",
+      "description": "The sacred, historical, and highly potent Siddh Peeth of Goddess Maa Baglamukhi situated on the banks of Lakhundar River in Nalkheda, Agar Malwa, Madhya Pradesh.",
+      "url": "https://www.panditmaabaglamukhi.com",
+      "telephone": "+91 79095 97033",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Maa Baglamukhi Mandir",
+        "addressLocality": "Nalkheda",
+        "addressRegion": "Madhya Pradesh",
+        "postalCode": "465445",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.panditmaabaglamukhi.com/#person",
+      "name": "Acharya Pt. Rudraksh Rajpurohit",
+      "alternateName": [
+        "Pandit Maa Baglamukhi", 
+        "Maa Bagalamukhi Pandit", 
+        "Pandit Maa Baglamukhi Nalkheda", 
+        "Maa Bagalamukhi Pandit Nalkheda"
+      ],
+      "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
+      "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
+      "url": "https://www.panditmaabaglamukhi.com"
+    }
+  ]
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       {/* 
         Server-rendered SEO content: hidden visually but fully crawlable.
         This ensures Google indexes the complete about page content including 

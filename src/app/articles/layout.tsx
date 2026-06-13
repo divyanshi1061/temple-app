@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vedic Guidance & Spiritual Wisdom | Maa Baglamukhi Temple",
+  title: "Vedic Guidance & Articles | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
   description:
-    "Read authentic articles on the history of Siddh Peeth Maa Baglamukhi Temple, the deep meaning of sacred mantras, step-by-step Havan processes, and travel guidelines for Nalkheda Dham.",
+    "Read spiritual guides and articles by Pandit Maa Baglamukhi expert Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) on mantras, Havans, and Nalkheda Dham history.",
   keywords: [
+    "Pandit Maa Baglamukhi", "Maa Bagalamukhi Pandit", "Pandit Maa Baglamukhi Nalkheda", "Maa Bagalamukhi Pandit Nalkheda",
     "Maa Baglamukhi Temple history", "Baglamukhi mantra meaning",
     "How to reach Nalkheda Dham", "Vedic Havan process",
-    "Maa Baglamukhi Pandit", "Acharya Pt Rudraksh Rajpurohit articles"
+    "Acharya Pt Rudraksh Rajpurohit articles"
   ],
   alternates: {
     canonical: "https://www.panditmaabaglamukhi.com/articles",
@@ -17,11 +18,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Vedic Guidance & Spiritual Wisdom | Maa Baglamukhi Temple",
+    title: "Vedic Guidance & Articles | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
     description:
-      "Explore deep spiritual insights, temple chronicles, and practical guides for visiting Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham.",
+      "Read spiritual guides and articles by Pandit Maa Baglamukhi expert Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) on mantras, Havans, and Nalkheda Dham history.",
     url: "https://www.panditmaabaglamukhi.com/articles",
-    siteName: "Maa Baglamukhi Nalkheda Dham",
+    siteName: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
     images: [
       {
         url: "/og-image.png",
@@ -35,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vedic Guidance & Spiritual Wisdom | Maa Baglamukhi Temple",
+    title: "Vedic Guidance & Articles | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
     description:
-      "Read authentic articles on the history of Siddh Peeth Maa Baglamukhi Temple, mantra meanings, and travel guides.",
+      "Read spiritual guides and articles by Pandit Maa Baglamukhi expert Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) on mantras, Havans, and Nalkheda Dham history.",
     images: ["/og-image.png"],
   },
 };

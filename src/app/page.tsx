@@ -18,8 +18,18 @@ export default function Home() {
       {
         "@type": "Person",
         "@id": "https://www.panditmaabaglamukhi.com/#person",
-        "name": "Acharya Pt. Rudraksh Rajpurohit",
-        "alternateName": ["Rudraksh Rajpurohit", "Pt. Rudraksh Rajpurohit", "Maa Baglamukhi Pandit Nalkheda", "Ma Baglamukhi Pandit Nalkheda"],
+        "name": "Pt. Rudraksh Rajpurohit (Pandit Maa Baglamukhi / Maa Bagalamukhi Pandit)",
+        "alternateName": [
+          "Pandit Maa Baglamukhi",
+          "Maa Bagalamukhi Pandit",
+          "Pandit Maa Baglamukhi Nalkheda",
+          "Maa Bagalamukhi Pandit Nalkheda",
+          "Acharya Pt. Rudraksh Rajpurohit",
+          "Rudraksh Rajpurohit",
+          "Pt. Rudraksh Rajpurohit",
+          "Maa Baglamukhi Pandit Nalkheda",
+          "Ma Baglamukhi Pandit Nalkheda"
+        ],
         "jobTitle": "Vedic Priest & Bagalmukhi Sadhak",
         "description": "Highly revered Vedic Priest & Bagalmukhi Sadhak based at the sacred Siddh Peeth Maa Baglamukhi Temple, Nalkheda, conducting high-potency Havans, Anusthans and Vedic Pujas.",
         "image": "https://www.panditmaabaglamukhi.com/acharya-new.webp",
@@ -223,10 +233,14 @@ export default function Home() {
       {
         "@type": "ProfessionalService",
         "@id": "https://www.panditmaabaglamukhi.com/#localbusiness",
-        "name": "Acharya Pt. Rudraksh Rajpurohit - Best Maa Baglamukhi Pandit Nalkheda",
+        "name": "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Acharya Pt. Rudraksh Rajpurohit",
         "alternateName": [
+          "Pandit Maa Baglamukhi",
+          "Maa Bagalamukhi Pandit",
+          "Pandit Maa Baglamukhi Nalkheda",
+          "Maa Bagalamukhi Pandit Nalkheda",
+          "Pt. Rudraksh Rajpurohit",
           "Maa Baglamukhi Pandit Nalkheda",
-          "Ma Baglamukhi Pandit Nalkheda",
           "Baglamukhi Pandit Nalkheda",
           "Nalkheda Pandit"
         ],

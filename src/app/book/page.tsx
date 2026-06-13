@@ -3,11 +3,13 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Book Online Puja & Havan | Acharya Pt Rudraksh Rajpurohit",
-  description: "Book authentic Maa Baglamukhi Pujas, Havans, and Vedic Anusthans at Siddh Peeth Nalkheda Dham, guided by Acharya Pt Rudraksh Rajpurohit.",
+  title: "Book Pujas & Havans Online | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
+  description: "Book authentic Vedic Pujas, Havans, and Anusthans at Siddh Peeth Nalkheda Dham with Pandit Maa Baglamukhi expert, Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
   keywords: [
     "Pandit Maa Baglamukhi",
-    "Bagalamukhi Pandit",
+    "Maa Bagalamukhi Pandit",
+    "Pandit Maa Baglamukhi Nalkheda",
+    "Maa Bagalamukhi Pandit Nalkheda",
     "Mandir Pujari",
     "Baglamukhi Pujari",
     "Maa Baglamukhi Havan booking",

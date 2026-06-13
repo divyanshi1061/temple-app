@@ -37,14 +37,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.panditmaabaglamukhi.com'),
   title: {
-    default: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
-    template: "%s | Acharya Pt. Rudraksh Rajpurohit | Siddh Peeth Nalkheda"
+    default: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
+    template: "%s | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit Nalkheda"
   },
   description:
-    "Acharya Pt. Rudraksh Rajpurohit personally performs authentic Maa Baglamukhi Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham, Madhya Pradesh. Every ritual follows strict scriptural purity — consult with Acharya Ji directly to resolve legal disputes, enemies, or family issues.",
+    "Consult Pandit Maa Baglamukhi expert Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) for authentic Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham. Resolve legal disputes, enemies, or financial issues with complete scriptural purity.",
   keywords: [
     // Brand & Person keywords
-    "Acharya Pt Rudraksh Rajpurohit", "Rudraksh Rajpurohit Nalkheda",
+    "Pandit Maa Baglamukhi", "Maa Bagalamukhi Pandit", "Pandit Maa Bagalamukhi Nalkheda", "Maa Bagalamukhi Pandit Nalkheda",
+    "Pt Rudraksh Rajpurohit", "Acharya Pt Rudraksh Rajpurohit", "Rudraksh Rajpurohit Nalkheda",
     "Maa Baglamukhi Pandit Nalkheda", "Baglamukhi Mandir Pujari",
     "Siddh Peeth Nalkheda Dham", "Maa Baglamukhi Havan Nalkheda",
     "Lal Mirchi Havan Nalkheda", "Court Case Victory Puja",
@@ -75,11 +76,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
+    title: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
     description:
-      "Connect with Acharya Pt. Rudraksh Rajpurohit for authentic Maa Baglamukhi Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham, Madhya Pradesh. Experience pure Vedic rituals for protection, peace, and prosperity.",
+      "Connect with Pandit Maa Baglamukhi expert Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) for authentic Havans, Pujas & Anusthans at the ancient Siddh Peeth in Nalkheda Dham, Madhya Pradesh. Experience pure Vedic rituals for protection, peace, and prosperity.",
     url: "https://www.panditmaabaglamukhi.com",
-    siteName: "Maa Baglamukhi Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
+    siteName: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
     images: [
       {
         url: "/og-image.png",
@@ -93,8 +94,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maa Baglamukhi Havan & Puja at Nalkheda Dham | Acharya Pt. Rudraksh Rajpurohit",
-    description: "Book authentic Maa Baglamukhi Havans, Pujas & Anusthans with Acharya Pt. Rudraksh Rajpurohit at Siddh Peeth Nalkheda Dham. Pure Vedic energy for overcoming active crises, legal battles, and obstacles.",
+    title: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
+    description: "Book authentic Vedic Havans, Pujas & Anusthans with Pandit Maa Baglamukhi expert Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit) at Siddh Peeth Nalkheda Dham.",
     images: ["/og-image.png"],
   },
   icons: {

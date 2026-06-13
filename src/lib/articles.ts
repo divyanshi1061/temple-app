@@ -399,7 +399,7 @@ export const ARTICLES: ArticleItem[] = [
       }
     },
     {
-      heading: { en: "Is it 'Bagalamukhi' or 'Baglamukhi'?", hi: "सही शब्द 'बगलामुखी' है या 'बगलामुखी'?" },
+      heading: { en: "Is it 'Bagalamukhi' or 'Baglamukhi'?", hi: "सही शब्द 'बगलामुखी' है या 'बगालामुखी'?" },
       content: {
         en: "From a purely grammatical perspective in Sanskrit and Hindi, both names refer to the exact same deity. In Hindi, it is commonly written as **बगलामुखी** (Baglamukhi), whereas in South Indian scripts, English translations of Tantric texts, and official academic papers, it is often spelled as **Bagalamukhi** (with an extra 'a'). This variation is simply a transliteration difference between regional languages and English. There is absolutely no difference in their divine powers, mantras, or blessings. Whether you pray to Maa Baglamukhi or Maa Bagalamukhi, she grants victory and protection equally.",
         hi: "संस्कृत और हिंदी व्याकरण के दृष्टिकोण से, दोनों नाम एक ही देवी की ओर संकेत करते हैं। उत्तरी भारत में इसे सामान्यतः **बगलामुखी** (Baglamukhi) लिखा और बोला जाता है, जबकि दक्षिण भारतीय भाषाओं, तांत्रिक ग्रंथों के अंग्रेजी अनुवादों और अकादमिक लेखों में इसे अक्सर **Bagalamukhi** (अतिरिक्त 'a' के साथ) लिखा जाता है। यह अंतर केवल अंग्रेजी लिप्यंतरण और क्षेत्रीय भाषाओं के उच्चारण के अंतर के कारण है। देवी के दिव्य स्वरूप, मंत्र, पूजा फल या आशीर्वाद में कोई अंतर नहीं है। चाहे आप माँ बगलामुखी कहें या माँ बगालामुखी, वे भक्तों को समान रूप से विजय और अभय प्रदान करती हैं।"

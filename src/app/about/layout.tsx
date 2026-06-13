@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Maa Baglamukhi Dham & Pt. Rudraksh Rajpurohit",
+  title: "About Pandit Maa Baglamukhi & Maa Bagalamukhi Pandit | Pt. Rudraksh Rajpurohit",
   description:
-    "Learn about the ancient history of the Siddh Peeth Maa Baglamukhi Temple in Nalkheda, Madhya Pradesh, its Pandava-era origins, and the spiritual path of Acharya Pt. Rudraksh Rajpurohit, who personally guides devotees in Vedic pujas.",
+    "Discover the history of Siddh Peeth Maa Baglamukhi Temple in Nalkheda, MP and learn about the spiritual path of Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
   keywords: [
-    "Acharya Pt Rudraksh Rajpurohit", "Maa Baglamukhi Pandit Nalkheda",
+    "Pandit Maa Baglamukhi", "Maa Bagalamukhi Pandit", "Pandit Maa Baglamukhi Nalkheda",
+    "Maa Bagalamukhi Pandit Nalkheda", "Acharya Pt Rudraksh Rajpurohit",
     "Siddh Peeth Nalkheda History", "Baglamukhi Mandir Pujari",
     "Lakhundar River temple history", "Pandava era temple Nalkheda",
     "Vedic priest Nalkheda", "Maa Baglamukhi Sadhak"
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "About Maa Baglamukhi Dham & Pt. Rudraksh Rajpurohit",
+    title: "About Pandit Maa Baglamukhi & Maa Bagalamukhi Pandit | Pt. Rudraksh Rajpurohit",
     description:
-      "Explore the Pandava-era legacy of the Siddh Peeth Maa Baglamukhi Temple in Nalkheda, and the devotional services guided by Acharya Pt. Rudraksh Rajpurohit.",
+      "Explore the history of Siddh Peeth Nalkheda Dham and the devotional services guided by Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
     url: "https://www.panditmaabaglamukhi.com/about",
-    siteName: "Maa Baglamukhi Nalkheda Dham",
+    siteName: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
     images: [
       {
         url: "/og-image.png",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Maa Baglamukhi Dham & Pt. Rudraksh Rajpurohit",
+    title: "About Pandit Maa Baglamukhi & Maa Bagalamukhi Pandit | Pt. Rudraksh Rajpurohit",
     description:
-      "Explore the ancient history of Siddh Peeth Maa Baglamukhi Temple and the spiritual legacy of Acharya Pt. Rudraksh Rajpurohit in Nalkheda.",
+      "Explore the history of Siddh Peeth Nalkheda Dham and the devotional services guided by Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
     images: ["/og-image.png"],
   },
 };

@@ -1,12 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery & Videos | Maa Baglamukhi Temple Nalkheda Dham",
+  title: "Gallery & Videos | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
   description:
-    "View stunning photos and videos of Maa Baglamukhi Temple, sacred Havans, divine Darshan, Shringar, and Aarti ceremonies at Siddh Peeth Nalkheda Dham, Agar Malwa.",
+    "View photos and videos of Siddh Peeth Nalkheda Dham rituals guided by Pandit Maa Baglamukhi expert Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
   keywords: [
     "Pandit Maa Baglamukhi",
-    "Bagalamukhi Pandit",
+    "Maa Bagalamukhi Pandit",
+    "Pandit Maa Baglamukhi Nalkheda",
+    "Maa Bagalamukhi Pandit Nalkheda",
     "Mandir Pujari",
     "Baglamukhi Pujari",
     "Maa Baglamukhi Temple photos",
@@ -26,11 +28,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Gallery & Videos | Maa Baglamukhi Temple Nalkheda",
+    title: "Gallery & Videos | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
     description:
-      "Explore divine photos and ritual videos from the sacred Siddh Peeth Maa Baglamukhi Temple at Nalkheda Dham.",
+      "Explore photos and ritual videos from Nalkheda Dham under the guidance of Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
     url: "https://www.panditmaabaglamukhi.com/gallery",
-    siteName: "Maa Baglamukhi Nalkheda Dham",
+    siteName: "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit - Pt. Rudraksh Rajpurohit",
     images: [
       {
         url: "/temple-night-1.webp",
@@ -44,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gallery & Videos | Maa Baglamukhi Temple Nalkheda",
+    title: "Gallery & Videos | Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit",
     description:
-      "Explore photos and ritual videos from Siddh Peeth Nalkheda Dham.",
+      "Explore photos and ritual videos from Nalkheda Dham under the guidance of Pandit Maa Baglamukhi specialist Acharya Pt. Rudraksh Rajpurohit (Maa Bagalamukhi Pandit).",
     images: ["/temple-night-1.webp"],
   },
 };

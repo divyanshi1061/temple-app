@@ -126,14 +126,14 @@ export default function HeroSection() {
             <div className="space-y-2 lg:space-y-3">
               <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900 font-cinzel leading-[1.2] lg:leading-[1.1] uppercase">
                 {lang === 'hi' 
-                  ? "माँ बगलामुखी अनुष्ठान एवं वैदिक हवन"
-                  : "Maa Baglamukhi Havans & Vedic Pujas"
+                  ? "पंडित माँ बगलामुखी | वैदिक अनुष्ठान एवं हवन"
+                  : "Pandit Maa Baglamukhi | Maa Bagalamukhi Pandit"
                 }
               </h1>
               <h2 className="text-[10px] sm:text-xs lg:text-sm text-gold font-semibold tracking-wider uppercase font-cinzel">
                 {lang === 'hi' 
                   ? "मार्गदर्शन: आचार्य पं. रुद्राक्ष राजपुरोहित • सिद्ध पीठ नलखेड़ा धाम" 
-                  : "guided by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
+                  : "Vedic Pujas & Havans by Acharya Pt. Rudraksh Rajpurohit • Siddh Peeth Nalkheda Dham"
                 }
               </h2>
             </div>
@@ -201,7 +201,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-full overflow-hidden border-6 lg:border-8 border-white bg-white shadow-xl lg:shadow-2xl scale-95 flex items-center justify-center">
                 <Image
                   src={acharyaImage}
-                  alt="Acharya Pt. Rudraksh Rajpurohit portrait"
+                  alt="Pandit Maa Baglamukhi & Maa Bagalamukhi Pandit - Acharya Pt. Rudraksh Rajpurohit"
                   fill
                   priority
                   sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 450px"
