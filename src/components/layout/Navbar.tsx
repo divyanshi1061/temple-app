@@ -73,7 +73,7 @@ export default function Navbar() {
             setActiveSection(id);
             // Clear URL hash when scrolling back to the home/top section
             if (id === "home" && typeof window !== "undefined" && window.location.hash) {
-              window.history.pushState("", document.title, window.location.pathname + window.location.search);
+              window.history.pushState({}, document.title, window.location.pathname + window.location.search);
             }
           }
         });
@@ -104,7 +104,7 @@ export default function Navbar() {
       target.scrollIntoView({ behavior: "smooth" });
       if (href === "#home") {
         if (typeof window !== "undefined" && window.location.hash) {
-          window.history.pushState("", document.title, window.location.pathname + window.location.search);
+          window.history.pushState({}, document.title, window.location.pathname + window.location.search);
         }
         setActiveSection("home");
       }
@@ -119,7 +119,7 @@ export default function Navbar() {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
       if (typeof window !== "undefined" && window.location.hash) {
-        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+        window.history.pushState({}, document.title, window.location.pathname + window.location.search);
       }
       setActiveSection("home");
       return;
@@ -133,7 +133,7 @@ export default function Navbar() {
         e.preventDefault();
         target.scrollIntoView({ behavior: "smooth" });
         if (typeof window !== "undefined") {
-          window.history.pushState("", document.title, window.location.pathname + window.location.search + hash);
+          window.history.pushState({}, document.title, window.location.pathname + window.location.search + hash);
         }
       }
     }
