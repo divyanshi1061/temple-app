@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import { API_BASE } from "@/lib/adminApi";
+import { API_BASE, getAssetUrl } from "@/lib/adminApi";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,12 +34,6 @@ export default function HeroSection() {
         if (res.ok) {
           const data = await res.json();
           if (data && data.url) {
-            const getAssetUrl = (url: string) => {
-              if (!url) return "";
-              if (url.startsWith("http://") || url.startsWith("https://")) return url;
-              const host = API_BASE.replace('/api', '');
-              return `${host}${url}`;
-            };
             setAcharyaImage(getAssetUrl(data.url));
           }
         }

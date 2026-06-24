@@ -2,12 +2,48 @@
 // Admin API Helper Utility
 // ==========================================
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:5000/api` : 'http://localhost:5000/api');
+// Dynamically resolve API base URL at runtime so the admin panel works
+// from any device on the network (not just the build machine's IP).
+// NEXT_PUBLIC_API_URL is only used when it looks like a real production URL
+// (i.e., contains a domain name, not a local/private IP like 192.168.x.x).
+const getApiBase = (): string => {
+  const envUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  // If an env URL is set AND it's a real production URL (not a local IP), use it
+  if (envUrl) {
+    const isLocalIp = /^https?:\/\/(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(envUrl);
+    if (!isLocalIp) {
+      return envUrl;
+    }
+  }
+
+  // Otherwise, dynamically resolve from the current browser location
+  if (typeof window !== 'undefined') {
+    return `${window.location.protocol}//${window.location.hostname}:5000/api`;
+  }
+
+  return 'http://localhost:5000/api';
+};
+
+export const API_BASE = getApiBase();
 
 // Helper to construct asset URLs (handling local server vs proxy routes)
 export const getAssetUrl = (url: string) => {
   if (!url) return '';
   if (url.startsWith('http://') || url.startsWith('https://')) {
+    // If the URL contains a hardcoded local IP that differs from current host,
+    // rewrite it to use the current hostname so assets load on any device
+    if (typeof window !== 'undefined') {
+      try {
+        const parsed = new URL(url);
+        const isLocalIp = /^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(parsed.hostname);
+        if (isLocalIp && parsed.hostname !== window.location.hostname) {
+          return `${window.location.protocol}//${window.location.hostname}:${parsed.port}${parsed.pathname}`;
+        }
+      } catch {
+        // Invalid URL, return as-is
+      }
+    }
     return url;
   }
   // If it starts with /uploads, prepend the backend host (without double /api)
