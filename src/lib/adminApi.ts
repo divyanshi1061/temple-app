@@ -2,7 +2,7 @@
 // Admin API Helper Utility
 // ==========================================
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:5000/api` : 'http://localhost:5000/api');
 
 // Helper to construct asset URLs (handling local server vs proxy routes)
 export const getAssetUrl = (url: string) => {

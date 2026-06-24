@@ -81,15 +81,14 @@ export default function GalleryPageClient() {
   useEffect(() => {
     async function fetchDynamicPhotos() {
       try {
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-        const res = await fetch(`${apiBase}/gallery?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${API_BASE}/gallery?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data) && data.length > 0) {
             const getAssetUrl = (url: string) => {
               if (!url) return "";
               if (url.startsWith("http://") || url.startsWith("https://")) return url;
-              const host = apiBase.replace('/api', '');
+              const host = API_BASE.replace('/api', '');
               return `${host}${url}`;
             };
             const mappedPhotos: PhotoItem[] = data.map((item: any) => ({
