@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useRouter } from "next/navigation";
 import { IoCloseOutline } from "react-icons/io5";
 import { ALL_PHOTOS, PhotoItem } from "@/lib/photos";
+import { API_BASE } from "@/lib/adminApi";
 
 const YOUTUBE_VIDEOS = [
   {
