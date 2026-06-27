@@ -98,10 +98,12 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
           onClose();
         }, 3000);
       } else {
+        const msg = data.message || "Failed to submit review.";
+        const isDuplicate = msg.toLowerCase().includes("already submitted");
         setErrorMessage(
-          lang === "en" 
-            ? data.message || "Failed to submit review."
-            : "आप पहले ही एक समीक्षा सबमिट कर चुके हैं।"
+          lang === "en"
+            ? (isDuplicate ? "You have already submitted a review." : msg)
+            : (isDuplicate ? "आप पहले ही एक समीक्षा सबमिट कर चुके हैं।" : "समीक्षा सबमिट करने में विफल।")
         );
       }
     } catch (err) {

@@ -227,6 +227,16 @@ export default function TestimonialsSection() {
           
           {/* Custom pagination layout */}
           <div className="swiper-custom-pagination flex justify-center gap-2 mt-4 z-20 relative" />
+          
+          {/* Review Us CTA Option */}
+          <div className="flex justify-center mt-10 relative z-20">
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-review-modal'))}
+              className="btn-sacred text-xs px-8 py-3.5 rounded-full font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
+            >
+              {lang === 'en' ? 'Share Your Experience' : 'अपना अनुभव साझा करें'}
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>
