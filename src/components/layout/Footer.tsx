@@ -257,7 +257,7 @@ export default function Footer() {
               <span className="text-gold/60">ॐ</span>
               <a href={`mailto:${email}`} className="hover:text-gold transition-colors">{email}</a>
               <span className="text-gold/60">ॐ</span>
-              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Instagram: @maa.baglamukhidarshan</a>
+              <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Instagram: @baglamukhi.rituals</a>
               <span className="text-gold/60">ॐ</span>
               <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-gold transition-colors">Facebook: Maa Baglamukhi Darshan</a>
               <span className="text-gold/60">ॐ</span>
