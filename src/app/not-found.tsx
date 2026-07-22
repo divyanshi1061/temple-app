@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaHome, FaArrowLeft } from "react-icons/fa";
+import { FaHome, } from "react-icons/fa";
 
 export const metadata = {
   title: "404 Page Not Found | Pandit Maa Baglamukhi Nalkheda Dham",

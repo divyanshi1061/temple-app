@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/animations/variants";
 import { SITE_CONFIG } from "@/lib/constants";
-import { getApiBase } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPlane, FaTrain, FaCar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -19,28 +19,19 @@ export default function ContactSection() {
   const [addressHi, setAddressHi] = useState(SITE_CONFIG.address.hi);
   const [addressEn, setAddressEn] = useState(SITE_CONFIG.address.en);
 
+  const { contact } = useSiteData();
+
   useEffect(() => {
-    async function fetchContact() {
-      try {
-        const res = await fetch(`${getApiBase()}/contact?t=${Date.now()}`, { cache: "no-store" });
-        if (res.ok) {
-          const data = await res.json();
-          if (data) {
-            if (data.phone) setPhone(data.phone);
-            if (data.whatsapp) setWhatsapp(data.whatsapp);
-            if (data.email) setEmail(data.email);
-            if (data.address) {
-              setAddressHi(data.address);
-              setAddressEn(data.address);
-            }
-          }
-        }
-      } catch (err) {
-        console.warn("Notice: Custom contact details not loaded (Backend offline). Using system defaults.");
+    if (contact) {
+      if (contact.phone) setPhone(contact.phone);
+      if (contact.whatsapp) setWhatsapp(contact.whatsapp);
+      if (contact.email) setEmail(contact.email);
+      if (contact.address) {
+        setAddressHi(contact.address);
+        setAddressEn(contact.address);
       }
     }
-    fetchContact();
-  }, []);
+  }, [contact]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { getApiBase, setAuthToken, getAuthToken } from "@/lib/adminApi";
-import { FaLock, FaUser, FaSun } from "react-icons/fa";
+import { FaLock, FaUser, } from "react-icons/fa";
 
 export default function AdminLoginPage() {
   const router = useRouter();

@@ -1,87 +1,24 @@
 // ==========================================
-// Admin API Helper Utility
+// Admin API Helper — Vercel / Next.js Routes
 // ==========================================
+// All API calls go to /api/* on the same origin.
+// No separate Express backend required.
 
-// Dynamically resolve API base URL at runtime so the admin panel works
-// from any device on the network (not just the build machine's IP).
-// NEXT_PUBLIC_API_URL is only used when it looks like a real production URL
-// (i.e., contains a domain name, not a local/private IP like 192.168.x.x).
-// Exported so call sites can invoke it at runtime (inside useEffect / event
-// handlers) where window is always available, avoiding the stale module-level
-// constant problem that occurs during Next.js SSR pre-rendering.
 export const getApiBase = (): string => {
-  // 1. In browser context, resolve dynamically from the current location
   if (typeof window !== 'undefined') {
-    // If accessing via localhost, 127.0.0.1, or local LAN IP, use local backend on port 5000
-    const isLocalHost = /^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2\d|3[01]))/i.test(window.location.hostname);
-    if (isLocalHost) {
-      return `${window.location.protocol}//${window.location.hostname}:5000/api`;
-    }
-    // In production domain, route through the standard reverse proxy (/api)
-    return `${window.location.protocol}//${window.location.hostname}/api`;
+    return `${window.location.origin}/api`;
   }
-
-  // 2. Server-side rendering (SSR) / build-time fallback
-  const envUrl = process.env.NEXT_PUBLIC_API_URL;
-  if (envUrl) {
-    const isLocalIp = /^https?:\/\/(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(envUrl);
-    if (!isLocalIp) {
-      return envUrl;
-    }
-  }
-
-  return 'http://localhost:5000/api';
+  return process.env.NEXT_PUBLIC_API_URL || '/api';
 };
 
-// Kept for import compatibility, but prefer calling getApiBase() at runtime
-// inside useEffect/event handlers to avoid stale SSR values.
-export const API_BASE = getApiBase();
+// Kept for import compatibility — prefer calling getApiBase() inside
+// useEffect / event handlers to avoid stale SSR values.
+export const API_BASE = typeof window !== 'undefined' ? `${window.location.origin}/api` : '/api';
 
-// Helper to construct asset URLs (handling local server vs proxy routes)
-export const getAssetUrl = (url: string) => {
+// Asset URLs are now stored as data URIs (base64) or public static paths.
+// No URL rewriting needed.
+export const getAssetUrl = (url: string): string => {
   if (!url) return '';
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    try {
-      const parsed = new URL(url);
-      const isLocalIp = /^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(parsed.hostname);
-      if (isLocalIp) {
-        // Determine the target hostname, protocol, and port
-        let targetHost = 'localhost';
-        let targetProtocol = 'http:';
-        let targetPort = parsed.port || '5000';
-
-        if (typeof window !== 'undefined') {
-          targetHost = window.location.hostname;
-          targetProtocol = window.location.protocol;
-          // If accessing via port 3000, the backend is likely on 5000
-          targetPort = window.location.port === '3000' ? '5000' : (window.location.port || parsed.port || '5000');
-        } else if (process.env.NEXT_PUBLIC_API_URL) {
-          try {
-            const apiParsed = new URL(process.env.NEXT_PUBLIC_API_URL);
-            targetHost = apiParsed.hostname;
-            targetProtocol = apiParsed.protocol;
-            targetPort = apiParsed.port || '5000';
-          } catch {
-            // Use defaults
-          }
-        }
-
-        // Rewrite the URL if protocol, hostname, or port differs
-        if (parsed.hostname !== targetHost || parsed.port !== targetPort || parsed.protocol !== targetProtocol) {
-          const portPart = targetPort ? `:${targetPort}` : '';
-          return `${targetProtocol}//${targetHost}${portPart}${parsed.pathname}`;
-        }
-      }
-    } catch {
-      // Invalid URL, return as-is
-    }
-    return url;
-  }
-  // If it starts with /uploads, prepend the backend host (without double /api)
-  if (url.startsWith('/uploads')) {
-    const host = getApiBase().replace('/api', '');
-    return `${host}${url}`;
-  }
   return url;
 };
 
@@ -105,28 +42,22 @@ export const removeAuthToken = (): void => {
 };
 
 export const fetchWithAuth = async (endpoint: string, options: RequestInit = {}): Promise<Response> => {
-  const token = getAuthToken();
-
   const headers: Record<string, string> = {};
 
-  // Set up Authorization Header if token exists
-  if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
-  }
-
-  // If it's not a FormData upload, default to JSON content type
+  // Default to JSON unless sending FormData
   if (!(options.body instanceof FormData)) {
     headers['Content-Type'] = 'application/json';
   }
 
-  // Merge external headers
   if (options.headers) {
     Object.assign(headers, options.headers);
   }
 
-  // Resolve the API base at call-time so production URLs are always correct
-  // even when the module was first loaded during SSR (where window is undefined).
-  let url = `${getApiBase()}${endpoint}`;
+  // Build URL using runtime origin (ensures correct host in all environments)
+  const base = typeof window !== 'undefined' ? `${window.location.origin}/api` : '/api';
+  let url = `${base}${endpoint}`;
+
+  // Cache-bust GET requests
   if (!options.method || options.method.toUpperCase() === 'GET') {
     const separator = url.includes('?') ? '&' : '?';
     url = `${url}${separator}t=${Date.now()}`;
@@ -134,18 +65,16 @@ export const fetchWithAuth = async (endpoint: string, options: RequestInit = {})
 
   const response = await fetch(url, {
     cache: 'no-store',
+    credentials: 'same-origin',
     ...options,
     headers,
   });
 
-  // Handle unauthorized/expired token
+  // Handle expired / invalid token — redirect to login
   if (response.status === 401 || response.status === 403) {
     removeAuthToken();
-    if (typeof window !== 'undefined') {
-      // Redirect to login if on admin route and not already there
-      if (window.location.pathname !== '/admin/login') {
-        window.location.href = '/admin/login';
-      }
+    if (typeof window !== 'undefined' && window.location.pathname !== '/admin/login') {
+      window.location.href = '/admin/login';
     }
   }
 

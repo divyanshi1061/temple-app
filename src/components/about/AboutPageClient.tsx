@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaQuoteLeft, FaTree, FaSun, FaHistory, FaBookOpen, FaPray, FaInfoCircle, FaStar, FaAward } from "react-icons/fa";
+import { FaQuoteLeft, FaTree, FaSun, FaPray, FaStar, } from "react-icons/fa";
 import { GiFlame, GiShield } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,10 +16,7 @@ export default function AboutPageClient() {
   const [activeTab, setActiveTab] = useState<"legend" | "darshan">("legend");
 
   // Title and description constants
-  const panditTitle = lang === "en" 
-    ? "Acharya Pt. Rudraksh Rajpurohit" 
-    : "आचार्य पं. रुद्राक्ष राजपुरोहित";
-
+  
   const panditDesc = lang === "en"
     ? "I welcome you to the sacred space of Maa Baglamukhi. As a lifelong Vedic priest and Baglamukhi Sadhak serving at the Siddh Peeth Nalkheda Dham, I have dedicated my life to preserving the absolute purity of ancient Vedic rituals and helping devotees experience the protective shield of our divine Mother. Born into a lineage of devoted spiritual practitioners, my path was guided early on to study and master the intricate Sanskrit scriptures, Vedic Yajna (fire rituals), and protective Tantric sadhana prescribed for removing life's most challenging obstacles."
     : "मैं माँ बगलामुखी के इस पावन द्वार पर आपका हार्दिक अभिनंदन करता हूँ। नलखेड़ा धाम सिद्ध पीठ में सेवा करने वाले एक समर्पित वैदिक पुजारी और बगलामुखी साधक के रूप में, मैंने अपना संपूर्ण जीवन प्राचीन वैदिक अनुष्ठानों की शुद्धता को अक्षुण्ण रखने और माँ की सुरक्षात्मक शक्ति से दुनिया भर के भक्तों के संकटों का निवारण करने के लिए समर्पित किया है। आध्यात्मिक साधकों और पुरोहितों के एक पावन वंश में जन्म लेने के कारण, मुझे बचपन से ही संस्कृत शास्त्रों, वैदिक यज्ञों (अग्नि अनुष्ठान) और तांत्रिक रक्षा प्रणालियों के गहन रहस्यों को सीखने का सुअवसर प्राप्त हुआ।";

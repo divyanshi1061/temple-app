@@ -106,7 +106,7 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
             : (isDuplicate ? "आप पहले ही एक समीक्षा सबमिट कर चुके हैं।" : "समीक्षा सबमिट करने में विफल।")
         );
       }
-    } catch (err) {
+    } catch (error: any) {
       setErrorMessage(
         lang === "en"
           ? "Network error. Please try again later."

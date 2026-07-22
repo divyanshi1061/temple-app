@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
+import ConfirmModal from "@/components/admin/ConfirmModal";
 import { fetchWithAuth, getAssetUrl } from "@/lib/adminApi";
 import { 
   FaUpload, 
@@ -10,8 +11,7 @@ import {
   FaCalendarAlt, 
   FaTimes, 
   FaChevronRight,
-  FaFileImage
-} from "react-icons/fa";
+  } from "react-icons/fa";
 
 interface GalleryItem {
   _id: string;
@@ -31,6 +31,7 @@ export default function GalleryManager() {
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
 
   // Fetch dynamic gallery images from database
   const loadImages = async () => {
@@ -43,7 +44,7 @@ export default function GalleryManager() {
       } else {
         toast.error("Failed to load gallery images");
       }
-    } catch (err) {
+    } catch (_err) {
       console.error(err);
       toast.error("Error loading gallery images");
     } finally {
@@ -119,10 +120,13 @@ export default function GalleryManager() {
   };
 
   // Handle delete action
-  const handleDeleteImage = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this image? This action cannot be undone.")) {
-      return;
-    }
+  const handleDeleteClick = (id: string) => {
+    setConfirmDeleteId(id);
+  };
+
+  const executeDeleteImage = async () => {
+    if (!confirmDeleteId) return;
+    const id = confirmDeleteId;
 
     setDeletingId(id);
     try {
@@ -137,11 +141,12 @@ export default function GalleryManager() {
         const data = await res.json();
         toast.error(data.message || "Failed to delete image");
       }
-    } catch (err) {
+    } catch (_err) {
       console.error(err);
       toast.error("Error deleting image");
     } finally {
       setDeletingId(null);
+      setConfirmDeleteId(null);
     }
   };
 
@@ -300,7 +305,7 @@ export default function GalleryManager() {
                     </div>
 
                     <button
-                      onClick={() => handleDeleteImage(img._id)}
+                      onClick={() => handleDeleteClick(img._id)}
                       disabled={deletingId === img._id}
                       className="w-full mt-3 py-2 border border-red-200 hover:border-red-500 bg-red-50/50 hover:bg-red-50 text-red-650 hover:text-red-750 text-[10px] font-extrabold uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-xs"
                     >
@@ -321,6 +326,13 @@ export default function GalleryManager() {
         </div>
 
       </div>
+
+      <ConfirmModal
+        isOpen={!!confirmDeleteId}
+        message="Are you sure you want to delete this image? This action cannot be undone."
+        onConfirm={executeDeleteImage}
+        onCancel={() => setConfirmDeleteId(null)}
+      />
 
     </div>
   );

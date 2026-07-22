@@ -5,12 +5,8 @@ import { toast } from "react-hot-toast";
 import { fetchWithAuth, getAssetUrl } from "@/lib/adminApi";
 import { 
   FaUpload, 
-  FaImage, 
-  FaSun, 
-  FaCalendarAlt, 
   FaChevronRight,
-  FaFileImage
-} from "react-icons/fa";
+  } from "react-icons/fa";
 
 interface HeroItem {
   _id: string;
@@ -39,7 +35,7 @@ export default function HeroBackgroundManager() {
       } else {
         toast.error("Failed to retrieve current hero status");
       }
-    } catch (err) {
+    } catch (_err) {
       console.error(err);
     } finally {
       setIsLoading(false);

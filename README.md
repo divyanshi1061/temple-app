@@ -18,8 +18,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-strtsrttrs
+## Build Requirements
+
+**Important Note for CI/CD or Isolated Build Environments:**
+This project relies on `next/font/google` to fetch fonts at build time. The build process requires outbound network access to `fonts.googleapis.com`. If your build environment (like an isolated Docker container or CI runner) is completely disconnected from the public internet, the build will fail with a connection timeout. Please ensure the build runner can reach the Google Fonts API.
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

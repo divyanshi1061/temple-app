@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
-import { navbarVariants, slideInFromLeft } from "@/animations/variants";
+import { navbarVariants, } from "@/animations/variants";
 import { useLanguage } from "@/context/LanguageContext";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/layout/Logo";
 import ReviewModal from "@/components/ReviewModal";
-import { FaStar } from "react-icons/fa";
+
 
 const MotionLink = motion(Link);
 

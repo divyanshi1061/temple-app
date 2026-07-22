@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { getApiBase } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -87,32 +87,23 @@ const DEFAULT_TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   const { lang } = useLanguage();
+  const { reviews } = useSiteData();
   const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
 
   useEffect(() => {
-    const loadReviews = async () => {
-      let apiReviews: TestimonialItem[] = [];
-      try {
-        const res = await fetch(`${getApiBase()}/reviews?t=${Date.now()}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data)) {
-            apiReviews = data.map((r: any) => ({
-              _id: r._id,
-              nameEn: r.name,
-              nameHi: r.name,
-              locationEn: r.location || "India",
-              locationHi: r.location || "भारत",
-              textEn: r.text,
-              textHi: r.text,
-              rating: r.rating || 5,
-            }));
-          }
-        }
-      } catch (err) {
-        console.warn("Failed to load approved reviews from backend, using defaults.");
-      }
-
+    if (reviews && reviews.length > 0) {
+      // Map API reviews to TestimonialItem format
+      const formattedReviews = reviews.map((r: any) => ({
+        _id: r._id,
+        nameEn: r.name,
+        nameHi: r.name, // Fallback if DB doesn't have translated names
+        locationEn: r.location || "",
+        locationHi: r.location || "",
+        textEn: r.comment,
+        textHi: r.comment, // Fallback
+        rating: r.rating,
+      }));
+      
       // Merge with offline user backup from localStorage (so user sees their submitted pending review locally)
       const saved = localStorage.getItem("user_reviews");
       let localReviews: TestimonialItem[] = [];
@@ -127,17 +118,51 @@ export default function TestimonialsSection() {
         }
       }
 
-      // Filter out local reviews that have already been approved and returned in apiReviews
-      const apiIds = new Set(apiReviews.map(r => r._id));
+      // Filter out local reviews that have already been approved and returned in formattedReviews
+      const apiIds = new Set(formattedReviews.map(r => r._id));
       const pendingLocalReviews = localReviews.filter(r => !apiIds.has(r._id));
 
-      setTestimonials([...DEFAULT_TESTIMONIALS, ...apiReviews, ...pendingLocalReviews]);
+      setTestimonials([...DEFAULT_TESTIMONIALS, ...formattedReviews, ...pendingLocalReviews]);
+    } else {
+      // If no reviews from context, just show default + local
+      const saved = localStorage.getItem("user_reviews");
+      let localReviews: TestimonialItem[] = [];
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+            localReviews = parsed;
+          }
+        } catch (e) {
+          console.error("Failed to parse local reviews", e);
+        }
+      }
+      setTestimonials([...DEFAULT_TESTIMONIALS, ...localReviews]);
+    }
+  }, [reviews]);
+
+  // Listen for local review updates
+  useEffect(() => {
+    const handleLocalUpdate = () => {
+      const saved = localStorage.getItem("user_reviews");
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+             // Basic re-render with local reviews
+             setTestimonials((prev) => {
+               const existingIds = new Set(prev.map(r => r._id));
+               const newLocal = parsed.filter(r => !existingIds.has(r._id));
+               return [...prev, ...newLocal];
+             });
+          }
+        } catch (e) {
+          console.error("Error reading local updates", e);
+        }
+      }
     };
-
-    loadReviews();
-
-    window.addEventListener("reviewsUpdated", loadReviews);
-    return () => window.removeEventListener("reviewsUpdated", loadReviews);
+    window.addEventListener("reviewsUpdated", handleLocalUpdate);
+    return () => window.removeEventListener("reviewsUpdated", handleLocalUpdate);
   }, []);
 
   return (

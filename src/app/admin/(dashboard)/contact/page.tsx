@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
+import ConfirmModal from "@/components/admin/ConfirmModal";
 import { fetchWithAuth } from "@/lib/adminApi";
 import { SITE_CONFIG } from "@/lib/constants";
 import { 
@@ -22,6 +23,7 @@ export default function ContactDetailsManager() {
   
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [isResetting, setIsResetting] = useState(false);
 
   // Load current configuration from DB
   const loadConfig = async () => {
@@ -87,14 +89,16 @@ export default function ContactDetailsManager() {
   };
 
   // Reset form to hardcoded system defaults
-  const handleResetToDefault = () => {
-    if (confirm("This will clear the database record and revert the public site to hardcoded defaults. Continue?")) {
-      setPhone("");
-      setWhatsapp("");
-      setEmail("");
-      setAddress("");
-      toast.success("Form fields reset (click Save to update the database)");
-    }
+  const handleResetClick = () => {
+    setIsResetting(true);
+  };
+
+  const executeReset = () => {
+    setPhone("");
+    setWhatsapp("");
+    setEmail("");
+    setAddress("");
+    toast.success("Form fields reset (click Save to update the database)");
   };
 
   return (
@@ -216,7 +220,7 @@ export default function ContactDetailsManager() {
               <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-gray-200/60">
                 <button
                   type="button"
-                  onClick={handleResetToDefault}
+                  onClick={handleResetClick}
                   className="flex-1 py-3 border border-gray-200 hover:border-gray-300 text-gray-550 hover:text-gray-700 text-xs font-extrabold uppercase tracking-wider rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 shadow-xs"
                 >
                   <FaUndo size={10} />
@@ -263,6 +267,13 @@ export default function ContactDetailsManager() {
         </div>
 
       </div>
+
+      <ConfirmModal
+        isOpen={isResetting}
+        message="This will clear the form fields. You will still need to click 'Save Changes' to update the database. Continue?"
+        onConfirm={executeReset}
+        onCancel={() => setIsResetting(false)}
+      />
 
     </div>
   );

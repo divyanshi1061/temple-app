@@ -3,9 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import { getAuthToken, removeAuthToken } from "@/lib/adminApi";
+import { removeAuthToken } from "@/lib/adminApi";
 import { 
-  FaHome, 
   FaImage, 
   FaVideo, 
   FaSun, 
@@ -29,14 +28,21 @@ export default function DashboardLayout({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Check if token exists in localStorage
-    const token = getAuthToken();
-    if (!token) {
-      setIsAuthenticated(false);
-      router.push("/admin/login");
-    } else {
-      setIsAuthenticated(true);
+    async function checkAuth() {
+      try {
+        const res = await fetch("/api/admin/verify");
+        if (res.ok) {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+          router.push("/admin/login");
+        }
+      } catch (_err) {
+        setIsAuthenticated(false);
+        router.push("/admin/login");
+      }
     }
+    checkAuth();
   }, [router]);
 
   const handleLogout = () => {

@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static site generation (SSG) export
-  output: "export",
   // Allow static image imports
   images: {
     // Disable default image optimization as next export is serverless

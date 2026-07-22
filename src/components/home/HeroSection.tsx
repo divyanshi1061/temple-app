@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import { getApiBase, getAssetUrl } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +16,7 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const { lang } = useLanguage();
   
+  const { heroImage: contextHeroImage } = useSiteData();
   const [acharyaImage, setAcharyaImage] = useState("/acharya-new.webp");
   const [particles, setParticles] = useState<Array<{
     id: number;
@@ -28,21 +29,10 @@ export default function HeroSection() {
   }>>([]);
 
   useEffect(() => {
-    async function fetchAcharyaImage() {
-      try {
-        const res = await fetch(`${getApiBase()}/hero?t=${Date.now()}`, { cache: "no-store" });
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.url) {
-            setAcharyaImage(getAssetUrl(data.url));
-          }
-        }
-      } catch (err) {
-        console.warn("Notice: Custom Acharya portrait not loaded (Backend offline). Using system default.");
-      }
+    if (contextHeroImage) {
+      setAcharyaImage(contextHeroImage);
     }
-    fetchAcharyaImage();
-  }, []);
+  }, [contextHeroImage]);
 
   useEffect(() => {
     setParticles(

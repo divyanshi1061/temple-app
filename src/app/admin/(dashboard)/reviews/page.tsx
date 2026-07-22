@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { fetchWithAuth } from "@/lib/adminApi";
+import toast, { Toaster } from "react-hot-toast";
+import ConfirmModal from "@/components/admin/ConfirmModal";
 import { 
   FaStar, 
   FaTrashAlt, 
@@ -28,6 +30,7 @@ export default function AdminReviewPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
 
   const loadReviews = async () => {
     try {
@@ -68,18 +71,23 @@ export default function AdminReviewPage() {
           prev.map((r) => (r._id === id ? { ...r, approved: !currentApproved } : r))
         );
       } else {
-        alert("Failed to update approval status.");
+        toast.error("Failed to update approval status.");
       }
     } catch (err) {
-      alert("Error contacting the server.");
+      console.error(err);
+      toast.error("Error contacting the server.");
     } finally {
       setActionLoading(null);
     }
   };
 
-  const handleDeleteReview = async (id: string) => {
-    if (!confirm("Are you sure you want to permanently delete this review?")) return;
+  const confirmDelete = (id: string) => {
+    setDeleteId(id);
+  };
 
+  const executeDelete = async () => {
+    if (!deleteId) return;
+    const id = deleteId;
     try {
       setActionLoading(id);
       const res = await fetchWithAuth(`/admin/reviews/${id}`, {
@@ -88,18 +96,22 @@ export default function AdminReviewPage() {
 
       if (res.ok) {
         setReviews((prev) => prev.filter((r) => r._id !== id));
+        toast.success("Review deleted successfully.");
       } else {
-        alert("Failed to delete review.");
+        toast.error("Failed to delete review.");
       }
     } catch (err) {
-      alert("Error contacting the server.");
+      console.error(err);
+      toast.error("Error contacting the server.");
     } finally {
       setActionLoading(null);
+      setDeleteId(null);
     }
   };
 
   return (
     <div className="space-y-6 flex-grow pb-12">
+      <Toaster position="top-right" />
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 pb-5">
         <div>
@@ -223,7 +235,7 @@ export default function AdminReviewPage() {
                       </button>
                       
                       <button
-                        onClick={() => handleDeleteReview(item._id)}
+                        onClick={() => confirmDelete(item._id)}
                         disabled={actionLoading === item._id}
                         className="inline-flex items-center justify-center w-8 h-8 rounded-lg border bg-red-50 hover:bg-red-100 border-red-200 text-red-600 transition-colors shadow-2xs"
                         title="Delete Review"
@@ -242,6 +254,12 @@ export default function AdminReviewPage() {
           </div>
         </div>
       )}
+      <ConfirmModal
+        isOpen={!!deleteId}
+        message="Are you sure you want to permanently delete this review?"
+        onConfirm={executeDelete}
+        onCancel={() => setDeleteId(null)}
+      />
     </div>
   );
 }

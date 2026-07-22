@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useRouter } from "next/navigation";
 import { IoCloseOutline } from "react-icons/io5";
 import { ALL_PHOTOS, PhotoItem } from "@/lib/photos";
-import { getApiBase, getAssetUrl } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
 
 const YOUTUBE_VIDEOS = [
   {
@@ -79,31 +79,22 @@ export default function GalleryPageClient() {
   // Dynamic photos list starting with hardcoded values
   const [photos, setPhotos] = useState<PhotoItem[]>(ALL_PHOTOS);
 
+  const { gallery } = useSiteData();
+
   useEffect(() => {
-    async function fetchDynamicPhotos() {
-      try {
-        const res = await fetch(`${getApiBase()}/gallery?t=${Date.now()}`, { cache: "no-store" });
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data) && data.length > 0) {
-            const mappedPhotos: PhotoItem[] = data.map((item: any) => ({
-              id: item._id,
-              url: getAssetUrl(item.url),
-              aspect: "aspect-[3/4]",
-              titleEn: item.caption || "Ritual",
-              titleHi: item.caption || "अनुष्ठान",
-              descEn: item.caption || "Maa Baglamukhi temple ritual",
-              descHi: item.caption || "माँ बगलामुखी मंदिर अनुष्ठान"
-            }));
-            setPhotos([...ALL_PHOTOS, ...mappedPhotos]);
-          }
-        }
-      } catch (err) {
-        console.warn("Notice: Custom gallery images not loaded (Backend offline). Using system default images.");
-      }
+    if (gallery && gallery.length > 0) {
+      const mappedPhotos: PhotoItem[] = gallery.map((item: any) => ({
+        id: item._id,
+        url: item.url, // URL is already absolute via getAssetUrl in context
+        aspect: "aspect-[3/4]",
+        titleEn: item.caption || "Ritual",
+        titleHi: item.caption || "अनुष्ठान",
+        descEn: item.caption || "Maa Baglamukhi temple ritual",
+        descHi: item.caption || "माँ बगलामुखी मंदिर अनुष्ठान"
+      }));
+      setPhotos([...ALL_PHOTOS, ...mappedPhotos]);
     }
-    fetchDynamicPhotos();
-  }, []);
+  }, [gallery]);
   
   // Custom scroll lock for lightbox
   useEffect(() => {

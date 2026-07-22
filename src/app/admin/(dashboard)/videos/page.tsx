@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
+import ConfirmModal from "@/components/admin/ConfirmModal";
 import { fetchWithAuth, getAssetUrl } from "@/lib/adminApi";
 import { 
   FaUpload, 
@@ -34,6 +35,7 @@ export default function VideoManager() {
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
 
   // Load videos from DB
   const loadVideos = async () => {
@@ -146,11 +148,14 @@ export default function VideoManager() {
   };
 
   // Handle delete video
-  const handleDeleteVideo = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this video? This action cannot be undone.")) {
-      return;
-    }
+  const handleDeleteClick = (id: string) => {
+    setConfirmDeleteId(id);
+  };
 
+  const executeDeleteVideo = async () => {
+    if (!confirmDeleteId) return;
+    const id = confirmDeleteId;
+    
     setDeletingId(id);
     try {
       const res = await fetchWithAuth(`/admin/videos/${id}`, {
@@ -169,6 +174,7 @@ export default function VideoManager() {
       toast.error("Error deleting video");
     } finally {
       setDeletingId(null);
+      setConfirmDeleteId(null);
     }
   };
 
@@ -411,7 +417,7 @@ export default function VideoManager() {
                     </div>
 
                     <button
-                      onClick={() => handleDeleteVideo(vid._id)}
+                      onClick={() => handleDeleteClick(vid._id)}
                       disabled={deletingId === vid._id}
                       className="w-full mt-3 py-2 border border-red-200 hover:border-red-500 bg-red-50/50 hover:bg-red-50 text-red-650 hover:text-red-750 text-[10px] font-extrabold uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-xs"
                     >
@@ -432,6 +438,13 @@ export default function VideoManager() {
         </div>
 
       </div>
+
+      <ConfirmModal
+        isOpen={!!confirmDeleteId}
+        message="Are you sure you want to delete this video? This action cannot be undone."
+        onConfirm={executeDeleteVideo}
+        onCancel={() => setConfirmDeleteId(null)}
+      />
 
     </div>
   );

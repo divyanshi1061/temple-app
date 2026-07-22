@@ -14,7 +14,7 @@ import {
 import Logo from "@/components/layout/Logo";
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import { getApiBase } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
 import Link from "next/link";
 
 export default function Footer() {
@@ -26,27 +26,18 @@ export default function Footer() {
   const [addressHi, setAddressHi] = useState(SITE_CONFIG.address.hi);
   const [addressEn, setAddressEn] = useState(SITE_CONFIG.address.en);
 
+  const { contact } = useSiteData();
+
   useEffect(() => {
-    async function fetchContact() {
-      try {
-        const res = await fetch(`${getApiBase()}/contact?t=${Date.now()}`, { cache: "no-store" });
-        if (res.ok) {
-          const data = await res.json();
-          if (data) {
-            if (data.phone) setPhone(data.phone);
-            if (data.email) setEmail(data.email);
-            if (data.address) {
-              setAddressHi(data.address);
-              setAddressEn(data.address);
-            }
-          }
-        }
-      } catch (err) {
-        console.warn("Notice: Custom contact details in footer not loaded (Backend offline). Using system defaults.");
+    if (contact) {
+      if (contact.phone) setPhone(contact.phone);
+      if (contact.email) setEmail(contact.email);
+      if (contact.address) {
+        setAddressHi(contact.address);
+        setAddressEn(contact.address);
       }
     }
-    fetchContact();
-  }, []);
+  }, [contact]);
 
   return (
     <footer className="relative bg-gradient-to-b from-white to-amber-50/20 border-t border-gray-100 overflow-hidden pt-6 pb-3 sacred-pattern">

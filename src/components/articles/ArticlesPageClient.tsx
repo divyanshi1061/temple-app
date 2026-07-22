@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
-import { FaBookOpen, FaClock, FaCalendarAlt, FaArrowRight, FaOm } from "react-icons/fa";
+import { FaBookOpen, FaClock, FaCalendarAlt, FaArrowRight, } from "react-icons/fa";
 import { ARTICLES } from "@/lib/articles";
 import { staggerContainer, staggerItem } from "@/animations/variants";
 import ParticleField from "@/components/effects/ParticleField";

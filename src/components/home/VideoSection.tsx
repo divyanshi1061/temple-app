@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { getApiBase, getAssetUrl } from "@/lib/adminApi";
+import { useSiteData } from "@/context/SiteDataContext";
+import { getAssetUrl } from "@/lib/adminApi";
 import { FaVideo, FaYoutube } from "react-icons/fa";
 
 interface VideoItem {
@@ -16,25 +17,15 @@ interface VideoItem {
 
 export default function VideoSection() {
   const { lang } = useLanguage();
+  const { videos: contextVideos } = useSiteData();
   const [videos, setVideos] = useState<VideoItem[]>([]);
   const [activeVideos, setActiveVideos] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    async function fetchVideos() {
-      try {
-        const res = await fetch(`${getApiBase()}/videos?t=${Date.now()}`, { cache: "no-store" });
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data)) {
-            setVideos(data);
-          }
-        }
-      } catch (err) {
-        console.warn("Notice: Dynamic videos not loaded (Backend offline). Using system default videos.");
-      }
+    if (contextVideos) {
+      setVideos(contextVideos);
     }
-    fetchVideos();
-  }, []);
+  }, [contextVideos]);
 
   // Helper to extract YouTube video ID from embed URL to load HQ default thumbnail
   const getYouTubeId = (url: string): string => {
