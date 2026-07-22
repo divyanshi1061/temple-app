@@ -10,25 +10,24 @@
 // handlers) where window is always available, avoiding the stale module-level
 // constant problem that occurs during Next.js SSR pre-rendering.
 export const getApiBase = (): string => {
-  const envUrl = process.env.NEXT_PUBLIC_API_URL;
+  // 1. In browser context, resolve dynamically from the current location
+  if (typeof window !== 'undefined') {
+    // If accessing via localhost, 127.0.0.1, or local LAN IP, use local backend on port 5000
+    const isLocalHost = /^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2\d|3[01]))/i.test(window.location.hostname);
+    if (isLocalHost) {
+      return `${window.location.protocol}//${window.location.hostname}:5000/api`;
+    }
+    // In production domain, route through the standard reverse proxy (/api)
+    return `${window.location.protocol}//${window.location.hostname}/api`;
+  }
 
-  // If an env URL is set AND it's a real production URL (not a local IP), use it
+  // 2. Server-side rendering (SSR) / build-time fallback
+  const envUrl = process.env.NEXT_PUBLIC_API_URL;
   if (envUrl) {
     const isLocalIp = /^https?:\/\/(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(envUrl);
     if (!isLocalIp) {
       return envUrl;
     }
-  }
-
-  // Otherwise, dynamically resolve from the current browser location
-  if (typeof window !== 'undefined') {
-    // If it's a local/development host, use port 5000
-    const isLocalHost = /^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2\d|3[01]))/i.test(window.location.hostname);
-    if (isLocalHost) {
-      return `${window.location.protocol}//${window.location.hostname}:5000/api`;
-    }
-    // Otherwise in production, route through the standard reverse proxy (/api)
-    return `${window.location.protocol}//${window.location.hostname}/api`;
   }
 
   return 'http://localhost:5000/api';

@@ -370,8 +370,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Preload the LCP hero image so it starts downloading immediately (only on homepage) */}
-      <link rel="preload" href="/acharya-new.webp" as="image" type="image/webp" />
       {/* Schema.org Structured Data for Rich Snippet SEO indexing */}
       <script
         type="application/ld+json"
