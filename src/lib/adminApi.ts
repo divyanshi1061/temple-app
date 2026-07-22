@@ -65,7 +65,7 @@ export const getAssetUrl = (url: string) => {
             // Use defaults
           }
         }
-        
+
         // Rewrite the URL if protocol, hostname, or port differs
         if (parsed.hostname !== targetHost || parsed.port !== targetPort || parsed.protocol !== targetProtocol) {
           const portPart = targetPort ? `:${targetPort}` : '';
@@ -106,9 +106,9 @@ export const removeAuthToken = (): void => {
 
 export const fetchWithAuth = async (endpoint: string, options: RequestInit = {}): Promise<Response> => {
   const token = getAuthToken();
-  
+
   const headers: Record<string, string> = {};
-  
+
   // Set up Authorization Header if token exists
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
