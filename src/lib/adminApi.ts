@@ -31,18 +31,39 @@ export const API_BASE = getApiBase();
 export const getAssetUrl = (url: string) => {
   if (!url) return '';
   if (url.startsWith('http://') || url.startsWith('https://')) {
-    // If the URL contains a hardcoded local IP that differs from current host,
-    // rewrite it to use the current hostname so assets load on any device
-    if (typeof window !== 'undefined') {
-      try {
-        const parsed = new URL(url);
-        const isLocalIp = /^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(parsed.hostname);
-        if (isLocalIp && parsed.hostname !== window.location.hostname) {
-          return `${window.location.protocol}//${window.location.hostname}:${parsed.port}${parsed.pathname}`;
+    try {
+      const parsed = new URL(url);
+      const isLocalIp = /^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.|127\.|localhost)/i.test(parsed.hostname);
+      if (isLocalIp) {
+        // Determine the target hostname, protocol, and port
+        let targetHost = 'localhost';
+        let targetProtocol = 'http:';
+        let targetPort = parsed.port || '5000';
+
+        if (typeof window !== 'undefined') {
+          targetHost = window.location.hostname;
+          targetProtocol = window.location.protocol;
+          // If accessing via port 3000, the backend is likely on 5000
+          targetPort = window.location.port === '3000' ? '5000' : (window.location.port || parsed.port || '5000');
+        } else if (process.env.NEXT_PUBLIC_API_URL) {
+          try {
+            const apiParsed = new URL(process.env.NEXT_PUBLIC_API_URL);
+            targetHost = apiParsed.hostname;
+            targetProtocol = apiParsed.protocol;
+            targetPort = apiParsed.port || '5000';
+          } catch {
+            // Use defaults
+          }
         }
-      } catch {
-        // Invalid URL, return as-is
+        
+        // Rewrite the URL if protocol, hostname, or port differs
+        if (parsed.hostname !== targetHost || parsed.port !== targetPort || parsed.protocol !== targetProtocol) {
+          const portPart = targetPort ? `:${targetPort}` : '';
+          return `${targetProtocol}//${targetHost}${portPart}${parsed.pathname}`;
+        }
       }
+    } catch {
+      // Invalid URL, return as-is
     }
     return url;
   }
