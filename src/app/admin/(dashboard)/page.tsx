@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { API_BASE, fetchWithAuth } from "@/lib/adminApi";
+import { getApiBase, fetchWithAuth } from "@/lib/adminApi";
 import { 
   FaImage, 
   FaVideo, 
@@ -31,12 +31,15 @@ export default function AdminDashboardPage() {
       try {
         setConnectionStatus("loading");
         
+        // Resolve API base at call-time (window is available inside useEffect)
+        const apiBase = getApiBase();
+        
         // Parallel fetch of public details to extract counts & statuses
         const [galleryRes, videosRes, heroRes, contactRes, reviewsRes] = await Promise.all([
-          fetch(`${API_BASE}/gallery`),
-          fetch(`${API_BASE}/videos`),
-          fetch(`${API_BASE}/hero`),
-          fetch(`${API_BASE}/contact`),
+          fetch(`${apiBase}/gallery`),
+          fetch(`${apiBase}/videos`),
+          fetch(`${apiBase}/hero`),
+          fetch(`${apiBase}/contact`),
           fetchWithAuth("/admin/reviews").catch(() => null),
         ]);
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { API_BASE, getAssetUrl } from "@/lib/adminApi";
+import { getApiBase, getAssetUrl } from "@/lib/adminApi";
 import { FaVideo, FaYoutube } from "react-icons/fa";
 
 interface VideoItem {
@@ -22,7 +22,7 @@ export default function VideoSection() {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const res = await fetch(`${API_BASE}/videos?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${getApiBase()}/videos?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data)) {

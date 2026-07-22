@@ -14,7 +14,7 @@ import {
 import Logo from "@/components/layout/Logo";
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import { API_BASE } from "@/lib/adminApi";
+import { getApiBase } from "@/lib/adminApi";
 import Link from "next/link";
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
   useEffect(() => {
     async function fetchContact() {
       try {
-        const res = await fetch(`${API_BASE}/contact?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${getApiBase()}/contact?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (data) {

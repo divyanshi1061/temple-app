@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MANTRAS, SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import { API_BASE, getAssetUrl } from "@/lib/adminApi";
+import { getApiBase, getAssetUrl } from "@/lib/adminApi";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +30,7 @@ export default function HeroSection() {
   useEffect(() => {
     async function fetchAcharyaImage() {
       try {
-        const res = await fetch(`${API_BASE}/hero?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${getApiBase()}/hero?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (data && data.url) {

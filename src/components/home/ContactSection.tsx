@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/animations/variants";
 import { SITE_CONFIG } from "@/lib/constants";
-import { API_BASE } from "@/lib/adminApi";
+import { getApiBase } from "@/lib/adminApi";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPlane, FaTrain, FaCar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -22,7 +22,7 @@ export default function ContactSection() {
   useEffect(() => {
     async function fetchContact() {
       try {
-        const res = await fetch(`${API_BASE}/contact?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${getApiBase()}/contact?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (data) {

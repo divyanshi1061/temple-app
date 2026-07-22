@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { API_BASE } from "@/lib/adminApi";
+import { getApiBase } from "@/lib/adminApi";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
     const loadReviews = async () => {
       let apiReviews: TestimonialItem[] = [];
       try {
-        const res = await fetch(`${API_BASE}/reviews?t=${Date.now()}`);
+        const res = await fetch(`${getApiBase()}/reviews?t=${Date.now()}`);
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data)) {

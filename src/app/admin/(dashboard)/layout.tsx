@@ -37,7 +37,7 @@ export default function DashboardLayout({
     } else {
       setIsAuthenticated(true);
     }
-  }, [router, pathname]);
+  }, [router]);
 
   const handleLogout = () => {
     removeAuthToken();

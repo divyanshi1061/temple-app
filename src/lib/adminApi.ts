@@ -6,7 +6,10 @@
 // from any device on the network (not just the build machine's IP).
 // NEXT_PUBLIC_API_URL is only used when it looks like a real production URL
 // (i.e., contains a domain name, not a local/private IP like 192.168.x.x).
-const getApiBase = (): string => {
+// Exported so call sites can invoke it at runtime (inside useEffect / event
+// handlers) where window is always available, avoiding the stale module-level
+// constant problem that occurs during Next.js SSR pre-rendering.
+export const getApiBase = (): string => {
   const envUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // If an env URL is set AND it's a real production URL (not a local IP), use it
@@ -19,12 +22,20 @@ const getApiBase = (): string => {
 
   // Otherwise, dynamically resolve from the current browser location
   if (typeof window !== 'undefined') {
-    return `${window.location.protocol}//${window.location.hostname}:5000/api`;
+    // If it's a local/development host, use port 5000
+    const isLocalHost = /^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2\d|3[01]))/i.test(window.location.hostname);
+    if (isLocalHost) {
+      return `${window.location.protocol}//${window.location.hostname}:5000/api`;
+    }
+    // Otherwise in production, route through the standard reverse proxy (/api)
+    return `${window.location.protocol}//${window.location.hostname}/api`;
   }
 
   return 'http://localhost:5000/api';
 };
 
+// Kept for import compatibility, but prefer calling getApiBase() at runtime
+// inside useEffect/event handlers to avoid stale SSR values.
 export const API_BASE = getApiBase();
 
 // Helper to construct asset URLs (handling local server vs proxy routes)
@@ -69,7 +80,7 @@ export const getAssetUrl = (url: string) => {
   }
   // If it starts with /uploads, prepend the backend host (without double /api)
   if (url.startsWith('/uploads')) {
-    const host = API_BASE.replace('/api', '');
+    const host = getApiBase().replace('/api', '');
     return `${host}${url}`;
   }
   return url;
@@ -114,8 +125,9 @@ export const fetchWithAuth = async (endpoint: string, options: RequestInit = {})
     Object.assign(headers, options.headers);
   }
 
-  // Add cache buster query parameter to GET requests to prevent caching
-  let url = `${API_BASE}${endpoint}`;
+  // Resolve the API base at call-time so production URLs are always correct
+  // even when the module was first loaded during SSR (where window is undefined).
+  let url = `${getApiBase()}${endpoint}`;
   if (!options.method || options.method.toUpperCase() === 'GET') {
     const separator = url.includes('?') ? '&' : '?';
     url = `${url}${separator}t=${Date.now()}`;

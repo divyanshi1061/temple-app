@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useRouter } from "next/navigation";
 import { IoCloseOutline } from "react-icons/io5";
 import { ALL_PHOTOS, PhotoItem } from "@/lib/photos";
-import { API_BASE, getAssetUrl } from "@/lib/adminApi";
+import { getApiBase, getAssetUrl } from "@/lib/adminApi";
 
 const YOUTUBE_VIDEOS = [
   {
@@ -82,7 +82,7 @@ export default function GalleryPageClient() {
   useEffect(() => {
     async function fetchDynamicPhotos() {
       try {
-        const res = await fetch(`${API_BASE}/gallery?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${getApiBase()}/gallery?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data) && data.length > 0) {

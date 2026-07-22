@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-import { API_BASE, setAuthToken, getAuthToken } from "@/lib/adminApi";
+import { getApiBase, setAuthToken, getAuthToken } from "@/lib/adminApi";
 import { FaLock, FaUser, FaSun } from "react-icons/fa";
 
 export default function AdminLoginPage() {
@@ -29,7 +29,7 @@ export default function AdminLoginPage() {
 
     setIsLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/admin/login`, {
+      const res = await fetch(`${getApiBase()}/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

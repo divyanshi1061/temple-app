@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
-import { API_BASE } from "@/lib/adminApi";
+import { getApiBase } from "@/lib/adminApi";
 
 interface ReviewModalProps {
   isOpen: boolean;
@@ -44,7 +44,7 @@ export default function ReviewModal({ isOpen, onClose }: ReviewModalProps) {
     setSuccessMessage("");
 
     try {
-      const res = await fetch(`${API_BASE}/reviews`, {
+      const res = await fetch(`${getApiBase()}/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

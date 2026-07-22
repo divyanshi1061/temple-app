@@ -115,8 +115,6 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="google-site-verification" content="7_S9yO97cQVDJYkkx0yKx-ptQACVyyVP3S-GBn3-gNg" />
-        {/* Preload the LCP hero image so it starts downloading immediately */}
-        <link rel="preload" href="/acharya-new.webp" as="image" type="image/webp" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
