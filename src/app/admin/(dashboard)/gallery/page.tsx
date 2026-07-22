@@ -45,7 +45,7 @@ export default function GalleryManager() {
         toast.error("Failed to load gallery images");
       }
     } catch (_err) {
-      console.error(err);
+      console.error(_err);
       toast.error("Error loading gallery images");
     } finally {
       setIsLoading(false);
@@ -142,7 +142,7 @@ export default function GalleryManager() {
         toast.error(data.message || "Failed to delete image");
       }
     } catch (_err) {
-      console.error(err);
+      console.error(_err);
       toast.error("Error deleting image");
     } finally {
       setDeletingId(null);

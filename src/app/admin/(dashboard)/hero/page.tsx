@@ -36,7 +36,7 @@ export default function HeroBackgroundManager() {
         toast.error("Failed to retrieve current hero status");
       }
     } catch (_err) {
-      console.error(err);
+      console.error(_err);
     } finally {
       setIsLoading(false);
     }
